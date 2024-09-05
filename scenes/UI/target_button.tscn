@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ct5wocj2m46oe"]
+
+[ext_resource type="Script" path="res://scripts/UI/Buttons/target_button.gd" id="1_cwpwd"]
+[ext_resource type="Texture2D" uid="uid://ig2gs72xw203" path="res://assets/Hand3.png" id="2_gxb0f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fxjg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4e6uj"]
+
+[sub_resource type="Theme" id="Theme_w8wuk"]
+Button/colors/font_focus_color = Color(1, 0.941176, 0.133333, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_0fxjg")
+Button/styles/normal = SubResource("StyleBoxEmpty_4e6uj")
+
+[node name="TargetButton" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+offset_right = -837.0
+offset_bottom = -623.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_w8wuk")
+text = "Some Action"
+alignment = 0
+script = ExtResource("1_cwpwd")
+
+[node name="HandSelection" type="Sprite2D" parent="."]
+position = Vector2(-32, 25)
+rotation = 0.698132
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_gxb0f")
+flip_h = true
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

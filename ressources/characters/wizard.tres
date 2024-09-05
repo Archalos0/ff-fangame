@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=8 format=3 uid="uid://d3e0ukcbrq2xt"]
+
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_hwe2i"]
+[ext_resource type="Resource" uid="uid://ch0skfp6wcka4" path="res://ressources/actions/attack.tres" id="2_2mt21"]
+[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_mcas3"]
+[ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/escape.tres" id="4_gggol"]
+[ext_resource type="Resource" uid="uid://c8b07q3k3miq1" path="res://ressources/actions/heal.tres" id="5_81284"]
+[ext_resource type="Script" path="res://ressources/characters/character.gd" id="5_e60fw"]
+[ext_resource type="Texture2D" uid="uid://2gq3o6rectv7" path="res://assets/Battlers/World01_006_Witch.png" id="6_4i7p2"]
+
+[resource]
+script = ExtResource("5_e60fw")
+character_name = "Wizard"
+health = 50
+magic_point = 100
+strenght = 10
+magic = 30
+defense = 5
+magic_defense = 10
+agility = 10
+accuracy = 10
+evasion = 5
+luck = 10
+actions_resources = Array[ExtResource("1_hwe2i")]([ExtResource("2_2mt21"), ExtResource("3_mcas3"), ExtResource("4_gggol"), ExtResource("5_81284")])
+is_player = true
+is_selectable = false
+sprite = ExtResource("6_4i7p2")

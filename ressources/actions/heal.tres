@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ActionResource" load_steps=2 format=3 uid="uid://c8b07q3k3miq1"]
+
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_s31qn"]
+
+[resource]
+script = ExtResource("1_s31qn")
+action_name = "Heal"
+description = "Heal an ally"
+cost = 0
+target_type = 1

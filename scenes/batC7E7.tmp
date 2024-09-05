@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyrh7x6drt5m2"]
+
+[ext_resource type="PackedScene" uid="uid://2hp84b1nweti" path="res://scenes/turn_queue2.tscn" id="1_78bgw"]
+[ext_resource type="PackedScene" uid="uid://wjgldpaop2o" path="res://scenes/character.tscn" id="2_l5bt3"]
+[ext_resource type="PackedScene" uid="uid://bwxim7a03270n" path="res://scenes/battle_menu.tscn" id="3_e4y40"]
+[ext_resource type="Texture2D" uid="uid://d2j87qegku2rr" path="res://assets/Battlers/World01_002_Salamander.png" id="3_hubdb"]
+[ext_resource type="Texture2D" uid="uid://bcktv4qbhr8gb" path="res://assets/Battlers/World01_003_Bird.png" id="4_qww8u"]
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="TurnQueue" parent="." instance=ExtResource("1_78bgw")]
+
+[node name="Character 1" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(229, 116)
+is_player = true
+
+[node name="Character 2" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+modulate = Color(0.313726, 0.854902, 0.580392, 1)
+position = Vector2(233, 256)
+is_player = true
+
+[node name="Character 3" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(800, 116)
+texture = ExtResource("3_hubdb")
+
+[node name="Character 4" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(800, 256)
+texture = ExtResource("4_qww8u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BattleMenu" parent="CanvasLayer" instance=ExtResource("3_e4y40")]
+
+[editable path="CanvasLayer/BattleMenu"]

@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvrnv0dr30iee"]
+
+[ext_resource type="Script" path="res://scripts/UI/Buttons/player_character_button.gd" id="1_6dj6h"]
+[ext_resource type="Texture2D" uid="uid://ig2gs72xw203" path="res://assets/Hand3.png" id="2_jhm36"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0hnov"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b356l"]
+
+[sub_resource type="Theme" id="Theme_ttafu"]
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0.215686, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_0hnov")
+Button/styles/normal = SubResource("StyleBoxEmpty_b356l")
+
+[sub_resource type="GDScript" id="GDScript_fkix2"]
+script/source = "extends HBoxContainer
+
+@onready var character_name: Label = $CharacterName
+@onready var hp: Label = $HP
+@onready var action_selected: Label = $ActionSelected
+
+func _ready() -> void:
+	character_name = get_node(\"CharacterName\")
+	hp = get_node(\"HP\")
+	action_selected = get_node(\"ActionSelected\")
+
+func set_data(p_character_name: String, p_health:int, p_max_health: int):
+	character_name.text = p_character_name
+	hp.text = str(p_health) + \" / \" + str(p_max_health)
+	action_selected.text = \"\"
+"
+
+[node name="CharacterInformations" type="Button"]
+custom_minimum_size = Vector2(0, 23)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -772.0
+offset_bottom = -598.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ttafu")
+script = ExtResource("1_6dj6h")
+
+[node name="HandSelection" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-32, 25)
+rotation = 0.698132
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_jhm36")
+flip_h = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_fkix2")
+
+[node name="CharacterName" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Character name"
+
+[node name="HP" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "100 / 100"
+
+[node name="ActionSelected" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Attack"
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

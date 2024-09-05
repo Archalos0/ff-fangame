@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://djr6o6asaa3v2"]
+
+[node name="Informations" type="Panel"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -243.0
+offset_right = 552.0
+offset_bottom = -8.0
+grow_vertical = 0
+
+[connection signal="button_up" from="ActionButtons/VBoxContainer/AttackButton" to="ActionButtons/VBoxContainer/AttackButton" method="_on_button_up"]
+[connection signal="button_up" from="ActionButtons/VBoxContainer/DefendButton" to="ActionButtons/VBoxContainer/DefendButton" method="_on_button_up"]
+[connection signal="button_up" from="ActionButtons/VBoxContainer/EscapeButton" to="ActionButtons/VBoxContainer/EscapeButton" method="_on_button_up"]

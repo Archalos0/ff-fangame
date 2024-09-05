@@ -1,0 +1,58 @@
+[gd_scene load_steps=13 format=3 uid="uid://dyrh7x6drt5m2"]
+
+[ext_resource type="PackedScene" uid="uid://2hp84b1nweti" path="res://scenes/turn_queue.tscn" id="1_78bgw"]
+[ext_resource type="Script" path="res://scripts/battle_scene.gd" id="1_bhy42"]
+[ext_resource type="PackedScene" uid="uid://wjgldpaop2o" path="res://scenes/character.tscn" id="2_l5bt3"]
+[ext_resource type="PackedScene" uid="uid://bwxim7a03270n" path="res://scenes/battle_menu.tscn" id="3_e4y40"]
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="4_6xxpw"]
+[ext_resource type="Resource" uid="uid://ch0skfp6wcka4" path="res://ressources/actions/Attack.tres" id="5_5rpue"]
+[ext_resource type="PackedScene" uid="uid://dklsry4omvh26" path="res://scenes/message_box.tscn" id="5_boqcs"]
+[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/Defend.tres" id="6_x3f0k"]
+[ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/Escape.tres" id="7_q6ykl"]
+[ext_resource type="Resource" uid="uid://c14y5llampbuw" path="res://ressources/characters/rogue.tres" id="8_o4upw"]
+[ext_resource type="Resource" uid="uid://14nb65ifqtqv" path="res://ressources/characters/healer.tres" id="9_l678p"]
+[ext_resource type="Resource" uid="uid://d3e0ukcbrq2xt" path="res://ressources/characters/wizard.tres" id="10_l5a4b"]
+
+[node name="BattleScene" type="Node2D"]
+script = ExtResource("1_bhy42")
+
+[node name="TurnQueue" parent="." instance=ExtResource("1_78bgw")]
+unique_name_in_owner = true
+
+[node name="Character" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(200, 100)
+actions_resources = Array[ExtResource("4_6xxpw")]([ExtResource("5_5rpue"), ExtResource("6_x3f0k"), ExtResource("7_q6ykl")])
+is_player = true
+
+[node name="Character2" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(200, 260)
+character_resource = ExtResource("8_o4upw")
+actions_resources = Array[ExtResource("4_6xxpw")]([ExtResource("5_5rpue"), ExtResource("6_x3f0k"), ExtResource("7_q6ykl")])
+is_player = true
+
+[node name="Character3" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(850, 100)
+character_resource = ExtResource("9_l678p")
+actions_resources = Array[ExtResource("4_6xxpw")]([ExtResource("5_5rpue"), ExtResource("6_x3f0k"), ExtResource("7_q6ykl")])
+
+[node name="Character4" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(850, 260)
+character_resource = ExtResource("10_l5a4b")
+actions_resources = Array[ExtResource("4_6xxpw")]([ExtResource("5_5rpue"), ExtResource("6_x3f0k"), ExtResource("7_q6ykl")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BattleMenu" parent="CanvasLayer" instance=ExtResource("3_e4y40")]
+unique_name_in_owner = true
+
+[node name="ActionSelection" parent="CanvasLayer/BattleMenu" index="0" node_paths=PackedStringArray("items")]
+items = [null, NodePath("VBoxContainer/DefendButton"), NodePath("VBoxContainer/EscapeButton")]
+
+[node name="MessageBox" parent="CanvasLayer" instance=ExtResource("5_boqcs")]
+unique_name_in_owner = true
+
+[editable path="CanvasLayer/BattleMenu"]
+[editable path="CanvasLayer/BattleMenu/ActionSelection/VBoxContainer/AttackButton"]
+[editable path="CanvasLayer/BattleMenu/ActionSelection/VBoxContainer/DefendButton"]
+[editable path="CanvasLayer/BattleMenu/ActionSelection/VBoxContainer/EscapeButton"]
+[editable path="CanvasLayer/MessageBox"]

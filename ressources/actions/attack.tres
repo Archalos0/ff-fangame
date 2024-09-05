@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ActionResource" load_steps=2 format=3 uid="uid://ch0skfp6wcka4"]
+
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_bshkg"]
+
+[resource]
+script = ExtResource("1_bshkg")
+action_name = "Attack"
+description = "Basic attack"
+cost = 0
+target_type = 0
