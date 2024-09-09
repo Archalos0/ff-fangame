@@ -7,7 +7,6 @@ class_name Character extends Node2D
 @export var stats: Stats
 
 @export var actions: Array[Action] = []
-@export var actions_resources: Array[ActionResource] = []
 
 # Character controls
 @export var is_player: bool

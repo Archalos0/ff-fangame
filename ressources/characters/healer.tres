@@ -1,9 +1,6 @@
-[gd_resource type="Resource" script_class="CharacterResource" load_steps=8 format=3 uid="uid://14nb65ifqtqv"]
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=5 format=3 uid="uid://14nb65ifqtqv"]
 
 [ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_4m7r4"]
-[ext_resource type="Resource" uid="uid://ch0skfp6wcka4" path="res://ressources/actions/attack.tres" id="2_qwexp"]
-[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_tpr4f"]
-[ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/escape.tres" id="4_e16t5"]
 [ext_resource type="Resource" uid="uid://c8b07q3k3miq1" path="res://ressources/actions/heal.tres" id="5_fldvd"]
 [ext_resource type="Script" path="res://ressources/characters/character.gd" id="5_xfby8"]
 [ext_resource type="Texture2D" uid="uid://cp0a3whikwmpk" path="res://assets/Battlers/World01_005_Shello.png" id="6_5ssqp"]
@@ -21,7 +18,7 @@ agility = 10
 accuracy = 10
 evasion = 5
 luck = 10
-actions_resources = Array[ExtResource("1_4m7r4")]([ExtResource("2_qwexp"), ExtResource("3_tpr4f"), ExtResource("4_e16t5"), ExtResource("5_fldvd")])
+actions_resources = Array[ExtResource("1_4m7r4")]([ExtResource("5_fldvd")])
 is_player = true
 is_selectable = false
 sprite = ExtResource("6_5ssqp")

@@ -61,6 +61,7 @@ func is_action_and_target_valid(action: Action, targets: Array[Character]):
 
 func end_turn():
 	active_character.end_turn()
+	battle_menu.delete_previous_action()
 	set_next_character()
 	play_turn()
 

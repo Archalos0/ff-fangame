@@ -3,22 +3,33 @@ class_name BattleMenu extends Control
 @onready var attack_button: ActionButton = $ActionSelection/VBoxContainer/AttackButton
 @onready var defend_button: ActionButton = $ActionSelection/VBoxContainer/DefendButton
 @onready var escape_button: ActionButton = $ActionSelection/VBoxContainer/EscapeButton
-@onready var heal_button: ActionButton = $ActionSelection/VBoxContainer/HealButton
 
 @onready var action_selection: MenuHandler = $ActionSelection
 @onready var target_selection: MenuHandler = $TargetSelection
 @onready var player_character_informations: PlayerSelectionMenu = $PlayerCharacterInformations
 
+const ACTION_BUTTON = preload("res://scenes/UI/action_button.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	mouse_filter = MOUSE_FILTER_PASS 
+	mouse_filter = MOUSE_FILTER_PASS
+	
+	for action_button: ActionButton in action_selection.v_box_container.get_children():
+		action_button.load_action_ressource()
 
 func update_actions_buttons(actions: Array[Action]):
-	attack_button.set_action(actions[0])
-	defend_button.set_action(actions[1])
-	escape_button.set_action(actions[2])
-	heal_button.set_action(actions[3])
+	
+	for action: Action in actions:
+		var action_button: ActionButton = ACTION_BUTTON.instantiate()
+		action_button.set_action(action)
+		action_selection.v_box_container.add_child(action_button)
+
+func delete_previous_action():
+	for action_button: ActionButton in action_selection.v_box_container.get_children():
+		if(action_button.action_ressource != null):
+			continue
+		
+		action_button.queue_free()
 
 func set_focus_on_target_selection():
 	target_selection.get_focus()

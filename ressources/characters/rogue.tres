@@ -1,10 +1,7 @@
-[gd_resource type="Resource" script_class="CharacterResource" load_steps=8 format=3 uid="uid://c14y5llampbuw"]
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=5 format=3 uid="uid://c14y5llampbuw"]
 
 [ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_cpd1l"]
-[ext_resource type="Resource" uid="uid://ch0skfp6wcka4" path="res://ressources/actions/attack.tres" id="2_mdy4p"]
-[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_2u56p"]
-[ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/escape.tres" id="4_5f07w"]
-[ext_resource type="Resource" uid="uid://c8b07q3k3miq1" path="res://ressources/actions/heal.tres" id="5_iuogh"]
+[ext_resource type="Resource" uid="uid://bxv0rm1u2q6wd" path="res://ressources/actions/steal.tres" id="2_jkx4r"]
 [ext_resource type="Script" path="res://ressources/characters/character.gd" id="5_nbavk"]
 [ext_resource type="Texture2D" uid="uid://calrwa8jodpqf" path="res://assets/Battlers/World04_003_ Outlaw.png" id="6_xxcjl"]
 
@@ -21,7 +18,7 @@ agility = 30
 accuracy = 20
 evasion = 20
 luck = 10
-actions_resources = Array[ExtResource("1_cpd1l")]([ExtResource("2_mdy4p"), ExtResource("3_2u56p"), ExtResource("4_5f07w"), ExtResource("5_iuogh")])
+actions_resources = Array[ExtResource("1_cpd1l")]([ExtResource("2_jkx4r")])
 is_player = true
 is_selectable = false
 sprite = ExtResource("6_xxcjl")
