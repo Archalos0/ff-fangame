@@ -20,6 +20,7 @@ unique_name_in_owner = true
 
 [node name="Character" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 100)
+character_resource = ExtResource("10_l5a4b")
 is_player = true
 
 [node name="Character2" parent="TurnQueue" instance=ExtResource("2_l5bt3")]

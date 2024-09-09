@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharacterResource" load_steps=5 format=3 uid="uid://d3e0ukcbrq2xt"]
 
 [ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_hwe2i"]
-[ext_resource type="Resource" uid="uid://bcru5po70akxq" path="res://ressources/actions/fire_ball.tres" id="2_mt3o5"]
+[ext_resource type="Resource" uid="uid://dbp4m3y5qf12u" path="res://ressources/actions/magic/fire.tres" id="2_vonj1"]
 [ext_resource type="Script" path="res://ressources/characters/character.gd" id="5_e60fw"]
 [ext_resource type="Texture2D" uid="uid://2gq3o6rectv7" path="res://assets/Battlers/World01_006_Witch.png" id="6_4i7p2"]
 
@@ -18,7 +18,7 @@ agility = 10
 accuracy = 10
 evasion = 5
 luck = 10
-actions_resources = Array[ExtResource("1_hwe2i")]([ExtResource("2_mt3o5")])
+actions_resources = Array[ExtResource("1_hwe2i")]([ExtResource("2_vonj1")])
 is_player = true
 is_selectable = false
 sprite = ExtResource("6_4i7p2")

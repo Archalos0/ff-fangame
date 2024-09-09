@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MagicResource" load_steps=2 format=3 uid="uid://dbp4m3y5qf12u"]
+
+[ext_resource type="Script" path="res://ressources/actions/magic/magic_ressource.gd" id="1_gkw3w"]
+
+[resource]
+script = ExtResource("1_gkw3w")
+action_type = Array[int]([0])
+action_name = "Fire"
+description = "Deals fire damage."
+cost = 1
+target_type = 0
