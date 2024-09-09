@@ -37,23 +37,55 @@ func play_turn():
 	if active_character.stats.health > 0:
 		active_character.initialize_turn()
 		
-		battle_menu.update_actions_buttons(active_character.actions)
-		
 		var action: Action
-		var targets: Array[Character]
+		var targets: Array[Character] = []
 		
-		var has_select_actions_and_target: bool = false
-		while not has_select_actions_and_target:
+		if active_character.is_player == true:
+			battle_menu.update_actions_buttons(active_character.actions)
+		
+		
+			var has_select_actions_and_target: bool = false
+			while not has_select_actions_and_target:
+				
+				action = await _select_actions()
+				targets = await get_target(action)
+				
+				has_select_actions_and_target = is_action_and_target_valid(action, targets)
 			
-			action = await _select_actions()
-			targets = await get_target(action)
+		else:
 			
-			has_select_actions_and_target = is_action_and_target_valid(action, targets)
+			action = active_character.actions[randi() % active_character.actions.size()]
+			
+			var potential_target: Array[Character] = _get_targets_list(action)
+			match action.target_type:
+				Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.SINGLE_ENEMY:
+					targets.append(potential_target[randi() % potential_target.size()])
+				Action.TARGET_TYPE.ALL_ALLIES, Action.TARGET_TYPE.ALL_ENEMIES:
+					targets = potential_target
+				_:
+					targets = potential_target
 		
 		print_debug_message(action, targets)
 		active_character.act(action, targets)
 	
 	end_turn()
+
+func _get_targets_list(action: Action) -> Array[Character]:
+	
+	var potential_targets: Array[Character] = [] 
+	
+	match action.target_type:
+		Action.TARGET_TYPE.NONE:
+			pass
+		Action.TARGET_TYPE.SELF:
+			potential_targets.append(active_character)
+		Action.TARGET_TYPE.SINGLE_ENEMY, Action.TARGET_TYPE.ALL_ENEMIES:
+			potential_targets = get_enemies()
+		Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.ALL_ALLIES:
+			potential_targets = get_allies()
+	
+	return potential_targets
+
 
 func is_action_and_target_valid(action: Action, targets: Array[Character]):
 	return action != null and ( (targets == [] and action.target_type == Action.TARGET_TYPE.NONE) \
@@ -83,24 +115,17 @@ func _select_actions():
 	return action
 
 func get_target(action: Action):
+
+	var potential_targets: Array[Character] = _get_targets_list(action)
 	
-	var all_targets: Array[Character] = []
-	var targets_selected: Array[Character] = []
+	_set_targets_selectable(potential_targets, true)
+	match action.target_type:
+		Action.TARGET_TYPE.SINGLE_ALLY:
+			battle_menu.set_focus_on_player_character()
+		Action.TARGET_TYPE.SINGLE_ENEMY:
+			battle_menu.set_focus_on_target_selection()
 	
-	if action.target_type != Action.TARGET_TYPE.NONE:
-		if action.target_type == Action.TARGET_TYPE.SELF:
-			targets_selected.append(active_character)
-		else:
-			if action.is_targeting_enemies():
-				all_targets = get_enemies()
-				_set_targets_selectable(all_targets, true)
-				battle_menu.set_focus_on_target_selection()
-			else:
-				all_targets = get_allies()
-				_set_targets_selectable(all_targets, true)
-				battle_menu.set_focus_on_player_character()
-			
-			targets_selected = await _select_targets(all_targets)
+	var targets_selected: Array[Character] = await _select_targets(potential_targets)
 	
 	return targets_selected
 
