@@ -16,10 +16,9 @@ enum ACTION_CLASS {
 }
 
 enum ACTION_TYPE {
-	DAMAGE,
-	HEAL,
-	AFFLICTION,
-	ABSORB,
+	BASIC_ATTACK,
+	PHYSICAL_ATTACK,
+	MAGICAL_ATTACK,
 }
 
 enum ELEMENT {
@@ -28,9 +27,22 @@ enum ELEMENT {
 	LIGHTNING,
 	EARTH,
 	WIND,
+	NONE,
 }
 
-enum AFFLICTION {
+enum BUFF {
+	REMOVE_POISON,
+	REMOVE_SILENCE,
+	REMOVE_SLEEP,
+	REMOVE_BLIND,
+	REMOVE_TOAD,
+	REMOVE_SHRINK,
+	MAGIC_BARRIER,
+	DEFENSE_UP,
+	RUNNING,
+}
+
+enum DEBUFF {
 	POISON,
 	SLEEP,
 	BLIND,
@@ -38,28 +50,47 @@ enum AFFLICTION {
 	PARALYSIS,
 	CONFUSION,
 	SILENCE,
+	TOAD,
+	SHRINK,
+	DEFENSE_NONE
 }
 
 class Spell:
 	var element: ELEMENT
 	var power: int
-	var affliction: Array[AFFLICTION]
+	var buffs: Array[BUFF]
+	var debuffs: Array[DEBUFF]
 	var is_offensive: bool
 
 @export var action_name: String = ""
 @export var description: String = "Description"
 @export var cost: int = 0
 @export var target_type: TARGET_TYPE = TARGET_TYPE.SINGLE_ENEMY
-@export var action_types: Array[Action.ACTION_TYPE]
-@export var spell_power: int
+@export var action_type: ACTION_TYPE
 
-func _init(p_name: String, p_description: String, p_cost: int, p_target_type: TARGET_TYPE, p_action_types: Array[ACTION_TYPE], p_spell_power: int):
-	action_name = p_name
-	description = p_description
-	cost = p_cost
-	target_type = p_target_type
-	action_types = p_action_types
-	spell_power = p_spell_power
+@export var spell_power: int
+@export var buffs: Array[BUFF]
+@export var debuffs: Array[DEBUFF]
+@export var element: ELEMENT
+
+func _init(
+	p_name: String, 
+	p_description: String, 
+	p_cost: int, 
+	p_target_type: TARGET_TYPE, 
+	p_action_type: ACTION_TYPE, 
+	p_spell_power: int, p_buffs: Array[Action.BUFF], 
+	p_debuffs: Array[Action.DEBUFF], 
+	p_element: ELEMENT):
+		action_name = p_name
+		description = p_description
+		cost = p_cost
+		target_type = p_target_type
+		action_type = p_action_type
+		spell_power = p_spell_power
+		buffs = p_buffs
+		debuffs = p_debuffs
+		element = p_element
 
 static func from_action_resource(action_resource: ActionResource) -> Action:
 	var action: Action = Action.new(
@@ -67,8 +98,11 @@ static func from_action_resource(action_resource: ActionResource) -> Action:
 		action_resource.description,
 		action_resource.cost,
 		action_resource.target_type,
-		action_resource.action_types,
-		action_resource.spell_power
+		action_resource.action_type,
+		action_resource.spell_power,
+		action_resource.buffs,
+		action_resource.debuffs,
+		action_resource.element
 	)
 	
 	return action
@@ -83,12 +117,25 @@ func is_targeting_allies() -> bool:
 	return true if target_type == TARGET_TYPE.SINGLE_ALLY or target_type == TARGET_TYPE.ALL_ALLIES else false
 
 func calcul_power(source: Character):
-	push_error("La méthode 'calcul_power' doit être redéfinie dans une sous-classe de 'Action'.")
+	var spell_power = 0
+	
+	match action_type:
+		ACTION_TYPE.BASIC_ATTACK:
+			spell_power = (source.stats.strenght / 4) + 8 #+8 = temp # need to add after : + (source.skill / 4) + source.weapon.damage
+		ACTION_TYPE.PHYSICAL_ATTACK:
+			spell_power = source.stats.strenght * spell_power
+		ACTION_TYPE.MAGICAL_ATTACK:
+			spell_power = source.stats.magic * spell_power
+	
+	return spell_power
 
 #TODO: Add the element, the weapon, and additional effects
 func execute(source: Character, targets: Array[Character]):
 	var spell: Spell = Spell.new()
 	spell.power = calcul_power(source)
+	spell.buffs = buffs
+	spell.debuffs = debuffs
+	spell.element = element
 	spell.is_offensive = true if is_targeting_enemies() else false
 	
 	for target: Character in targets:

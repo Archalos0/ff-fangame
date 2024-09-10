@@ -1,19 +1,16 @@
-[gd_resource type="Resource" script_class="MagicResource" load_steps=2 format=3 uid="uid://crwjue65b04qr"]
+[gd_resource type="Resource" script_class="ActionResource" load_steps=2 format=3 uid="uid://crwjue65b04qr"]
 
-[sub_resource type="GDScript" id="GDScript_s0jps"]
-script/source = "class_name MagicResource extends ActionResource
-
-
-func _init(p_name: String = \"\", p_description: String = \"\", p_cost: int = 0, p_target_type: Action.TARGET_TYPE = Action.TARGET_TYPE.NONE, p_action_type: Array[Action.ACTION_TYPE] = []):
-	super(p_name, p_description, p_cost, p_target_type, p_action_type)
-"
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_jvcuj"]
 
 [resource]
-script = SubResource("GDScript_s0jps")
+script = ExtResource("1_jvcuj")
 action_class = 2
 action_name = "Fira"
 description = "Deals fire damage."
 cost = 1
 target_type = 2
-action_types = Array[int]([0])
+action_type = 2
 spell_power = 55
+buffs = Array[int]([])
+debuffs = Array[int]([])
+element = 0

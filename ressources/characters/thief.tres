@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=7 format=3 uid="uid://c14y5llampbuw"]
+
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_vr6ky"]
+[ext_resource type="Resource" uid="uid://cfhkkifysuca8" path="res://ressources/actions/attack.tres" id="2_v3dk8"]
+[ext_resource type="Resource" uid="uid://bxv0rm1u2q6wd" path="res://ressources/actions/steal.tres" id="3_vtytm"]
+[ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/run_away.tres" id="4_t6d6t"]
+[ext_resource type="Script" path="res://ressources/characters/character.gd" id="5_stfd3"]
+[ext_resource type="Texture2D" uid="uid://calrwa8jodpqf" path="res://assets/Battlers/World04_003_ Outlaw.png" id="6_jmb7s"]
+
+[resource]
+script = ExtResource("5_stfd3")
+character_name = "Thief"
+health_point = 100
+magic_point = 0
+strenght = 5
+agility = 5
+vitality = 5
+intellect = 5
+mind = 5
+defense = 0
+magic_defense = 5
+actions_resources = Array[ExtResource("1_vr6ky")]([ExtResource("2_v3dk8"), ExtResource("3_vtytm"), ExtResource("4_t6d6t")])
+is_player = true
+is_selectable = false
+sprite = ExtResource("6_jmb7s")

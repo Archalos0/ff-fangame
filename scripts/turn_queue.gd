@@ -32,7 +32,7 @@ func initialize():
 	battle_menu.player_character_informations.load_characters(characters.filter(func(character): return character.is_player))
 
 func play_turn():
-	if active_character.stats.health > 0:
+	if active_character.stats.health_point > 0:
 		active_character.initialize_turn()
 		
 		var action: Action
@@ -41,12 +41,14 @@ func play_turn():
 		if active_character.is_player == true:
 			battle_menu.update_actions_buttons(active_character.actions)
 		
-		
 			var has_select_actions_and_target: bool = false
 			while not has_select_actions_and_target:
 				
 				action = await _select_actions()
-				targets = await get_target(action)
+				if action.target_type == Action.TARGET_TYPE.SELF:
+					targets = [active_character]
+				elif action.target_type != Action.TARGET_TYPE.NONE:
+					targets = await get_target(action)
 				
 				has_select_actions_and_target = is_action_and_target_valid(action, targets)
 			

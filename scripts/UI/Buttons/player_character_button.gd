@@ -18,7 +18,7 @@ func _ready() -> void:
 func set_character(new_character: Character):
 	character = new_character
 	character_name.text = character.character_name
-	hp.text = str(character.stats.health) + " / " + str(character.stats.health)
+	hp.text = str(character.stats.health_point) + " / " + str(character.stats.health_point)
 	action_selected.text = ""
 
 func _on_button_up() -> void:

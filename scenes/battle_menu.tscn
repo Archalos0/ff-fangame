@@ -1,13 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwxim7a03270n"]
+[gd_scene load_steps=6 format=3 uid="uid://bwxim7a03270n"]
 
 [ext_resource type="Script" path="res://scripts/battle_menu.gd" id="1_quhk2"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/target_selection_menu.gd" id="4_eyooa"]
-[ext_resource type="Resource" uid="uid://ch0skfp6wcka4" path="res://ressources/actions/attack.tres" id="4_p06pf"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/menu_handler.gd" id="4_vka4l"]
-[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="5_hbmq4"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/player_selection_menu.gd" id="5_jdmb0"]
-[ext_resource type="PackedScene" uid="uid://b30pk6sumq6rl" path="res://scenes/UI/action_button.tscn" id="5_lafcj"]
-[ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/escape.tres" id="6_30gwh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3q5r"]
 bg_color = Color(0.141176, 0.301961, 1, 1)
@@ -51,30 +47,6 @@ offset_top = 11.0
 offset_right = 171.0
 offset_bottom = 156.0
 
-[node name="AttackButton" parent="ActionSelection/VBoxContainer" instance=ExtResource("5_lafcj")]
-layout_mode = 2
-text = "Attack"
-action_resource = ExtResource("4_p06pf")
-
-[node name="HandSelection" parent="ActionSelection/VBoxContainer/AttackButton" index="0"]
-visible = false
-
-[node name="DefendButton" parent="ActionSelection/VBoxContainer" instance=ExtResource("5_lafcj")]
-layout_mode = 2
-text = "Defend"
-action_resource = ExtResource("5_hbmq4")
-
-[node name="HandSelection" parent="ActionSelection/VBoxContainer/DefendButton" index="0"]
-visible = false
-
-[node name="EscapeButton" parent="ActionSelection/VBoxContainer" instance=ExtResource("5_lafcj")]
-layout_mode = 2
-text = "Escape"
-action_resource = ExtResource("6_30gwh")
-
-[node name="HandSelection" parent="ActionSelection/VBoxContainer/EscapeButton" index="0"]
-visible = false
-
 [node name="TargetSelection" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 2
@@ -116,7 +88,3 @@ offset_left = 12.0
 offset_top = 10.0
 offset_right = 569.0
 offset_bottom = 156.0
-
-[editable path="ActionSelection/VBoxContainer/AttackButton"]
-[editable path="ActionSelection/VBoxContainer/DefendButton"]
-[editable path="ActionSelection/VBoxContainer/EscapeButton"]

@@ -9,11 +9,7 @@ func _ready() -> void:
 	initialize()
 
 func load_action_resource():
-	match action_resource.action_class:
-		Action.ACTION_CLASS.PHYSICAL:
-			set_action(Special.from_action_resource(action_resource))
-		_:
-			set_action(Magic.from_action_resource(action_resource))
+	set_action(Action.from_action_resource(action_resource))
 
 func set_action(new_action: Action):
 	action = new_action
