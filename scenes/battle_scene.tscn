@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyrh7x6drt5m2"]
+[gd_scene load_steps=8 format=3 uid="uid://dyrh7x6drt5m2"]
 
 [ext_resource type="PackedScene" uid="uid://2hp84b1nweti" path="res://scenes/turn_queue.tscn" id="1_78bgw"]
 [ext_resource type="PackedScene" uid="uid://wjgldpaop2o" path="res://scenes/character.tscn" id="2_l5bt3"]
@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://ds3bdm33tld2i" path="res://ressources/characters/black_mage.tres" id="4_xq3ge"]
 [ext_resource type="PackedScene" uid="uid://dklsry4omvh26" path="res://scenes/message_box.tscn" id="5_boqcs"]
 [ext_resource type="Resource" uid="uid://cc2q5xty0kpwb" path="res://ressources/characters/white_mage.tres" id="5_mlcfh"]
-[ext_resource type="Resource" uid="uid://c14y5llampbuw" path="res://ressources/characters/thief.tres" id="8_o4upw"]
 
 [sub_resource type="GDScript" id="GDScript_54abh"]
 script/source = "extends Node2D
@@ -20,11 +19,12 @@ unique_name_in_owner = true
 
 [node name="Character" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 101)
+character_resource = ExtResource("4_xq3ge")
 is_player = true
 
 [node name="Character2" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 260)
-character_resource = ExtResource("8_o4upw")
+character_resource = ExtResource("5_mlcfh")
 is_player = true
 
 [node name="Character3" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
@@ -39,9 +39,6 @@ character_resource = ExtResource("5_mlcfh")
 
 [node name="BattleMenu" parent="CanvasLayer" instance=ExtResource("3_e4y40")]
 unique_name_in_owner = true
-
-[node name="ActionSelection" parent="CanvasLayer/BattleMenu" index="0" node_paths=PackedStringArray("items")]
-items = [null, null, null]
 
 [node name="MessageBox" parent="CanvasLayer" instance=ExtResource("5_boqcs")]
 unique_name_in_owner = true

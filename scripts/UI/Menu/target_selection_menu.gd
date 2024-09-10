@@ -7,4 +7,4 @@ func load_characters(p_enemies: Array[Character]):
 	for enemy in characters:
 		var target_button = TARGET_BUTTON.instantiate()
 		target_button.set_character(enemy)
-		v_box_container.add_child(target_button)
+		self.buttons.add_child(target_button)

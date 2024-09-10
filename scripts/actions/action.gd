@@ -125,7 +125,7 @@ func calcul_power(source: Character):
 		ACTION_TYPE.PHYSICAL_ATTACK:
 			spell_power = source.stats.strenght * spell_power
 		ACTION_TYPE.MAGICAL_ATTACK:
-			spell_power = source.stats.magic * spell_power
+			spell_power = source.stats.intellect * spell_power
 	
 	return spell_power
 

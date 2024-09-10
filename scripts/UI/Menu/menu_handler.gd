@@ -1,18 +1,22 @@
 class_name MenuHandler extends Panel
 
-@onready var v_box_container: VBoxContainer = $VBoxContainer
-
-@export var items: Array[CommandButton]
+@onready var buttons: VBoxContainer = $VBoxContainer
 
 func _ready() -> void:
-	pass
+	buttons = get_node("Buttons")
+	
 
 func get_focus():
-	if v_box_container.get_child_count() > 0:
-		for item in v_box_container.get_children():
+	if buttons.get_child_count() > 0:
+		for item in buttons.get_children():
 			item.focus_mode = Control.FOCUS_ALL
-		v_box_container.get_child(0).grab_focus()
+		buttons.get_child(0).grab_focus()
 
 func lost_focus():
-	for item in v_box_container.get_children():
+	for item in buttons.get_children():
 		item.focus_mode = Control.FOCUS_NONE
+
+func select_all():
+	#for item: TargetButton in v_box_container.get_children():
+		#item._on_focus_entered()
+	pass

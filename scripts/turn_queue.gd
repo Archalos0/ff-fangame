@@ -119,11 +119,14 @@ func get_target(action: Action):
 	var potential_targets: Array[Character] = _get_targets_list(action)
 	
 	_set_targets_selectable(potential_targets, true)
+	
 	match action.target_type:
 		Action.TARGET_TYPE.SINGLE_ALLY:
 			battle_menu.set_focus_on_player_character()
 		Action.TARGET_TYPE.SINGLE_ENEMY:
 			battle_menu.set_focus_on_target_selection()
+		Action.TARGET_TYPE.ALL_ENEMIES:
+			battle_menu.select_all_enemies()
 	
 	var targets_selected: Array[Character] = await _select_targets(potential_targets)
 	
