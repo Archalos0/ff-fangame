@@ -10,3 +10,4 @@ description = "Try to escape the fight"
 cost = 0
 target_type = 4
 action_types = Array[int]([1])
+spell_power = 0

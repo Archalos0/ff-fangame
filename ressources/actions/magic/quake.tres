@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MagicResource" load_steps=2 format=3 uid="uid://dbp4m3y5qf12u"]
+[gd_resource type="Resource" script_class="MagicResource" load_steps=2 format=3 uid="uid://dp4eii6y3axry"]
 
 [sub_resource type="GDScript" id="GDScript_s0jps"]
 script/source = "class_name MagicResource extends ActionResource
@@ -11,9 +11,9 @@ func _init(p_name: String = \"\", p_description: String = \"\", p_cost: int = 0,
 [resource]
 script = SubResource("GDScript_s0jps")
 action_class = 2
-action_name = "Fire"
-description = "Deals fire damage."
+action_name = "Quake"
+description = "Deals earth damage."
 cost = 1
 target_type = 0
 action_types = Array[int]([0])
-spell_power = 0
+spell_power = 150

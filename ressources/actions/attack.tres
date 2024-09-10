@@ -10,3 +10,4 @@ description = "Basic attack"
 cost = 0
 target_type = 0
 action_types = Array[int]([0])
+spell_power = 0

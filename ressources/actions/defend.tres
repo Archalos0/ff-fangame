@@ -10,3 +10,4 @@ description = "Defend himself"
 cost = 0
 target_type = 5
 action_types = Array[int]([1])
+spell_power = 0

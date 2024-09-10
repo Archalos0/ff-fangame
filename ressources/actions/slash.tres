@@ -10,3 +10,4 @@ description = "Slash all anemies"
 cost = 0
 target_type = 2
 action_types = Array[int]([0])
+spell_power = 0
