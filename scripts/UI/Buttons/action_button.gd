@@ -2,14 +2,18 @@ class_name ActionButton extends CommandButton
 
 @onready var turn_queue: TurnQueue = $"/root/BattleScene/TurnQueue"
 
-@export var action_ressource: ActionResource
+@export var action_resource: ActionResource
 var action: Action
 
 func _ready() -> void:
 	initialize()
 
-func load_action_ressource():
-	set_action(Action.from_action_resource(action_ressource))
+func load_action_resource():
+	match action_resource.action_class:
+		Action.ACTION_CLASS.PHYSICAL:
+			set_action(Special.from_action_resource(action_resource))
+		_:
+			set_action(Magic.from_action_resource(action_resource))
 
 func set_action(new_action: Action):
 	action = new_action

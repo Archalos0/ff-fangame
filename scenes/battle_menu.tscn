@@ -54,7 +54,7 @@ offset_bottom = 156.0
 [node name="AttackButton" parent="ActionSelection/VBoxContainer" instance=ExtResource("5_lafcj")]
 layout_mode = 2
 text = "Attack"
-action_ressource = ExtResource("4_p06pf")
+action_resource = ExtResource("4_p06pf")
 
 [node name="HandSelection" parent="ActionSelection/VBoxContainer/AttackButton" index="0"]
 visible = false
@@ -62,7 +62,7 @@ visible = false
 [node name="DefendButton" parent="ActionSelection/VBoxContainer" instance=ExtResource("5_lafcj")]
 layout_mode = 2
 text = "Defend"
-action_ressource = ExtResource("5_hbmq4")
+action_resource = ExtResource("5_hbmq4")
 
 [node name="HandSelection" parent="ActionSelection/VBoxContainer/DefendButton" index="0"]
 visible = false
@@ -70,7 +70,7 @@ visible = false
 [node name="EscapeButton" parent="ActionSelection/VBoxContainer" instance=ExtResource("5_lafcj")]
 layout_mode = 2
 text = "Escape"
-action_ressource = ExtResource("6_30gwh")
+action_resource = ExtResource("6_30gwh")
 
 [node name="HandSelection" parent="ActionSelection/VBoxContainer/EscapeButton" index="0"]
 visible = false

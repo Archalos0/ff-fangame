@@ -6,11 +6,7 @@ class_name Character extends Node2D
 @export var character_resource: CharacterResource
 @export var stats: Stats
 
-@export var actions = {
-	"Physical" = [],
-	"White Magic" = [],
-	"Black Magic" = []
-}
+@export var actions: Array[Action] = []
 
 # Character controls
 @export var is_player: bool
@@ -45,12 +41,11 @@ func _load_from_resource(p_character_resource: CharacterResource = null):
 	for action_resource in p_character_resource.actions_resources:
 		match action_resource.action_class:
 			Action.ACTION_CLASS.PHYSICAL:
-				actions["Physical"].append(Special.from_action_resource(action_resource))
+				actions.append(Special.from_action_resource(action_resource))
 			Action.ACTION_CLASS.WHITE_MAGIC:
-				actions["White Magic"].append(Magic.from_action_resource(action_resource))
+				actions.append(Magic.from_action_resource(action_resource))
 			Action.ACTION_CLASS.BLACK_MAGIC:
-				actions["Black Magic"].append(Magic.from_action_resource(action_resource))
-			
+				actions.append(Magic.from_action_resource(action_resource))
 	
 	sprite.texture = p_character_resource.sprite
 
@@ -93,10 +88,6 @@ func end_turn():
 	arrow_character_playing.visible = false
 
 func act(action: Action, targets: Array[Character]):
-	if action is Magic:
-		print("magic")
-	else:
-		print("pas magic")
 	action.execute(self, targets)
 
 func attack(target: Character):
