@@ -118,5 +118,5 @@ func _unhandled_input_event(viewport: Node, event: InputEvent, shape_idx: int) -
 
 func character_selected():
 	if is_selectable:
-		turn_queue.target_selected.emit(self)
+		turn_queue.target_selected.emit([self])
 		arrow_character_selection.visible = false
