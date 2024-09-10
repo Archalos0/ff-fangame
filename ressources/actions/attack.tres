@@ -4,7 +4,9 @@
 
 [resource]
 script = ExtResource("1_bshkg")
+action_class = 0
 action_name = "Attack"
 description = "Basic attack"
 cost = 0
 target_type = 0
+action_types = Array[int]([0])

@@ -27,9 +27,7 @@ func initialize():
 	active_character = get_child(0)
 	for node_character in get_children():
 		characters.append(node_character)
-		#characters[characters.size() - 1]._init()
 		
-	#battle_menu.target_selection.load_enemies(characters.filter(func(character): return not character.is_player))
 	battle_menu.target_selection.load_characters(characters.filter(func(character): return not character.is_player))
 	battle_menu.player_character_informations.load_characters(characters.filter(func(character): return character.is_player))
 

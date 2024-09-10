@@ -6,7 +6,11 @@ class_name Character extends Node2D
 @export var character_resource: CharacterResource
 @export var stats: Stats
 
-@export var actions: Array[Action] = []
+@export var actions = {
+	"Physical" = [],
+	"White Magic" = [],
+	"Black Magic" = []
+}
 
 # Character controls
 @export var is_player: bool
@@ -39,7 +43,14 @@ func _load_from_resource(p_character_resource: CharacterResource = null):
 	stats.luck			= p_character_resource.luck
 	
 	for action_resource in p_character_resource.actions_resources:
-		actions.append(Action.from_action_resource(action_resource))
+		match action_resource.action_class:
+			Action.ACTION_CLASS.PHYSICAL:
+				actions["Physical"].append(Special.from_action_resource(action_resource))
+			Action.ACTION_CLASS.WHITE_MAGIC:
+				actions["White Magic"].append(Magic.from_action_resource(action_resource))
+			Action.ACTION_CLASS.BLACK_MAGIC:
+				actions["Black Magic"].append(Magic.from_action_resource(action_resource))
+			
 	
 	sprite.texture = p_character_resource.sprite
 
@@ -80,28 +91,13 @@ func initialize_turn():
 
 func end_turn():
 	arrow_character_playing.visible = false
-	
 
 func act(action: Action, targets: Array[Character]):
-	match action.target_type:
-		Action.TARGET_TYPE.SINGLE_ALLY:
-			print("single ally")
-			
-		Action.TARGET_TYPE.ALL_ALLIES:
-			print("all allies")
-			
-		Action.TARGET_TYPE.SINGLE_ENEMY:
-			targets[0].get_hit(stats.strenght)
-			
-		Action.TARGET_TYPE.ALL_ENEMIES:
-			for target in targets:
-				target.get_hit(stats.strenght)
-			
-		Action.TARGET_TYPE.NONE:
-			print("None")
-			
-		Action.TARGET_TYPE.SELF:
-			print("self")
+	if action is Magic:
+		print("magic")
+	else:
+		print("pas magic")
+	action.execute(self, targets)
 
 func attack(target: Character):
 	print(name + " is attacking " + target.name)
@@ -115,10 +111,21 @@ func escape():
 func play():
 	print(name + " is playing")
 
+#TODO: Implement the other effect of the spell
+func receive_spell(spell: Action.Spell):
+	if spell.is_offensive == true:
+		get_hit(spell.power - stats.defense)
+	else:
+		get_heal(spell.power)
+
 func get_hit(damage: int):
 	stats.health -= damage
 	health_bar.value = stats.health
 
+func get_heal(hp: int):
+	stats.health += hp
+	health_bar.value = stats.health
+	
 func _on_mouse_entered() -> void:
 	get_focus()
 

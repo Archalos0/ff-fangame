@@ -4,7 +4,9 @@
 
 [resource]
 script = ExtResource("1_s31qn")
+action_class = 1
 action_name = "Heal"
 description = "Heal an ally"
 cost = 0
 target_type = 1
+action_types = Array[int]([1])

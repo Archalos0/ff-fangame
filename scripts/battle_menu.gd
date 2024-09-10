@@ -17,12 +17,13 @@ func _ready() -> void:
 	for action_button: ActionButton in action_selection.v_box_container.get_children():
 		action_button.load_action_ressource()
 
-func update_actions_buttons(actions: Array[Action]):
+func update_actions_buttons(actions):
 	
-	for action: Action in actions:
-		var action_button: ActionButton = ACTION_BUTTON.instantiate()
-		action_button.set_action(action)
-		action_selection.v_box_container.add_child(action_button)
+	for categorie: String in actions:
+		for action: Action in actions[categorie]:
+			var action_button: ActionButton = ACTION_BUTTON.instantiate()
+			action_button.set_action(action)
+			action_selection.v_box_container.add_child(action_button)
 
 func delete_previous_action():
 	for action_button: ActionButton in action_selection.v_box_container.get_children():

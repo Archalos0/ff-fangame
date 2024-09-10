@@ -4,7 +4,9 @@
 
 [resource]
 script = ExtResource("1_urgby")
+action_class = 0
 action_name = "Defend"
 description = "Defend himself"
 cost = 0
 target_type = 5
+action_types = Array[int]([1])

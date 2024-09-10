@@ -4,7 +4,9 @@
 
 [resource]
 script = ExtResource("1_u2bgs")
+action_class = 0
 action_name = "Slash"
 description = "Slash all anemies"
 cost = 0
 target_type = 2
+action_types = Array[int]([0])
