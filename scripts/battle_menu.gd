@@ -23,6 +23,7 @@ func delete_previous_action():
 		if(action_button.action_resource != null):
 			continue
 		
+		action_selection.v_box_container.remove_child(action_button)
 		action_button.queue_free()
 
 func set_focus_on_target_selection():
