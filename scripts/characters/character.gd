@@ -90,18 +90,6 @@ func end_turn():
 func act(action: Action, targets: Array[Character]):
 	action.execute(self, targets)
 
-func attack(target: Character):
-	print(name + " is attacking " + target.name)
-
-func defend():
-	print(name + " is defending")
-
-func escape():
-	print(name + " is escaping")
-
-func play():
-	print(name + " is playing")
-
 #TODO: Implement the other effect of the spell
 func receive_spell(spell: Action.Spell):
 	if spell.is_offensive == true:
