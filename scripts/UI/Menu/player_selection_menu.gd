@@ -2,7 +2,6 @@ class_name PlayerSelectionMenu extends CharacterMenuHandler
 
 const CHARACTER_INFORMATIONS = preload("res://scenes/UI/character_informations.tscn")
 
-
 func load_characters(p_player_characters: Array[Character]):
 	super(p_player_characters)
 	for character in characters:

@@ -21,6 +21,12 @@ func set_character(new_character: Character):
 	hp.text = str(character.stats.health_point) + " / " + str(character.stats.health_point)
 	action_selected.text = ""
 
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		emit_signal("character_has_been_selected")
+		event.consume() # Empêche la propagation de l'événement.
+	return
+
 func _on_button_up() -> void:
 	character.character_selected()
 	

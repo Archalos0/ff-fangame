@@ -1,7 +1,7 @@
 class_name TurnQueue extends Node2D
 
 signal action_selected(action: Action)
-signal target_selected(target: Character)
+signal target_selected(targets: Array[Character])
 
 @onready var message_box: MessageBox = %MessageBox
 @onready var battle_menu: BattleMenu = %BattleMenu
@@ -127,17 +127,24 @@ func get_target(action: Action):
 			battle_menu.set_focus_on_target_selection()
 		Action.TARGET_TYPE.ALL_ENEMIES:
 			battle_menu.select_all_enemies()
+		Action.TARGET_TYPE.ALL_ALLIES:
+			battle_menu.select_all_allies()
 	
 	var targets_selected: Array[Character] = await _select_targets(potential_targets)
 	
 	return targets_selected
 
 func _select_targets(targets: Array[Character]) -> Array[Character]:
-	
+
 	message_box.set_message("Wait for target...")
 	var targets_selected: Array[Character] = []
-	targets_selected.append(await target_selected)
-	message_box.set_message("target selected : " + targets_selected[0].to_string())
+	targets_selected.append_array(await target_selected)
+	
+	var message: String = "Targets selected : "
+	for character: Character in targets_selected:
+		message += character.character_name + ", "
+	message_box.set_message(message)
+	
 	
 	_set_targets_selectable(targets, false)
 	

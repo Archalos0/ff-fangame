@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwxim7a03270n"]
+[gd_scene load_steps=7 format=3 uid="uid://bwxim7a03270n"]
 
 [ext_resource type="Script" path="res://scripts/battle_menu.gd" id="1_quhk2"]
+[ext_resource type="Script" path="res://scripts/UI/Menu/buttons_container.gd" id="3_fpyf4"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/target_selection_menu.gd" id="4_eyooa"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/menu_handler.gd" id="4_vka4l"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/player_selection_menu.gd" id="5_jdmb0"]
@@ -46,6 +47,7 @@ offset_left = 18.0
 offset_top = 11.0
 offset_right = 171.0
 offset_bottom = 156.0
+script = ExtResource("3_fpyf4")
 
 [node name="TargetSelection" type="Panel" parent="."]
 layout_mode = 1
