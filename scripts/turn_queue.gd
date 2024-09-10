@@ -40,6 +40,7 @@ func play_turn():
 		
 		if active_character.is_player == true:
 			battle_menu.update_actions_buttons(active_character.actions)
+			await get_tree().create_timer(1.5).timeout
 		
 			var has_select_actions_and_target: bool = false
 			while not has_select_actions_and_target:
