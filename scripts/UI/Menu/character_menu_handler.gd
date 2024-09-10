@@ -10,20 +10,30 @@ func load_characters(p_characters: Array[Character]):
 func _gui_input(event: InputEvent) -> void:
 	if _are_all_selected:
 		if event is InputEventKey and event.is_action_pressed("Validate"):
-			var characters: Array[Character] = []
-			match name:
-				"PlayerCharacterInformations":
-					for character_button: PlayerCharacterButton in buttons.get_children():
-						characters.append(character_button.character)
-				"TargetSelection":
-					for character_button: TargetButton in buttons.get_children():
-						characters.append(character_button.character)
-			turn_queue.emit_signal("target_selected", characters)
+			_send_characters()
+			_reset_ui()
 		return
 
-func select_all_character():	
-	for button in buttons.get_children():
-		button.set_disabled(true) # Désactive tous les boutons
+
+func _send_characters():
+	var characters: Array[Character] = []
+	match name:
+		"PlayerCharacterInformations":
+			for character_button: PlayerCharacterButton in buttons.get_children():
+				characters.append(character_button.character)
+		"TargetSelection":
+			for character_button: TargetButton in buttons.get_children():
+				characters.append(character_button.character)
+	turn_queue.emit_signal("target_selected", characters)
+
+func _reset_ui():
+	for character_button in buttons.get_children():
+		character_button.set_is_selected(false)
+		character_button.focus_mode = Control.FOCUS_NONE
+	focus_mode = Control.FOCUS_NONE
+	buttons.focus_mode = Control.FOCUS_NONE
+	
+func select_all_character():
 	_are_all_selected = true
 	for target_button in buttons.get_children():
 		target_button.set_is_selected(true)
