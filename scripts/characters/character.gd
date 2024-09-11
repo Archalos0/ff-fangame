@@ -10,7 +10,7 @@ class_name Character extends Node2D
 
 # Character controls
 @export var is_player: bool
-@export var is_selectable: bool = false
+var is_selectable: ISelectable = ISelectable.new()
 
 # Character UI
 @onready var sprite: Sprite2D = $Sprite
@@ -35,8 +35,6 @@ func _load_from_resource(p_character_resource: CharacterResource = null):
 	stats.intellect		= p_character_resource.intellect
 	stats.mind			= p_character_resource.mind
 	
-	#actions.append(Action.new("Attack", "Attack an  enemy", 0, Action.TARGET_TYPE.SINGLE_ENEMY, Action.ACTION_TYPE.BASIC_ATTACK, 1, [], [], Action.ELEMENT.NONE))
-	#actions.append(Action.new("Run Away", "Try to run away from the battle", 0, Action.TARGET_TYPE.SELF, Action.ACTION_TYPE.PHYSICAL_ATTACK, 0, [Action.BUFF.RUNNING], [Action.DEBUFF.DEFENSE_NONE], Action.ELEMENT.NONE))
 	for action_resource in p_character_resource.actions_resources:
 		actions.append(Action.from_action_resource(action_resource))
 	
@@ -54,6 +52,8 @@ func _ready() -> void:
 	health_bar.max_value = stats.health_point
 	health_bar.min_value = 0
 	health_bar.value = stats.health_point
+	
+	is_selectable.set_is_selectable(false)
 
 func _place_health_bar():
 	var sprite_size = sprite.texture.get_width()
@@ -103,14 +103,14 @@ func _on_mouse_entered() -> void:
 	get_focus()
 
 func get_focus():
-	if is_selectable:
+	if is_selectable.get_is_selectable():
 		arrow_character_selection.visible = true
 
 func _on_mouse_exited() -> void:
 	lost_focus()
 
 func lost_focus():
-	if is_selectable:
+	if is_selectable.get_is_selectable():
 		arrow_character_selection.visible = false
 
 func _unhandled_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -118,6 +118,6 @@ func _unhandled_input_event(viewport: Node, event: InputEvent, shape_idx: int) -
 		character_selected()
 
 func character_selected():
-	if is_selectable:
+	if is_selectable.get_is_selectable():
 		turn_queue.target_selected.emit([self])
 		arrow_character_selection.visible = false

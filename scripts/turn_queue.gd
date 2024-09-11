@@ -153,7 +153,7 @@ func _select_targets(targets: Array[Character]) -> Array[Character]:
 
 func _set_targets_selectable(targets: Array[Character], is_selectable: bool):
 	for character: Character in targets:
-		character.is_selectable = is_selectable
+		character.is_selectable.set_is_selectable(is_selectable)
 
 func get_enemies():
 	if active_character.is_player == true:

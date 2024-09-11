@@ -18,7 +18,6 @@ class_name CharacterResource extends Resource
 
 # Character controls
 @export var is_player: bool
-@export var is_selectable: bool = false
 
 # Character design
 @export var sprite: Texture2D
