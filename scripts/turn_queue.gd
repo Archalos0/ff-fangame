@@ -110,11 +110,11 @@ func print_debug_message(action: Action, targets: Array[Character]):
 	
 	print(debug_message)
 
-func _select_actions():
+func _select_actions() -> Action:
 	battle_menu.set_focus_on_action_selection()
 	
 	message_box.set_message("Wait for action....")
-	var action = await action_selected
+	var action: Action = await action_selected
 	message_box.set_message("action selected : " + action.to_string())
 	return action
 

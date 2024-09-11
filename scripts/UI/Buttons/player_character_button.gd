@@ -27,8 +27,8 @@ func _gui_input(event: InputEvent) -> void:
 		event.consume() # Empêche la propagation de l'événement.
 	return
 
-func _on_button_up() -> void:
-	character.character_selected()
+#func _on_button_up() -> void:
+	#character.character_selected()
 	
 func _on_focus_entered() -> void:
 	on_focus_entered()

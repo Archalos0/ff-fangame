@@ -11,8 +11,8 @@ func set_character(new_character: Character):
 	character = new_character
 	text = character.character_name
 
-func _on_button_up() -> void:
-	character.character_selected()
+#func _on_button_up() -> void:
+	#character.character_selected()
 	
 func _on_focus_entered() -> void:
 	on_focus_entered()

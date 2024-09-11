@@ -1,21 +1,23 @@
 class_name MenuHandler extends Panel
 
-@onready var buttons: VBoxContainer = $Buttons
+@onready var _buttons: ButtonsHandler = $Buttons
 
 var _has_focus: bool = false
 var _are_all_selected: bool = false
 
-func _ready() -> void:
-	buttons = get_node("Buttons")
-
 func select_all():
 	if _has_focus:
-		set_are_all_selected(true) 
-		for button: CommandButton in buttons.get_children():
-			button.set_is_selected(true)
+		set_are_all_selected(true)
+		_buttons.select_all()
 		grab_focus()
 	else:
 		push_error("Le menu " + name + " n'a pas le focus")
+
+func _reset_ui():
+	_buttons.unselect_all()
+	focus_mode = Control.FOCUS_NONE
+	_buttons.focus_mode = Control.FOCUS_NONE
+	_are_all_selected = false
 
 func get_are_all_selected():
 	return _are_all_selected
@@ -25,23 +27,18 @@ func set_are_all_selected(p_are_all_selected: bool):
 
 func set_focus_state(p_focus_state):
 	_has_focus = p_focus_state
+	
 	if _has_focus == true:
+		focus_mode = Control.FOCUS_ALL
+		grab_focus()
 		if not _are_all_selected:
-			for button: CommandButton in buttons.get_children():
-				button.focus_mode = Control.FOCUS_ALL
-			buttons.get_child(0).grab_focus()
+			_buttons.select_first()
 		else:
-			if buttons.get_child_count() > 0:
-				for button: CommandButton in buttons.get_children():
-					button.focus_mode = Control.FOCUS_NONE
-				var button: CommandButton = buttons.get_child(0)
-				button.set_is_selected(true)
-			focus_mode = Control.FOCUS_ALL
-			grab_focus()
+			_buttons.select_all()
 	else:
-		if buttons.get_child_count() > 0:
-			for button: CommandButton in buttons.get_children():
-					button.focus_mode = Control.FOCUS_NONE
+		focus_mode = Control.FOCUS_NONE
+		_buttons.unselect_all()
+
 
 func get_focus_state():
 	return _has_focus
