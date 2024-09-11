@@ -93,6 +93,20 @@ func is_action_and_target_valid(action: Action, targets: Array[Character]):
 		or (targets != [] and action.target_type != Action.TARGET_TYPE.NONE))
 
 func end_turn():
+	var all_opponents_dead: bool = true
+	for opponent: Character in characters:
+		if active_character.is_player and not opponent.is_player and opponent.stats.health_point > 0:
+			all_opponents_dead = false
+			break
+		elif not active_character.is_player and opponent.is_player and opponent.stats.health_point > 0:
+			all_opponents_dead = false
+			break
+	if all_opponents_dead:
+		if active_character.is_player:
+			print("YOU WIN")
+		else:
+			print("YOU LOST")
+	
 	active_character.end_turn()
 	battle_menu.delete_previous_action()
 	set_next_character()
