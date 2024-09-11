@@ -32,6 +32,15 @@ func initialize():
 	battle_menu.player_character_informations.load_characters(characters.filter(func(character): return character.is_player))
 
 func play_turn():
+	if is_battle_end():
+		if active_character.is_player:
+			print("YOU WIN")
+			message_box.set_message("YOU WIN")
+		else:
+			print("YOU LOST")
+			message_box.set_message("YOU LOST")
+		return
+	
 	if active_character.stats.health_point > 0:
 		active_character.initialize_turn()
 		
@@ -93,20 +102,6 @@ func is_action_and_target_valid(action: Action, targets: Array[Character]):
 		or (targets != [] and action.target_type != Action.TARGET_TYPE.NONE))
 
 func end_turn():
-	var all_opponents_dead: bool = true
-	for opponent: Character in characters:
-		if active_character.is_player and not opponent.is_player and opponent.stats.health_point > 0:
-			all_opponents_dead = false
-			break
-		elif not active_character.is_player and opponent.is_player and opponent.stats.health_point > 0:
-			all_opponents_dead = false
-			break
-	if all_opponents_dead:
-		if active_character.is_player:
-			print("YOU WIN")
-		else:
-			print("YOU LOST")
-	
 	active_character.end_turn()
 	battle_menu.delete_previous_action()
 	set_next_character()
@@ -186,3 +181,15 @@ func set_next_character():
 	if(get_child(new_index).name == "Timer"):
 		new_index = (new_index + 1) % get_child_count()
 	active_character = get_child(new_index)
+
+func is_battle_end() -> bool:	
+	var all_opponents_dead: bool = true
+	for opponent: Character in characters:
+		if active_character.is_player and not opponent.is_player and opponent.stats.health_point > 0:
+			all_opponents_dead = false
+			break
+		elif not active_character.is_player and opponent.is_player and opponent.stats.health_point > 0:
+			all_opponents_dead = false
+			break
+			
+	return all_opponents_dead
