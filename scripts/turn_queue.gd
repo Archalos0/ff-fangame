@@ -54,7 +54,7 @@ func play_turn():
 				has_select_actions_and_target = is_action_and_target_valid(action, targets)
 			
 		else:
-			
+			await get_tree().create_timer(1.5).timeout
 			action = active_character.actions[randi() % active_character.actions.size()]
 			
 			var potential_target: Array[Character] = _get_targets_list(action)
