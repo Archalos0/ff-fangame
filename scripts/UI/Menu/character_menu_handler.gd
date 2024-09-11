@@ -14,16 +14,21 @@ func _gui_input(event: InputEvent) -> void:
 			_reset_ui()
 		return
 
-
 func _send_characters():
 	var characters: Array[Character] = []
-	match name:
-		"PlayerCharacterInformations":
-			for character_button: PlayerCharacterButton in buttons.get_children():
+	if self is PlayerSelectionMenu:
+		for character_button: PlayerCharacterButton in buttons.get_children():
+			characters.append(character_button.character)
+	elif self is TargetSelectionMenu:
+		for character_button: TargetButton in buttons.get_children():
 				characters.append(character_button.character)
-		"TargetSelection":
-			for character_button: TargetButton in buttons.get_children():
-				characters.append(character_button.character)
+	#match name:
+		#"PlayerCharacterInformations":
+			#for character_button: PlayerCharacterButton in buttons.get_children():
+			#characters.append(character_button.character)
+		#"TargetSelection":
+			#for character_button: TargetButton in buttons.get_children():
+				#characters.append(character_button.character)
 	turn_queue.emit_signal("target_selected", characters)
 
 func _reset_ui():
@@ -32,6 +37,7 @@ func _reset_ui():
 		character_button.focus_mode = Control.FOCUS_NONE
 	focus_mode = Control.FOCUS_NONE
 	buttons.focus_mode = Control.FOCUS_NONE
+	_are_all_selected = false
 	
 func select_all_character():
 	_are_all_selected = true
