@@ -18,6 +18,7 @@ func update_actions_buttons(actions):
 		var action_button: ActionButton = ACTION_BUTTON.instantiate()
 		action_button.set_action(action)
 		action_selection.buttons.add_child(action_button)
+		action_button.focus_mode = Control.FOCUS_NONE
 		if previous_button != null:
 			previous_button.focus_next = action_button.get_path()
 			action_button.focus_previous = previous_button.get_path()
