@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="ActionResource" load_steps=2 format=3 uid="uid://c8b07q3k3miq1"]
 
-[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_s31qn"]
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_edyg6"]
 
 [resource]
-script = ExtResource("1_s31qn")
+script = ExtResource("1_edyg6")
 action_class = 1
-action_name = "Heal"
-description = "Heal an ally"
+action_name = "Cure"
+description = "Restores HP."
 cost = 0
 target_type = 1
-action_type = 2
 spell_power = 0
 buffs = Array[int]([])
 debuffs = Array[int]([])
 element = 5
+damage_type = 3
