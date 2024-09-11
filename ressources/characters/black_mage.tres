@@ -22,5 +22,4 @@ defense = 5
 magic_defense = 5
 actions_resources = Array[ExtResource("1_2mdop")]([ExtResource("2_mix2t"), ExtResource("3_lq0y1"), ExtResource("4_wrmh4"), ExtResource("5_knrix")])
 is_player = true
-is_selectable = false
 sprite = ExtResource("6_fv1us")
