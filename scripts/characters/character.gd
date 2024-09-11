@@ -84,11 +84,12 @@ func act(action: Action, targets: Array[Character]):
 	action.execute(self, targets)
 
 #TODO: Implement the other effect of the spell
-func receive_spell(spell: Action.Spell):
-	if spell.is_offensive == true:
-		get_hit(spell.power - stats.defense)
-	else:
-		get_heal(spell.power)
+#TODO: Do I have to keep this function ?
+#func receive_spell(spell: Action.Spell):
+	#if spell.is_offensive == true:
+		#get_hit(spell.power - stats.defense)
+	#else:
+		#get_heal(spell.power)
 
 func get_hit(damage: int):
 	stats.health_point -= damage
