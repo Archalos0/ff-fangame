@@ -6,12 +6,6 @@ signal target_selected(targets: Array[Character])
 @onready var message_box: MessageBox = %MessageBox
 @onready var battle_menu: BattleMenu = %BattleMenu
 
-enum ACTIONS {
-	ATTACK,
-	DEFEND,
-	ESCAPE,
-}
-
 var characters: Array[Character] = []
 var active_character: Character = null
 
