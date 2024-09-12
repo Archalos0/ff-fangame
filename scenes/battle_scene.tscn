@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyrh7x6drt5m2"]
+[gd_scene load_steps=10 format=3 uid="uid://dyrh7x6drt5m2"]
 
 [ext_resource type="PackedScene" uid="uid://2hp84b1nweti" path="res://scenes/turn_queue.tscn" id="1_78bgw"]
 [ext_resource type="PackedScene" uid="uid://wjgldpaop2o" path="res://scenes/character.tscn" id="2_l5bt3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://ds3bdm33tld2i" path="res://ressources/characters/black_mage.tres" id="4_xq3ge"]
 [ext_resource type="PackedScene" uid="uid://dklsry4omvh26" path="res://scenes/message_box.tscn" id="5_boqcs"]
 [ext_resource type="Resource" uid="uid://cc2q5xty0kpwb" path="res://ressources/characters/white_mage.tres" id="5_mlcfh"]
+[ext_resource type="Resource" uid="uid://ccu6cgewng6th" path="res://ressources/characters/monk.tres" id="6_mjmvw"]
 
 [sub_resource type="GDScript" id="GDScript_54abh"]
 script/source = "extends Node2D
@@ -24,8 +25,13 @@ character_resource = ExtResource("4_xq3ge")
 is_player = true
 
 [node name="Character2" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
-position = Vector2(200, 260)
+position = Vector2(200, 212)
 character_resource = ExtResource("4_o4ena")
+is_player = true
+
+[node name="Character5" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(200, 326)
+character_resource = ExtResource("5_mlcfh")
 is_player = true
 
 [node name="Character3" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
@@ -33,8 +39,12 @@ position = Vector2(850, 100)
 character_resource = ExtResource("4_xq3ge")
 
 [node name="Character4" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
-position = Vector2(850, 260)
+position = Vector2(850, 212)
 character_resource = ExtResource("5_mlcfh")
+
+[node name="Character6" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
+position = Vector2(850, 326)
+character_resource = ExtResource("6_mjmvw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
