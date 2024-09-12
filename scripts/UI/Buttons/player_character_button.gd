@@ -26,11 +26,3 @@ func set_is_selected(p_is_selected: bool):
 		character.arrow_character_selection.visible = true
 	else:
 		character.arrow_character_selection.visible = false
-
-func _on_focus_entered() -> void:
-	on_focus_entered()
-	character.get_focus()
-
-func _on_focus_exited() -> void:
-	on_focus_exited()
-	character.lost_focus()
