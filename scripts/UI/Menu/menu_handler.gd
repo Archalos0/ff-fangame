@@ -29,20 +29,19 @@ func get_are_all_selected():
 func set_are_all_selected(p_are_all_selected: bool):
 	_are_all_selected = p_are_all_selected
 
-func set_focus_state(p_focus_state):
+func set_focus_state(p_focus_state) -> void:
 	_has_focus = p_focus_state
 	
-	if _has_focus == true:
-		focus_mode = Control.FOCUS_ALL
-		grab_focus()
-		if not _are_all_selected:
-			_buttons.select_first()
-		else:
-			_buttons.select_all()
+	if not _has_focus:
+		_reset_ui()
+		return
+	
+	focus_mode = Control.FOCUS_ALL
+	grab_focus()
+	if not _are_all_selected:
+		_buttons.select_first()
 	else:
-		focus_mode = Control.FOCUS_NONE
-		_buttons.unselect_all()
-
+		_buttons.select_all()
 
 func get_focus_state():
 	return _has_focus
