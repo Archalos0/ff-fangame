@@ -123,7 +123,7 @@ func calcul_power(source: Character):
 		DAMAGE_TYPE.MAGICAL:
 			power = source.stats.intellect * spell_power / 4
 		DAMAGE_TYPE.HEALING:
-			power = source.stats.mind * spell_power / 4
+			power = source.stats.mind * spell_power
 		_:
 			power = 0
 	
