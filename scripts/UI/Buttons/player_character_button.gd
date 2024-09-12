@@ -20,6 +20,13 @@ func set_character(new_character: Character):
 	hp.text = str(character.stats.health_point) + " / " + str(character.stats.health_point)
 	action_selected.text = ""
 
+func set_is_selected(p_is_selected: bool):
+	super(p_is_selected)
+	if _is_selected:
+		character.arrow_character_selection.visible = true
+	else:
+		character.arrow_character_selection.visible = false
+
 func _on_focus_entered() -> void:
 	on_focus_entered()
 	character.get_focus()
