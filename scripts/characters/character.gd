@@ -98,24 +98,14 @@ func get_hit(damage: int):
 func get_heal(hp: int):
 	stats.health_point += hp
 	health_bar.value = stats.health_point
-	
-func _on_mouse_entered() -> void:
-	get_focus()
 
 func get_focus():
 	if is_selectable.get_is_selectable():
 		arrow_character_selection.visible = true
 
-func _on_mouse_exited() -> void:
-	lost_focus()
-
 func lost_focus():
 	if is_selectable.get_is_selectable():
 		arrow_character_selection.visible = false
-
-func _unhandled_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_pressed():
-		character_selected()
 
 func character_selected():
 	if is_selectable.get_is_selectable():
