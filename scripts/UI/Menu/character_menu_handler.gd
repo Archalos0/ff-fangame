@@ -34,4 +34,3 @@ func _send_characters():
 			characters.append(character_button.character)
 	
 	emit_signal("characters_selected", characters)
-	#turn_queue.emit_signal("target_selected", characters)

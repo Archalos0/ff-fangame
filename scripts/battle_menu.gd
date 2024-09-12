@@ -16,7 +16,8 @@ func _ready() -> void:
 	
 	action_menu.action_selected.connect(Callable(self, "_on_action_selected"))
 	target_menu.connect("characters_selected", Callable(self, "_on_characters_selected"))
-
+	player_character_menu.connect("characters_selected", Callable(self, "_on_characters_selected"))
+	
 func _on_action_selected(action: Action):
 	emit_signal("action_selected", action)
 
