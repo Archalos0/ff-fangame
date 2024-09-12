@@ -1,7 +1,5 @@
 class_name TargetButton extends CommandButton
 
-@onready var turn_queue: TurnQueue = $"/root/BattleScene/TurnQueue"
-
 @export var character: Character
 
 func _ready() -> void:

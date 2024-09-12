@@ -1,7 +1,6 @@
 class_name PlayerCharacterButton extends CommandButton
 
 @onready var h_box_container: HBoxContainer = $HBoxContainer
-@onready var turn_queue: TurnQueue = $"/root/BattleScene/TurnQueue"
 
 @onready var character_name: Label = $HBoxContainer/CharacterName
 @onready var hp: Label = $HBoxContainer/HP
@@ -21,15 +20,6 @@ func set_character(new_character: Character):
 	hp.text = str(character.stats.health_point) + " / " + str(character.stats.health_point)
 	action_selected.text = ""
 
-func _gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		emit_signal("character_has_been_selected")
-		event.consume() # Empêche la propagation de l'événement.
-	return
-
-#func _on_button_up() -> void:
-	#character.character_selected()
-	
 func _on_focus_entered() -> void:
 	on_focus_entered()
 	character.get_focus()

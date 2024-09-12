@@ -1,7 +1,8 @@
 class_name ActionMenu extends MenuHandler
 
+signal action_selected(action: Action)
+
 const ACTION_BUTTON = preload("res://scenes/UI/action_button.tscn")
-@onready var turn_queue: TurnQueue = $"/root/BattleScene/TurnQueue"
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventKey: 
@@ -27,7 +28,7 @@ func _send_action():
 		push_error("Plus d'une action sélectionnée")
 		return
 	
-	turn_queue.emit_signal("action_selected", buttons_selected[0].action)
+	emit_signal("action_selected", buttons_selected[0].action)
 
 func load_actions(p_actions: Array[Action]):
 	for action: Action in p_actions:

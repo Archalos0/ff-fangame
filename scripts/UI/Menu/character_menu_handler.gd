@@ -1,8 +1,8 @@
 class_name CharacterMenuHandler extends MenuHandler
 
-var characters: Array[Character] = []
+signal characters_selected(characters: Array[Character])
 
-@onready var turn_queue: TurnQueue = $"/root/BattleScene/TurnQueue"
+var characters: Array[Character] = []
 
 func load_characters(p_characters: Array[Character]):
 	characters = p_characters
@@ -33,4 +33,5 @@ func _send_characters():
 		for character_button: TargetButton in _buttons.get_buttons_selected():
 			characters.append(character_button.character)
 	
-	turn_queue.emit_signal("target_selected", characters)
+	emit_signal("characters_selected", characters)
+	#turn_queue.emit_signal("target_selected", characters)

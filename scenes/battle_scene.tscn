@@ -11,6 +11,19 @@
 
 [sub_resource type="GDScript" id="GDScript_54abh"]
 script/source = "extends Node2D
+
+@onready var turn_queue: TurnQueue = %TurnQueue
+@onready var battle_menu: BattleMenu = %BattleMenu
+
+func _ready() -> void:
+	battle_menu.characters_selected.connect(Callable(self, \"_on_characters_selected\"))
+	battle_menu.action_selected.connect(Callable(self, \"_on_action_selected\"))
+
+func _on_action_selected(action: Action):
+	turn_queue.action_selected.emit(action)
+
+func _on_characters_selected(characters: Array[Character]):
+	turn_queue.target_selected.emit(characters)
 "
 
 [node name="BattleScene" type="Node2D"]
