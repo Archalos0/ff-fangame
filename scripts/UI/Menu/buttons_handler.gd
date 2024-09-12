@@ -8,6 +8,7 @@ func initialize():
 	_buttons.clear()
 	for command_button: CommandButton in get_children():
 		_buttons.append(command_button)
+		command_button.focus_mode = Control.FOCUS_NONE
 
 func select_next_button():
 	if _index_button_selected < (_buttons.size() - 1):
@@ -27,6 +28,7 @@ func select_all():
 
 func select_first():
 	if _buttons.size() > 0:
+		_index_button_selected = 0
 		_buttons[0].set_is_selected(true)
 		
 func unselect_all():

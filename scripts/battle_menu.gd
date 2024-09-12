@@ -7,6 +7,9 @@ class_name BattleMenu extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mouse_filter = MOUSE_FILTER_PASS
+	action_menu.focus_mode = Control.FOCUS_NONE
+	target_selection.focus_mode = Control.FOCUS_NONE
+	player_character_informations.focus_mode = Control.FOCUS_NONE
 
 func update_actions_buttons(actions):
 	var previous_button: ActionButton = null

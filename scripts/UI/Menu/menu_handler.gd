@@ -5,6 +5,10 @@ class_name MenuHandler extends Panel
 var _has_focus: bool = false
 var _are_all_selected: bool = false
 
+func _ready() -> void:
+	focus_mode = Panel.FOCUS_NONE
+	_buttons.initialize()
+
 func select_all():
 	if _has_focus:
 		set_are_all_selected(true)
