@@ -15,17 +15,16 @@ func _ready() -> void:
 	player_character_menu.focus_mode = Control.FOCUS_NONE
 	
 	action_menu.action_selected.connect(Callable(self, "_on_action_selected"))
-	target_menu.connect("characters_selected", Callable(self, "_on_characters_selected"))
-	player_character_menu.connect("characters_selected", Callable(self, "_on_characters_selected"))
+	target_menu.characters_selected.connect(Callable(self, "_on_characters_selected"))
+	player_character_menu.characters_selected.connect(Callable(self, "_on_characters_selected"))
 	
 func _on_action_selected(action: Action):
-	emit_signal("action_selected", action)
+	action_selected.emit(action)
 
 func _on_characters_selected(characters: Array[Character]):
-	emit_signal("characters_selected", characters)
+	characters_selected.emit(characters)
 
 func update_actions_buttons(actions):
-	var previous_button: ActionButton = null
 	action_menu.load_actions(actions)
 
 func delete_previous_action():

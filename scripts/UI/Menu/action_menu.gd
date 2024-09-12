@@ -28,7 +28,7 @@ func _send_action():
 		push_error("Plus d'une action sélectionnée")
 		return
 	
-	emit_signal("action_selected", buttons_selected[0].action)
+	action_selected.emit(buttons_selected[0].action)
 
 func load_actions(p_actions: Array[Action]):
 	for action: Action in p_actions:
