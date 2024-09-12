@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_sjsu0"]
 [ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/run_away.tres" id="4_2wrc1"]
 [ext_resource type="Script" path="res://ressources/characters/character.gd" id="5_3fdpn"]
-[ext_resource type="Texture2D" uid="uid://calrwa8jodpqf" path="res://assets/Battlers/World04_003_ Outlaw.png" id="6_3ymw8"]
+[ext_resource type="Texture2D" uid="uid://d2j87qegku2rr" path="res://assets/Battlers/World01_002_Salamander.png" id="6_hmh66"]
 
 [resource]
 script = ExtResource("5_3fdpn")
@@ -21,5 +21,4 @@ defense = 5
 magic_defense = 5
 actions_resources = Array[ExtResource("1_7v3v1")]([ExtResource("2_d44h1"), ExtResource("3_sjsu0"), ExtResource("4_2wrc1")])
 is_player = true
-is_selectable = false
-sprite = ExtResource("6_3ymw8")
+sprite = ExtResource("6_hmh66")
