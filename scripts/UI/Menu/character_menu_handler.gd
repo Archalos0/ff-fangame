@@ -34,7 +34,3 @@ func _send_characters():
 			characters.append(character_button.character)
 	
 	turn_queue.emit_signal("target_selected", characters)
-
-func select_all_character():
-	_are_all_selected = true
-	_buttons.select_all()
