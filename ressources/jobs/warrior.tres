@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Job" load_steps=6 format=3 uid="uid://d2mfwgksyojoa"]
+[gd_resource type="Resource" script_class="JobResource" load_steps=6 format=3 uid="uid://d2mfwgksyojoa"]
 
 [ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_neeui"]
 [ext_resource type="Resource" uid="uid://cfhkkifysuca8" path="res://ressources/actions/attack.tres" id="2_0j268"]
@@ -9,5 +9,5 @@
 [resource]
 script = ExtResource("2_p13it")
 job_name = "Warrior"
-actions = Array[ExtResource("1_neeui")]([ExtResource("2_0j268"), ExtResource("3_vyxgl")])
+actions_resources = Array[ExtResource("1_neeui")]([ExtResource("2_0j268"), ExtResource("3_vyxgl")])
 stats_evolution = ExtResource("5_ye6cj")
