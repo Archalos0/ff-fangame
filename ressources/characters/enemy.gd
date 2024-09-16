@@ -1,8 +1,9 @@
-class_name CharacterResource extends Resource
+class_name EnemyResource extends CharacterResource
 
-@export var character_name: String = ""
-@export var level: int = 1
-@export var texture: Texture2D = null
+@export var gils: int = 0
+@export var experience: int = 0
+
+#Enemy stats
 
 #@export var character_name: String
 #

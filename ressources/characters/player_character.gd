@@ -1,8 +1,8 @@
-class_name CharacterResource extends Resource
+class_name PlayerCharacterResource extends CharacterResource
 
-@export var character_name: String = ""
-@export var level: int = 1
-@export var texture: Texture2D = null
+@export var job_resource: JobResource
+
+#equipements
 
 #@export var character_name: String
 #
