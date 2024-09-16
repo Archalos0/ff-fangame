@@ -1,7 +1,7 @@
 class_name BattleMenu extends Control
 
 signal action_selected(action: Action)
-signal characters_selected(charcters: Array[Character])
+signal characters_selected(charcters: Array[Battler])
 
 @onready var action_menu: ActionMenu = $ActionSelection
 @onready var target_menu: TargetSelectionMenu = $TargetSelection
@@ -21,7 +21,7 @@ func _ready() -> void:
 func _on_action_selected(action: Action):
 	action_selected.emit(action)
 
-func _on_characters_selected(characters: Array[Character]):
+func _on_characters_selected(characters: Array[Battler]):
 	characters_selected.emit(characters)
 
 func update_actions_buttons(actions):

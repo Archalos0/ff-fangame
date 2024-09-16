@@ -119,7 +119,7 @@ func calcul_power(source: Character):
 	
 	match damage_type:
 		DAMAGE_TYPE.PHYSICAL:
-			power = (source.stats.strenght / 4) + 8
+			power = (source.stats.strength / 4) + 8
 		DAMAGE_TYPE.MAGICAL:
 			power = source.stats.intellect * spell_power / 4
 		DAMAGE_TYPE.HEALING:
@@ -136,7 +136,7 @@ func execute(source: Character, targets: Array[Character]):
 	match damage_type:
 		DAMAGE_TYPE.PHYSICAL:
 			for target: Character in targets:
-				target.get_hit(power - target.stats.defense)
+				target.set_health_points(target.get_health_points() - (power - target.stats.defense))
 		DAMAGE_TYPE.MAGICAL:
 			for target: Character in targets:
 				target.get_hit(power - target.stats.magic_defense)

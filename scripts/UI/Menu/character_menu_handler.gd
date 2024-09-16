@@ -1,6 +1,6 @@
 class_name CharacterMenuHandler extends MenuHandler
 
-signal characters_selected(characters: Array[Character])
+signal characters_selected(characters: Array[Battler])
 
 var _characters: Array[Battler] = []
 
@@ -24,7 +24,7 @@ func _gui_input(event: InputEvent) -> void:
 			return
 
 func _send_characters():
-	var _characters_selected: Array[Character] = []
+	var _characters_selected: Array[Battler] = []
 
 	if self is PlayerSelectionMenu:
 		for character_button: PlayerCharacterButton in _buttons.get_buttons_selected():
