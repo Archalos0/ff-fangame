@@ -6,8 +6,8 @@ signal target_selected(targets: Array[Character])
 @onready var message_box: MessageBox = %MessageBox
 @onready var battle_menu: BattleMenu = %BattleMenu
 
-var characters: Array[Character] = []
-var active_character: Character = null
+var characters: Array[Battler] = []
+var active_character: Battler = null
 
 func _ready() -> void:
 	
@@ -35,14 +35,14 @@ func play_turn():
 			message_box.set_message("YOU LOST")
 		return
 	
-	if active_character.stats.health_point > 0:
+	if active_character.character_data.stats.health_point > 0:
 		active_character.initialize_turn()
 		
 		var action: Action
 		var targets: Array[Character] = []
 		
 		if active_character.is_player == true:
-			battle_menu.update_actions_buttons(active_character.actions)
+			battle_menu.update_actions_buttons(active_character.character_data.actions)
 			await get_tree().create_timer(1.5).timeout
 		
 			var has_select_actions_and_target: bool = false
@@ -50,7 +50,7 @@ func play_turn():
 				
 				action = await _select_actions()
 				if action.target_type == Action.TARGET_TYPE.SELF:
-					targets = [active_character]
+					targets = [active_character.character_data]
 				elif action.target_type != Action.TARGET_TYPE.NONE:
 					targets = await get_target(action)
 				
@@ -178,11 +178,11 @@ func set_next_character():
 
 func is_battle_end() -> bool:	
 	var all_opponents_dead: bool = true
-	for opponent: Character in characters:
-		if active_character.is_player and not opponent.is_player and opponent.stats.health_point > 0:
+	for opponent: Battler in characters:
+		if active_character.is_player and not opponent.is_player and opponent.character_data.stats.health_point > 0:
 			all_opponents_dead = false
 			break
-		elif not active_character.is_player and opponent.is_player and opponent.stats.health_point > 0:
+		elif not active_character.is_player and opponent.is_player and opponent.character_data.stats.health_point > 0:
 			all_opponents_dead = false
 			break
 			

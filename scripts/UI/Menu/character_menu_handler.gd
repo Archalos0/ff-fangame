@@ -2,9 +2,9 @@ class_name CharacterMenuHandler extends MenuHandler
 
 signal characters_selected(characters: Array[Character])
 
-var _characters: Array[Character] = []
+var _characters: Array[Battler] = []
 
-func load_characters(p_characters: Array[Character]):
+func load_characters(p_characters: Array[Battler]):
 	_characters = p_characters
 	_buttons.initialize()
 

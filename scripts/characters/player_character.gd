@@ -23,3 +23,4 @@ func load_actions():
 
 func load_stats():
 	stats = job.stats
+	stats.health_point = 100
