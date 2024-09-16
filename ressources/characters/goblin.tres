@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyResource" load_steps=4 format=3 uid="uid://xekqkxo6n077"]
+
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_vfgsi"]
+[ext_resource type="Script" path="res://ressources/characters/enemy.gd" id="2_op36h"]
+[ext_resource type="Texture2D" uid="uid://hqxlnerswk4y" path="res://assets/Battlers/World01_001_GreenGoo.png" id="3_5i4ad"]
+
+[resource]
+script = ExtResource("2_op36h")
+gils = 500
+experience = 1250
+actions_resources = Array[ExtResource("1_vfgsi")]([])
+stats = {
+"agility": 4,
+"intellect": 2,
+"mind": 1,
+"strength": 5,
+"vitality": 3
+}
+character_name = "Goblin"
+level = 1
+texture = ExtResource("3_5i4ad")

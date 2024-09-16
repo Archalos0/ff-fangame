@@ -2,8 +2,15 @@ class_name EnemyResource extends CharacterResource
 
 @export var gils: int = 0
 @export var experience: int = 0
+@export var actions_resources: Array[ActionResource]
 
-#Enemy stats
+@export var stats: Dictionary = {
+	"strength": 0,
+	"agility": 0,
+	"vitality": 0,
+	"intellect": 0,
+	"mind": 0
+}
 
 #@export var character_name: String
 #
