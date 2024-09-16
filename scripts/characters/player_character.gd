@@ -10,8 +10,6 @@ func load_from_character_resource(p_resource: CharacterResource):
 	
 	var resource: PlayerCharacterResource = p_resource
 	
-	var new_character = PlayerCharacter.new()
-	
 	character_name	= resource.character_name
 	level			= resource.level
 	texture			= resource.texture
