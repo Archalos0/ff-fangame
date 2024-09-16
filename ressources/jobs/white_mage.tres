@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="JobResource" load_steps=6 format=3 uid="uid://bu1n6nohhq25h"]
+
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_txejj"]
+[ext_resource type="Resource" uid="uid://cfhkkifysuca8" path="res://ressources/actions/attack.tres" id="2_eyrmm"]
+[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_uyg7m"]
+[ext_resource type="Script" path="res://ressources/jobs/job.gd" id="4_t3miq"]
+[ext_resource type="JSON" path="res://ressources/jobs/stats_evolution/white_mage_stats_evolution.json" id="5_e2ive"]
+
+[resource]
+script = ExtResource("4_t3miq")
+job_name = "White mage"
+actions_resources = Array[ExtResource("1_txejj")]([ExtResource("2_eyrmm"), ExtResource("3_uyg7m")])
+stats_evolution = ExtResource("5_e2ive")

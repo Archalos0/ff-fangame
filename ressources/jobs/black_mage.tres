@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="JobResource" load_steps=6 format=3 uid="uid://cgdx6ajehx1ua"]
+
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_2xmxo"]
+[ext_resource type="Resource" uid="uid://cfhkkifysuca8" path="res://ressources/actions/attack.tres" id="2_5hhby"]
+[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_ojh6k"]
+[ext_resource type="Script" path="res://ressources/jobs/job.gd" id="4_0sqir"]
+[ext_resource type="JSON" path="res://ressources/jobs/stats_evolution/black_mage_stats_evolution.json" id="5_8qosv"]
+
+[resource]
+script = ExtResource("4_0sqir")
+job_name = "Black mage"
+actions_resources = Array[ExtResource("1_2xmxo")]([ExtResource("2_5hhby"), ExtResource("3_ojh6k")])
+stats_evolution = ExtResource("5_8qosv")
