@@ -29,7 +29,7 @@ var actions: Array[Action] = []
 			#break
 			#
 
-static func from_resource(job_resource: JobResource, character_level: int):
+static func from_resource(job_resource: JobResource, character_level: int) -> Job:
 	var new_job = Job.new()
 	new_job.job_name = job_resource.job_name
 	
