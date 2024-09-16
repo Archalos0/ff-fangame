@@ -1,4 +1,4 @@
-class_name Stats extends Node
+class_name Stats
 
 @export var health_point: int
 @export var magic_point: int
