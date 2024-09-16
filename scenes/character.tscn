@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3g1yyhevef2b" path="res://assets/Battlers/World01_007_Pirate.png" id="1_38yix"]
 [ext_resource type="Resource" uid="uid://cbgqya4fwns3c" path="res://ressources/characters/warrior.tres" id="2_36j77"]
-[ext_resource type="Script" path="res://scripts/characters/character.gd" id="2_fyw8l"]
+[ext_resource type="Script" path="res://scripts/characters/battler.gd" id="2_fyw8l"]
 [ext_resource type="Texture2D" uid="uid://boidi66kcaha0" path="res://assets/white-arrow.png" id="3_wnayh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44n46"]

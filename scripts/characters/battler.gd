@@ -1,4 +1,4 @@
-class_name Character extends Node2D
+class_name Battler extends Node2D
 
 @export var character_name: String
 

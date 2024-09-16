@@ -34,30 +34,39 @@ unique_name_in_owner = true
 
 [node name="Character" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 101)
+character_name = null
 character_resource = ExtResource("4_xq3ge")
 is_player = true
 
 [node name="Character2" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 212)
+character_name = null
 character_resource = ExtResource("4_o4ena")
 is_player = true
 
 [node name="Character5" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 326)
+character_name = null
 character_resource = ExtResource("5_mlcfh")
 is_player = true
 
 [node name="Character3" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(850, 100)
+character_name = null
 character_resource = ExtResource("4_xq3ge")
+is_player = null
 
 [node name="Character4" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(850, 212)
+character_name = null
 character_resource = ExtResource("5_mlcfh")
+is_player = null
 
 [node name="Character6" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(850, 326)
+character_name = null
 character_resource = ExtResource("6_mjmvw")
+is_player = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
