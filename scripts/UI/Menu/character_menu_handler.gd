@@ -15,13 +15,16 @@ func _gui_input(event: InputEvent) -> void:
 			_reset_ui()
 			return
 		
-		if event.is_action_pressed("Next") and not _are_all_selected:
+		if event.is_action_pressed("Next") and _current_mode_selection == MODE_SELECTION.SINGLE:
 			_buttons.select_next_button()
 			return
 		
-		if event.is_action_pressed("Previous") and not _are_all_selected:
+		if event.is_action_pressed("Previous") and _current_mode_selection == MODE_SELECTION.SINGLE:
 			_buttons.select_previous_button()
 			return
+		
+		if event.is_action_pressed("Change_Mode_Selection") and _authorize_multiple_selection == true:
+			switch_selection_mode()
 
 func _send_characters():
 	var _characters_selected: Array[Battler] = []

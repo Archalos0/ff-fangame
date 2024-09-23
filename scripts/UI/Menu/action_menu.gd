@@ -16,7 +16,6 @@ func _gui_input(event: InputEvent) -> void:
 		if event.is_action_pressed("Previous"):
 			_buttons.select_previous_button()
 			return
-			
 
 func _send_action():
 	var buttons_selected: Array[CommandButton] = _buttons.get_buttons_selected()

@@ -35,14 +35,14 @@ func play_turn():
 			message_box.set_message("YOU LOST")
 		return
 	
-	if active_character.character_data.stats.health_point > 0:
+	if active_character.get_current_health_points() > 0:
 		active_character.initialize_turn()
 		
 		var action: Action
 		var targets: Array[Battler] = []
 		
 		if active_character.is_player == true:
-			battle_menu.update_actions_buttons(active_character.character_data.actions)
+			battle_menu.update_actions_buttons(active_character.get_actions())
 			await get_tree().create_timer(1.5).timeout
 		
 			var has_select_actions_and_target: bool = false
@@ -58,7 +58,7 @@ func play_turn():
 			
 		else:
 			await get_tree().create_timer(1.5).timeout
-			action = active_character.actions[randi() % active_character.actions.size()]
+			action = active_character.get_actions()[randi() % active_character.get_actions().size()]
 			
 			var potential_target: Array[Battler] = _get_targets_list(action)
 			match action.target_type:
@@ -70,9 +70,9 @@ func play_turn():
 					targets = potential_target
 		
 		print_debug_message(action, targets)
-		var targets_data: Array[Character] = []
+		var targets_data: Array[Battler] = []
 		for battler: Battler in targets:
-			targets_data.append(battler.character_data)
+			targets_data.append(battler)
 		active_character.act(action, targets_data)
 	
 	end_turn()
@@ -128,14 +128,10 @@ func get_target(action: Action):
 	_set_targets_selectable(potential_targets, true)
 	
 	match action.target_type:
-		Action.TARGET_TYPE.SINGLE_ALLY:
-			battle_menu.set_focus_on_player_character()
-		Action.TARGET_TYPE.SINGLE_ENEMY:
-			battle_menu.set_focus_on_target_selection()
-		Action.TARGET_TYPE.ALL_ENEMIES:
-			battle_menu.select_all_enemies()
-		Action.TARGET_TYPE.ALL_ALLIES:
-			battle_menu.select_all_allies()
+		Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.ALL_ALLIES:
+			battle_menu.set_focus_on_player_character((action.target_type == Action.TARGET_TYPE.ALL_ALLIES))
+		Action.TARGET_TYPE.SINGLE_ENEMY, Action.TARGET_TYPE.ALL_ENEMIES:
+			battle_menu.set_focus_on_target_selection((action.target_type == Action.TARGET_TYPE.ALL_ENEMIES))
 	
 	var targets_selected: Array[Battler] = await _select_targets(potential_targets)
 	
@@ -149,7 +145,7 @@ func _select_targets(targets: Array[Battler]) -> Array[Battler]:
 	
 	var message: String = "Targets selected : "
 	for character: Battler in targets_selected:
-		message += character.character_data.character_name + ", "
+		message += character.get_character_name() + ", "
 	message_box.set_message(message)
 	
 	
@@ -182,10 +178,10 @@ func set_next_character():
 func is_battle_end() -> bool:	
 	var all_opponents_dead: bool = true
 	for opponent: Battler in characters:
-		if active_character.is_player and not opponent.is_player and opponent.character_data.stats.health_point > 0:
+		if active_character.is_player and not opponent.is_player and opponent.get_current_health_points() > 0:
 			all_opponents_dead = false
 			break
-		elif not active_character.is_player and opponent.is_player and opponent.character_data.stats.health_point > 0:
+		elif not active_character.is_player and opponent.is_player and opponent.get_current_health_points() > 0:
 			all_opponents_dead = false
 			break
 			

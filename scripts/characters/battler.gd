@@ -1,6 +1,6 @@
 class_name Battler extends Node2D
 
-var character_data: Character
+var _character_data: Character
 # Character stats
 @export var character_resource: CharacterResource
 
@@ -22,11 +22,11 @@ var is_selectable: ISelectable = ISelectable.new()
 
 func _load_from_resource(p_character_resource: CharacterResource = null):
 	if p_character_resource is EnemyResource:
-		character_data = Enemy.new()
-		character_data.load_from_character_resource(p_character_resource)
+		_character_data = Enemy.new()
+		_character_data.load_from_character_resource(p_character_resource)
 	elif p_character_resource is PlayerCharacterResource:
-		character_data = PlayerCharacter.new()
-		character_data.load_from_character_resource(p_character_resource)
+		_character_data = PlayerCharacter.new()
+		_character_data.load_from_character_resource(p_character_resource)
 	
 	sprite.texture = p_character_resource.texture
 
@@ -39,9 +39,9 @@ func _ready() -> void:
 	if not is_player:
 		flip_character()
 	
-	health_bar.max_value = character_data.stats.health_point
+	health_bar.max_value = _character_data.stats.health_point
 	health_bar.min_value = 0
-	health_bar.value = character_data.stats.health_point
+	health_bar.value = _character_data.stats.health_point
 	
 	is_selectable.set_is_selectable(false)
 
@@ -70,8 +70,32 @@ func initialize_turn():
 func end_turn():
 	arrow_character_playing.visible = false
 
-func act(action: Action, targets: Array[Character]):
-	action.execute(character_data, targets)
+func act(action: Action, targets: Array[Battler]):
+	var power = action.calcul_power(_character_data)
+	
+	match action.damage_type:
+		Action.DAMAGE_TYPE.PHYSICAL:
+			for target: Battler in targets:
+				target.get_hit(power - target._character_data.stats.defense)
+		Action.DAMAGE_TYPE.MAGICAL:
+			for target: Battler in targets:
+				target.get_hit(target._character_data.stats.magic_defense)
+		Action.DAMAGE_TYPE.HEALING:
+			for target: Battler in targets:
+				target.get_heal(power)
+
+func get_character_name() -> String:
+	return _character_data.character_name
+
+func get_current_health_points() -> int:
+	return _character_data.stats.health_point
+
+#TODO: Add max_health_points in stats
+func get_max_health_points() -> int:
+	return _character_data.stats.health_point
+
+func get_actions() -> Array[Action]:
+	return _character_data.actions
 
 #TODO: Implement the other effect of the spell
 #TODO: Do I have to keep this function ?
@@ -82,12 +106,12 @@ func act(action: Action, targets: Array[Character]):
 		#get_heal(spell.power)
 
 func get_hit(damage: int):
-	character_data.stats.health_point -= damage
-	health_bar.value = character_data.stats.health_point
+	_character_data.set_health_points(_character_data.get_health_points() - damage)
+	health_bar.value = _character_data.stats.health_point
 
 func get_heal(hp: int):
-	character_data.stats.health_point += hp
-	health_bar.value = character_data.stats.health_point
+	_character_data.set_health_points(_character_data.get_health_points() + hp)
+	health_bar.value = _character_data.stats.health_point
 
 func get_focus():
 	if is_selectable.get_is_selectable():

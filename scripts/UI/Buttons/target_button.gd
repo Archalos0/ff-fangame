@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func set_character(new_character: Battler):
 	character = new_character
-	text = character.character_data.character_name
+	text = character.get_character_name()
 
 	
 func set_is_selected(p_is_selected: bool):

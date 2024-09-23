@@ -30,7 +30,7 @@ func select_first():
 	if _buttons.size() > 0:
 		_index_button_selected = 0
 		_buttons[0].set_is_selected(true)
-		
+
 func unselect_all():
 	for button: CommandButton in _buttons:
 		button.set_is_selected(false)
@@ -46,6 +46,3 @@ func remove_all_buttons():
 		remove_child(button)
 		button.queue_free()
 	_buttons.clear()
-
-func get_buttons():
-	return _buttons

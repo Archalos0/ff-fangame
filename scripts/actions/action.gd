@@ -130,8 +130,8 @@ func calcul_power(source: Character):
 	return power
 
 #TODO: Add the element, the weapon, and additional effects
-func execute(source: Character, targets: Array[Character]):
-	var power = calcul_power(source)
+func execute(source: Battler, targets: Array[Character]):
+	var power = calcul_power(source._character_data)
 	
 	match damage_type:
 		DAMAGE_TYPE.PHYSICAL:
@@ -139,7 +139,7 @@ func execute(source: Character, targets: Array[Character]):
 				target.set_health_points(target.get_health_points() - (power - target.stats.defense))
 		DAMAGE_TYPE.MAGICAL:
 			for target: Character in targets:
-				target.get_hit(power - target.stats.magic_defense)
+				target.set_health_points(target.get_health_points() - (power - target.stats.magic_defense))
 		DAMAGE_TYPE.HEALING:
 			for target: Character in targets:
 				target.get_heal(power)

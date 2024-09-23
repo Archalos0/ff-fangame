@@ -1,24 +1,8 @@
-[gd_resource type="Resource" script_class="CharacterResource" load_steps=7 format=3 uid="uid://cbgqya4fwns3c"]
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=2 format=3 uid="uid://cbgqya4fwns3c"]
 
-[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_4v15e"]
-[ext_resource type="Resource" uid="uid://cfhkkifysuca8" path="res://ressources/actions/attack.tres" id="2_7phoo"]
 [ext_resource type="Script" path="res://ressources/characters/character.gd" id="2_kh0yw"]
-[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_hbc6m"]
-[ext_resource type="Resource" uid="uid://blpyafh46t1gq" path="res://ressources/actions/run_away.tres" id="4_kccpv"]
-[ext_resource type="Texture2D" uid="uid://d3g1yyhevef2b" path="res://assets/Battlers/World01_007_Pirate.png" id="6_ppfsd"]
 
 [resource]
 script = ExtResource("2_kh0yw")
 character_name = "Warrior"
-health_point = 100
-magic_point = 0
-strenght = 5
-agility = 5
-vitality = 5
-intellect = 5
-mind = 5
-defense = 5
-magic_defense = 10
-actions_resources = Array[ExtResource("1_4v15e")]([ExtResource("2_7phoo"), ExtResource("3_hbc6m"), ExtResource("4_kccpv")])
-is_player = true
-sprite = ExtResource("6_ppfsd")
+level = 1

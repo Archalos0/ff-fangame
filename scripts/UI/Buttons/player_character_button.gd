@@ -16,8 +16,8 @@ func _ready() -> void:
 
 func set_character(new_character: Battler):
 	character = new_character
-	character_name.text = character.character_data.character_name
-	hp.text = str(character.character_data.stats.health_point) + " / " + str(character.character_data.stats.health_point)
+	character_name.text = character.get_character_name()
+	hp.text = str(character.get_current_health_points()) + " / " + str(character.get_max_health_points())
 	action_selected.text = ""
 
 func set_is_selected(p_is_selected: bool):
