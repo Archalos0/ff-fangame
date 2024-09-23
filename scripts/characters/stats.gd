@@ -1,7 +1,10 @@
 class_name Stats
 
-@export var health_point: int
-@export var magic_point: int
+@export var health_points: int
+@export var max_health_points: int
+
+@export var magic_points: int
+@export var max_magic_points: int
 
 @export var strength: int
 @export var agility: int

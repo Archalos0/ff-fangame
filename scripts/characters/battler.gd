@@ -39,9 +39,9 @@ func _ready() -> void:
 	if not is_player:
 		flip_character()
 	
-	health_bar.max_value = _character_data.stats.health_point
+	health_bar.max_value = _character_data.stats.health_points
 	health_bar.min_value = 0
-	health_bar.value = _character_data.stats.health_point
+	health_bar.value = _character_data.stats.health_points
 	
 	is_selectable.set_is_selectable(false)
 
@@ -88,11 +88,11 @@ func get_character_name() -> String:
 	return _character_data.character_name
 
 func get_current_health_points() -> int:
-	return _character_data.stats.health_point
+	return _character_data.stats.health_points
 
 #TODO: Add max_health_points in stats
 func get_max_health_points() -> int:
-	return _character_data.stats.health_point
+	return _character_data.stats.health_points
 
 func get_actions() -> Array[Action]:
 	return _character_data.actions
@@ -107,11 +107,11 @@ func get_actions() -> Array[Action]:
 
 func get_hit(damage: int):
 	_character_data.set_health_points(_character_data.get_health_points() - damage)
-	health_bar.value = _character_data.stats.health_point
+	health_bar.value = _character_data.stats.health_points
 
 func get_heal(hp: int):
 	_character_data.set_health_points(_character_data.get_health_points() + hp)
-	health_bar.value = _character_data.stats.health_point
+	health_bar.value = _character_data.stats.health_points
 
 func get_focus():
 	if is_selectable.get_is_selectable():

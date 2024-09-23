@@ -23,4 +23,4 @@ func load_actions():
 
 func load_stats():
 	stats = job.stats
-	stats.health_point = 100
+	stats.health_points = 100

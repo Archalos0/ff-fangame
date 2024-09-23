@@ -13,7 +13,7 @@ func load_from_character_resource(p_resource: CharacterResource):
 	push_error("The method from_character_resource() has not been implementing in the derived class")
 
 func get_health_points() -> int:
-	return stats.health_point
+	return stats.health_points
 
 func set_health_points(hp: int):
-	stats.health_point = hp
+	stats.health_points = hp
