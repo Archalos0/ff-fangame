@@ -4,7 +4,7 @@ signal characters_selected(characters: Array[Battler])
 
 var _characters: Array[Battler] = []
 
-func load_characters(p_characters: Array[Battler]):
+func load_characters(p_characters: Array[Battler]) -> void:
 	_characters = p_characters
 	_buttons.initialize()
 
@@ -26,7 +26,7 @@ func _gui_input(event: InputEvent) -> void:
 		if event.is_action_pressed("Change_Mode_Selection") and _authorize_multiple_selection == true:
 			switch_selection_mode()
 
-func _send_characters():
+func _send_characters() -> void:
 	var _characters_selected: Array[Battler] = []
 
 	if self is PlayerSelectionMenu:

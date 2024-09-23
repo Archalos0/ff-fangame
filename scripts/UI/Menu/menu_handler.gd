@@ -26,14 +26,14 @@ func _ready() -> void:
 	#else:
 		#push_error("Le menu " + name + " n'a pas le focus")
 
-func _reset_ui():
+func _reset_ui() -> void:
 	_buttons.unselect_all()
 	focus_mode = Control.FOCUS_NONE
 	_buttons.focus_mode = Control.FOCUS_NONE
 	_authorize_multiple_selection = false
 	_current_mode_selection = MODE_SELECTION.SINGLE
 
-func switch_selection_mode():
+func switch_selection_mode() -> void:
 	if _authorize_multiple_selection == true:
 		match _current_mode_selection:
 			MODE_SELECTION.SINGLE:
@@ -47,7 +47,7 @@ func switch_selection_mode():
 	else:
 		push_error("impossible de changer le mode de selection")
 
-func set_focus_state(p_focus_state, p_authorize_multiple_selection: bool = false) -> void:
+func set_focus_state(p_focus_state: bool, p_authorize_multiple_selection: bool = false) -> void:
 	_has_focus = p_focus_state
 	
 	if not _has_focus:
