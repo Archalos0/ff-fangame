@@ -2,7 +2,9 @@ class_name CharacterResource extends Resource
 
 @export var character_name: String = ""
 @export var level: int = 1
-@export var texture: Texture2D = null
+
+@export var max_health_points: int = 100
+@export var current_health_points: int = 100
 
 #@export var character_name: String
 #

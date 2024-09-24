@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=2 format=3 uid="uid://hcr4n1s280fo"]
+
+[ext_resource type="Script" path="res://ressources/characters/player_character.gd" id="1_0ij6q"]
+
+[resource]
+script = ExtResource("1_0ij6q")
+character_name = "Refia"
+level = 1
+max_health_points = 100
+current_health_points = 100

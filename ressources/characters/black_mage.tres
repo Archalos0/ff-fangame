@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterResource" load_steps=2 format=3 uid="uid://ds3bdm33tld2i"]
-
-[ext_resource type="Script" path="res://ressources/characters/character.gd" id="5_a471k"]
-
-[resource]
-script = ExtResource("5_a471k")
-character_name = "Black mage"
-level = 1

@@ -14,7 +14,11 @@ func load_from_character_resource(p_resource: CharacterResource):
 	level			= resource.level
 	texture			= resource.texture
 	job				= Job.from_resource(resource.job_resource, level)
+	
 	load_stats()
+	stats.max_health_points = p_resource.max_health_points
+	stats.health_points = p_resource.current_health_points
+
 	load_actions()
 
 
@@ -23,4 +27,3 @@ func load_actions():
 
 func load_stats():
 	stats = job.stats
-	stats.health_points = 100

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2hp84b1nweti" path="res://scenes/turn_queue.tscn" id="1_78bgw"]
 [ext_resource type="PackedScene" uid="uid://wjgldpaop2o" path="res://scenes/character.tscn" id="2_l5bt3"]
 [ext_resource type="PackedScene" uid="uid://bwxim7a03270n" path="res://scenes/battle_menu.tscn" id="3_e4y40"]
-[ext_resource type="Resource" uid="uid://cbmjbftt4s5nf" path="res://ressources/characters/arc.tres" id="3_hdhid"]
+[ext_resource type="Resource" uid="uid://cbmjbftt4s5nf" path="res://ressources/characters/player_characters/character1.tres" id="3_hdhid"]
 [ext_resource type="PackedScene" uid="uid://dklsry4omvh26" path="res://scenes/message_box.tscn" id="5_boqcs"]
 
 [sub_resource type="GDScript" id="GDScript_54abh"]

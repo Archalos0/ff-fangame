@@ -92,7 +92,7 @@ func get_current_health_points() -> int:
 
 #TODO: Add max_health_points in stats
 func get_max_health_points() -> int:
-	return _character_data.stats.health_points
+	return _character_data.stats.max_health_points
 
 func get_actions() -> Array[Action]:
 	return _character_data.actions

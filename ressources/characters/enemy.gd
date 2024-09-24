@@ -3,6 +3,7 @@ class_name EnemyResource extends CharacterResource
 @export var gils: int = 0
 @export var experience: int = 0
 @export var actions_resources: Array[ActionResource]
+@export var texture: Texture2D = null
 
 @export var stats: Dictionary = {
 	"strength": 0,

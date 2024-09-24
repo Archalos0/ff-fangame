@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterResource" load_steps=2 format=3 uid="uid://cbgqya4fwns3c"]
-
-[ext_resource type="Script" path="res://ressources/characters/character.gd" id="2_kh0yw"]
-
-[resource]
-script = ExtResource("2_kh0yw")
-character_name = "Warrior"
-level = 1
