@@ -1,7 +1,7 @@
 class_name JobResource extends Resource
 
 @export var job_name: String
-@export var job_scene: PackedScene
+@export var job_animation: SpriteFrames
 
 
 #key = character level - value list of stats
