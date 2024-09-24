@@ -1,4 +1,4 @@
-class_name Equipment extends Node
+class_name Equipment
 
 var equipment_name: String
 var stats_upgraded: Stats
@@ -36,19 +36,3 @@ enum STATUS {
 	MINI,
 	GRADUAL_PETRIFY,
 }
-
-class Weapon extends Equipment:
-	var element: ELEMENT
-
-
-class Armor extends Equipment:
-	var elemental_resistance: Array[ELEMENT]
-	var elemental_weakness: Array[ELEMENT]
-	var statuses_immunity: Array[STATUS]
-
-class Equipments:
-	var left_hand: Equipment
-	var right_hand: Equipment
-	var head: Armor
-	var body: Armor
-	var arms: Armor
