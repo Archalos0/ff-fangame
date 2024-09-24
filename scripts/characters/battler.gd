@@ -38,7 +38,7 @@ func _ready() -> void:
 	_place_health_bar()
 	_place_selection_arrow()
 	
-	if not is_player:
+	if is_player:
 		flip_character()
 	
 	health_bar.max_value = _character_data.stats.health_points
