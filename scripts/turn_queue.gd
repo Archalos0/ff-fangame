@@ -1,13 +1,13 @@
 class_name TurnQueue extends Node2D
 
 signal action_selected(action: Action)
-signal target_selected(targets: Array[Character])
+signal target_selected(targets: Array[Battler])
 
 @onready var message_box: MessageBox = %MessageBox
 @onready var battle_menu: BattleMenu = %BattleMenu
 
-var characters: Array[Character] = []
-var active_character: Character = null
+var characters: Array[Battler] = []
+var active_character: Battler = null
 
 func _ready() -> void:
 	
@@ -35,14 +35,14 @@ func play_turn():
 			message_box.set_message("YOU LOST")
 		return
 	
-	if active_character.stats.health_point > 0:
+	if active_character.get_current_health_points() > 0:
 		active_character.initialize_turn()
 		
 		var action: Action
-		var targets: Array[Character] = []
+		var targets: Array[Battler] = []
 		
 		if active_character.is_player == true:
-			battle_menu.update_actions_buttons(active_character.actions)
+			battle_menu.update_actions_buttons(active_character.get_actions())
 			await get_tree().create_timer(1.5).timeout
 		
 			var has_select_actions_and_target: bool = false
@@ -58,9 +58,9 @@ func play_turn():
 			
 		else:
 			await get_tree().create_timer(1.5).timeout
-			action = active_character.actions[randi() % active_character.actions.size()]
+			action = active_character.get_actions()[randi() % active_character.get_actions().size()]
 			
-			var potential_target: Array[Character] = _get_targets_list(action)
+			var potential_target: Array[Battler] = _get_targets_list(action)
 			match action.target_type:
 				Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.SINGLE_ENEMY:
 					targets.append(potential_target[randi() % potential_target.size()])
@@ -70,13 +70,16 @@ func play_turn():
 					targets = potential_target
 		
 		print_debug_message(action, targets)
-		active_character.act(action, targets)
+		var targets_data: Array[Battler] = []
+		for battler: Battler in targets:
+			targets_data.append(battler)
+		active_character.act(action, targets_data)
 	
 	end_turn()
 
-func _get_targets_list(action: Action) -> Array[Character]:
+func _get_targets_list(action: Action) -> Array[Battler]:
 	
-	var potential_targets: Array[Character] = [] 
+	var potential_targets: Array[Battler] = [] 
 	
 	match action.target_type:
 		Action.TARGET_TYPE.NONE:
@@ -91,7 +94,7 @@ func _get_targets_list(action: Action) -> Array[Character]:
 	return potential_targets
 
 
-func is_action_and_target_valid(action: Action, targets: Array[Character]):
+func is_action_and_target_valid(action: Action, targets: Array[Battler]):
 	return action != null and ( (targets == [] and action.target_type == Action.TARGET_TYPE.NONE) \
 		or (targets != [] and action.target_type != Action.TARGET_TYPE.NONE))
 
@@ -101,11 +104,11 @@ func end_turn():
 	set_next_character()
 	play_turn()
 
-func print_debug_message(action: Action, targets: Array[Character]):
+func print_debug_message(action: Action, targets: Array[Battler]):
 	var debug_message = active_character.to_string() + " is using " + action.to_string()
 	if targets != []:
 		debug_message += " on "
-		for character: Character in targets:
+		for character: Battler in targets:
 			debug_message += character.to_string() + " "
 	
 	print(debug_message)
@@ -120,33 +123,29 @@ func _select_actions() -> Action:
 
 func get_target(action: Action):
 
-	var potential_targets: Array[Character] = _get_targets_list(action)
+	var potential_targets: Array[Battler] = _get_targets_list(action)
 	
 	_set_targets_selectable(potential_targets, true)
 	
 	match action.target_type:
-		Action.TARGET_TYPE.SINGLE_ALLY:
-			battle_menu.set_focus_on_player_character()
-		Action.TARGET_TYPE.SINGLE_ENEMY:
-			battle_menu.set_focus_on_target_selection()
-		Action.TARGET_TYPE.ALL_ENEMIES:
-			battle_menu.select_all_enemies()
-		Action.TARGET_TYPE.ALL_ALLIES:
-			battle_menu.select_all_allies()
+		Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.ALL_ALLIES:
+			battle_menu.set_focus_on_player_character((action.target_type == Action.TARGET_TYPE.ALL_ALLIES))
+		Action.TARGET_TYPE.SINGLE_ENEMY, Action.TARGET_TYPE.ALL_ENEMIES:
+			battle_menu.set_focus_on_target_selection((action.target_type == Action.TARGET_TYPE.ALL_ENEMIES))
 	
-	var targets_selected: Array[Character] = await _select_targets(potential_targets)
+	var targets_selected: Array[Battler] = await _select_targets(potential_targets)
 	
 	return targets_selected
 
-func _select_targets(targets: Array[Character]) -> Array[Character]:
+func _select_targets(targets: Array[Battler]) -> Array[Battler]:
 
 	message_box.set_message("Wait for target...")
-	var targets_selected: Array[Character] = []
+	var targets_selected: Array[Battler] = []
 	targets_selected.append_array(await target_selected)
 	
 	var message: String = "Targets selected : "
-	for character: Character in targets_selected:
-		message += character.character_name + ", "
+	for character: Battler in targets_selected:
+		message += character.get_character_name() + ", "
 	message_box.set_message(message)
 	
 	
@@ -154,8 +153,8 @@ func _select_targets(targets: Array[Character]) -> Array[Character]:
 	
 	return targets_selected
 
-func _set_targets_selectable(targets: Array[Character], is_selectable: bool):
-	for character: Character in targets:
+func _set_targets_selectable(targets: Array[Battler], is_selectable: bool):
+	for character: Battler in targets:
 		character.is_selectable.set_is_selectable(is_selectable)
 
 func get_enemies():
@@ -178,11 +177,11 @@ func set_next_character():
 
 func is_battle_end() -> bool:	
 	var all_opponents_dead: bool = true
-	for opponent: Character in characters:
-		if active_character.is_player and not opponent.is_player and opponent.stats.health_point > 0:
+	for opponent: Battler in characters:
+		if active_character.is_player and not opponent.is_player and opponent.get_current_health_points() > 0:
 			all_opponents_dead = false
 			break
-		elif not active_character.is_player and opponent.is_player and opponent.stats.health_point > 0:
+		elif not active_character.is_player and opponent.is_player and opponent.get_current_health_points() > 0:
 			all_opponents_dead = false
 			break
 			

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=3 format=3 uid="uid://btgf4intcdk4x"]
+
+[ext_resource type="Resource" uid="uid://bu1n6nohhq25h" path="res://ressources/jobs/wind_crystal/white_mage.tres" id="1_7t6xp"]
+[ext_resource type="Script" path="res://ressources/characters/player_character.gd" id="2_be51w"]
+
+[resource]
+script = ExtResource("2_be51w")
+job_resource = ExtResource("1_7t6xp")
+character_name = "Arc"
+level = 1
+max_health_points = 100
+current_health_points = 100

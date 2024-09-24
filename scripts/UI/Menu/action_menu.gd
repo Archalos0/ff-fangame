@@ -16,9 +16,8 @@ func _gui_input(event: InputEvent) -> void:
 		if event.is_action_pressed("Previous"):
 			_buttons.select_previous_button()
 			return
-			
 
-func _send_action():
+func _send_action() -> void:
 	var buttons_selected: Array[CommandButton] = _buttons.get_buttons_selected()
 	if buttons_selected.size() == 0:
 		push_error("Pas d'action sélectionnée")
@@ -30,12 +29,12 @@ func _send_action():
 	
 	action_selected.emit(buttons_selected[0].action)
 
-func load_actions(p_actions: Array[Action]):
+func load_actions(p_actions: Array[Action]) -> void:
 	for action: Action in p_actions:
 		var action_button: ActionButton = ACTION_BUTTON.instantiate()
 		action_button.set_action(action)
 		_buttons.add_child(action_button)
 	_buttons.initialize()
 
-func delete_actions():
+func delete_actions() -> void:
 	_buttons.remove_all_buttons()

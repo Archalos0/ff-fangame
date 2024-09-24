@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=3 format=3 uid="uid://cbmjbftt4s5nf"]
+
+[ext_resource type="Resource" uid="uid://cgdx6ajehx1ua" path="res://ressources/jobs/wind_crystal/black_mage.tres" id="1_1kbyh"]
+[ext_resource type="Script" path="res://ressources/characters/player_character.gd" id="2_kwc3q"]
+
+[resource]
+script = ExtResource("2_kwc3q")
+job_resource = ExtResource("1_1kbyh")
+character_name = "Luneth"
+level = 1
+max_health_points = 100
+current_health_points = 100

@@ -1,10 +1,10 @@
 class_name CharacterMenuHandler extends MenuHandler
 
-signal characters_selected(characters: Array[Character])
+signal characters_selected(characters: Array[Battler])
 
-var _characters: Array[Character] = []
+var _characters: Array[Battler] = []
 
-func load_characters(p_characters: Array[Character]):
+func load_characters(p_characters: Array[Battler]) -> void:
 	_characters = p_characters
 	_buttons.initialize()
 
@@ -15,16 +15,19 @@ func _gui_input(event: InputEvent) -> void:
 			_reset_ui()
 			return
 		
-		if event.is_action_pressed("Next") and not _are_all_selected:
+		if event.is_action_pressed("Next") and _current_mode_selection == MODE_SELECTION.SINGLE:
 			_buttons.select_next_button()
 			return
 		
-		if event.is_action_pressed("Previous") and not _are_all_selected:
+		if event.is_action_pressed("Previous") and _current_mode_selection == MODE_SELECTION.SINGLE:
 			_buttons.select_previous_button()
 			return
+		
+		if event.is_action_pressed("Change_Mode_Selection") and _authorize_multiple_selection == true:
+			switch_selection_mode()
 
-func _send_characters():
-	var _characters_selected: Array[Character] = []
+func _send_characters() -> void:
+	var _characters_selected: Array[Battler] = []
 
 	if self is PlayerSelectionMenu:
 		for character_button: PlayerCharacterButton in _buttons.get_buttons_selected():

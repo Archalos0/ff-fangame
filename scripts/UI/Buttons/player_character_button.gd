@@ -6,7 +6,7 @@ class_name PlayerCharacterButton extends CommandButton
 @onready var hp: Label = $HBoxContainer/HP
 @onready var action_selected: Label = $HBoxContainer/ActionSelected
 
-@export var character: Character
+@export var character: Battler
 
 func _ready() -> void:
 	initialize()
@@ -14,10 +14,10 @@ func _ready() -> void:
 	hp.text = "100 / 100"
 	action_selected.text = ""
 
-func set_character(new_character: Character):
+func set_character(new_character: Battler):
 	character = new_character
-	character_name.text = character.character_name
-	hp.text = str(character.stats.health_point) + " / " + str(character.stats.health_point)
+	character_name.text = character.get_character_name()
+	hp.text = str(character.get_current_health_points()) + " / " + str(character.get_max_health_points())
 	action_selected.text = ""
 
 func set_is_selected(p_is_selected: bool):

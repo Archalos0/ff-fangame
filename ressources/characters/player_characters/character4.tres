@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=3 format=3 uid="uid://ckup81lciryvw"]
+
+[ext_resource type="Resource" uid="uid://dnallenm62qeg" path="res://ressources/jobs/wind_crystal/red_mage.tres" id="1_d2qit"]
+[ext_resource type="Script" path="res://ressources/characters/player_character.gd" id="2_fqurr"]
+
+[resource]
+script = ExtResource("2_fqurr")
+job_resource = ExtResource("1_d2qit")
+character_name = "Ingus"
+level = 1
+max_health_points = 100
+current_health_points = 100

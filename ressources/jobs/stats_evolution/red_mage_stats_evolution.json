@@ -1,0 +1,86 @@
+{
+   "1": {
+	  "strength": 5,
+	  "agility": 5,
+	  "vitality": 5,
+	  "intellect": 5,
+	  "mind": 5
+   },
+   "2": {
+	  "strength": 6,
+	  "agility": 5,
+	  "vitality": 6,
+	  "intellect": 5,
+	  "mind": 5
+   },
+   "10": {
+	  "strength": 10,
+	  "agility": 10,
+	  "vitality": 10,
+	  "intellect": 10,
+	  "mind": 10
+   },
+   "20": {
+	  "strength": 16,
+	  "agility": 15,
+	  "vitality": 16,
+	  "intellect": 15,
+	  "mind": 15
+   },
+   "30": {
+	  "strength": 22,
+	  "agility": 20,
+	  "vitality": 22,
+	  "intellect": 20,
+	  "mind": 20
+   },
+   "40": {
+	  "strength": 28,
+	  "agility": 24,
+	  "vitality": 28,
+	  "intellect": 24,
+	  "mind": 24
+   },
+   "50": {
+	  "strength": 34,
+	  "agility": 29,
+	  "vitality": 34,
+	  "intellect": 29,
+	  "mind": 29
+   },
+   "60": {
+	  "strength": 40,
+	  "agility": 34,
+	  "vitality": 40,
+	  "intellect": 34,
+	  "mind": 34
+   },
+   "70": {
+	  "strength": 46,
+	  "agility": 38,
+	  "vitality": 46,
+	  "intellect": 38,
+	  "mind": 38
+   },
+   "80": {
+	  "strength": 52,
+	  "agility": 43,
+	  "vitality": 52,
+	  "intellect": 43,
+	  "mind": 43
+   },
+   "90": {
+	  "strength": 58,
+	  "agility": 48,
+	  "vitality": 58,
+	  "intellect": 48,
+	  "mind": 48
+   },
+   "99": {
+	  "strength": 63,
+	  "agility": 52,
+	  "vitality": 63,
+	  "intellect": 52,
+	  "mind": 52
+   }
+}

@@ -1,13 +1,13 @@
 class_name TargetButton extends CommandButton
 
-@export var character: Character
+@export var character: Battler
 
 func _ready() -> void:
 	initialize()
 
-func set_character(new_character: Character):
+func set_character(new_character: Battler):
 	character = new_character
-	text = character.character_name
+	text = character.get_character_name()
 
 	
 func set_is_selected(p_is_selected: bool):

@@ -1,9 +1,12 @@
-class_name Stats extends Node
+class_name Stats
 
-@export var health_point: int
-@export var magic_point: int
+@export var health_points: int
+@export var max_health_points: int
 
-@export var strenght: int
+@export var magic_points: int
+@export var max_magic_points: int
+
+@export var strength: int
 @export var agility: int
 @export var vitality: int
 @export var intellect: int
@@ -12,4 +15,21 @@ class_name Stats extends Node
 @export var magic_defense: int
 
 func _init():
-	pass
+	strength 		= 5
+	agility 		= 5
+	vitality 		= 5
+	intellect 		= 5
+	mind 			= 5
+	defense 		= 5
+	magic_defense 	= 5
+
+static func from_dictionary(data: Dictionary) -> Stats:
+	var new_stats = Stats.new()
+	
+	new_stats.strength 	= data.strength
+	new_stats.agility 	= data.agility
+	new_stats.vitality	= data.vitality
+	new_stats.intellect	= data.intellect
+	new_stats.mind		= data.mind
+	
+	return new_stats
