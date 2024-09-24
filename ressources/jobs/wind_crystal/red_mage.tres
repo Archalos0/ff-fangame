@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="JobResource" load_steps=6 format=3 uid="uid://dnallenm62qeg"]
+[gd_resource type="Resource" script_class="JobResource" load_steps=8 format=3 uid="uid://dnallenm62qeg"]
 
+[ext_resource type="SpriteFrames" uid="uid://b3nek6yuw13id" path="res://assets/sprites/jobs/wind_crystal/red_mage/red_mage_animation.tres" id="1_dhqkh"]
 [ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_qnegs"]
 [ext_resource type="Resource" uid="uid://cfhkkifysuca8" path="res://ressources/actions/attack.tres" id="2_lb0yt"]
 [ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_k7ufc"]
+[ext_resource type="Resource" uid="uid://c8b07q3k3miq1" path="res://ressources/actions/cure.tres" id="4_dhcl5"]
 [ext_resource type="Script" path="res://ressources/jobs/job.gd" id="4_jje1p"]
 [ext_resource type="JSON" path="res://ressources/jobs/stats_evolution/red_mage_stats_evolution.json" id="5_627k8"]
 
 [resource]
 script = ExtResource("4_jje1p")
 job_name = "Red mage"
-actions_resources = Array[ExtResource("1_qnegs")]([ExtResource("2_lb0yt"), ExtResource("3_k7ufc")])
+actions_resources = Array[ExtResource("1_qnegs")]([ExtResource("2_lb0yt"), ExtResource("3_k7ufc"), ExtResource("4_dhcl5")])
+job_animation = ExtResource("1_dhqkh")
 stats_evolution = ExtResource("5_627k8")

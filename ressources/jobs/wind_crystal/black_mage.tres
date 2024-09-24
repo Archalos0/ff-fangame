@@ -1,9 +1,16 @@
-[gd_resource type="Resource" script_class="JobResource" load_steps=3 format=3 uid="uid://cgdx6ajehx1ua"]
+[gd_resource type="Resource" script_class="JobResource" load_steps=8 format=3 uid="uid://cgdx6ajehx1ua"]
 
-[ext_resource type="Script" path="res://ressources/jobs/job.gd" id="4_0sqir"]
-[ext_resource type="JSON" path="res://ressources/jobs/stats_evolution/black_mage_stats_evolution.json" id="5_8qosv"]
+[ext_resource type="Script" path="res://ressources/actions/action_ressource.gd" id="1_eiii1"]
+[ext_resource type="SpriteFrames" uid="uid://cbnb18v88libe" path="res://assets/sprites/jobs/wind_crystal/black_mage/black_mage_animation.tres" id="1_yw8sf"]
+[ext_resource type="Script" path="res://ressources/jobs/job.gd" id="2_0et23"]
+[ext_resource type="Resource" uid="uid://cfhkkifysuca8" path="res://ressources/actions/attack.tres" id="2_vqehg"]
+[ext_resource type="Resource" uid="uid://g71qycx6kuua" path="res://ressources/actions/defend.tres" id="3_3tk5r"]
+[ext_resource type="JSON" path="res://ressources/jobs/stats_evolution/black_mage_stats_evolution.json" id="3_shpy5"]
+[ext_resource type="Resource" uid="uid://dbp4m3y5qf12u" path="res://ressources/actions/magic/fire.tres" id="4_jafow"]
 
 [resource]
-script = ExtResource("4_0sqir")
+script = ExtResource("2_0et23")
 job_name = "Black mage"
-stats_evolution = ExtResource("5_8qosv")
+actions_resources = Array[ExtResource("1_eiii1")]([ExtResource("2_vqehg"), ExtResource("3_3tk5r"), ExtResource("4_jafow")])
+job_animation = ExtResource("1_yw8sf")
+stats_evolution = ExtResource("3_shpy5")

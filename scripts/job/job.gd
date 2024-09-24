@@ -12,6 +12,8 @@ var stats: Stats
 
 var actions: Array[Action] = []
 
+var animations: SpriteFrames
+
 # Equippable weapons
 # var equippable_weapons = Array[WEAPON_TYPE]
 
@@ -38,5 +40,5 @@ static func from_resource(job_resource: JobResource, character_level: int) -> Jo
 		
 	new_job.stats_evolution = job_resource.stats_evolution.data
 	new_job.stats = Stats.from_dictionary(new_job.stats_evolution[str(character_level)])
-	
+	new_job.animations = job_resource.job_animation
 	return new_job

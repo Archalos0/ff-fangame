@@ -12,7 +12,7 @@ func load_from_character_resource(p_resource: CharacterResource):
 	
 	character_name	= resource.character_name
 	level			= resource.level
-	texture			= resource.texture
+	#texture			= resource.texture
 	gils			= resource.gils
 	experience		= resource.experience
 	

@@ -11,7 +11,8 @@ var _character_data: Character
 var is_selectable: ISelectable = ISelectable.new()
 
 # Character UI
-@onready var sprite: Sprite2D = $Sprite
+#@onready var sprite: Sprite2D = $Sprite
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var arrow_character_playing: Sprite2D = $arrow_character_playing
 @onready var arrow_character_selection: Sprite2D = $arrow_character_selection
 @onready var health_bar: ProgressBar = $healthbar
@@ -28,7 +29,8 @@ func _load_from_resource(p_character_resource: CharacterResource = null):
 		_character_data = PlayerCharacter.new()
 		_character_data.load_from_character_resource(p_character_resource)
 	
-	sprite.texture = p_character_resource.texture
+	#sprite.texture = p_character_resource.texture
+	animated_sprite_2d.sprite_frames = _character_data.get_animation()
 
 func _ready() -> void:
 	_load_from_resource(character_resource)
@@ -46,14 +48,14 @@ func _ready() -> void:
 	is_selectable.set_is_selectable(false)
 
 func _place_health_bar():
-	var sprite_size = sprite.texture.get_width()
+	var sprite_size = 32 #animated_sprite_2d.texture.get_width()
 	if is_player:
 		health_bar.position.x = (sprite_size / 2) + 10
 	else:
 		health_bar.position.x = -(sprite_size / 2 + health_bar.size.x + 10)
 
 func _place_selection_arrow():
-	var sprite_size = sprite.texture.get_width()
+	var sprite_size = 32 #animated_sprite_2d.texture.get_width()
 	var arrow_sprite_size = arrow_character_selection.texture.get_width() * arrow_character_selection.scale.x
 	if is_player:
 		arrow_character_selection.position.x = -(sprite_size / 2) - arrow_sprite_size + 10
@@ -61,7 +63,7 @@ func _place_selection_arrow():
 		arrow_character_selection.position.x = (sprite_size / 2 + arrow_sprite_size) - 10
 
 func flip_character():
-	sprite.flip_h = true
+	animated_sprite_2d.flip_h = true
 	arrow_character_selection.flip_v = false
 
 func initialize_turn():

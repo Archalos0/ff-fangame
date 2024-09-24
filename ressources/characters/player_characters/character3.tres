@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=2 format=3 uid="uid://hcr4n1s280fo"]
+[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=3 format=3 uid="uid://hcr4n1s280fo"]
 
 [ext_resource type="Script" path="res://ressources/characters/player_character.gd" id="1_0ij6q"]
+[ext_resource type="Resource" uid="uid://d2mfwgksyojoa" path="res://ressources/jobs/wind_crystal/warrior.tres" id="1_esetm"]
 
 [resource]
 script = ExtResource("1_0ij6q")
+job_resource = ExtResource("1_esetm")
 character_name = "Refia"
 level = 1
 max_health_points = 100

@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dyrh7x6drt5m2"]
+[gd_scene load_steps=9 format=3 uid="uid://dyrh7x6drt5m2"]
 
 [ext_resource type="PackedScene" uid="uid://2hp84b1nweti" path="res://scenes/turn_queue.tscn" id="1_78bgw"]
 [ext_resource type="PackedScene" uid="uid://wjgldpaop2o" path="res://scenes/character.tscn" id="2_l5bt3"]
 [ext_resource type="PackedScene" uid="uid://bwxim7a03270n" path="res://scenes/battle_menu.tscn" id="3_e4y40"]
 [ext_resource type="Resource" uid="uid://cbmjbftt4s5nf" path="res://ressources/characters/player_characters/character1.tres" id="3_hdhid"]
+[ext_resource type="Resource" uid="uid://btgf4intcdk4x" path="res://ressources/characters/player_characters/character2.tres" id="4_rgfqk"]
+[ext_resource type="Resource" uid="uid://hcr4n1s280fo" path="res://ressources/characters/player_characters/character3.tres" id="5_bdvnk"]
 [ext_resource type="PackedScene" uid="uid://dklsry4omvh26" path="res://scenes/message_box.tscn" id="5_boqcs"]
 
 [sub_resource type="GDScript" id="GDScript_54abh"]
@@ -36,12 +38,12 @@ is_player = true
 
 [node name="Character2" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 212)
-character_resource = ExtResource("3_hdhid")
+character_resource = ExtResource("4_rgfqk")
 is_player = true
 
 [node name="Character5" parent="TurnQueue" instance=ExtResource("2_l5bt3")]
 position = Vector2(200, 326)
-character_resource = ExtResource("3_hdhid")
+character_resource = ExtResource("5_bdvnk")
 is_player = true
 
 [node name="Character3" parent="TurnQueue" instance=ExtResource("2_l5bt3")]

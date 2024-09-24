@@ -1,7 +1,7 @@
 class_name Character
 
 var character_name: String
-var texture: Texture2D
+#var texture: Texture2D
 var level: int
 
 var stats: Stats
@@ -17,3 +17,6 @@ func get_health_points() -> int:
 
 func set_health_points(hp: int):
 	stats.health_points = hp
+
+func get_animation():
+	push_error("The method get_animation() has not been implementing in the derived class")

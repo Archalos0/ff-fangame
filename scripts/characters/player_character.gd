@@ -12,7 +12,7 @@ func load_from_character_resource(p_resource: CharacterResource):
 	
 	character_name	= resource.character_name
 	level			= resource.level
-	texture			= resource.texture
+	#texture			= resource.texture
 	job				= Job.from_resource(resource.job_resource, level)
 	
 	load_stats()
@@ -27,3 +27,6 @@ func load_actions():
 
 func load_stats():
 	stats = job.stats
+
+func get_animation() -> SpriteFrames:
+	return job.animations
