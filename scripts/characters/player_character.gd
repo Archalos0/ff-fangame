@@ -1,7 +1,7 @@
 class_name PlayerCharacter extends Character
 
 var job: Job
-#var equipments: Equipments 
+var equipments: Equipments 
 
 func load_from_character_resource(p_resource: CharacterResource):
 	if p_resource is not PlayerCharacterResource:
