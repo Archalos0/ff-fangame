@@ -18,6 +18,7 @@ enum BODY_PART {
 }
 
 enum ELEMENT {
+	NONE,
 	FIRE,
 	ICE,
 	LIGHTNING,
@@ -27,6 +28,7 @@ enum ELEMENT {
 }
 
 enum STATUS {
+	NONE,
 	POISON,
 	PARALYSIS,
 	CONFUSION,
