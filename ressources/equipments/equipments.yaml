@@ -5,38 +5,38 @@ equipments:
   - name: "Knife"
     type: DAGGER
     attack: 8
-    sprite_path: "res://sprites/knife.png"
+    sprite_path: "res://sprites/equipments/daggers/knife.png"
 
   - name: "Dagger"
     type: DAGGER
     attack: 9
-    sprite_path: "res://sprites/dagger.png"
+    sprite_path: "res://sprites/equipments/daggers/dagger.png"
     stats_upgraded: []
 
   - name: "Mythril Knife"
     type: DAGGER
     attack: 14
-    sprite_path: "res://sprites/mythril_knife.png"
+    sprite_path: "res://sprites/equipments/daggers/mythril_knife.png"
     stats_upgraded: []
 
   - name: "Main Gauche"
     type: DAGGER
     attack: 35
-    sprite_path: "res://sprites/main_gauche.png"
+    sprite_path: "res://sprites/equipments/daggers/main_gauche.png"
     stats_upgraded:
       - agility: 3
 
   - name: "Orialcon"
     type: DAGGER
     attack: 45
-    sprite_path: "res://sprites/orialcon.png"
+    sprite_path: "res://sprites/equipments/daggers/orialcon.png"
     stats_upgraded:
       - agility: 4
 
   - name: "Air Knife"
     type: DAGGER
     attack: 89
-    sprite_path: "res://sprites/air_knife.png"
+    sprite_path: "res://sprites/equipments/daggers/air_knife.png"
     stats_upgraded:
       - agility: 6
 
@@ -46,98 +46,98 @@ equipments:
   - name: "Golden Sword"
     type: SWORD
     attack: 5
-    sprite_path: "res://sprites/golden_sword.png"
+    sprite_path: "res://sprites/equipments/swords/golden_sword.png"
     stats_upgraded:
       - vitality: 5
 
   - name: "Longsword"
     type: SWORD
     attack: 10
-    sprite_path: "res://sprites/longsword.png"
+    sprite_path: "res://sprites/equipments/swords/longsword.png"
     stats_upgraded: []
 
   - name: "Wightslayer"
     type: SWORD
     attack: 15
-    sprite_path: "res://sprites/wightslayer.png"
+    sprite_path: "res://sprites/equipments/swords/wightslayer.png"
     stats_upgraded: []
 
   - name: "Mythril Sword"
     type: SWORD
     attack: 17
-    sprite_path: "res://sprites/mythril_sword.png"
+    sprite_path: "res://sprites/equipments/swords/mythril_sword.png"
     stats_upgraded: []
 
   - name: "Serpent Sword"
     type: SWORD
     attack: 25
-    sprite_path: "res://sprites/serpent_sword.png"
+    sprite_path: "res://sprites/equipments/swords/serpent_sword.png"
     stats_upgraded: []
 
   - name: "Tyrfing"
     type: SWORD
     attack: 28
-    sprite_path: "res://sprites/tyrfing.png"
+    sprite_path: "res://sprites/equipments/swords/tyrfing.png"
     stats_upgraded: []
 
   - name: "Salamand Sword"
     type: SWORD
     attack: 30
-    sprite_path: "res://sprites/salamand_sword.png"
+    sprite_path: "res://sprites/equipments/swords/salamand_sword.png"
     stats_upgraded: []
 
   - name: "Freezing Blade"
     type: SWORD
     attack: 32
-    sprite_path: "res://sprites/freezing_blade.png"
+    sprite_path: "res://sprites/equipments/swords/freezing_blade.png"
     stats_upgraded: []
 
   - name: "Royal Sword"
     type: SWORD
     attack: 50
-    sprite_path: "res://sprites/royal_sword.png"
+    sprite_path: "res://sprites/equipments/swords/royal_sword.png"
     stats_upgraded: []
 
   - name: "Blood Sword"
     type: SWORD
     attack: 55
-    sprite_path: "res://sprites/blood_sword.png"
+    sprite_path: "res://sprites/equipments/swords/blood_sword.png"
     stats_upgraded: []
 
   - name: "Ancient Sword"
     type: SWORD
     attack: 80
-    sprite_path: "res://sprites/ancient_sword.png"
+    sprite_path: "res://sprites/equipments/swords/ancient_sword.png"
     stats_upgraded: []
 
   - name: "Defender"
     type: SWORD
     attack: 95
-    sprite_path: "res://sprites/defender.png"
+    sprite_path: "res://sprites/equipments/swords/defender.png"
     stats_upgraded: []
 
   - name: "Break Blade"
     type: SWORD
     attack: 125
-    sprite_path: "res://sprites/break_blade.png"
+    sprite_path: "res://sprites/equipments/swords/break_blade.png"
     stats_upgraded: []
 
   - name: "Excalibur"
     type: SWORD
     attack: 137
-    sprite_path: "res://sprites/excalibur.png"
+    sprite_path: "res://sprites/equipments/swords/excalibur.png"
     stats_upgraded: []
 
   - name: "Ragnarok"
     type: SWORD
     attack: 140
-    sprite_path: "res://sprites/ragnarok.png"
+    sprite_path: "res://sprites/equipments/swords/ragnarok.png"
     stats_upgraded: []
 
   - name: "Onion Sword"
     type: SWORD
     attack: 156
-    sprite_path: "res://sprites/onion_sword.png"
+    sprite_path: "res://sprites/equipments/swords/onion_sword.png"
     stats_upgraded: []
 
   #--------------------------------------------------------------------#
@@ -147,26 +147,26 @@ equipments:
   - name: "Ashura"
     type: DARK_BLADE
     attack: 100
-    sprite_path: "res://sprites/ashura.png"
+    sprite_path: "res://sprites/equipments/dark_blades/ashura.png"
     stats_upgraded:
       - agility: 10
 
   - name: "Kotetsu"
     type: DARK_BLADE
     attack: 105
-    sprite_path: "res://sprites/kotetsu.png"
+    sprite_path: "res://sprites/equipments/dark_blades/kotetsu.png"
     stats_upgraded: []
 
   - name: "Kiku-Ichimonji"
     type: DARK_BLADE
     attack: 115
-    sprite_path: "res://sprites/kiku_ichimonji.png"
+    sprite_path: "res://sprites/equipments/dark_blades/kiku_ichimonji.png"
     stats_upgraded: []
 
   - name: "Masamune"
     type: DARK_BLADE
     attack: 132
-    sprite_path: "res://sprites/masamune.png"
+    sprite_path: "res://sprites/equipments/dark_blades/masamune.png"
     stats_upgraded: []
 
   #--------------------------------------------------------------------#
@@ -175,13 +175,13 @@ equipments:
   - name: "Staff"
     type: STAFF
     attack: 3
-    sprite_path: "res://sprites/staff.png"
+    sprite_path: "res://sprites/equipments/staves/staff.png"
     stats_upgraded: []
 
   - name: "Fire Staff"
     type: STAFF
     attack: 20
-    sprite_path: "res://sprites/fire_staff.png"
+    sprite_path: "res://sprites/equipments/staves/fire_staff.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -189,7 +189,7 @@ equipments:
   - name: "Ice Staff"
     type: STAFF
     attack: 20
-    sprite_path: "res://sprites/ice_staff.png"
+    sprite_path: "res://sprites/equipments/staves/ice_staff.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -197,7 +197,7 @@ equipments:
   - name: "Light Staff"
     type: STAFF
     attack: 20
-    sprite_path: "res://sprites/light_staff.png"
+    sprite_path: "res://sprites/equipments/staves/light_staff.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -205,21 +205,21 @@ equipments:
   - name: "Golem Staff"
     type: STAFF
     attack: 30
-    sprite_path: "res://sprites/golem_staff.png"
+    sprite_path: "res://sprites/equipments/staves/golem_staff.png"
     stats_upgraded:
       - mind: 3
 
   - name: "Rune Staff"
     type: STAFF
     attack: 33
-    sprite_path: "res://sprites/rune_staff.png"
+    sprite_path: "res://sprites/equipments/staves/rune_staff.png"
     stats_upgraded:
       - mind: 4
 
   - name: "Elder Staff"
     type: STAFF
     attack: 85
-    sprite_path: "res://sprites/elder_staff.png"
+    sprite_path: "res://sprites/equipments/staves/elder_staff.png"
     stats_upgraded:
       - mind: 6
 
@@ -230,21 +230,21 @@ equipments:
   - name: "Mythril Rod"
     type: ROD
     attack: 12
-    sprite_path: "res://sprites/mythril_rod.png"
+    sprite_path: "res://sprites/equipments/rodes/mythril_rod.png"
     stats_upgraded:
       - intellect: 1
 
   - name: "Fire Rod"
     type: ROD
     attack: 25
-    sprite_path: "res://sprites/fire_rod.png"
+    sprite_path: "res://sprites/equipments/rodes/fire_rod.png"
     stats_upgraded:
       - intellect: 3
 
   - name: "Ice Rod"
     type: ROD
     attack: 25
-    sprite_path: "res://sprites/ice_rod.png"
+    sprite_path: "res://sprites/equipments/rodes/ice_rod.png"
     stats_upgraded:
       - intellect: 3
       - mind: 3
@@ -252,7 +252,7 @@ equipments:
   - name: "Light Rod"
     type: ROD
     attack: 25
-    sprite_path: "res://sprites/light_rod.png"
+    sprite_path: "res://sprites/equipments/rodes/light_rod.png"
     stats_upgraded:
       - intellect: 3
       - mind: 3
@@ -260,7 +260,7 @@ equipments:
   - name: "Omnirod"
     type: ROD
     attack: 93
-    sprite_path: "res://sprites/omnirod.png"
+    sprite_path: "res://sprites/equipments/rodes/omnirod.png"
     stats_upgraded:
       - intellect: 10
 
@@ -270,19 +270,19 @@ equipments:
   - name: "Nunchaku"
     type: NUNCHAKU
     attack: 12
-    sprite_path: "res://sprites/nunchaku.png"
+    sprite_path: "res://sprites/equipments/nunchakus/nunchaku.png"
     stats_upgraded: []
 
   - name: "Tonfa"
     type: NUNCHAKU
     attack: 20
-    sprite_path: "res://sprites/tonfa.png"
+    sprite_path: "res://sprites/equipments/nunchakus/tonfa.png"
     stats_upgraded: []
 
   - name: "Sansetsukon"
     type: NUNCHAKU
     attack: 25
-    sprite_path: "res://sprites/sansetsukon.png"
+    sprite_path: "res://sprites/equipments/nunchakus/sansetsukon.png"
     stats_upgraded: []
 
   #--------------------------------------------------------------------#
@@ -291,25 +291,25 @@ equipments:
   - name: "Bow"
     type: BOW
     attack: 10
-    sprite_path: "res://sprites/bow.png"
+    sprite_path: "res://sprites/equipments/bows/bow.png"
     stats_upgraded: []
 
   - name: "Great Bow"
     type: BOW
     attack: 18
-    sprite_path: "res://sprites/great_bow.png"
+    sprite_path: "res://sprites/equipments/bows/great_bow.png"
     stats_upgraded: []
 
   - name: "Killer Bow"
     type: BOW
     attack: 26
-    sprite_path: "res://sprites/killer_bow.png"
+    sprite_path: "res://sprites/equipments/bows/killer_bow.png"
     stats_upgraded: []
 
   - name: "Rune Bow"
     type: BOW
     attack: 42
-    sprite_path: "res://sprites/rune_bow.png"
+    sprite_path: "res://sprites/equipments/bows/rune_bow.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -317,7 +317,7 @@ equipments:
   - name: "Yoichi Bow"
     type: BOW
     attack: 70
-    sprite_path: "res://sprites/yoichi_bow.png"
+    sprite_path: "res://sprites/equipments/bows/yoichi_bow.png"
     stats_upgraded:
       - agility: 5
 
@@ -327,49 +327,49 @@ equipments:
   - name: "Wooden Arrow"
     type: ARROW
     attack: 6
-    sprite_path: "res://sprites/wooden_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/wooden_arrow.png"
     stats_upgraded: []
 
   - name: "Holy Arrow"
     type: ARROW
     attack: 8
-    sprite_path: "res://sprites/holy_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/holy_arrow.png"
     stats_upgraded: []
 
   - name: "Iron Arrow"
     type: ARROW
     attack: 12
-    sprite_path: "res://sprites/iron_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/iron_arrow.png"
     stats_upgraded: []
 
   - name: "Fire Arrow"
     type: ARROW
     attack: 17
-    sprite_path: "res://sprites/fire_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/fire_arrow.png"
     stats_upgraded: []
 
   - name: "Ice Arrow"
     type: ARROW
     attack: 17
-    sprite_path: "res://sprites/ice_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/ice_arrow.png"
     stats_upgraded: []
 
   - name: "Light Arrow"
     type: ARROW
     attack: 17
-    sprite_path: "res://sprites/light_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/light_arrow.png"
     stats_upgraded: []
 
   - name: "Medusa Arrow"
     type: ARROW
     attack: 23
-    sprite_path: "res://sprites/medusa_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/medusa_arrow.png"
     stats_upgraded: []
 
   - name: "Yoichi Arrow"
     type: ARROW
     attack: 40
-    sprite_path: "res://sprites/yoichi_arrow.png"
+    sprite_path: "res://sprites/equipments/arrows/yoichi_arrow.png"
     stats_upgraded: []
 
   #---------------------------------------------------------------------#
@@ -378,7 +378,7 @@ equipments:
   - name: "Book of Fire"
     type: BOOK
     attack: 32
-    sprite_path: "res://sprites/book_of_fire.png"
+    sprite_path: "res://sprites/equipments/books/book_of_fire.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -386,7 +386,7 @@ equipments:
   - name: "Book of Ice"
     type: BOOK
     attack: 32
-    sprite_path: "res://sprites/book_of_ice.png"
+    sprite_path: "res://sprites/equipments/books/book_of_ice.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -394,7 +394,7 @@ equipments:
   - name: "Book of Light"
     type: BOOK
     attack: 32
-    sprite_path: "res://sprites/book_of_light.png"
+    sprite_path: "res://sprites/equipments/books/book_of_light.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -402,7 +402,7 @@ equipments:
   - name: "Tome of Fire"
     type: BOOK
     attack: 53
-    sprite_path: "res://sprites/tome_of_fire.png"
+    sprite_path: "res://sprites/equipments/books/tome_of_fire.png"
     stats_upgraded:
       - intellect: 3
       - mind: 3
@@ -410,7 +410,7 @@ equipments:
   - name: "Tome of Ice"
     type: BOOK
     attack: 53
-    sprite_path: "res://sprites/tome_of_ice.png"
+    sprite_path: "res://sprites/equipments/books/tome_of_ice.png"
     stats_upgraded:
       - intellect: 3
       - mind: 3
@@ -418,7 +418,7 @@ equipments:
   - name: "Tome of Light"
     type: BOOK
     attack: 53
-    sprite_path: "res://sprites/tome_of_light.png"
+    sprite_path: "res://sprites/equipments/books/tome_of_light.png"
     stats_upgraded:
       - intellect: 3
       - mind: 3
@@ -429,27 +429,27 @@ equipments:
   - name: "Cat Claws"
     type: KNUCKLES
     attack: 42
-    sprite_path: "res://sprites/cat_claws.png"
+    sprite_path: "res://sprites/equipments/knuckles/cat_claws.png"
     stats_upgraded:
       - agility: 3
 
   - name: "Kaiser Knuckles"
     type: KNUCKLES
     attack: 50
-    sprite_path: "res://sprites/kaiser_knuckles.png"
+    sprite_path: "res://sprites/equipments/knuckles/kaiser_knuckles.png"
     stats_upgraded: []
 
   - name: "Wyvern Claws"
     type: KNUCKLES
     attack: 51
-    sprite_path: "res://sprites/wyvern_claws.png"
+    sprite_path: "res://sprites/equipments/knuckles/wyvern_claws.png"
     stats_upgraded:
       - agility: 4
 
   - name: "Faerie Claws"
     type: KNUCKLES
     attack: 89
-    sprite_path: "res://sprites/faerie_claws.png"
+    sprite_path: "res://sprites/equipments/knuckles/faerie_claws.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -457,7 +457,7 @@ equipments:
   - name: "Hellish Claws"
     type: KNUCKLES
     attack: 121
-    sprite_path: "res://sprites/hellish_claws.png"
+    sprite_path: "res://sprites/equipments/knuckles/hellish_claws.png"
     stats_upgraded:
       - vitality: 5
 
@@ -467,25 +467,25 @@ equipments:
   - name: "Thunder Spear"
     type: SPEAR
     attack: 45
-    sprite_path: "res://sprites/thunder_spear.png"
+    sprite_path: "res://sprites/equipments/spears/thunder_spear.png"
     stats_upgraded: []
 
   - name: "Wind Spear"
     type: SPEAR
     attack: 53
-    sprite_path: "res://sprites/wind_spear.png"
+    sprite_path: "res://sprites/equipments/spears/wind_spear.png"
     stats_upgraded: []
 
   - name: "Blood Lance"
     type: SPEAR
     attack: 95
-    sprite_path: "res://sprites/blood_lance.png"
+    sprite_path: "res://sprites/equipments/spears/blood_lance.png"
     stats_upgraded: []
 
   - name: "Holy Lance"
     type: SPEAR
     attack: 125
-    sprite_path: "res://sprites/holy_lance.png"
+    sprite_path: "res://sprites/equipments/spears/holy_lance.png"
     stats_upgraded: []
 
   #-------------------------------------------------------------------#
@@ -494,20 +494,20 @@ equipments:
   - name: "Hammer"
     type: HAMMER
     attack: 55
-    sprite_path: "res://sprites/hammer.png"
+    sprite_path: "res://sprites/equipments/hammers/hammer.png"
     stats_upgraded:
       - vitality: 1
 
   - name: "Thor"
     type: HAMMER
     attack: 30
-    sprite_path: "res://sprites/thor.png"
+    sprite_path: "res://sprites/equipments/hammers/thor.png"
     stats_upgraded: []
 
   - name: "Triton Hammer"
     type: HAMMER
     attack: 110
-    sprite_path: "res://sprites/triton_hammer.png"
+    sprite_path: "res://sprites/equipments/hammers/triton_hammer.png"
     stats_upgraded:
       - vitality: 5
 
@@ -517,25 +517,25 @@ equipments:
   - name: "Battleaxe"
     type: AXE
     attack: 65
-    sprite_path: "res://sprites/battleaxe.png"
+    sprite_path: "res://sprites/equipments/axes/battleaxe.png"
     stats_upgraded: []
 
   - name: "Morning Star"
     type: AXE
     attack: 50
-    sprite_path: "res://sprites/morning_star.png"
+    sprite_path: "res://sprites/equipments/axes/morning_star.png"
     stats_upgraded: []
 
   - name: "Dual Tomahawk"
     type: AXE
     attack: 73
-    sprite_path: "res://sprites/dual_tomahawk.png"
+    sprite_path: "res://sprites/equipments/axes/dual_tomahawk.png"
     stats_upgraded: []
 
   - name: "Dual Haken"
     type: AXE
     attack: 122
-    sprite_path: "res://sprites/dual_haken.png"
+    sprite_path: "res://sprites/equipments/axes/dual_haken.png"
     stats_upgraded:
       - strength: 3
 
@@ -545,19 +545,19 @@ equipments:
   - name: "Boomerange"
     type: THROWING_WEAPON
     attack: 40
-    sprite_path: "res://sprites/boomerange.png"
+    sprite_path: "res://sprites/equipments/throwing_weapons/boomerange.png"
     stats_upgraded: []
 
   - name: "Moonring Blade"
     type: THROWING_WEAPON
     attack: 110
-    sprite_path: "res://sprites/moonring_blade.png"
+    sprite_path: "res://sprites/equipments/throwing_weapons/moonring_blade.png"
     stats_upgraded: []
 
   - name: "Shuriken"
     type: THROWING_WEAPON
     attack: 200
-    sprite_path: "res://sprites/shuriken.png"
+    sprite_path: "res://sprites/equipments/throwing_weapons/shuriken.png"
     stats_upgraded: []
 
   #-------------------------------------------------------------------#
@@ -566,19 +566,19 @@ equipments:
   - name: "Diamond Bell"
     type: BELL
     attack: 42
-    sprite_path: "res://sprites/diamond_bell.png"
+    sprite_path: "res://sprites/equipments/bells/diamond_bell.png"
     stats_upgraded: []
 
   - name: "Earthen Bell"
     type: BELL
     attack: 88
-    sprite_path: "res://sprites/earthen_bell.png"
+    sprite_path: "res://sprites/equipments/bells/earthen_bell.png"
     stats_upgraded: []
 
   - name: "Rune Bell"
     type: BELL
     attack: 98
-    sprite_path: "res://sprites/rune_bell.png"
+    sprite_path: "res://sprites/equipments/bells/rune_bell.png"
     stats_upgraded: []
 
   #-------------------------------------------------------------------#
@@ -587,28 +587,28 @@ equipments:
   - name: "Madhura Harp"
     type: HARP
     attack: 60
-    sprite_path: "res://sprites/madhura_harp.png"
+    sprite_path: "res://sprites/equipments/harps/madhura_harp.png"
     stats_upgraded:
       - mind: 5
 
   - name: "Loki Harp"
     type: HARP
     attack: 60
-    sprite_path: "res://sprites/loki_harp.png"
+    sprite_path: "res://sprites/equipments/harps/loki_harp.png"
     stats_upgraded:
       - mind: 5
 
   - name: "Lamia Harp"
     type: HARP
     attack: 60
-    sprite_path: "res://sprites/lamia_harp.png"
+    sprite_path: "res://sprites/equipments/harps/lamia_harp.png"
     stats_upgraded:
       - mind: 5
 
   - name: "Dream Harp"
     type: HARP
     attack: 60
-    sprite_path: "res://sprites/dream_harp.png"
+    sprite_path: "res://sprites/equipments/harps/dream_harp.png"
     stats_upgraded:
       - mind: 5
 
@@ -620,28 +620,28 @@ equipments:
     type: SHIELD
     defense: 2
     magic_defense: 1
-    sprite_path: "res://sprites/leather_shield.png"
+    sprite_path: "res://sprites/equipments/shields/leather_shield.png"
     stats_upgraded: []
 
   - name: "Mythril Shield"
     type: SHIELD
     defense: 3
     magic_defense: 3
-    sprite_path: "res://sprites/mythril_shield.png"
+    sprite_path: "res://sprites/equipments/shields/mythril_shield.png"
     stats_upgraded: []
 
   - name: "Ice Shield"
     type: SHIELD
     defense: 6
     magic_defense: 4
-    sprite_path: "res://sprites/ice_shield.png"
+    sprite_path: "res://sprites/equipments/shields/ice_shield.png"
     stats_upgraded: []
 
   - name: "Heroic Shield"
     type: SHIELD
     defense: 9
     magic_defense: 6
-    sprite_path: "res://sprites/heroic_shield.png"
+    sprite_path: "res://sprites/equipments/shields/heroic_shield.png"
     stats_upgraded:
       - all_stats: 1
 
@@ -649,21 +649,21 @@ equipments:
     type: SHIELD
     defense: 12
     magic_defense: 8
-    sprite_path: "res://sprites/demon_shield.png"
+    sprite_path: "res://sprites/equipments/shields/demon_shield.png"
     stats_upgraded: []
 
   - name: "Diamond Shield"
     type: SHIELD
     defense: 14
     magic_defense: 10
-    sprite_path: "res://sprites/diamond_shield.png"
+    sprite_path: "res://sprites/equipments/shields/diamond_shield.png"
     stats_upgraded: []
 
   - name: "Aegis Shield"
     type: SHIELD
     defense: 16
     magic_defense: 17
-    sprite_path: "res://sprites/aegis_shield.png"
+    sprite_path: "res://sprites/equipments/shields/aegis_shield.png"
     stats_upgraded:
       - mind: 4
 
@@ -671,21 +671,21 @@ equipments:
     type: SHIELD
     defense: 18
     magic_defense: 13
-    sprite_path: "res://sprites/genji_shield.png"
+    sprite_path: "res://sprites/equipments/shields/genji_shield.png"
     stats_upgraded: []
 
   - name: "Crystal Shield"
     type: SHIELD
     defense: 20
     magic_defense: 15
-    sprite_path: "res://sprites/crystal_shield.png"
+    sprite_path: "res://sprites/equipments/shields/crystal_shield.png"
     stats_upgraded: []
 
   - name: "Onion Shield"
     type: SHIELD
     defense: 30
     magic_defense: 30
-    sprite_path: "res://sprites/onion_shield.png"
+    sprite_path: "res://sprites/equipments/shields/onion_shield.png"
     stats_upgraded:
       - all_stats: 2
 
@@ -696,28 +696,28 @@ equipments:
     type: HEAD_ARMOR
     defense: 1
     magic_defense: 1
-    sprite_path: "res://sprites/leather_cap.png"
+    sprite_path: "res://sprites/equipments/head_armors/leather_cap.png"
     stats_upgraded: []
 
   - name: "Mythril Helm"
     type: HEAD_ARMOR
     defense: 4
     magic_defense: 3
-    sprite_path: "res://sprites/mythril_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/mythril_helm.png"
     stats_upgraded: []
 
   - name: "Shell Helm"
     type: HEAD_ARMOR
     defense: 6
     magic_defense: 5
-    sprite_path: "res://sprites/shell_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/shell_helm.png"
     stats_upgraded: []
 
   - name: "Headband"
     type: HEAD_ARMOR
     defense: 8
     magic_defense: 3
-    sprite_path: "res://sprites/headband.png"
+    sprite_path: "res://sprites/equipments/head_armors/headband.png"
     stats_upgraded:
       - strength: 1
       - vitality: 1
@@ -726,14 +726,14 @@ equipments:
     type: HEAD_ARMOR
     defense: 10
     magic_defense: 6
-    sprite_path: "res://sprites/ice_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/ice_helm.png"
     stats_upgraded: []
 
   - name: "Feathered Hat"
     type: HEAD_ARMOR
     defense: 10
     magic_defense: 16
-    sprite_path: "res://sprites/feathered_hat.png"
+    sprite_path: "res://sprites/equipments/head_armors/feathered_hat.png"
     stats_upgraded:
       - agility: 2
 
@@ -741,7 +741,7 @@ equipments:
     type: HEAD_ARMOR
     defense: 11
     magic_defense: 16
-    sprite_path: "res://sprites/scholar_hat.png"
+    sprite_path: "res://sprites/equipments/head_armors/scholar_hat.png"
     stats_upgraded:
       - intellect: 1
 
@@ -749,7 +749,7 @@ equipments:
     type: HEAD_ARMOR
     defense: 15
     magic_defense: 10
-    sprite_path: "res://sprites/black_cowl.png"
+    sprite_path: "res://sprites/equipments/head_armors/black_cowl.png"
     stats_upgraded:
       - agility: 2
 
@@ -757,7 +757,7 @@ equipments:
     type: HEAD_ARMOR
     defense: 17
     magic_defense: 11
-    sprite_path: "res://sprites/chakra_band.png"
+    sprite_path: "res://sprites/equipments/head_armors/chakra_band.png"
     stats_upgraded:
       - vitality: 2
 
@@ -765,28 +765,28 @@ equipments:
     type: HEAD_ARMOR
     defense: 18
     magic_defense: 9
-    sprite_path: "res://sprites/dragon_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/dragon_helm.png"
     stats_upgraded: []
 
   - name: "Viking Helm"
     type: HEAD_ARMOR
     defense: 19
     magic_defense: 5
-    sprite_path: "res://sprites/viking_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/viking_helm.png"
     stats_upgraded: []
 
   - name: "Diamond Helm"
     type: HEAD_ARMOR
     defense: 21
     magic_defense: 10
-    sprite_path: "res://sprites/diamond_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/diamond_helm.png"
     stats_upgraded: []
 
   - name: "Ribbon"
     type: HEAD_ARMOR
     defense: 23
     magic_defense: 20
-    sprite_path: "res://sprites/ribbon.png"
+    sprite_path: "res://sprites/equipments/head_armors/ribbon.png"
     stats_upgraded:
       - all_stats: 2
 
@@ -794,21 +794,21 @@ equipments:
     type: HEAD_ARMOR
     defense: 25
     magic_defense: 15
-    sprite_path: "res://sprites/genji_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/genji_helm.png"
     stats_upgraded: []
 
   - name: "Crystal Helm"
     type: HEAD_ARMOR
     defense: 31
     magic_defense: 17
-    sprite_path: "res://sprites/crystal_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/crystal_helm.png"
     stats_upgraded: []
 
   - name: "Onion Helm"
     type: HEAD_ARMOR
     defense: 40
     magic_defense: 40
-    sprite_path: "res://sprites/onion_helm.png"
+    sprite_path: "res://sprites/equipments/head_armors/onion_helm.png"
     stats_upgraded:
       - mind: 5
       - intellect: 5
@@ -820,28 +820,28 @@ equipments:
     type: BODY_ARMOR
     defense: 1
     magic_defense: 1
-    sprite_path: "res://sprites/vest.png"
+    sprite_path: "res://sprites/equipments/body_armors/vest.png"
     stats_upgraded: []
 
   - name: "Leather Armor"
     type: BODY_ARMOR
     defense: 3
     magic_defense: 1
-    sprite_path: "res://sprites/leather_armor.png"
+    sprite_path: "res://sprites/equipments/body_armors/leather_armor.png"
     stats_upgraded: []
 
   - name: "Mythril Armor"
     type: BODY_ARMOR
     defense: 10
     magic_defense: 3
-    sprite_path: "res://sprites/mythril_armor.png"
+    sprite_path: "res://sprites/equipments/body_armors/mythril_armor.png"
     stats_upgraded: []
 
   - name: "Mage Robe"
     type: BODY_ARMOR
     defense: 13
     magic_defense: 13
-    sprite_path: "res://sprites/mage_robe.png"
+    sprite_path: "res://sprites/equipments/body_armors/mage_robe.png"
     stats_upgraded:
       - intellect: 1
       - mind: 1
@@ -850,21 +850,21 @@ equipments:
     type: BODY_ARMOR
     defense: 18
     magic_defense: 9
-    sprite_path: "res://sprites/shell_armor.png"
+    sprite_path: "res://sprites/equipments/body_armors/shell_armor.png"
     stats_upgraded: []
 
   - name: "Ice Armor"
     type: BODY_ARMOR
     defense: 20
     magic_defense: 9
-    sprite_path: "res://sprites/ice_armor.png"
+    sprite_path: "res://sprites/equipments/body_armors/ice_armor.png"
     stats_upgraded: []
 
   - name: "Kenpo Gi"
     type: BODY_ARMOR
     defense: 20
     magic_defense: 8
-    sprite_path: "res://sprites/kenpo_gi.png"
+    sprite_path: "res://sprites/equipments/body_armors/kenpo_gi.png"
     stats_upgraded:
       - vitality: 1
       - agility: 1
@@ -873,7 +873,7 @@ equipments:
     type: BODY_ARMOR
     defense: 20
     magic_defense: 23
-    sprite_path: "res://sprites/scholar_robe.png"
+    sprite_path: "res://sprites/equipments/body_armors/scholar_robe.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -882,21 +882,21 @@ equipments:
     type: BODY_ARMOR
     defense: 21
     magic_defense: 11
-    sprite_path: "res://sprites/flame_mail.png"
+    sprite_path: "res://sprites/equipments/body_armors/flame_mail.png"
     stats_upgraded: []
 
   - name: "Knight Armor"
     type: BODY_ARMOR
     defense: 25
     magic_defense: 7
-    sprite_path: "res://sprites/knight_armor.png"
+    sprite_path: "res://sprites/equipments/body_armors/knight_armor.png"
     stats_upgraded: []
 
   - name: "Black Garb"
     type: BODY_ARMOR
     defense: 30
     magic_defense: 18
-    sprite_path: "res://sprites/black_garb.png"
+    sprite_path: "res://sprites/equipments/body_armors/black_garb.png"
     stats_upgraded:
       - vitality: 2
       - agility: 2
@@ -905,7 +905,7 @@ equipments:
     type: BODY_ARMOR
     defense: 30
     magic_defense: 30
-    sprite_path: "res://sprites/reflect_mail.png"
+    sprite_path: "res://sprites/equipments/body_armors/reflect_mail.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -914,7 +914,7 @@ equipments:
     type: BODY_ARMOR
     defense: 31
     magic_defense: 45
-    sprite_path: "res://sprites/white_robe.png"
+    sprite_path: "res://sprites/equipments/body_armors/white_robe.png"
     stats_upgraded:
       - mind: 5
 
@@ -922,7 +922,7 @@ equipments:
     type: BODY_ARMOR
     defense: 31
     magic_defense: 45
-    sprite_path: "res://sprites/black_robe.png"
+    sprite_path: "res://sprites/equipments/body_armors/black_robe.png"
     stats_upgraded:
       - intellect: 5
 
@@ -930,7 +930,7 @@ equipments:
     type: BODY_ARMOR
     defense: 32
     magic_defense: 28
-    sprite_path: "res://sprites/bard_vest.png"
+    sprite_path: "res://sprites/equipments/body_armors/bard_vest.png"
     stats_upgraded:
       - mind: 2
       - agility: 2
@@ -939,7 +939,7 @@ equipments:
     type: BODY_ARMOR
     defense: 33
     magic_defense: 18
-    sprite_path: "res://sprites/black_belt_gi.png"
+    sprite_path: "res://sprites/equipments/body_armors/black_belt_gi.png"
     stats_upgraded:
       - vitality: 3
       - agility: 3
@@ -948,14 +948,14 @@ equipments:
     type: BODY_ARMOR
     defense: 35
     magic_defense: 13
-    sprite_path: "res://sprites/dragon_mail.png"
+    sprite_path: "res://sprites/equipments/body_armors/dragon_mail.png"
     stats_upgraded: []
 
   - name: "Gala Vest"
     type: BODY_ARMOR
     defense: 35
     magic_defense: 25
-    sprite_path: "res://sprites/gala_vest.png"
+    sprite_path: "res://sprites/equipments/body_armors/gala_vest.png"
     stats_upgraded:
       - vitality: 3
 
@@ -963,42 +963,42 @@ equipments:
     type: BODY_ARMOR
     defense: 36
     magic_defense: 5
-    sprite_path: "res://sprites/viking_mail.png"
+    sprite_path: "res://sprites/equipments/body_armors/viking_mail.png"
     stats_upgraded: []
 
   - name: "Demon Mail"
     type: BODY_ARMOR
     defense: 38
     magic_defense: 17
-    sprite_path: "res://sprites/demon_mail.png"
+    sprite_path: "res://sprites/equipments/body_armors/demon_mail.png"
     stats_upgraded: []
 
   - name: "Diamond Mail"
     type: BODY_ARMOR
     defense: 40
     magic_defense: 19
-    sprite_path: "res://sprites/diamond_mail.png"
+    sprite_path: "res://sprites/equipments/body_armors/diamond_mail.png"
     stats_upgraded: []
 
   - name: "Genji Armor"
     type: BODY_ARMOR
     defense: 45
     magic_defense: 22
-    sprite_path: "res://sprites/genji_armor.png"
+    sprite_path: "res://sprites/equipments/body_armors/genji_armor.png"
     stats_upgraded: []
 
   - name: "Crystal Mail"
     type: BODY_ARMOR
     defense: 55
     magic_defense: 24
-    sprite_path: "res://sprites/crystal_mail.png"
+    sprite_path: "res://sprites/equipments/body_armors/crystal_mail.png"
     stats_upgraded: []
 
   - name: "Onion"
     type: BODY_ARMOR
     defense: 60
     magic_defense: 40
-    sprite_path: "res://sprites/onion.png"
+    sprite_path: "res://sprites/equipments/body_armors/onion.png"
     stats_upgraded:
       - strength: 5
       - vitality: 5
@@ -1010,28 +1010,28 @@ equipments:
     type: ARMS_ARMOR
     defense: 1
     magic_defense: 1
-    sprite_path: "res://sprites/bronze_bracers.png"
+    sprite_path: "res://sprites/equipments/arm_armors/bronze_bracers.png"
     stats_upgraded: []
 
   - name: "Mythril Bracers"
     type: ARMS_ARMOR
     defense: 1
     magic_defense: 4
-    sprite_path: "res://sprites/mythril_bracers.png"
+    sprite_path: "res://sprites/equipments/arm_armors/mythril_bracers.png"
     stats_upgraded: []
 
   - name: "Mythril Gloves"
     type: ARMS_ARMOR
     defense: 3
     magic_defense: 1
-    sprite_path: "res://sprites/mythril_gloves.png"
+    sprite_path: "res://sprites/equipments/arm_armors/mythril_gloves.png"
     stats_upgraded: []
 
   - name: "Gauntlets"
     type: ARMS_ARMOR
     defense: 8
     magic_defense: 4
-    sprite_path: "res://sprites/gauntlets.png"
+    sprite_path: "res://sprites/equipments/arm_armors/gauntlets.png"
     stats_upgraded:
       - strength: 1
       - vitality: 1
@@ -1040,7 +1040,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 11
     magic_defense: 8
-    sprite_path: "res://sprites/thief_gloves.png"
+    sprite_path: "res://sprites/equipments/arm_armors/thief_gloves.png"
     stats_upgraded:
       - agility: 3
 
@@ -1048,7 +1048,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 11
     magic_defense: 13
-    sprite_path: "res://sprites/rune_bracers.png"
+    sprite_path: "res://sprites/equipments/arm_armors/rune_bracers.png"
     stats_upgraded:
       - intellect: 2
       - mind: 2
@@ -1057,7 +1057,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 13
     magic_defense: 9
-    sprite_path: "res://sprites/power_bracers.png"
+    sprite_path: "res://sprites/equipments/arm_armors/power_bracers.png"
     stats_upgraded:
       - strength: 2
       - vitality: 2
@@ -1066,7 +1066,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 13
     magic_defense: 16
-    sprite_path: "res://sprites/diamond_bracers.png"
+    sprite_path: "res://sprites/equipments/arm_armors/diamond_bracers.png"
     stats_upgraded:
       - intellect: 3
       - mind: 3
@@ -1075,7 +1075,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 15
     magic_defense: 7
-    sprite_path: "res://sprites/diamond_gloves.png"
+    sprite_path: "res://sprites/equipments/arm_armors/diamond_gloves.png"
     stats_upgraded:
       - strength: 3
       - vitality: 3
@@ -1084,7 +1084,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 18
     magic_defense: 18
-    sprite_path: "res://sprites/protect_ring.png"
+    sprite_path: "res://sprites/equipments/arm_armors/protect_ring.png"
     stats_upgraded:
       - all_stats: 2
 
@@ -1092,7 +1092,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 20
     magic_defense: 14
-    sprite_path: "res://sprites/genji_gloves.png"
+    sprite_path: "res://sprites/equipments/arm_armors/genji_gloves.png"
     stats_upgraded:
       - strength: 4
       - agility: 4
@@ -1101,7 +1101,7 @@ equipments:
     type: ARMS_ARMOR
     defense: 30
     magic_defense: 15
-    sprite_path: "res://sprites/crystal_gloves.png"
+    sprite_path: "res://sprites/equipments/arm_armors/crystal_gloves.png"
     stats_upgraded:
       - strength: 4
       - vitality: 4
@@ -1110,6 +1110,6 @@ equipments:
     type: ARMS_ARMOR
     defense: 50
     magic_defense: 25
-    sprite_path: "res://sprites/onion_gauntlets.png"
+    sprite_path: "res://sprites/equipments/arm_armors/onion_gauntlets.png"
     stats_upgraded:
       - all_stats: 3
