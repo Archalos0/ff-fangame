@@ -1015,3 +1015,127 @@ equipments:
     sprite_path: "res://sprites/assets/equipments/body_armors/onion_armor.png"
     stats_upgraded:
       - all_stats: 2
+
+  #------------------------------------------------------------------#
+  #                            ARMS ARMOR                            #
+  #------------------------------------------------------------------#
+  - id: "arms_001"
+    name: "Bronze Bracers"
+    type: ARMS_ARMOR
+    defense: 1
+    magic_defense: 1
+    sprite_path: "res://sprites/equipments/arm_armors/bronze_bracers.png"
+    stats_upgraded: []
+
+  - id: "arms_002"
+    name: "Mythril Bracers"
+    type: ARMS_ARMOR
+    defense: 1
+    magic_defense: 4
+    sprite_path: "res://sprites/equipments/arm_armors/mythril_bracers.png"
+    stats_upgraded: []
+
+  - id: "arms_003"
+    name: "Mythril Gloves"
+    type: ARMS_ARMOR
+    defense: 3
+    magic_defense: 1
+    sprite_path: "res://sprites/equipments/arm_armors/mythril_gloves.png"
+    stats_upgraded: []
+
+  - id: "arms_004"
+    name: "Gauntlets"
+    type: ARMS_ARMOR
+    defense: 8
+    magic_defense: 4
+    sprite_path: "res://sprites/equipments/arm_armors/gauntlets.png"
+    stats_upgraded:
+      - strength: 1
+      - vitality: 1
+
+  - id: "arms_005"
+    name: "Thief Gloves"
+    type: ARMS_ARMOR
+    defense: 11
+    magic_defense: 8
+    sprite_path: "res://sprites/equipments/arm_armors/thief_gloves.png"
+    stats_upgraded:
+      - agility: 3
+
+  - id: "arms_006"
+    name: "Rune Bracers"
+    type: ARMS_ARMOR
+    defense: 11
+    magic_defense: 13
+    sprite_path: "res://sprites/equipments/arm_armors/rune_bracers.png"
+    stats_upgraded:
+      - intellect: 2
+      - mind: 2
+
+  - id: "arms_007"
+    name: "Power Bracers"
+    type: ARMS_ARMOR
+    defense: 13
+    magic_defense: 9
+    sprite_path: "res://sprites/equipments/arm_armors/power_bracers.png"
+    stats_upgraded:
+      - strength: 2
+      - vitality: 2
+
+  - id: "arms_008"
+    name: "Diamond Bracers"
+    type: ARMS_ARMOR
+    defense: 13
+    magic_defense: 16
+    sprite_path: "res://sprites/equipments/arm_armors/diamond_bracers.png"
+    stats_upgraded:
+      - intellect: 3
+      - mind: 3
+
+  - id: "arms_009"
+    name: "Diamond Gloves"
+    type: ARMS_ARMOR
+    defense: 15
+    magic_defense: 7
+    sprite_path: "res://sprites/equipments/arm_armors/diamond_gloves.png"
+    stats_upgraded:
+      - strength: 3
+      - vitality: 3
+
+  - id: "arms_010"
+    name: "Protect Ring"
+    type: ARMS_ARMOR
+    defense: 18
+    magic_defense: 18
+    sprite_path: "res://sprites/equipments/arm_armors/protect_ring.png"
+    stats_upgraded:
+      - all_stats: 2
+
+  - id: "arms_011"
+    name: "Genji Gloves"
+    type: ARMS_ARMOR
+    defense: 20
+    magic_defense: 14
+    sprite_path: "res://sprites/equipments/arm_armors/genji_gloves.png"
+    stats_upgraded:
+      - strength: 4
+      - agility: 4
+
+  - id: "arms_012"
+    name: "Crystal Gloves"
+    type: ARMS_ARMOR
+    defense: 30
+    magic_defense: 15
+    sprite_path: "res://sprites/equipments/arm_armors/crystal_gloves.png"
+    stats_upgraded:
+      - strength: 4
+      - vitality: 4
+
+  - id: "arms_013"
+    name: "Onion Gauntlets"
+    type: ARMS_ARMOR
+    defense: 50
+    magic_defense: 25
+    sprite_path: "res://sprites/equipments/arm_armors/onion_gauntlets.png"
+    stats_upgraded:
+      - all_stats: 3
