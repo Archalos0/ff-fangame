@@ -1,11 +1,20 @@
-[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=3 format=3 uid="uid://cbmjbftt4s5nf"]
+[gd_resource type="Resource" script_class="PlayerCharacterResource" load_steps=7 format=3 uid="uid://cbmjbftt4s5nf"]
 
 [ext_resource type="Resource" uid="uid://cgdx6ajehx1ua" path="res://ressources/jobs/wind_crystal/black_mage.tres" id="1_1kbyh"]
+[ext_resource type="Resource" uid="uid://bj7wqcpem8kih" path="res://ressources/equipments/knife.tres" id="1_afnlx"]
 [ext_resource type="Script" path="res://ressources/characters/player_character.gd" id="2_kwc3q"]
+[ext_resource type="Resource" uid="uid://h614bhgw11q0" path="res://ressources/equipments/main_gauche.tres" id="2_y0130"]
+[ext_resource type="Script" path="res://ressources/equipments/equipments_resource.gd" id="3_b2t3k"]
+
+[sub_resource type="Resource" id="Resource_32ddj"]
+script = ExtResource("3_b2t3k")
+left_hand = ExtResource("1_afnlx")
+right_hand = ExtResource("2_y0130")
 
 [resource]
 script = ExtResource("2_kwc3q")
 job_resource = ExtResource("1_1kbyh")
+equipments_resource = SubResource("Resource_32ddj")
 character_name = "Luneth"
 level = 1
 max_health_points = 100
