@@ -49,36 +49,26 @@ var _player: PlayerData = PlayerData.new()
 func load_save(file_path) -> void:
 	_save_file_path = file_path
 	
-	if not FileAccess.file_exists(_save_file_path):
+	var res = FileHandler.get_json_content(_save_file_path)
+	
+	if res.has("error"):
 		return
 	
-	var json: JSON = JSON.new()
+	var raw_data = res
 	
-	var file = FileAccess.open(_save_file_path, FileAccess.READ)
-	var res = json.parse(file.get_as_text())
-	file.close()
-	
-	if res == OK:
-		var raw_data = json.data
-		
-		for key in raw_data.keys():
-			match key:
-				"player": 
-					_player = PlayerData.new()
-					_player.load_player(raw_data["player"])
-	else:
-		print("Error")
+	for key in raw_data.keys():
+		match key:
+			"player": 
+				_player = PlayerData.new()
+				_player.load_player(raw_data["player"])
 
 func save_game():
 	if not FileAccess.file_exists(_save_file_path):
 		return
 	
 	var dict_to_save: Dictionary = _get_properties_dict()
-	var json_string: String = JSON.stringify(dict_to_save, "\t", false)
+	FileHandler.write_json_content(_save_file_path, dict_to_save)
 	
-	var file = FileAccess.open(_save_file_path, FileAccess.WRITE)
-	file.store_string(json_string)
-	file.close()
 
 func _get_properties_dict():
 	var properties = {
