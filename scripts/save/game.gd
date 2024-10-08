@@ -29,50 +29,52 @@ class PlayerData:
 class CharacterData: 
 	var name: String
 	var job: String
-	var equipments: EquipmentsData
+	var equipments: EquipmentsData = EquipmentsData.new()
 	
 	func load_character(dict: Dictionary):
 		name = dict["name"]
 		job = dict["job"]
-		equipments = EquipmentsData.new()
+		
 		if dict.has("equipments"):
 			equipments.load_equipments(dict["equipments"])
 	
 	func get_properties_dict():
 		var properties = {
 			"name": name,
-			"job": job
+			"job": job,
+			"equipments": {
+				"left_hand": equipments.left_hand.id,
+				"right_hand": equipments.right_hand.id,
+				"head_armor": equipments.head_armor.id,
+				"body_armor": equipments.body_armor.id,
+				"arm_armor": equipments.arm_armor.id,
+			}
 		}
 		
 		return properties
 
 class EquipmentsData:
-	var left_hand: EquipmentData
-	var right_hand: EquipmentData
-	var head_armor: EquipmentData
-	var body_armor: EquipmentData
-	var arm_armor: EquipmentData
+	var left_hand: EquipmentData = EquipmentData.new()
+	var right_hand: EquipmentData = EquipmentData.new()
+	var head_armor: EquipmentData = EquipmentData.new()
+	var body_armor: EquipmentData = EquipmentData.new()
+	var arm_armor: EquipmentData = EquipmentData.new()
 	
 	func load_equipments(dict: Dictionary):
 		for key in dict:
 			if dict[key] == null:
 				continue
-				
+			
 			match key:
 				"left_hand": 
-					left_hand = EquipmentData.new()
 					left_hand.load_equipment(dict["left_hand"])
 				"right_hand": 
-					right_hand = EquipmentData.new()
 					right_hand.load_equipment(dict["right_hand"])
 				"head_armor": 
-					head_armor = EquipmentData.new()
 					head_armor.load_equipment(dict["head_armor"])
 				"body_armor": 
-					body_armor = EquipmentData.new()
 					body_armor.load_equipment(dict["body_armor"])
 				"arm_armor":
-					arm_armor = EquipmentData.new()
 					arm_armor.load_equipment(dict["arm_armor"])
 
 class EquipmentData:
@@ -137,7 +139,6 @@ func save_game():
 	var dict_to_save: Dictionary = _get_properties_dict()
 	FileHandler.write_json_content(_save_file_path, dict_to_save)
 
-
 func _get_properties_dict():
 	var properties = {
 		"player": _player.get_properties_dict()
@@ -149,4 +150,5 @@ func add_character(dict: Dictionary):
 	var character: CharacterData = CharacterData.new()
 	character.name = dict["name"]
 	character.job = dict["job"]
+	character.equipments.left_hand.id = dict["equipments"]["left_hand"]
 	_player.characters.append(character)
