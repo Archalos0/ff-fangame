@@ -1,0 +1,18 @@
+{
+	"player": {
+		"characters": [
+			{
+				"name": "Luneth",
+				"job": "Warrior"
+			},
+			{
+				"name": "Arc",
+				"job": "Black Mage"
+			},
+			{
+				"name": "Refia",
+				"job": "White Mage"
+			}
+		]
+	}
+}
