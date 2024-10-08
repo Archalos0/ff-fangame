@@ -16,6 +16,10 @@ run/main_scene="res://scenes/battle_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://scripts/save/game.gd"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

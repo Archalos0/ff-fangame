@@ -1,16 +1,18 @@
 {
-	"characters": [
-		{
-			"job": "Thief",
-			"name": "Luneth"
-		},
-		{
-			"job": "Black Mage",
-			"name": "Arc"
-		},
-		{
-			"job": "White Mage",
-			"name": "Refia"
-		}
-	]
+	"player": {
+		"characters": [
+			{
+				"name": "Luneth",
+				"job": "Warrior"
+			},
+			{
+				"name": "Arc",
+				"job": "Black Mage"
+			},
+			{
+				"name": "Refia",
+				"job": "White Mage"
+			}
+		]
+	}
 }

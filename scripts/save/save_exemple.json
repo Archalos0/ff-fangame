@@ -1,26 +1,29 @@
 {
-	"characters":[
-		{
-			"name":"Luneth",
-			"job":"Warrior",
-			"equipments":{
-				"left_hand":"sword_002",
-				"right_hand":"shield_001",
-				"head_armor":"head_armor_006",
-				"body_armor":"body_armor_001",
-				"arm_armor":null
+	"player": {
+		
+		"characters":[
+			{
+				"name":"Luneth",
+				"job":"Warrior",
+				"equipments":{
+					"left_hand":"sword_002",
+					"right_hand":"shield_001",
+					"head_armor":"head_armor_006",
+					"body_armor":"body_armor_001",
+					"arm_armor":null
+				}
+			},
+			{
+				"name":"Luneth",
+				"job":"Warrior",
+				"equipments":{
+					"left_hand":"sword_002",
+					"right_hand":"shield_001",
+					"head_armor":"head_armor_006",
+					"body_armor":"body_armor_001",
+					"arm_armor":null
+				}
 			}
-		},
-		{
-			"name":"Luneth",
-			"job":"Warrior",
-			"equipments":{
-				"left_hand":"sword_002",
-				"right_hand":"shield_001",
-				"head_armor":"head_armor_006",
-				"body_armor":"body_armor_001",
-				"arm_armor":null
-			}
-		}
-	]
+		]
+	}
 }
