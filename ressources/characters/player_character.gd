@@ -2,7 +2,8 @@ class_name PlayerCharacterResource extends CharacterResource
 
 @export var job_resource: JobResource
 
-#equipements
+@export var equipments_resource: EquipmentsResource
+
 
 #@export var character_name: String
 #

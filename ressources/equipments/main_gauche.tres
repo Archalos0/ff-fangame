@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EquipmentResource" load_steps=2 format=3 uid="uid://h614bhgw11q0"]
+
+[ext_resource type="Script" path="res://ressources/equipments/equipment_resource.gd" id="1_q178j"]
+
+[resource]
+script = ExtResource("1_q178j")
+equipment_name = "Main Gauche"
+type = "DAGGER"
+main_stats_value = 35
+stats_upgraded = {}

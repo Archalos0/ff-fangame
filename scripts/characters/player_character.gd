@@ -1,7 +1,7 @@
 class_name PlayerCharacter extends Character
 
 var job: Job
-#var equipments: Equipments 
+var equipments: Equipments 
 
 func load_from_character_resource(p_resource: CharacterResource):
 	if p_resource is not PlayerCharacterResource:
@@ -20,6 +20,7 @@ func load_from_character_resource(p_resource: CharacterResource):
 	stats.health_points = p_resource.current_health_points
 
 	load_actions()
+	_load_equipments(resource.equipments_resource)
 
 
 func load_actions():
@@ -30,3 +31,6 @@ func load_stats():
 
 func get_animation() -> SpriteFrames:
 	return job.animations
+
+func _load_equipments(p_equipments: EquipmentsResource):
+	equipments.left_hand.load_from_resource(p_equipments.left_hand)

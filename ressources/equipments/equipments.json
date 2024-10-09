@@ -1,0 +1,1453 @@
+{
+	"dagger_001":{
+		"name":"Knife",
+		"type":"DAGGER",
+		"attack":8,
+		"sprite_path":"res://sprites/assets/equipments/daggers/knife.png"
+	},
+	"dagger_002":{
+		"name":"Dagger",
+		"type":"DAGGER",
+		"attack":9,
+		"sprite_path":"res://sprites/assets/equipments/daggers/dagger.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"dagger_003":{
+		"name":"Mythril Knife",
+		"type":"DAGGER",
+		"attack":14,
+		"sprite_path":"res://sprites/assets/equipments/daggers/mythril_knife.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"dagger_004":{
+		"name":"Main Gauche",
+		"type":"DAGGER",
+		"attack":35,
+		"sprite_path":"res://sprites/assets/equipments/daggers/main_gauche.png",
+		"stats_upgraded":[
+			{
+				"agility":3
+			}
+		]
+	},
+	"dagger_005":{
+		"name":"Orialcon",
+		"type":"DAGGER",
+		"attack":45,
+		"sprite_path":"res://sprites/assets/equipments/daggers/orialcon.png",
+		"stats_upgraded":[
+			{
+				"agility":4
+			}
+		]
+	},
+	"dagger_006":{
+		"name":"Air Knife",
+		"type":"DAGGER",
+		"attack":89,
+		"sprite_path":"res://sprites/assets/equipments/daggers/air_knife.png",
+		"stats_upgraded":[
+			{
+				"agility":6
+			}
+		]
+	},
+	"sword_001":{
+		"name":"Golden Sword",
+		"type":"SWORD",
+		"attack":5,
+		"sprite_path":"res://sprites/assets/equipments/swords/golden_sword.png",
+		"stats_upgraded":[
+			{
+				"vitality":5
+			}
+		]
+	},
+	"sword_002":{
+		"name":"Longsword",
+		"type":"SWORD",
+		"attack":10,
+		"sprite_path":"res://sprites/assets/equipments/swords/longsword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_003":{
+		"name":"Wightslayer",
+		"type":"SWORD",
+		"attack":15,
+		"sprite_path":"res://sprites/assets/equipments/swords/wightslayer.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_004":{
+		"name":"Mythril Sword",
+		"type":"SWORD",
+		"attack":17,
+		"sprite_path":"res://sprites/assets/equipments/swords/mythril_sword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_005":{
+		"name":"Serpent Sword",
+		"type":"SWORD",
+		"attack":25,
+		"sprite_path":"res://sprites/assets/equipments/swords/serpent_sword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_006":{
+		"name":"Tyrfing",
+		"type":"SWORD",
+		"attack":28,
+		"sprite_path":"res://sprites/assets/equipments/swords/tyrfing.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_007":{
+		"name":"Salamand Sword",
+		"type":"SWORD",
+		"attack":30,
+		"sprite_path":"res://sprites/assets/equipments/swords/salamand_sword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_008":{
+		"name":"Freezing Blade",
+		"type":"SWORD",
+		"attack":32,
+		"sprite_path":"res://sprites/assets/equipments/swords/freezing_blade.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_009":{
+		"name":"Royal Sword",
+		"type":"SWORD",
+		"attack":50,
+		"sprite_path":"res://sprites/assets/equipments/swords/royal_sword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_010":{
+		"name":"Blood Sword",
+		"type":"SWORD",
+		"attack":55,
+		"sprite_path":"res://sprites/assets/equipments/swords/blood_sword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_011":{
+		"name":"Ancient Sword",
+		"type":"SWORD",
+		"attack":80,
+		"sprite_path":"res://sprites/assets/equipments/swords/ancient_sword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_012":{
+		"name":"Defender",
+		"type":"SWORD",
+		"attack":95,
+		"sprite_path":"res://sprites/assets/equipments/swords/defender.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_013":{
+		"name":"Break Blade",
+		"type":"SWORD",
+		"attack":125,
+		"sprite_path":"res://sprites/assets/equipments/swords/break_blade.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_014":{
+		"name":"Excalibur",
+		"type":"SWORD",
+		"attack":137,
+		"sprite_path":"res://sprites/assets/equipments/swords/excalibur.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_015":{
+		"name":"Ragnarok",
+		"type":"SWORD",
+		"attack":140,
+		"sprite_path":"res://sprites/assets/equipments/swords/ragnarok.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"sword_016":{
+		"name":"Onion Sword",
+		"type":"SWORD",
+		"attack":156,
+		"sprite_path":"res://sprites/assets/equipments/swords/onion_sword.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"dark_blade_001":{
+		"name":"Ashura",
+		"type":"DARK_BLADE",
+		"attack":100,
+		"sprite_path":"res://sprites/assets/equipments/dark_blades/ashura.png",
+		"stats_upgraded":[
+			{
+				"agility":10
+			}
+		]
+	},
+	"dark_blade_002":{
+		"name":"Kotetsu",
+		"type":"DARK_BLADE",
+		"attack":105,
+		"sprite_path":"res://sprites/assets/equipments/dark_blades/kotetsu.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"dark_blade_003":{
+		"name":"Kiku-Ichimonji",
+		"type":"DARK_BLADE",
+		"attack":115,
+		"sprite_path":"res://sprites/assets/equipments/dark_blades/kiku_ichimonji.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"dark_blade_004":{
+		"name":"Masamune",
+		"type":"DARK_BLADE",
+		"attack":132,
+		"sprite_path":"res://sprites/assets/equipments/dark_blades/masamune.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"staff_001":{
+		"name":"Staff",
+		"type":"STAFF",
+		"attack":3,
+		"sprite_path":"res://sprites/assets/equipments/staves/staff.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"staff_002":{
+		"name":"Fire Staff",
+		"type":"STAFF",
+		"attack":20,
+		"sprite_path":"res://sprites/assets/equipments/staves/fire_staff.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"staff_003":{
+		"name":"Ice Staff",
+		"type":"STAFF",
+		"attack":20,
+		"sprite_path":"res://sprites/assets/equipments/staves/ice_staff.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"staff_004":{
+		"name":"Light Staff",
+		"type":"STAFF",
+		"attack":20,
+		"sprite_path":"res://sprites/assets/equipments/staves/light_staff.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"staff_005":{
+		"name":"Golem Staff",
+		"type":"STAFF",
+		"attack":30,
+		"sprite_path":"res://sprites/assets/equipments/staves/golem_staff.png",
+		"stats_upgraded":[
+			{
+				"mind":3
+			}
+		]
+	},
+	"staff_006":{
+		"name":"Rune Staff",
+		"type":"STAFF",
+		"attack":33,
+		"sprite_path":"res://sprites/assets/equipments/staves/rune_staff.png",
+		"stats_upgraded":[
+			{
+				"mind":4
+			}
+		]
+	},
+	"staff_007":{
+		"name":"Elder Staff",
+		"type":"STAFF",
+		"attack":85,
+		"sprite_path":"res://sprites/assets/equipments/staves/elder_staff.png",
+		"stats_upgraded":[
+			{
+				"mind":6
+			}
+		]
+	},
+	"rod_001":{
+		"name":"Mythril Rod",
+		"type":"ROD",
+		"attack":12,
+		"sprite_path":"res://sprites/assets/equipments/rodes/mythril_rod.png",
+		"stats_upgraded":[
+			{
+				"intellect":1
+			}
+		]
+	},
+	"rod_002":{
+		"name":"Fire Rod",
+		"type":"ROD",
+		"attack":25,
+		"sprite_path":"res://sprites/assets/equipments/rodes/fire_rod.png",
+		"stats_upgraded":[
+			{
+				"intellect":3
+			}
+		]
+	},
+	"rod_003":{
+		"name":"Ice Rod",
+		"type":"ROD",
+		"attack":25,
+		"sprite_path":"res://sprites/assets/equipments/rodes/ice_rod.png",
+		"stats_upgraded":[
+			{
+				"intellect":3
+			},
+			{
+				"mind":3
+			}
+		]
+	},
+	"rod_004":{
+		"name":"Light Rod",
+		"type":"ROD",
+		"attack":25,
+		"sprite_path":"res://sprites/assets/equipments/rodes/light_rod.png",
+		"stats_upgraded":[
+			{
+				"intellect":3
+			},
+			{
+				"mind":3
+			}
+		]
+	},
+	"rod_005":{
+		"name":"Omnirod",
+		"type":"ROD",
+		"attack":93,
+		"sprite_path":"res://sprites/assets/equipments/rodes/omnirod.png",
+		"stats_upgraded":[
+			{
+				"intellect":10
+			}
+		]
+	},
+	"nunchaku_001":{
+		"name":"Nunchaku",
+		"type":"NUNCHAKU",
+		"attack":12,
+		"sprite_path":"res://sprites/assets/equipments/nunchakus/nunchaku.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"nunchaku_002":{
+		"name":"Tonfa",
+		"type":"NUNCHAKU",
+		"attack":20,
+		"sprite_path":"res://sprites/assets/equipments/nunchakus/tonfa.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"nunchaku_003":{
+		"name":"Sansetsukon",
+		"type":"NUNCHAKU",
+		"attack":25,
+		"sprite_path":"res://sprites/assets/equipments/nunchakus/sansetsukon.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"bow_001":{
+		"name":"Bow",
+		"type":"BOW",
+		"attack":10,
+		"sprite_path":"res://sprites/assets/equipments/bows/bow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"bow_002":{
+		"name":"Great Bow",
+		"type":"BOW",
+		"attack":18,
+		"sprite_path":"res://sprites/assets/equipments/bows/great_bow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"bow_003":{
+		"name":"Killer Bow",
+		"type":"BOW",
+		"attack":26,
+		"sprite_path":"res://sprites/assets/equipments/bows/killer_bow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"bow_004":{
+		"name":"Rune Bow",
+		"type":"BOW",
+		"attack":42,
+		"sprite_path":"res://sprites/assets/equipments/bows/rune_bow.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"bow_005":{
+		"name":"Yoichi Bow",
+		"type":"BOW",
+		"attack":70,
+		"sprite_path":"res://sprites/assets/equipments/bows/yoichi_bow.png",
+		"stats_upgraded":[
+			{
+				"agility":5
+			}
+		]
+	},
+	"arrow_001":{
+		"name":"Wooden Arrow",
+		"type":"ARROW",
+		"attack":6,
+		"sprite_path":"res://sprites/assets/equipments/arrows/wooden_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arrow_002":{
+		"name":"Holy Arrow",
+		"type":"ARROW",
+		"attack":8,
+		"sprite_path":"res://sprites/assets/equipments/arrows/holy_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arrow_003":{
+		"name":"Iron Arrow",
+		"type":"ARROW",
+		"attack":12,
+		"sprite_path":"res://sprites/assets/equipments/arrows/iron_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arrow_004":{
+		"name":"Fire Arrow",
+		"type":"ARROW",
+		"attack":17,
+		"sprite_path":"res://sprites/assets/equipments/arrows/fire_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arrow_005":{
+		"name":"Ice Arrow",
+		"type":"ARROW",
+		"attack":17,
+		"sprite_path":"res://sprites/assets/equipments/arrows/ice_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arrow_006":{
+		"name":"Light Arrow",
+		"type":"ARROW",
+		"attack":17,
+		"sprite_path":"res://sprites/assets/equipments/arrows/light_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arrow_007":{
+		"name":"Medusa Arrow",
+		"type":"ARROW",
+		"attack":23,
+		"sprite_path":"res://sprites/assets/equipments/arrows/medusa_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arrow_008":{
+		"name":"Yoichi Arrow",
+		"type":"ARROW",
+		"attack":40,
+		"sprite_path":"res://sprites/assets/equipments/arrows/yoichi_arrow.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"book_001":{
+		"name":"Book of Fire",
+		"type":"BOOK",
+		"attack":32,
+		"sprite_path":"res://sprites/assets/equipments/books/book_of_fire.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"book_002":{
+		"name":"Book of Ice",
+		"type":"BOOK",
+		"attack":32,
+		"sprite_path":"res://sprites/assets/equipments/books/book_of_ice.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"book_003":{
+		"name":"Book of Light",
+		"type":"BOOK",
+		"attack":32,
+		"sprite_path":"res://sprites/assets/equipments/books/book_of_light.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"book_004":{
+		"name":"Tome of Fire",
+		"type":"BOOK",
+		"attack":53,
+		"sprite_path":"res://sprites/assets/equipments/books/tome_of_fire.png",
+		"stats_upgraded":[
+			{
+				"intellect":3
+			},
+			{
+				"mind":3
+			}
+		]
+	},
+	"book_005":{
+		"name":"Tome of Ice",
+		"type":"BOOK",
+		"attack":53,
+		"sprite_path":"res://sprites/assets/equipments/books/tome_of_ice.png",
+		"stats_upgraded":[
+			{
+				"intellect":3
+			},
+			{
+				"mind":3
+			}
+		]
+	},
+	"book_006":{
+		"name":"Tome of Light",
+		"type":"BOOK",
+		"attack":53,
+		"sprite_path":"res://sprites/assets/equipments/books/tome_of_light.png",
+		"stats_upgraded":[
+			{
+				"intellect":3
+			},
+			{
+				"mind":3
+			}
+		]
+	},
+	"knuckle_001":{
+		"name":"Cat Claws",
+		"type":"KNUCKLES",
+		"attack":42,
+		"sprite_path":"res://sprites/assets/equipments/knuckles/cat_claws.png",
+		"stats_upgraded":[
+			{
+				"agility":3
+			}
+		]
+	},
+	"knuckle_002":{
+		"name":"Kaiser Knuckles",
+		"type":"KNUCKLES",
+		"attack":50,
+		"sprite_path":"res://sprites/assets/equipments/knuckles/kaiser_knuckles.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"knuckle_003":{
+		"name":"Wyvern Claws",
+		"type":"KNUCKLES",
+		"attack":51,
+		"sprite_path":"res://sprites/assets/equipments/knuckles/wyvern_claws.png",
+		"stats_upgraded":[
+			{
+				"agility":4
+			}
+		]
+	},
+	"knuckle_004":{
+		"name":"Faerie Claws",
+		"type":"KNUCKLES",
+		"attack":89,
+		"sprite_path":"res://sprites/assets/equipments/knuckles/faerie_claws.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"knuckle_005":{
+		"name":"Hellish Claws",
+		"type":"KNUCKLES",
+		"attack":121,
+		"sprite_path":"res://sprites/assets/equipments/knuckles/hellish_claws.png",
+		"stats_upgraded":[
+			{
+				"vitality":5
+			}
+		]
+	},
+	"spear_001":{
+		"name":"Thunder Spear",
+		"type":"SPEAR",
+		"attack":45,
+		"sprite_path":"res://sprites/assets/equipments/spears/thunder_spear.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"spear_002":{
+		"name":"Wind Spear",
+		"type":"SPEAR",
+		"attack":53,
+		"sprite_path":"res://sprites/assets/equipments/spears/wind_spear.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"spear_003":{
+		"name":"Blood Lance",
+		"type":"SPEAR",
+		"attack":95,
+		"sprite_path":"res://sprites/assets/equipments/spears/blood_lance.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"spear_004":{
+		"name":"Holy Lance",
+		"type":"SPEAR",
+		"attack":125,
+		"sprite_path":"res://sprites/assets/equipments/spears/holy_lance.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"hammer_001":{
+		"name":"Hammer",
+		"type":"HAMMER",
+		"attack":55,
+		"sprite_path":"res://sprites/assets/equipments/hammers/hammer.png",
+		"stats_upgraded":[
+			{
+				"vitality":1
+			}
+		]
+	},
+	"hammer_002":{
+		"name":"Thor",
+		"type":"HAMMER",
+		"attack":30,
+		"sprite_path":"res://sprites/assets/equipments/hammers/thor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"hammer_003":{
+		"name":"Triton Hammer",
+		"type":"HAMMER",
+		"attack":110,
+		"sprite_path":"res://sprites/assets/equipments/hammers/triton_hammer.png",
+		"stats_upgraded":[
+			{
+				"vitality":5
+			}
+		]
+	},
+	"axe_001":{
+		"name":"Battleaxe",
+		"type":"AXE",
+		"attack":65,
+		"sprite_path":"res://sprites/assets/equipments/axes/battleaxe.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"axe_002":{
+		"name":"Morning Star",
+		"type":"AXE",
+		"attack":50,
+		"sprite_path":"res://sprites/assets/equipments/axes/morning_star.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"axe_003":{
+		"name":"Dual Tomahawk",
+		"type":"AXE",
+		"attack":73,
+		"sprite_path":"res://sprites/assets/equipments/axes/dual_tomahawk.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"axe_004":{
+		"name":"Dual Haken",
+		"type":"AXE",
+		"attack":122,
+		"sprite_path":"res://sprites/assets/equipments/axes/dual_haken.png",
+		"stats_upgraded":[
+			{
+				"strength":3
+			}
+		]
+	},
+	"throwing_001":{
+		"name":"Boomerange",
+		"type":"THROWING_WEAPON",
+		"attack":40,
+		"sprite_path":"res://sprites/assets/equipments/throwing_weapons/boomerange.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"throwing_002":{
+		"name":"Moonring Blade",
+		"type":"THROWING_WEAPON",
+		"attack":110,
+		"sprite_path":"res://sprites/assets/equipments/throwing_weapons/moonring_blade.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"throwing_003":{
+		"name":"Shuriken",
+		"type":"THROWING_WEAPON",
+		"attack":200,
+		"sprite_path":"res://sprites/assets/equipments/throwing_weapons/shuriken.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"bell_001":{
+		"name":"Diamond Bell",
+		"type":"BELL",
+		"attack":42,
+		"sprite_path":"res://sprites/assets/equipments/bells/diamond_bell.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"bell_002":{
+		"name":"Earthen Bell",
+		"type":"BELL",
+		"attack":88,
+		"sprite_path":"res://sprites/assets/equipments/bells/earthen_bell.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"bell_003":{
+		"name":"Rune Bell",
+		"type":"BELL",
+		"attack":98,
+		"sprite_path":"res://sprites/assets/equipments/bells/rune_bell.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"harp_001":{
+		"name":"Madhura Harp",
+		"type":"HARP",
+		"attack":60,
+		"sprite_path":"res://sprites/assets/equipments/harps/madhura_harp.png",
+		"stats_upgraded":[
+			{
+				"mind":5
+			}
+		]
+	},
+	"harp_002":{
+		"name":"Loki Harp",
+		"type":"HARP",
+		"attack":60,
+		"sprite_path":"res://sprites/assets/equipments/harps/loki_harp.png",
+		"stats_upgraded":[
+			{
+				"mind":5
+			}
+		]
+	},
+	"harp_003":{
+		"name":"Lamia Harp",
+		"type":"HARP",
+		"attack":60,
+		"sprite_path":"res://sprites/assets/equipments/harps/lamia_harp.png",
+		"stats_upgraded":[
+			{
+				"mind":5
+			}
+		]
+	},
+	"harp_004":{
+		"name":"Dream Harp",
+		"type":"HARP",
+		"attack":60,
+		"sprite_path":"res://sprites/assets/equipments/harps/dream_harp.png",
+		"stats_upgraded":[
+			{
+				"mind":5
+			}
+		]
+	},
+	"shield_001":{
+		"name":"Leather Shield",
+		"type":"SHIELD",
+		"defense":2,
+		"magic_defense":1,
+		"sprite_path":"res://sprites/assets/equipments/shields/leather_shield.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"shield_002":{
+		"name":"Mythril Shield",
+		"type":"SHIELD",
+		"defense":3,
+		"magic_defense":3,
+		"sprite_path":"res://sprites/assets/equipments/shields/mythril_shield.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"shield_003":{
+		"name":"Ice Shield",
+		"type":"SHIELD",
+		"defense":6,
+		"magic_defense":4,
+		"sprite_path":"res://sprites/assets/equipments/shields/ice_shield.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"shield_004":{
+		"name":"Heroic Shield",
+		"type":"SHIELD",
+		"defense":9,
+		"magic_defense":6,
+		"sprite_path":"res://sprites/assets/equipments/shields/heroic_shield.png",
+		"stats_upgraded":[
+			{
+				"all_stats":1
+			}
+		]
+	},
+	"shield_005":{
+		"name":"Demon Shield",
+		"type":"SHIELD",
+		"defense":12,
+		"magic_defense":8,
+		"sprite_path":"res://sprites/assets/equipments/shields/demon_shield.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"shield_006":{
+		"name":"Diamond Shield",
+		"type":"SHIELD",
+		"defense":14,
+		"magic_defense":10,
+		"sprite_path":"res://sprites/assets/equipments/shields/diamond_shield.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"shield_007":{
+		"name":"Aegis Shield",
+		"type":"SHIELD",
+		"defense":16,
+		"magic_defense":17,
+		"sprite_path":"res://sprites/assets/equipments/shields/aegis_shield.png",
+		"stats_upgraded":[
+			{
+				"mind":4
+			}
+		]
+	},
+	"shield_008":{
+		"name":"Genji Shield",
+		"type":"SHIELD",
+		"defense":18,
+		"magic_defense":13,
+		"sprite_path":"res://sprites/assets/equipments/shields/genji_shield.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"shield_009":{
+		"name":"Crystal Shield",
+		"type":"SHIELD",
+		"defense":20,
+		"magic_defense":15,
+		"sprite_path":"res://sprites/assets/equipments/shields/crystal_shield.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"shield_010":{
+		"name":"Onion Shield",
+		"type":"SHIELD",
+		"defense":30,
+		"magic_defense":30,
+		"sprite_path":"res://sprites/assets/equipments/shields/onion_shield.png",
+		"stats_upgraded":[
+			{
+				"all_stats":2
+			}
+		]
+	},
+	"head_armor_001":{
+		"name":"Leather Cap",
+		"type":"HEAD_ARMOR",
+		"defense":1,
+		"magic_defense":1,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/leather_cap.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_002":{
+		"name":"Mythril Helm",
+		"type":"HEAD_ARMOR",
+		"defense":4,
+		"magic_defense":3,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/mythril_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_003":{
+		"name":"Shell Helm",
+		"type":"HEAD_ARMOR",
+		"defense":6,
+		"magic_defense":5,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/shell_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_004":{
+		"name":"Headband",
+		"type":"HEAD_ARMOR",
+		"defense":8,
+		"magic_defense":3,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/headband.png",
+		"stats_upgraded":[
+			{
+				"strength":1
+			},
+			{
+				"vitality":1
+			}
+		]
+	},
+	"head_armor_005":{
+		"name":"Ice Helm",
+		"type":"HEAD_ARMOR",
+		"defense":10,
+		"magic_defense":6,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/ice_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_006":{
+		"name":"Feathered Hat",
+		"type":"HEAD_ARMOR",
+		"defense":10,
+		"magic_defense":16,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/feathered_hat.png",
+		"stats_upgraded":[
+			{
+				"agility":2
+			}
+		]
+	},
+	"head_armor_007":{
+		"name":"Scholar Hat",
+		"type":"HEAD_ARMOR",
+		"defense":11,
+		"magic_defense":16,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/scholar_hat.png",
+		"stats_upgraded":[
+			{
+				"intellect":1
+			}
+		]
+	},
+	"head_armor_008":{
+		"name":"Black Cowl",
+		"type":"HEAD_ARMOR",
+		"defense":15,
+		"magic_defense":10,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/black_cowl.png",
+		"stats_upgraded":[
+			{
+				"agility":2
+			}
+		]
+	},
+	"head_armor_009":{
+		"name":"Chakra Band",
+		"type":"HEAD_ARMOR",
+		"defense":17,
+		"magic_defense":11,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/chakra_band.png",
+		"stats_upgraded":[
+			{
+				"vitality":2
+			}
+		]
+	},
+	"head_armor_010":{
+		"name":"Dragon Helm",
+		"type":"HEAD_ARMOR",
+		"defense":18,
+		"magic_defense":9,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/dragon_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_011":{
+		"name":"Viking Helm",
+		"type":"HEAD_ARMOR",
+		"defense":19,
+		"magic_defense":5,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/viking_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_012":{
+		"name":"Diamond Helm",
+		"type":"HEAD_ARMOR",
+		"defense":21,
+		"magic_defense":10,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/diamond_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_013":{
+		"name":"Ribbon",
+		"type":"HEAD_ARMOR",
+		"defense":23,
+		"magic_defense":20,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/ribbon.png",
+		"stats_upgraded":[
+			{
+				"all_stats":2
+			}
+		]
+	},
+	"head_armor_014":{
+		"name":"Genji Helm",
+		"type":"HEAD_ARMOR",
+		"defense":25,
+		"magic_defense":15,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/genji_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_015":{
+		"name":"Crystal Helm",
+		"type":"HEAD_ARMOR",
+		"defense":31,
+		"magic_defense":17,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/crystal_helm.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"head_armor_016":{
+		"name":"Onion Helm",
+		"type":"HEAD_ARMOR",
+		"defense":40,
+		"magic_defense":40,
+		"sprite_path":"res://sprites/assets/equipments/head_armors/onion_helm.png",
+		"stats_upgraded":[
+			{
+				"mind":5
+			},
+			{
+				"intellect":5
+			}
+		]
+	},
+	"body_armor_001":{
+		"name":"Vest",
+		"type":"BODY_ARMOR",
+		"defense":1,
+		"magic_defense":1,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/vest.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_002":{
+		"name":"Leather Armor",
+		"type":"BODY_ARMOR",
+		"defense":3,
+		"magic_defense":1,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/leather_armor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_003":{
+		"name":"Mythril Armor",
+		"type":"BODY_ARMOR",
+		"defense":10,
+		"magic_defense":3,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/mythril_armor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_004":{
+		"name":"Mage Robe",
+		"type":"BODY_ARMOR",
+		"defense":10,
+		"magic_defense":9,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/mage_robe.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_005":{
+		"name":"Iron Armor",
+		"type":"BODY_ARMOR",
+		"defense":12,
+		"magic_defense":4,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/iron_armor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_006":{
+		"name":"Dragon Armor",
+		"type":"BODY_ARMOR",
+		"defense":15,
+		"magic_defense":8,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/dragon_armor.png",
+		"stats_upgraded":[
+			{
+				"vitality":2
+			}
+		]
+	},
+	"body_armor_007":{
+		"name":"Demon Armor",
+		"type":"BODY_ARMOR",
+		"defense":20,
+		"magic_defense":12,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/demon_armor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_008":{
+		"name":"Diamond Armor",
+		"type":"BODY_ARMOR",
+		"defense":25,
+		"magic_defense":15,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/diamond_armor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_009":{
+		"name":"Genji Armor",
+		"type":"BODY_ARMOR",
+		"defense":30,
+		"magic_defense":20,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/genji_armor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_010":{
+		"name":"Crystal Armor",
+		"type":"BODY_ARMOR",
+		"defense":35,
+		"magic_defense":25,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/crystal_armor.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"body_armor_011":{
+		"name":"Onion Armor",
+		"type":"BODY_ARMOR",
+		"defense":40,
+		"magic_defense":30,
+		"sprite_path":"res://sprites/assets/equipments/body_armors/onion_armor.png",
+		"stats_upgraded":[
+			{
+				"all_stats":2
+			}
+		]
+	},
+	"arms_001":{
+		"name":"Bronze Bracers",
+		"type":"ARMS_ARMOR",
+		"defense":1,
+		"magic_defense":1,
+		"sprite_path":"res://sprites/equipments/arm_armors/bronze_bracers.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arms_002":{
+		"name":"Mythril Bracers",
+		"type":"ARMS_ARMOR",
+		"defense":1,
+		"magic_defense":4,
+		"sprite_path":"res://sprites/equipments/arm_armors/mythril_bracers.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arms_003":{
+		"name":"Mythril Gloves",
+		"type":"ARMS_ARMOR",
+		"defense":3,
+		"magic_defense":1,
+		"sprite_path":"res://sprites/equipments/arm_armors/mythril_gloves.png",
+		"stats_upgraded":[
+			
+		]
+	},
+	"arms_004":{
+		"name":"Gauntlets",
+		"type":"ARMS_ARMOR",
+		"defense":8,
+		"magic_defense":4,
+		"sprite_path":"res://sprites/equipments/arm_armors/gauntlets.png",
+		"stats_upgraded":[
+			{
+				"strength":1
+			},
+			{
+				"vitality":1
+			}
+		]
+	},
+	"arms_005":{
+		"name":"Thief Gloves",
+		"type":"ARMS_ARMOR",
+		"defense":11,
+		"magic_defense":8,
+		"sprite_path":"res://sprites/equipments/arm_armors/thief_gloves.png",
+		"stats_upgraded":[
+			{
+				"agility":3
+			}
+		]
+	},
+	"arms_006":{
+		"name":"Rune Bracers",
+		"type":"ARMS_ARMOR",
+		"defense":11,
+		"magic_defense":13,
+		"sprite_path":"res://sprites/equipments/arm_armors/rune_bracers.png",
+		"stats_upgraded":[
+			{
+				"intellect":2
+			},
+			{
+				"mind":2
+			}
+		]
+	},
+	"arms_007":{
+		"name":"Power Bracers",
+		"type":"ARMS_ARMOR",
+		"defense":13,
+		"magic_defense":9,
+		"sprite_path":"res://sprites/equipments/arm_armors/power_bracers.png",
+		"stats_upgraded":[
+			{
+				"strength":2
+			},
+			{
+				"vitality":2
+			}
+		]
+	},
+	"arms_008":{
+		"name":"Diamond Bracers",
+		"type":"ARMS_ARMOR",
+		"defense":13,
+		"magic_defense":16,
+		"sprite_path":"res://sprites/equipments/arm_armors/diamond_bracers.png",
+		"stats_upgraded":[
+			{
+				"intellect":3
+			},
+			{
+				"mind":3
+			}
+		]
+	},
+	"arms_009":{
+		"name":"Diamond Gloves",
+		"type":"ARMS_ARMOR",
+		"defense":15,
+		"magic_defense":7,
+		"sprite_path":"res://sprites/equipments/arm_armors/diamond_gloves.png",
+		"stats_upgraded":[
+			{
+				"strength":3
+			},
+			{
+				"vitality":3
+			}
+		]
+	},
+	"arms_010":{
+		"name":"Protect Ring",
+		"type":"ARMS_ARMOR",
+		"defense":18,
+		"magic_defense":18,
+		"sprite_path":"res://sprites/equipments/arm_armors/protect_ring.png",
+		"stats_upgraded":[
+			{
+				"all_stats":2
+			}
+		]
+	},
+	"arms_011":{
+		"name":"Genji Gloves",
+		"type":"ARMS_ARMOR",
+		"defense":20,
+		"magic_defense":14,
+		"sprite_path":"res://sprites/equipments/arm_armors/genji_gloves.png",
+		"stats_upgraded":[
+			{
+				"strength":4
+			},
+			{
+				"agility":4
+			}
+		]
+	},
+	"arms_012":{
+		"name":"Crystal Gloves",
+		"type":"ARMS_ARMOR",
+		"defense":30,
+		"magic_defense":15,
+		"sprite_path":"res://sprites/equipments/arm_armors/crystal_gloves.png",
+		"stats_upgraded":[
+			{
+				"strength":4
+			},
+			{
+				"vitality":4
+			}
+		]
+	},
+	"arms_013":{
+		"name":"Onion Gauntlets",
+		"type":"ARMS_ARMOR",
+		"defense":50,
+		"magic_defense":25,
+		"sprite_path":"res://sprites/equipments/arm_armors/onion_gauntlets.png",
+		"stats_upgraded":[
+			{
+				"all_stats":3
+			}
+		]
+	}
+}

@@ -3,15 +3,47 @@
 		"characters": [
 			{
 				"name": "Luneth",
-				"job": "Warrior"
+				"job": "Warrior",
+				"equipments": {
+					"left_hand": "sword_002",
+					"right_hand": "shield_001",
+					"head_armor": "head_armor_006",
+					"body_armor": "body_armor_001",
+					"arm_armor": ""
+				}
 			},
 			{
 				"name": "Arc",
-				"job": "Black Mage"
+				"job": "Black Mage",
+				"equipments": {
+					"left_hand": "",
+					"right_hand": "",
+					"head_armor": "",
+					"body_armor": "",
+					"arm_armor": ""
+				}
 			},
 			{
 				"name": "Refia",
-				"job": "White Mage"
+				"job": "White Mage",
+				"equipments": {
+					"left_hand": "rod_002",
+					"right_hand": "",
+					"head_armor": "",
+					"body_armor": "",
+					"arm_armor": ""
+				}
+			},
+			{
+				"name": "Refia",
+				"job": "White Mage",
+				"equipments": {
+					"left_hand": "rod_002",
+					"right_hand": "",
+					"head_armor": "",
+					"body_armor": "",
+					"arm_armor": ""
+				}
 			}
 		]
 	}
