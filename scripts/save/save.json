@@ -33,6 +33,17 @@
 					"body_armor": "",
 					"arm_armor": ""
 				}
+			},
+			{
+				"name": "Refia",
+				"job": "White Mage",
+				"equipments": {
+					"left_hand": "rod_002",
+					"right_hand": "",
+					"head_armor": "",
+					"body_armor": "",
+					"arm_armor": ""
+				}
 			}
 		]
 	}
