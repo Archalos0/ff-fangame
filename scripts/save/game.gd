@@ -2,7 +2,7 @@ extends Node
 
 #----INNER CLASS----#
 class PlayerData:
-	var characters: Array[CharacterData]
+	var characters: Array[PlayerCharacter]
 
 	func load_player(dict: Dictionary):
 		for key in dict.keys():
@@ -12,8 +12,8 @@ class PlayerData:
 	func _load_characters(data: Array):
 		characters.resize(data.size())
 		for i in range(characters.size()):
-			characters[i] = CharacterData.new()
-			characters[i].load_character(data[i])
+			characters[i] = PlayerCharacter.new()
+			characters[i].load_character_data(data[i])
 		
 		
 	func get_properties_dict():
