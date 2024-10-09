@@ -4,6 +4,9 @@
 			{
 				"name": "Luneth",
 				"job": "Warrior",
+				"level": 3,
+				"max_health_points": 150,
+				"current_health_points": 134,
 				"equipments": {
 					"left_hand": "sword_002",
 					"right_hand": "shield_001",
@@ -15,6 +18,9 @@
 			{
 				"name": "Arc",
 				"job": "Black Mage",
+				"level": 5,
+				"max_health_points": 123,
+				"current_health_points": 123,
 				"equipments": {
 					"left_hand": "",
 					"right_hand": "",
@@ -26,17 +32,9 @@
 			{
 				"name": "Refia",
 				"job": "White Mage",
-				"equipments": {
-					"left_hand": "rod_002",
-					"right_hand": "",
-					"head_armor": "",
-					"body_armor": "",
-					"arm_armor": ""
-				}
-			},
-			{
-				"name": "Refia",
-				"job": "White Mage",
+				"level": 0,
+				"max_health_points": 0,
+				"current_health_points": 0,
 				"equipments": {
 					"left_hand": "rod_002",
 					"right_hand": "",

@@ -30,11 +30,17 @@ class CharacterData:
 	var name: String
 	var job: String
 	var equipments: EquipmentsData = EquipmentsData.new()
+	var level: int
+	var max_health_points: int
+	var current_health_points: int
 	
 	func load_character(dict: Dictionary):
 		name = dict["name"]
 		job = dict["job"]
-		
+		level = dict["level"]
+		max_health_points = dict["max_health_points"]
+		current_health_points = dict["current_health_points"]
+
 		if dict.has("equipments"):
 			equipments.load_equipments(dict["equipments"])
 	
@@ -42,6 +48,9 @@ class CharacterData:
 		var properties = {
 			"name": name,
 			"job": job,
+			"level": level,
+			"max_health_points": max_health_points,
+			"current_health_points": current_health_points,
 			"equipments": {
 				"left_hand": equipments.left_hand,
 				"right_hand": equipments.right_hand,
