@@ -62,7 +62,7 @@ class EquipmentsData:
 	
 	func load_equipments(dict: Dictionary):
 		for key in dict:
-			if dict[key] == null:
+			if dict[key] == null or dict[key] == "":
 				continue
 			
 			match key:
@@ -91,7 +91,6 @@ class EquipmentData:
 	var stats_upgraded: Array
 	
 	func load_equipment(equipment_id: String):
-		
 		var dict: Dictionary = FileHandler.get_json_content("res://ressources/equipments/equipments.json")
 		
 		if dict.has("error"):
