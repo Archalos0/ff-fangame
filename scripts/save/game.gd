@@ -2,44 +2,96 @@ extends Node
 
 #----INNER CLASS----#
 class PlayerData:
-	var characters: Array[CharacterData]
+	var characters: CharactersData = CharactersData.new()
 
 	func load_player(dict: Dictionary):
 		for key in dict.keys():
 			match key:
-				"characters": _load_characters(dict["characters"]) 
+				"characters": characters.load_characters(dict["characters"]) 
 				
-	func _load_characters(data: Array):
-		characters.resize(data.size())
-		for i in range(characters.size()):
-			characters[i] = CharacterData.new()
-			characters[i].load_character(data[i])
-		
 		
 	func get_properties_dict():
 		var properties = {
-			"characters": []
+			"characters": characters.get_properties_dict()
 		}
 		
+		return properties
+
+class CharactersData:
+	var character_1: CharacterData = CharacterData.new()
+	var character_2: CharacterData = CharacterData.new()
+	var character_3: CharacterData = CharacterData.new()
+	var character_4: CharacterData = CharacterData.new()
+	
+	#Set up the default name of the characters
+	func _init() -> void:
+		character_1.name = "Luneth" 
+		character_2.name = "Arc" 
+		character_3.name = "Refia" 
+		character_4.name = "Ingus" 
+	
+	func load_characters(characters: Array):
+		characters.resize(4)
 		for character in characters:
-			properties["characters"].append(character.get_properties_dict())
+			if character == null:
+				character = CharacterData.new()
+				
+		if characters[0] != null : character_1.load_character(characters[0])
+		if characters[1] != null : character_2.load_character(characters[1])
+		if characters[2] != null : character_3.load_character(characters[2])
+		if characters[3] != null : character_4.load_character(characters[3])
+
+	func get_properties_dict():
+		var properties = [
+			character_1.get_properties_dict(),
+			character_2.get_properties_dict(),
+			character_3.get_properties_dict(),
+			character_4.get_properties_dict(),
+		]
 		
 		return properties
 
 class CharacterData: 
-	var name: String
-	var job: String
+	var name: String = ""
+	var job: String = "warrior"
 	var equipments: EquipmentsData = EquipmentsData.new()
-	var level: int
-	var max_health_points: int
-	var current_health_points: int
+	var level: int = 1
+	var max_health_points: int = 100
+	var current_health_points: int = 100
+	var jobs_level: Dictionary = {
+		"onion_knight": 1,
+		"warrior": 1,
+		"monk": 1,
+		"white_mage": 1,
+		"black_mage": 1,
+		"red_mage": 1,
+		"thief": 1,
+		"ranger": 1,
+		"knight": 1,
+		"scholar": 1,
+		"geomancer": 1,
+		"dragoon": 1,
+		"viking": 1,
+		"dark_knight": 1,
+		"evoker": 1,
+		"bard": 1,
+		"black_belt": 1,
+		"devout": 1,
+		"magus": 1,
+		"summoner": 1,
+		"sage": 1,
+		"ninja": 1
+	}
 	
 	func load_character(dict: Dictionary):
 		name = dict["name"]
 		job = dict["job"]
 		level = dict["level"]
+
 		max_health_points = dict["max_health_points"]
 		current_health_points = dict["current_health_points"]
+
+		jobs_level = dict["jobs_level"]
 
 		if dict.has("equipments"):
 			equipments.load_equipments(dict["equipments"])
@@ -57,7 +109,8 @@ class CharacterData:
 				"head_armor": equipments.head_armor,
 				"body_armor": equipments.body_armor,
 				"arm_armor": equipments.arm_armor,
-			}
+			},
+			"jobs_level": jobs_level
 		}
 		
 		return properties
@@ -149,10 +202,3 @@ func _get_properties_dict():
 	}
 	
 	return properties
-
-func add_character(dict: Dictionary):
-	var character: CharacterData = CharacterData.new()
-	character.name = dict["name"]
-	character.job = dict["job"]
-	character.equipments.left_hand = dict["equipments"]["left_hand"]
-	_player.characters.append(character)
