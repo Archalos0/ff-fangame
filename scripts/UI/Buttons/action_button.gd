@@ -7,8 +7,9 @@ func _ready() -> void:
 	initialize()
 
 func load_action_resource():
-	set_action(Action.from_action_resource(action_resource))
-
+	#set_action(Action.from_action_resource(action_resource))
+	pass
+	
 func set_action(new_action: Action):
 	action = new_action
 	text = action.action_name

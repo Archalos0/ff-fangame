@@ -3,10 +3,20 @@
 		"characters": [
 			{
 				"name": "Luneth",
-				"job": "warrior",
+				"job": "thief",
 				"level": 10,
 				"max_health_points": 150,
 				"current_health_points": 134,
+				"magics": {
+					"1": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"2": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"5": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"6": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"7": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"8": { "first_slot": "", "second_slot": "", "third_slot": ""}
+				},
 				"equipments": {
 					"left_hand": "sword_002",
 					"right_hand": "shield_001",
@@ -45,6 +55,16 @@
 				"level": 2,
 				"max_health_points": 123,
 				"current_health_points": 123,
+				"magics": {
+					"1": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"2": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"5": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"6": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"7": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"8": { "first_slot": "", "second_slot": "", "third_slot": ""}
+				},
 				"equipments": {
 					"left_hand": "",
 					"right_hand": "",
@@ -83,6 +103,16 @@
 				"level": 1,
 				"max_health_points": 100,
 				"current_health_points": 100,
+				"magics": {
+					"1": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"2": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"5": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"6": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"7": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"8": { "first_slot": "", "second_slot": "", "third_slot": ""}
+				},
 				"equipments": {
 					"left_hand": "",
 					"right_hand": "",
@@ -121,6 +151,16 @@
 				"level": 1,
 				"max_health_points": 100,
 				"current_health_points": 100,
+				"magics": {
+					"1": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"2": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"5": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"6": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"7": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"8": { "first_slot": "", "second_slot": "", "third_slot": ""}
+				},
 				"equipments": {
 					"left_hand": "",
 					"right_hand": "",

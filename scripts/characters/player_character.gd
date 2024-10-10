@@ -22,13 +22,13 @@ func load_actions():
 	actions = job.actions
 
 func load_stats():
-	var content = FileHandler.get_json_content("res://ressources/jobs/jobs_stats_evolution.json")
+	var content = FileHandler.get_json_content("res://ressources/jobs/jobs.json")
 	
 	if content.has("error"):
 		return
 	
 	stats = Stats.new()
-	stats.load_character_stats(content[job.job_name][str(level)])
+	stats.load_character_stats(content[job.job_name]["stats"][str(level)])
 
 func get_animation() -> SpriteFrames:
 	return job.animations

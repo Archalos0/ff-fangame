@@ -7,3 +7,5 @@ func _ready() -> void:
 	character_1.load(Game._player.characters.character_1)
 	print(character_1.get_stats())
 	print("coucou")
+	
+	

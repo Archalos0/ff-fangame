@@ -1,0 +1,1978 @@
+{
+	"warrior": {
+		"actions": [
+			"attack",
+			"advance",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 9,
+				"agility": 5,
+				"vitality": 6,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 15,
+				"agility": 10,
+				"vitality": 10,
+				"intellect": 8,
+				"mind": 8
+			},
+			"20": {
+				"strength": 21,
+				"agility": 15,
+				"vitality": 16,
+				"intellect": 14,
+				"mind": 14
+			},
+			"30": {
+				"strength": 27,
+				"agility": 20,
+				"vitality": 22,
+				"intellect": 18,
+				"mind": 18
+			},
+			"40": {
+				"strength": 34,
+				"agility": 24,
+				"vitality": 28,
+				"intellect": 22,
+				"mind": 22
+			},
+			"50": {
+				"strength": 40,
+				"agility": 29,
+				"vitality": 34,
+				"intellect": 26,
+				"mind": 26
+			},
+			"60": {
+				"strength": 46,
+				"agility": 34,
+				"vitality": 40,
+				"intellect": 29,
+				"mind": 29
+			},
+			"70": {
+				"strength": 53,
+				"agility": 39,
+				"vitality": 46,
+				"intellect": 33,
+				"mind": 33
+			},
+			"80": {
+				"strength": 59,
+				"agility": 43,
+				"vitality": 52,
+				"intellect": 37,
+				"mind": 37
+			},
+			"90": {
+				"strength": 65,
+				"agility": 48,
+				"vitality": 58,
+				"intellect": 41,
+				"mind": 41
+			},
+			"99": {
+				"strength": 71,
+				"agility": 52,
+				"vitality": 63,
+				"intellect": 45,
+				"mind": 45
+			}
+		}
+	},
+	"monk": {
+		"actions": [
+			"attack",
+			"retaliate",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 14,
+				"agility": 9,
+				"vitality": 7,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 20,
+				"agility": 15,
+				"vitality": 11,
+				"intellect": 9,
+				"mind": 9
+			},
+			"20": {
+				"strength": 26,
+				"agility": 21,
+				"vitality": 18,
+				"intellect": 12,
+				"mind": 14
+			},
+			"30": {
+				"strength": 33,
+				"agility": 27,
+				"vitality": 25,
+				"intellect": 15,
+				"mind": 18
+			},
+			"40": {
+				"strength": 40,
+				"agility": 34,
+				"vitality": 31,
+				"intellect": 19,
+				"mind": 22
+			},
+			"50": {
+				"strength": 48,
+				"agility": 40,
+				"vitality": 38,
+				"intellect": 22,
+				"mind": 26
+			},
+			"60": {
+				"strength": 55,
+				"agility": 46,
+				"vitality": 45,
+				"intellect": 25,
+				"mind": 29
+			},
+			"70": {
+				"strength": 63,
+				"agility": 53,
+				"vitality": 51,
+				"intellect": 29,
+				"mind": 33
+			},
+			"80": {
+				"strength": 70,
+				"agility": 59,
+				"vitality": 58,
+				"intellect": 35,
+				"mind": 37
+			},
+			"90": {
+				"strength": 78,
+				"agility": 65,
+				"vitality": 65,
+				"intellect": 35,
+				"mind": 41
+			},
+			"99": {
+				"strength": 85,
+				"agility": 71,
+				"vitality": 71,
+				"intellect": 38,
+				"mind": 45
+			}
+		}
+	},
+	"white_mage": {
+		"actions": [
+			"attack",
+			"magic",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 6,
+				"vitality": 6,
+				"intellect": 5,
+				"mind": 9
+			},
+			"10": {
+				"strength": 10,
+				"agility": 10,
+				"vitality": 10,
+				"intellect": 9,
+				"mind": 15
+			},
+			"20": {
+				"strength": 15,
+				"agility": 16,
+				"vitality": 16,
+				"intellect": 14,
+				"mind": 21
+			},
+			"30": {
+				"strength": 20,
+				"agility": 22,
+				"vitality": 22,
+				"intellect": 18,
+				"mind": 27
+			},
+			"40": {
+				"strength": 24,
+				"agility": 28,
+				"vitality": 28,
+				"intellect": 22,
+				"mind": 34
+			},
+			"50": {
+				"strength": 29,
+				"agility": 34,
+				"vitality": 34,
+				"intellect": 26,
+				"mind": 40
+			},
+			"60": {
+				"strength": 34,
+				"agility": 40,
+				"vitality": 40,
+				"intellect": 29,
+				"mind": 46
+			},
+			"70": {
+				"strength": 38,
+				"agility": 46,
+				"vitality": 46,
+				"intellect": 33,
+				"mind": 52
+			},
+			"80": {
+				"strength": 43,
+				"agility": 52,
+				"vitality": 52,
+				"intellect": 37,
+				"mind": 58
+			},
+			"90": {
+				"strength": 48,
+				"agility": 58,
+				"vitality": 58,
+				"intellect": 41,
+				"mind": 65
+			},
+			"99": {
+				"strength": 52,
+				"agility": 63,
+				"vitality": 63,
+				"intellect": 45,
+				"mind": 71
+			}
+		}
+	},
+	"black_mage": {
+		"actions": [
+			"attack",
+			"magic",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 6,
+				"vitality": 6,
+				"intellect": 9,
+				"mind": 0
+			},
+			"10": {
+				"strength": 10,
+				"agility": 10,
+				"vitality": 10,
+				"intellect": 15,
+				"mind": 9
+			},
+			"20": {
+				"strength": 15,
+				"agility": 16,
+				"vitality": 16,
+				"intellect": 21,
+				"mind": 14
+			},
+			"30": {
+				"strength": 20,
+				"agility": 22,
+				"vitality": 22,
+				"intellect": 27,
+				"mind": 18
+			},
+			"40": {
+				"strength": 24,
+				"agility": 28,
+				"vitality": 28,
+				"intellect": 34,
+				"mind": 22
+			},
+			"50": {
+				"strength": 29,
+				"agility": 34,
+				"vitality": 34,
+				"intellect": 40,
+				"mind": 26
+			},
+			"60": {
+				"strength": 34,
+				"agility": 40,
+				"vitality": 40,
+				"intellect": 46,
+				"mind": 29
+			},
+			"70": {
+				"strength": 38,
+				"agility": 46,
+				"vitality": 46,
+				"intellect": 53,
+				"mind": 33
+			},
+			"80": {
+				"strength": 43,
+				"agility": 52,
+				"vitality": 52,
+				"intellect": 59,
+				"mind": 37
+			},
+			"90": {
+				"strength": 48,
+				"agility": 58,
+				"vitality": 58,
+				"intellect": 65,
+				"mind": 41
+			},
+			"99": {
+				"strength": 52,
+				"agility": 63,
+				"vitality": 63,
+				"intellect": 71,
+				"mind": 45
+			}
+		}
+	},
+	"red_mage": {
+		"actions": [
+			"attack",
+			"magic",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 6,
+				"agility": 5,
+				"vitality": 6,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 10,
+				"agility": 10,
+				"vitality": 10,
+				"intellect": 10,
+				"mind": 10
+			},
+			"20": {
+				"strength": 16,
+				"agility": 15,
+				"vitality": 16,
+				"intellect": 15,
+				"mind": 15
+			},
+			"30": {
+				"strength": 22,
+				"agility": 20,
+				"vitality": 22,
+				"intellect": 20,
+				"mind": 20
+			},
+			"40": {
+				"strength": 28,
+				"agility": 24,
+				"vitality": 28,
+				"intellect": 24,
+				"mind": 24
+			},
+			"50": {
+				"strength": 34,
+				"agility": 29,
+				"vitality": 34,
+				"intellect": 29,
+				"mind": 29
+			},
+			"60": {
+				"strength": 40,
+				"agility": 34,
+				"vitality": 40,
+				"intellect": 34,
+				"mind": 34
+			},
+			"70": {
+				"strength": 46,
+				"agility": 38,
+				"vitality": 46,
+				"intellect": 38,
+				"mind": 38
+			},
+			"80": {
+				"strength": 52,
+				"agility": 43,
+				"vitality": 52,
+				"intellect": 43,
+				"mind": 43
+			},
+			"90": {
+				"strength": 58,
+				"agility": 48,
+				"vitality": 58,
+				"intellect": 48,
+				"mind": 48
+			},
+			"99": {
+				"strength": 63,
+				"agility": 52,
+				"vitality": 63,
+				"intellect": 52,
+				"mind": 52
+			}
+		}
+	},
+	"thief": {
+		"actions": [
+			"attack",
+			"steal",
+			"flee",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 6,
+				"agility": 5,
+				"vitality": 6,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 10,
+				"agility": 13,
+				"vitality": 10,
+				"intellect": 9,
+				"mind": 9
+			},
+			"20": {
+				"strength": 16,
+				"agility": 23,
+				"vitality": 16,
+				"intellect": 14,
+				"mind": 12
+			},
+			"30": {
+				"strength": 22,
+				"agility": 32,
+				"vitality": 22,
+				"intellect": 18,
+				"mind": 15
+			},
+			"40": {
+				"strength": 28,
+				"agility": 42,
+				"vitality": 28,
+				"intellect": 22,
+				"mind": 19
+			},
+			"50": {
+				"strength": 34,
+				"agility": 52,
+				"vitality": 34,
+				"intellect": 26,
+				"mind": 22
+			},
+			"60": {
+				"strength": 40,
+				"agility": 61,
+				"vitality": 40,
+				"intellect": 29,
+				"mind": 52
+			},
+			"70": {
+				"strength": 46,
+				"agility": 61,
+				"vitality": 40,
+				"intellect": 33,
+				"mind": 39
+			},
+			"80": {
+				"strength": 52,
+				"agility": 80,
+				"vitality": 52,
+				"intellect": 37,
+				"mind": 32
+			},
+			"90": {
+				"strength": 58,
+				"agility": 90,
+				"vitality": 58,
+				"intellect": 41,
+				"mind": 35
+			},
+			"99": {
+				"strength": 62,
+				"agility": 99,
+				"vitality": 63,
+				"intellect": 45,
+				"mind": 38
+			}
+		}
+	},
+	"ranger": {
+		"actions": [
+			"attack",
+			"barrage",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 7,
+				"agility": 10,
+				"vitality": 6,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 11,
+				"agility": 16,
+				"vitality": 10,
+				"intellect": 8,
+				"mind": 8
+			},
+			"20": {
+				"strength": 18,
+				"agility": 24,
+				"vitality": 16,
+				"intellect": 14,
+				"mind": 14
+			},
+			"30": {
+				"strength": 25,
+				"agility": 32,
+				"vitality": 22,
+				"intellect": 18,
+				"mind": 18
+			},
+			"40": {
+				"strength": 31,
+				"agility": 39,
+				"vitality": 28,
+				"intellect": 22,
+				"mind": 22
+			},
+			"50": {
+				"strength": 38,
+				"agility": 46,
+				"vitality": 34,
+				"intellect": 26,
+				"mind": 26
+			},
+			"60": {
+				"strength": 45,
+				"agility": 54,
+				"vitality": 40,
+				"intellect": 29,
+				"mind": 29
+			},
+			"70": {
+				"strength": 51,
+				"agility": 62,
+				"vitality": 46,
+				"intellect": 33,
+				"mind": 33
+			},
+			"80": {
+				"strength": 58,
+				"agility": 69,
+				"vitality": 51,
+				"intellect": 37,
+				"mind": 37
+			},
+			"90": {
+				"strength": 65,
+				"agility": 77,
+				"vitality": 58,
+				"intellect": 41,
+				"mind": 41
+			},
+			"99": {
+				"strength": 71,
+				"agility": 85,
+				"vitality": 63,
+				"intellect": 54,
+				"mind": 54
+			}
+		}
+	},
+	"knight": {
+		"actions": [
+			"attack",
+			"magic",
+			"defend",
+			"item"
+		],
+		"passive": "cover",
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 10,
+				"agility": 6,
+				"vitality": 10,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 16,
+				"agility": 10,
+				"vitality": 16,
+				"intellect": 9,
+				"mind": 10
+			},
+			"20": {
+				"strength": 24,
+				"agility": 16,
+				"vitality": 24,
+				"intellect": 14,
+				"mind": 15
+			},
+			"30": {
+				"strength": 31,
+				"agility": 22,
+				"vitality": 31,
+				"intellect": 18,
+				"mind": 20
+			},
+			"40": {
+				"strength": 39,
+				"agility": 28,
+				"vitality": 39,
+				"intellect": 22,
+				"mind": 24
+			},
+			"50": {
+				"strength": 46,
+				"agility": 34,
+				"vitality": 46,
+				"intellect": 26,
+				"mind": 29
+			},
+			"60": {
+				"strength": 54,
+				"agility": 40,
+				"vitality": 54,
+				"intellect": 29,
+				"mind": 34
+			},
+			"70": {
+				"strength": 62,
+				"agility": 46,
+				"vitality": 62,
+				"intellect": 33,
+				"mind": 38
+			},
+			"80": {
+				"strength": 69,
+				"agility": 52,
+				"vitality": 69,
+				"intellect": 37,
+				"mind": 43
+			},
+			"90": {
+				"strength": 77,
+				"agility": 58,
+				"vitality": 77,
+				"intellect": 41,
+				"mind": 48
+			},
+			"99": {
+				"strength": 85,
+				"agility": 63,
+				"vitality": 85,
+				"intellect": 45,
+				"mind": 52
+			}
+		}
+	},
+	"scholar": {
+		"actions": [
+			"attack",
+			"magic",
+			"study",
+			"item"
+		],
+		"passive": "item_lore",
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 7,
+				"agility": 7,
+				"vitality": 5,
+				"intellect": 15,
+				"mind": 5
+			},
+			"10": {
+				"strength": 11,
+				"agility": 11,
+				"vitality": 8,
+				"intellect": 21,
+				"mind": 8
+			},
+			"20": {
+				"strength": 18,
+				"agility": 18,
+				"vitality": 12,
+				"intellect": 31,
+				"mind": 14
+			},
+			"30": {
+				"strength": 25,
+				"agility": 25,
+				"vitality": 15,
+				"intellect": 39,
+				"mind": 18
+			},
+			"40": {
+				"strength": 31,
+				"agility": 31,
+				"vitality": 19,
+				"intellect": 48,
+				"mind": 22
+			},
+			"50": {
+				"strength": 38,
+				"agility": 38,
+				"vitality": 22,
+				"intellect": 57,
+				"mind": 26
+			},
+			"60": {
+				"strength": 45,
+				"agility": 45,
+				"vitality": 25,
+				"intellect": 65,
+				"mind": 29
+			},
+			"70": {
+				"strength": 51,
+				"agility": 51,
+				"vitality": 29,
+				"intellect": 74,
+				"mind": 33
+			},
+			"80": {
+				"strength": 58,
+				"agility": 58,
+				"vitality": 32,
+				"intellect": 82,
+				"mind": 37
+			},
+			"90": {
+				"strength": 65,
+				"agility": 65,
+				"vitality": 35,
+				"intellect": 91,
+				"mind": 41
+			},
+			"99": {
+				"strength": 71,
+				"agility": 71,
+				"vitality": 38,
+				"intellect": 99,
+				"mind": 45
+			}
+		}
+	},
+	"geomancer": {
+		"actions": [
+			"attack",
+			"terrain",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 7,
+				"vitality": 5,
+				"intellect": 9,
+				"mind": 5
+			},
+			"10": {
+				"strength": 10,
+				"agility": 11,
+				"vitality": 10,
+				"intellect": 15,
+				"mind": 10
+			},
+			"20": {
+				"strength": 15,
+				"agility": 18,
+				"vitality": 15,
+				"intellect": 21,
+				"mind": 15
+			},
+			"30": {
+				"strength": 20,
+				"agility": 25,
+				"vitality": 20,
+				"intellect": 27,
+				"mind": 20
+			},
+			"40": {
+				"strength": 24,
+				"agility": 31,
+				"vitality": 24,
+				"intellect": 34,
+				"mind": 24
+			},
+			"50": {
+				"strength": 29,
+				"agility": 37,
+				"vitality": 29,
+				"intellect": 39,
+				"mind": 29
+			},
+			"60": {
+				"strength": 34,
+				"agility": 45,
+				"vitality": 34,
+				"intellect": 46,
+				"mind": 34
+			},
+			"70": {
+				"strength": 38,
+				"agility": 51,
+				"vitality": 38,
+				"intellect": 53,
+				"mind": 38
+			},
+			"80": {
+				"strength": 43,
+				"agility": 58,
+				"vitality": 43,
+				"intellect": 59,
+				"mind": 43
+			},
+			"90": {
+				"strength": 48,
+				"agility": 65,
+				"vitality": 48,
+				"intellect": 65,
+				"mind": 48
+			},
+			"99": {
+				"strength": 52,
+				"agility": 71,
+				"vitality": 52,
+				"intellect": 71,
+				"mind": 52
+			}
+		}
+	},
+	"dragoon": {
+		"actions": [
+			"attack",
+			"jump",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 14,
+				"agility": 5,
+				"vitality": 6,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 20,
+				"agility": 13,
+				"vitality": 10,
+				"intellect": 10,
+				"mind": 10
+			},
+			"20": {
+				"strength": 26,
+				"agility": 23,
+				"vitality": 26,
+				"intellect": 15,
+				"mind": 15
+			},
+			"30": {
+				"strength": 33,
+				"agility": 32,
+				"vitality": 22,
+				"intellect": 20,
+				"mind": 20
+			},
+			"40": {
+				"strength": 40,
+				"agility": 42,
+				"vitality": 28,
+				"intellect": 24,
+				"mind": 24
+			},
+			"50": {
+				"strength": 48,
+				"agility": 52,
+				"vitality": 34,
+				"intellect": 29,
+				"mind": 29
+			},
+			"60": {
+				"strength": 55,
+				"agility": 61,
+				"vitality": 40,
+				"intellect": 34,
+				"mind": 34
+			},
+			"70": {
+				"strength": 63,
+				"agility": 71,
+				"vitality": 46,
+				"intellect": 38,
+				"mind": 38
+			},
+			"80": {
+				"strength": 70,
+				"agility": 80,
+				"vitality": 52,
+				"intellect": 43,
+				"mind": 43
+			},
+			"90": {
+				"strength": 78,
+				"agility": 90,
+				"vitality": 58,
+				"intellect": 48,
+				"mind": 48
+			},
+			"99": {
+				"strength": 85,
+				"agility": 99,
+				"vitality": 63,
+				"intellect": 52,
+				"mind": 52
+			}
+		}
+	},
+	"viking": {
+		"actions": [
+			"attack",
+			"provoke",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 25,
+				"intellect": 5,
+				"mind": 6
+			},
+			"10": {
+				"strength": 12,
+				"agility": 9,
+				"vitality": 32,
+				"intellect": 9,
+				"mind": 10
+			},
+			"20": {
+				"strength": 20,
+				"agility": 14,
+				"vitality": 39,
+				"intellect": 14,
+				"mind": 16
+			},
+			"30": {
+				"strength": 28,
+				"agility": 18,
+				"vitality": 47,
+				"intellect": 18,
+				"mind": 22
+			},
+			"40": {
+				"strength": 36,
+				"agility": 22,
+				"vitality": 54,
+				"intellect": 22,
+				"mind": 28
+			},
+			"50": {
+				"strength": 44,
+				"agility": 26,
+				"vitality": 62,
+				"intellect": 26,
+				"mind": 34
+			},
+			"60": {
+				"strength": 52,
+				"agility": 29,
+				"vitality": 69,
+				"intellect": 29,
+				"mind": 40
+			},
+			"70": {
+				"strength": 60,
+				"agility": 33,
+				"vitality": 77,
+				"intellect": 33,
+				"mind": 46
+			},
+			"80": {
+				"strength": 69,
+				"agility": 37,
+				"vitality": 84,
+				"intellect": 37,
+				"mind": 52
+			},
+			"90": {
+				"strength": 77,
+				"agility": 41,
+				"vitality": 92,
+				"intellect": 41,
+				"mind": 58
+			},
+			"99": {
+				"strength": 85,
+				"agility": 45,
+				"vitality": 99,
+				"intellect": 45,
+				"mind": 63
+			}
+		}
+	},
+	"dark_knigth": {
+		"actions": [
+			"attack",
+			"souleater",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 14,
+				"agility": 9,
+				"vitality": 7,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 20,
+				"agility": 15,
+				"vitality": 11,
+				"intellect": 10,
+				"mind": 10
+			},
+			"20": {
+				"strength": 26,
+				"agility": 21,
+				"vitality": 18,
+				"intellect": 15,
+				"mind": 15
+			},
+			"30": {
+				"strength": 33,
+				"agility": 27,
+				"vitality": 25,
+				"intellect": 20,
+				"mind": 20
+			},
+			"40": {
+				"strength": 40,
+				"agility": 34,
+				"vitality": 31,
+				"intellect": 24,
+				"mind": 24
+			},
+			"50": {
+				"strength": 48,
+				"agility": 40,
+				"vitality": 38,
+				"intellect": 29,
+				"mind": 29
+			},
+			"60": {
+				"strength": 55,
+				"agility": 46,
+				"vitality": 45,
+				"intellect": 34,
+				"mind": 34
+			},
+			"70": {
+				"strength": 63,
+				"agility": 53,
+				"vitality": 51,
+				"intellect": 38,
+				"mind": 38
+			},
+			"80": {
+				"strength": 70,
+				"agility": 59,
+				"vitality": 58,
+				"intellect": 43,
+				"mind": 43
+			},
+			"90": {
+				"strength": 78,
+				"agility": 65,
+				"vitality": 65,
+				"intellect": 48,
+				"mind": 48
+			},
+			"99": {
+				"strength": 85,
+				"agility": 71,
+				"vitality": 71,
+				"intellect": 52,
+				"mind": 52
+			}
+		}
+	},
+	"evoker": {
+		"actions": [
+			"attack",
+			"summon",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 6,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 7,
+				"mind": 7
+			},
+			"10": {
+				"strength": 10,
+				"agility": 10,
+				"vitality": 9,
+				"intellect": 11,
+				"mind": 11
+			},
+			"20": {
+				"strength": 16,
+				"agility": 15,
+				"vitality": 14,
+				"intellect": 18,
+				"mind": 18
+			},
+			"30": {
+				"strength": 22,
+				"agility": 20,
+				"vitality": 18,
+				"intellect": 25,
+				"mind": 25
+			},
+			"40": {
+				"strength": 28,
+				"agility": 24,
+				"vitality": 22,
+				"intellect": 31,
+				"mind": 31
+			},
+			"50": {
+				"strength": 34,
+				"agility": 29,
+				"vitality": 26,
+				"intellect": 38,
+				"mind": 38
+			},
+			"60": {
+				"strength": 40,
+				"agility": 34,
+				"vitality": 29,
+				"intellect": 45,
+				"mind": 45
+			},
+			"70": {
+				"strength": 46,
+				"agility": 38,
+				"vitality": 33,
+				"intellect": 51,
+				"mind": 51
+			},
+			"80": {
+				"strength": 52,
+				"agility": 43,
+				"vitality": 37,
+				"intellect": 58,
+				"mind": 58
+			},
+			"90": {
+				"strength": 58,
+				"agility": 48,
+				"vitality": 41,
+				"intellect": 65,
+				"mind": 65
+			},
+			"99": {
+				"strength": 63,
+				"agility": 52,
+				"vitality": 45,
+				"intellect": 71,
+				"mind": 71
+			}
+		}
+	},
+	"bard": {
+		"actions": [
+			"attack",
+			"sing",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 7,
+				"vitality": 6,
+				"intellect": 6,
+				"mind": 9
+			},
+			"10": {
+				"strength": 9,
+				"agility": 11,
+				"vitality": 10,
+				"intellect": 10,
+				"mind": 15
+			},
+			"20": {
+				"strength": 14,
+				"agility": 18,
+				"vitality": 16,
+				"intellect": 16,
+				"mind": 21
+			},
+			"30": {
+				"strength": 18,
+				"agility": 25,
+				"vitality": 22,
+				"intellect": 22,
+				"mind": 27
+			},
+			"40": {
+				"strength": 22,
+				"agility": 31,
+				"vitality": 28,
+				"intellect": 28,
+				"mind": 34
+			},
+			"50": {
+				"strength": 26,
+				"agility": 38,
+				"vitality": 34,
+				"intellect": 34,
+				"mind": 40
+			},
+			"60": {
+				"strength": 29,
+				"agility": 45,
+				"vitality": 40,
+				"intellect": 40,
+				"mind": 46
+			},
+			"70": {
+				"strength": 33,
+				"agility": 51,
+				"vitality": 46,
+				"intellect": 46,
+				"mind": 53
+			},
+			"80": {
+				"strength": 37,
+				"agility": 58,
+				"vitality": 52,
+				"intellect": 52,
+				"mind": 59
+			},
+			"90": {
+				"strength": 41,
+				"agility": 65,
+				"vitality": 58,
+				"intellect": 58,
+				"mind": 65
+			},
+			"99": {
+				"strength": 45,
+				"agility": 71,
+				"vitality": 63,
+				"intellect": 63,
+				"mind": 71
+			}
+		}
+	},
+	"black_belt": {
+		"actions": [
+			"attack",
+			"boost",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 25,
+				"agility": 10,
+				"vitality": 10,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 32,
+				"agility": 16,
+				"vitality": 16,
+				"intellect": 9,
+				"mind": 9
+			},
+			"20": {
+				"strength": 39,
+				"agility": 24,
+				"vitality": 24,
+				"intellect": 12,
+				"mind": 12
+			},
+			"30": {
+				"strength": 47,
+				"agility": 31,
+				"vitality": 32,
+				"intellect": 15,
+				"mind": 15
+			},
+			"40": {
+				"strength": 54,
+				"agility": 39,
+				"vitality": 48,
+				"intellect": 19,
+				"mind": 19
+			},
+			"50": {
+				"strength": 62,
+				"agility": 46,
+				"vitality": 57,
+				"intellect": 22,
+				"mind": 22
+			},
+			"60": {
+				"strength": 69,
+				"agility": 54,
+				"vitality": 65,
+				"intellect": 25,
+				"mind": 25
+			},
+			"70": {
+				"strength": 77,
+				"agility": 62,
+				"vitality": 74,
+				"intellect": 29,
+				"mind": 29
+			},
+			"80": {
+				"strength": 84,
+				"agility": 69,
+				"vitality": 82,
+				"intellect": 32,
+				"mind": 32
+			},
+			"90": {
+				"strength": 92,
+				"agility": 78,
+				"vitality": 92,
+				"intellect": 35,
+				"mind": 35
+			},
+			"99": {
+				"strength": 99,
+				"agility": 85,
+				"vitality": 99,
+				"intellect": 38,
+				"mind": 38
+			}
+		}
+	},
+	"devout": {
+		"actions": [
+			"attack",
+			"magic",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 6,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 25
+			},
+			"10": {
+				"strength": 9,
+				"agility": 10,
+				"vitality": 9,
+				"intellect": 10,
+				"mind": 32
+			},
+			"20": {
+				"strength": 14,
+				"agility": 16,
+				"vitality": 16,
+				"intellect": 15,
+				"mind": 39
+			},
+			"30": {
+				"strength": 18,
+				"agility": 22,
+				"vitality": 23,
+				"intellect": 20,
+				"mind": 47
+			},
+			"40": {
+				"strength": 22,
+				"agility": 28,
+				"vitality": 30,
+				"intellect": 24,
+				"mind": 54
+			},
+			"50": {
+				"strength": 26,
+				"agility": 34,
+				"vitality": 37,
+				"intellect": 29,
+				"mind": 62
+			},
+			"60": {
+				"strength": 29,
+				"agility": 40,
+				"vitality": 44,
+				"intellect": 34,
+				"mind": 69
+			},
+			"70": {
+				"strength": 33,
+				"agility": 46,
+				"vitality": 51,
+				"intellect": 38,
+				"mind": 77
+			},
+			"80": {
+				"strength": 37,
+				"agility": 52,
+				"vitality": 57,
+				"intellect": 43,
+				"mind": 84
+			},
+			"90": {
+				"strength": 41,
+				"agility": 58,
+				"vitality": 64,
+				"intellect": 48,
+				"mind": 92
+			},
+			"99": {
+				"strength": 45,
+				"agility": 63,
+				"vitality": 71,
+				"intellect": 52,
+				"mind": 99
+			}
+		}
+	},
+	"magus": {
+		"actions": [
+			"attack",
+			"magic",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 6,
+				"vitality": 5,
+				"intellect": 25,
+				"mind": 5
+			},
+			"10": {
+				"strength": 9,
+				"agility": 10,
+				"vitality": 12,
+				"intellect": 32,
+				"mind": 10
+			},
+			"20": {
+				"strength": 14,
+				"agility": 16,
+				"vitality": 20,
+				"intellect": 39,
+				"mind": 15
+			},
+			"30": {
+				"strength": 18,
+				"agility": 22,
+				"vitality": 28,
+				"intellect": 47,
+				"mind": 20
+			},
+			"40": {
+				"strength": 22,
+				"agility": 28,
+				"vitality": 36,
+				"intellect": 54,
+				"mind": 24
+			},
+			"50": {
+				"strength": 26,
+				"agility": 34,
+				"vitality": 44,
+				"intellect": 62,
+				"mind": 29
+			},
+			"60": {
+				"strength": 29,
+				"agility": 40,
+				"vitality": 52,
+				"intellect": 69,
+				"mind": 34
+			},
+			"70": {
+				"strength": 33,
+				"agility": 46,
+				"vitality": 60,
+				"intellect": 77,
+				"mind": 38
+			},
+			"80": {
+				"strength": 37,
+				"agility": 52,
+				"vitality": 69,
+				"intellect": 84,
+				"mind": 43
+			},
+			"90": {
+				"strength": 41,
+				"agility": 58,
+				"vitality": 77,
+				"intellect": 92,
+				"mind": 48
+			},
+			"99": {
+				"strength": 45,
+				"agility": 63,
+				"vitality": 85,
+				"intellect": 99,
+				"mind": 52
+			}
+		}
+	},
+	"summoner": {
+		"actions": [
+			"attack",
+			"summon",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 9,
+				"vitality": 5,
+				"intellect": 10,
+				"mind": 10
+			},
+			"10": {
+				"strength": 9,
+				"agility": 15,
+				"vitality": 10,
+				"intellect": 16,
+				"mind": 16
+			},
+			"20": {
+				"strength": 14,
+				"agility": 21,
+				"vitality": 16,
+				"intellect": 25,
+				"mind": 25
+			},
+			"30": {
+				"strength": 18,
+				"agility": 27,
+				"vitality": 20,
+				"intellect": 31,
+				"mind": 31
+			},
+			"40": {
+				"strength": 22,
+				"agility": 34,
+				"vitality": 24,
+				"intellect": 39,
+				"mind": 39
+			},
+			"50": {
+				"strength": 26,
+				"agility": 40,
+				"vitality": 29,
+				"intellect": 46,
+				"mind": 46
+			},
+			"60": {
+				"strength": 29,
+				"agility": 46,
+				"vitality": 34,
+				"intellect": 54,
+				"mind": 54
+			},
+			"70": {
+				"strength": 33,
+				"agility": 53,
+				"vitality": 38,
+				"intellect": 62,
+				"mind": 62
+			},
+			"80": {
+				"strength": 37,
+				"agility": 59,
+				"vitality": 43,
+				"intellect": 69,
+				"mind": 69
+			},
+			"90": {
+				"strength": 41,
+				"agility": 65,
+				"vitality": 48,
+				"intellect": 77,
+				"mind": 77
+			},
+			"99": {
+				"strength": 45,
+				"agility": 71,
+				"vitality": 52,
+				"intellect": 85,
+				"mind": 85
+			}
+		}
+	},
+	"sage": {
+		"actions": [
+			"attack",
+			"magic",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 5,
+				"agility": 6,
+				"vitality": 5,
+				"intellect": 14,
+				"mind": 14
+			},
+			"10": {
+				"strength": 9,
+				"agility": 9,
+				"vitality": 10,
+				"intellect": 20,
+				"mind": 20
+			},
+			"20": {
+				"strength": 12,
+				"agility": 16,
+				"vitality": 16,
+				"intellect": 26,
+				"mind": 26
+			},
+			"30": {
+				"strength": 15,
+				"agility": 22,
+				"vitality": 23,
+				"intellect": 33,
+				"mind": 33
+			},
+			"40": {
+				"strength": 19,
+				"agility": 28,
+				"vitality": 30,
+				"intellect": 40,
+				"mind": 40
+			},
+			"50": {
+				"strength": 22,
+				"agility": 34,
+				"vitality": 37,
+				"intellect": 48,
+				"mind": 48
+			},
+			"60": {
+				"strength": 25,
+				"agility": 40,
+				"vitality": 44,
+				"intellect": 55,
+				"mind": 55
+			},
+			"70": {
+				"strength": 29,
+				"agility": 46,
+				"vitality": 51,
+				"intellect": 63,
+				"mind": 63
+			},
+			"80": {
+				"strength": 32,
+				"agility": 52,
+				"vitality": 57,
+				"intellect": 70,
+				"mind": 70
+			},
+			"90": {
+				"strength": 35,
+				"agility": 58,
+				"vitality": 64,
+				"intellect": 78,
+				"mind": 78
+			},
+			"99": {
+				"strength": 38,
+				"agility": 63,
+				"vitality": 71,
+				"intellect": 85,
+				"mind": 85
+			}
+		}
+	},
+	"ninja": {
+		"actions": [
+			"attack",
+			"throw",
+			"defend",
+			"item"
+		],
+		"stats": {
+			"1": {
+				"strength": 5,
+				"agility": 5,
+				"vitality": 5,
+				"intellect": 5,
+				"mind": 5
+			},
+			"2": {
+				"strength": 25,
+				"agility": 25,
+				"vitality": 7,
+				"intellect": 5,
+				"mind": 5
+			},
+			"10": {
+				"strength": 32,
+				"agility": 32,
+				"vitality": 11,
+				"intellect": 10,
+				"mind": 10
+			},
+			"20": {
+				"strength": 39,
+				"agility": 39,
+				"vitality": 18,
+				"intellect": 15,
+				"mind": 15
+			},
+			"30": {
+				"strength": 47,
+				"agility": 47,
+				"vitality": 25,
+				"intellect": 20,
+				"mind": 20
+			},
+			"40": {
+				"strength": 54,
+				"agility": 54,
+				"vitality": 31,
+				"intellect": 24,
+				"mind": 24
+			},
+			"50": {
+				"strength": 62,
+				"agility": 62,
+				"vitality": 38,
+				"intellect": 29,
+				"mind": 29
+			},
+			"60": {
+				"strength": 69,
+				"agility": 69,
+				"vitality": 45,
+				"intellect": 34,
+				"mind": 34
+			},
+			"70": {
+				"strength": 77,
+				"agility": 77,
+				"vitality": 51,
+				"intellect": 38,
+				"mind": 38
+			},
+			"80": {
+				"strength": 84,
+				"agility": 84,
+				"vitality": 58,
+				"intellect": 43,
+				"mind": 43
+			},
+			"90": {
+				"strength": 92,
+				"agility": 92,
+				"vitality": 65,
+				"intellect": 48,
+				"mind": 48
+			},
+			"99": {
+				"strength": 99,
+				"agility": 99,
+				"vitality": 71,
+				"intellect": 52,
+				"mind": 52
+			}
+		}
+	}
+}

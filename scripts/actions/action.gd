@@ -1,5 +1,7 @@
 class_name Action extends Node
 
+const ACTIONS_FILE : String = "res://ressources/actions/actions.json"
+
 enum TARGET_TYPE {
 	SINGLE_ENEMY,
 	SINGLE_ALLY,
@@ -68,42 +70,34 @@ enum DAMAGE_TYPE {
 @export var debuffs: Array[DEBUFF]
 @export var element: ELEMENT
 
-func _init(
-	p_name: String, 
-	p_description: String, 
-	p_cost: int, 
-	p_target_type: TARGET_TYPE, 
-	#p_action_type: ACTION_TYPE, 
-	p_spell_power: int, p_buffs: Array[Action.BUFF], 
-	p_debuffs: Array[Action.DEBUFF], 
-	p_element: ELEMENT,
-	p_damage_type: DAMAGE_TYPE):
-		action_name = p_name
-		description = p_description
-		cost = p_cost
-		target_type = p_target_type
-		#action_type = p_action_type
-		spell_power = p_spell_power
-		buffs = p_buffs
-		debuffs = p_debuffs
-		element = p_element
-		damage_type = p_damage_type
+#func _init(
+	#p_name: String, 
+	#p_description: String, 
+	#p_cost: int, 
+	#p_target_type: TARGET_TYPE, 
+	##p_action_type: ACTION_TYPE, 
+	#p_spell_power: int, p_buffs: Array[Action.BUFF], 
+	#p_debuffs: Array[Action.DEBUFF], 
+	#p_element: ELEMENT,
+	#p_damage_type: DAMAGE_TYPE):
+		#action_name = p_name
+		#description = p_description
+		#cost = p_cost
+		#target_type = p_target_type
+		##action_type = p_action_type
+		#spell_power = p_spell_power
+		#buffs = p_buffs
+		#debuffs = p_debuffs
+		#element = p_element
+		#damage_type = p_damage_type
 
-static func from_action_resource(action_resource: ActionResource) -> Action:
-	var action: Action = Action.new(
-		action_resource.action_name,
-		action_resource.description,
-		action_resource.cost,
-		action_resource.target_type,
-		#action_resource.action_type,
-		action_resource.spell_power,
-		action_resource.buffs,
-		action_resource.debuffs,
-		action_resource.element,
-		action_resource.damage_type
-	)
+func load(action_id: String):
+	var content: Dictionary = FileHandler.get_json_content(ACTIONS_FILE)
 	
-	return action
+	if content.has("error"):
+		return
+	
+	action_name = action_id
 
 func _to_string() -> String:
 	return action_name + " - " + description + " - " + str(cost) + " - " + str(target_type)

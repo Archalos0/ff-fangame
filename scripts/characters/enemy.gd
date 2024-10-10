@@ -21,9 +21,10 @@ func load_from_character_resource(p_resource: CharacterResource):
 	
 
 func load_actions(p_actions_resource: Array[ActionResource]):
-	for action_resource: ActionResource in p_actions_resource:
-		actions.append(Action.from_action_resource(action_resource))
-
+	#for action_resource: ActionResource in p_actions_resource:
+		#actions.append(Action.from_action_resource(action_resource))
+	pass
+	
 func load_stats(p_stats: Dictionary):
 	#stats = Stats.from_dictionary(p_stats)
 	pass
