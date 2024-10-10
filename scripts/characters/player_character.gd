@@ -3,6 +3,22 @@ class_name PlayerCharacter extends Character
 var job: Job
 var equipments: Equipments 
 
+func load(character_data: Game.CharacterData):
+	character_name = character_data.name
+
+	level = character_data.level
+
+	#Load job
+	job = Job.new()
+	job.load(character_data.job, character_data.jobs_level[character_data.job])
+	
+	load_stats()
+	
+	#Load equipments
+	equipments = Equipments.new()
+	equipments.load(character_data.equipments)
+
+
 func load_from_character_resource(p_resource: CharacterResource):
 	if p_resource is not PlayerCharacterResource:
 		push_error("The resource type is not valid")

@@ -12,11 +12,11 @@
 					"right_hand": "shield_001",
 					"head_armor": "head_armor_006",
 					"body_armor": "body_armor_001",
-					"arm_armor": ""
+					"arm_armor": "arms_013"
 				},
 				"jobs_level": {
 					"onion_knight": 1,
-					"warrior": 5,
+					"warrior": 2,
 					"monk": 1,
 					"white_mage": 1,
 					"black_mage": 1,
@@ -56,7 +56,7 @@
 					"onion_knight": 1,
 					"warrior": 1,
 					"monk": 1,
-					"white_mage": 3,
+					"white_mage": 10,
 					"black_mage": 2,
 					"red_mage": 1,
 					"thief": 1,

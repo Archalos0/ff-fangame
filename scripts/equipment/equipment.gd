@@ -1,5 +1,7 @@
 class_name Equipment
 
+const EQUIPMENTS_FILE: String = "res://ressources/equipments/equipments.json"
+
 var equipment_name: String
 var stats_upgraded: Stats
 
@@ -38,3 +40,22 @@ enum STATUS {
 	MINI,
 	GRADUAL_PETRIFY,
 }
+
+
+func load(equipment_id: String):
+	if equipment_id == "": 
+		return 
+	 
+	var content: Dictionary = FileHandler.get_json_content(EQUIPMENTS_FILE)
+	
+	if content.has("error"):
+		return
+	
+	equipment_name = content[equipment_id]["name"]
+	
+	stats_upgraded = Stats.from_dictionary(content[equipment_id]["stats_upgraded"])
+	
+	attack_modifier = content[equipment_id].get("attack", 0)
+	defense_modifier = content[equipment_id].get("defense", 0)
+	magic_defense_modifier = content[equipment_id].get("magic_defense", 0)
+	evade_modifier = content[equipment_id].get("evade", 0)

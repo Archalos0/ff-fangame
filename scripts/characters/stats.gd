@@ -1,35 +1,31 @@
 class_name Stats
 
-@export var health_points: int
-@export var max_health_points: int
-
-@export var magic_points: int
-@export var max_magic_points: int
-
-@export var strength: int
-@export var agility: int
-@export var vitality: int
-@export var intellect: int
-@export var mind: int
-@export var defense: int
-@export var magic_defense: int
-
-func _init():
-	strength 		= 5
-	agility 		= 5
-	vitality 		= 5
-	intellect 		= 5
-	mind 			= 5
-	defense 		= 5
-	magic_defense 	= 5
+var health_points: int
+var max_health_points: int
+var magic_points: int
+var max_magic_points: int
+var strength: int
+var agility: int
+var vitality: int
+var intellect: int
+var mind: int
+var defense: int
+var magic_defense: int
 
 static func from_dictionary(data: Dictionary) -> Stats:
 	var new_stats = Stats.new()
 	
-	new_stats.strength 	= data.strength
-	new_stats.agility 	= data.agility
-	new_stats.vitality	= data.vitality
-	new_stats.intellect	= data.intellect
-	new_stats.mind		= data.mind
+	if data.has("all_stats"):
+		new_stats.strength 	= data["all_stats"]
+		new_stats.agility 	= data["all_stats"]
+		new_stats.vitality	= data["all_stats"]
+		new_stats.intellect	= data["all_stats"]
+		new_stats.mind		= data["all_stats"]
+	else:
+		new_stats.strength 	= data.get("strength", 0)
+		new_stats.agility 	= data.get("agility", 0)
+		new_stats.vitality	= data.get("vitality", 0)
+		new_stats.intellect	= data.get("intellect", 0)
+		new_stats.mind		= data.get("mind", 0)
 	
 	return new_stats
