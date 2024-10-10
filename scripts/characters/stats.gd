@@ -1,16 +1,20 @@
 class_name Stats
 
-var health_points: int
-var max_health_points: int
-var magic_points: int
-var max_magic_points: int
-var strength: int
-var agility: int
-var vitality: int
-var intellect: int
-var mind: int
-var defense: int
-var magic_defense: int
+var health_points: int = 0
+var max_health_points: int = 0
+
+# Equipment stats
+var magic_points: int = 0
+var max_magic_points: int = 0
+var defense: int = 0
+var magic_defense: int = 0
+
+# Job stats
+var strength: int = 0
+var agility: int = 0
+var vitality: int = 0
+var intellect: int = 0
+var mind: int = 0
 
 static func from_dictionary(data: Dictionary) -> Stats:
 	var new_stats = Stats.new()
