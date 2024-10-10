@@ -1,0 +1,56 @@
+{
+  "actions": {
+    "attack": {
+      "type": "PHYSICAL_DAMAGE",
+      "target": {
+        "type": "SINGLE_ENEMY"
+      },
+      "effect": {
+        "damage_type": "PHYSICAL",
+        "base_power": 100
+      }
+    },
+    "defend": {
+      "type": "DEFENSE_BUFF",
+      "target": {
+        "type": "SELF"
+      },
+      "effect": {
+        "defense_multiplier": 4,
+        "duration": 1
+      }
+    },
+    "run_away": {
+      "type": "ESCAPE",
+      "target": {
+        "type": "SELF"
+      },
+      "effects": [
+        {
+          "name": "DEFENSE_REDUCTION",
+          "target": "SELF",
+          "defense_multiplier": 0,
+          "duration": 1
+        },
+        {
+          "name": "TEAM_ESCAPE_CHANCE",
+          "target": "ALL_ALLIES",
+          "run_away_chance_boost": 1,
+          "duration": 1
+        }
+      ]
+    },
+    "magic": {
+      "type": "OPEN_MENU",
+      "menu": {
+        "name": "MAGIC_SPELLS"
+      }
+    },
+    "items": {
+      "type": "OPEN_MENU",
+      "menu": {
+        "name": "ITEMS"
+      }
+    }
+  }
+}
