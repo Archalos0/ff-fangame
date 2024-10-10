@@ -18,7 +18,6 @@ func load(character_data: Game.CharacterData):
 	
 	load_stats()
 
-
 func load_actions():
 	actions = job.actions
 
@@ -33,9 +32,6 @@ func load_stats():
 
 func get_animation() -> SpriteFrames:
 	return job.animations
-
-func _load_equipments(p_equipments: EquipmentsResource):
-	equipments.left_hand.load_from_resource(p_equipments.left_hand)
 
 func get_stats() -> Dictionary:
 	var full_stats: Dictionary = {
