@@ -53,7 +53,8 @@ func load(equipment_id: String):
 	
 	equipment_name = content[equipment_id]["name"]
 	
-	stats_upgraded = Stats.from_dictionary(content[equipment_id]["stats_upgraded"])
+	stats_upgraded = Stats.new()
+	stats_upgraded.load_character_stats(content[equipment_id]["stats_upgraded"])
 	
 	attack_modifier = content[equipment_id].get("attack", 0)
 	defense_modifier = content[equipment_id].get("defense", 0)

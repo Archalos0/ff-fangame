@@ -4,7 +4,7 @@
 			{
 				"name": "Luneth",
 				"job": "warrior",
-				"level": 3,
+				"level": 10,
 				"max_health_points": 150,
 				"current_health_points": 134,
 				"equipments": {
@@ -42,7 +42,7 @@
 			{
 				"name": "Arc",
 				"job": "black_mage",
-				"level": 5,
+				"level": 2,
 				"max_health_points": 123,
 				"current_health_points": 123,
 				"equipments": {

@@ -20,3 +20,7 @@ func set_health_points(hp: int):
 
 func get_animation():
 	push_error("The method get_animation() has not been implementing in the derived class")
+
+func get_stats() -> Dictionary:
+	push_error("The method get_stats() has not been implementing in the derived class")
+	return {}

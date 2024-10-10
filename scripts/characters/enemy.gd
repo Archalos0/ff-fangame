@@ -25,4 +25,5 @@ func load_actions(p_actions_resource: Array[ActionResource]):
 		actions.append(Action.from_action_resource(action_resource))
 
 func load_stats(p_stats: Dictionary):
-	stats = Stats.from_dictionary(p_stats)
+	#stats = Stats.from_dictionary(p_stats)
+	pass
