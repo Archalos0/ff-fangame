@@ -28,14 +28,15 @@ func initialize():
 	battle_menu.player_character_menu.load_characters(characters.filter(func(character): return character.is_player))
 
 func play_turn():
-	if is_battle_end():
-		if active_character.is_player:
-			print("YOU WIN")
-			message_box.set_message("YOU WIN")
-		else:
-			print("YOU LOST")
-			message_box.set_message("YOU LOST")
-		return
+	if active_character.get_current_health_points() > 30000: return
+	#if is_battle_end():
+		#if active_character.is_player:
+			#print("YOU WIN")
+			#message_box.set_message("YOU WIN")
+		#else:
+			#print("YOU LOST")
+			#message_box.set_message("YOU LOST")
+		#return
 	
 	if active_character.get_current_health_points() > 0:
 		active_character.initialize_turn()
