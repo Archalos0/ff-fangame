@@ -7,6 +7,9 @@ signal characters_selected(charcters: Array[Battler])
 @onready var target_menu: TargetSelectionMenu = $TargetSelection
 @onready var player_character_menu: PlayerSelectionMenu = $PlayerCharacterInformations
 
+@onready var magic_spells_menu: Panel = $MagicSpellsMenu
+@onready var items_menu: Panel = $ItemsMenu
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mouse_filter = MOUSE_FILTER_PASS
@@ -15,11 +18,24 @@ func _ready() -> void:
 	player_character_menu.focus_mode = Control.FOCUS_NONE
 	
 	action_menu.action_selected.connect(Callable(self, "_on_action_selected"))
+	action_menu.open_menu.connect(Callable(self, "_on_open_menu"))
+	
 	target_menu.characters_selected.connect(Callable(self, "_on_characters_selected"))
+	
 	player_character_menu.characters_selected.connect(Callable(self, "_on_characters_selected"))
 	
 func _on_action_selected(action: Action):
 	action_selected.emit(action)
+
+func _on_open_menu(menu_id: String):
+	match menu_id:
+		"MAGIC_SPELLS": magic_spells_menu.visible = true
+		"ITEMS": items_menu.visible = true
+
+func _on_close_menu(menu_id: String):
+	match menu_id:
+		"MAGIC_SPELLS": magic_spells_menu.visible = false
+		"ITEMS": items_menu.visible = false
 
 func _on_characters_selected(characters: Array[Battler]):
 	characters_selected.emit(characters)
