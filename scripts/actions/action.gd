@@ -98,6 +98,9 @@ func load(action_id: String):
 		return
 	
 	action_name = action_id
+	#description = content[action_id]["description"]
+	cost = content[action_id]["cost"]
+	#target_type = content[action_id]["target"]
 
 func _to_string() -> String:
 	return action_name + " - " + description + " - " + str(cost) + " - " + str(target_type)
