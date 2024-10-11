@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://cq1y06sugh8uk"]
+
+[ext_resource type="Texture2D" uid="uid://dvdxbfo21vema" path="res://assets/sprites/monsters/killer_bee.png" id="1_ax1t6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvklc"]
+atlas = ExtResource("1_ax1t6")
+region = Rect2(0, 0, 68, 88)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvklc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

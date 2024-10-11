@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://iloex84ffarw"]
+
+[ext_resource type="Texture2D" uid="uid://bx4qlqqj2lxcu" path="res://assets/sprites/monsters/carbuncle.png" id="1_ox0bu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7joh"]
+atlas = ExtResource("1_ox0bu")
+region = Rect2(0, 0, 70, 72)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7joh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

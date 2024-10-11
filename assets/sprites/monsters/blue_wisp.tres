@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://cj5avwugtg3fw"]
+
+[ext_resource type="Texture2D" uid="uid://yur0it5cjalj" path="res://assets/sprites/monsters/blue_wisp.png" id="1_b1uvm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_areby"]
+atlas = ExtResource("1_b1uvm")
+region = Rect2(0, 0, 64, 76)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_areby")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
