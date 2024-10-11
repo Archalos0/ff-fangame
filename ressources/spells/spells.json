@@ -13,6 +13,20 @@
     "target": "E",
     "type": "PHYSICAL"
   },
+  "advance": {
+    "name": "Advance",
+    "element": "NONE",
+    "hit_percentage": 100,
+    "target": "SA",
+    "type": "NONE"
+  },
+  "basic_defense": {
+    "name": "Defense",
+    "element": "NONE",
+    "hit_percentage": 100,
+    "target": "SA",
+    "type": "NONE"
+  },
   "fire": {
     "name": "Fire",
     "element": "FIRE",
