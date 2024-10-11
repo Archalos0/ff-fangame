@@ -51,7 +51,10 @@ func get_stats() -> Dictionary:
 	}
 	
 	var equipments_stats: Dictionary = equipments.get_stats()
-
+	
+	full_stats["current_health_points"] = stats.current_health_points
+	full_stats["max_health_points"] = stats.max_health_points
+	
 	full_stats["strength"] 	+= stats.strength 	+ equipments_stats["strength"]
 	full_stats["agility"] 	+= stats.agility 	+ equipments_stats["agility"]
 	full_stats["vitality"] 	+= stats.vitality 	+ equipments_stats["vitality"]

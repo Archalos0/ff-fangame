@@ -6,6 +6,9 @@ var gils: int
 var experience: int
 var sprite_frames: SpriteFrames
 
+var attack: int
+var defense: int
+
 #func load_from_character_resource(p_resource: CharacterResource):
 	#if p_resource is not EnemyResource:
 		#push_error("The resource type is not valid")
@@ -34,6 +37,12 @@ func load(monster_id: String):
 	
 	sprite_frames = SpriteFrames.new()
 	sprite_frames = load(monster_data["sprite_frames"]) as SpriteFrames
+	
+	stats = Stats.new()
+	stats.current_health_points = monster_data["hp"]
+	stats.max_health_points = monster_data["hp"]
+	attack = monster_data["atk"]
+	defense = monster_data["def"]
 
 #func load_actions(p_actions_resource: Array[ActionResource]):
 	##for action_resource: ActionResource in p_actions_resource:
@@ -45,10 +54,26 @@ func load_stats(p_stats: Dictionary):
 	pass
 
 func get_stats() -> Dictionary:
-	return {
-		"max_health_points": 100,
-		"current_health_points": 50
+	var full_stats: Dictionary = {
+		"max_health_points": 0,
+		"current_health_points": 0,
+		"strength": 0,
+		"agility": 0,
+		"vitality": 0,
+		"intellect": 0,
+		"mind": 0,
+		"attack": 0,
+		"defense": 0,
+		"magic_defense": 0,
+		"evade": 0,
 	}
+	
+	full_stats["current_health_points"] = stats.current_health_points
+	full_stats["max_health_points"] = stats.max_health_points
+	full_stats["attack"] = attack
+	full_stats["defense"] = defense
+	
+	return full_stats
 
 func get_sprite_frames() -> SpriteFrames:
 	return sprite_frames

@@ -9,34 +9,29 @@ signal target_selected(targets: Array[Battler])
 var characters: Array[Battler] = []
 var active_character: Battler = null
 
-func _ready() -> void:
-	pass
-
-func ready(): 
-		#TODO : Wait all node loaded at the scene loading
-	#await message_box.ready
-
-	initialize()
-	play_turn()
 
 func initialize():
+	
 	active_character = get_child(0)
 	for node_character in get_children():
 		characters.append(node_character)
 		
 	battle_menu.target_menu.load_characters(characters.filter(func(character): return not character.is_player))
 	battle_menu.player_character_menu.load_characters(characters.filter(func(character): return character.is_player))
-
+	
+	
+	play_turn()
+	
 func play_turn():
-	if active_character.get_current_health_points() > 30000: return
-	#if is_battle_end():
-		#if active_character.is_player:
-			#print("YOU WIN")
-			#message_box.set_message("YOU WIN")
-		#else:
-			#print("YOU LOST")
-			#message_box.set_message("YOU LOST")
-		#return
+	
+	if is_battle_end():
+		if active_character.is_player:
+			print("YOU WIN")
+			message_box.set_message("YOU WIN")
+		else:
+			print("YOU LOST")
+			message_box.set_message("YOU LOST")
+		return
 	
 	if active_character.get_current_health_points() > 0:
 		active_character.initialize_turn()

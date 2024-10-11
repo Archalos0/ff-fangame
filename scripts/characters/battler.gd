@@ -89,7 +89,7 @@ func get_character_name() -> String:
 	return "" #_character_data.character_name
 
 func get_current_health_points() -> int:
-	return _character_data.stats.current_health_points
+	return _character_data.get_stats()["current_health_points"]
 
 #TODO: Add max_health_points in stats
 func get_max_health_points() -> int:
