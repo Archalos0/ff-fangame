@@ -17,6 +17,8 @@ func load(character_data: Game.CharacterData):
 	equipments.load(character_data.equipments)
 	
 	load_stats()
+	stats.current_health_points = character_data.current_health_points
+	stats.max_health_points = character_data.max_health_points
 
 func load_actions():
 	#actions = job.actions
@@ -62,3 +64,6 @@ func get_stats() -> Dictionary:
 	full_stats["evade"] 		+= equipments_stats["evade"]
 
 	return full_stats
+
+func get_actions() -> Array[Action]:
+	return job.actions
