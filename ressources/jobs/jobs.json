@@ -1,5 +1,6 @@
 {
 	"warrior": {
+		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/warrior/warrior_animation.tres",
 		"actions": [
 			"attack",
 			"advance",
@@ -94,6 +95,7 @@
 		}
 	},
 	"monk": {
+		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/monk/monk_animation.tres",
 		"actions": [
 			"attack",
 			"retaliate",
@@ -188,6 +190,7 @@
 		}
 	},
 	"white_mage": {
+		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/white_mage/white_mage_animation.tres",
 		"actions": [
 			"attack",
 			"magic",
@@ -282,6 +285,7 @@
 		}
 	},
 	"black_mage": {
+		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/black_mage/black_mage_animation.tres",
 		"actions": [
 			"attack",
 			"magic",
@@ -376,6 +380,7 @@
 		}
 	},
 	"red_mage": {
+		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/red_mage/red_mage_animation.tres",
 		"actions": [
 			"attack",
 			"magic",
