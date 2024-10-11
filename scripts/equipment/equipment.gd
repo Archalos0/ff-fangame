@@ -43,9 +43,16 @@ enum STATUS {
 
 
 func load(equipment_id: String):
-	if equipment_id == "": 
-		return 
 	 
+	if equipment_id == "": 
+		equipment_name = ""
+		stats_upgraded = Stats.new()
+		attack_modifier = 0
+		defense_modifier = 0
+		magic_defense_modifier = 0
+		evade_modifier = 0
+		return
+		
 	var content: Dictionary = FileHandler.get_json_content(EQUIPMENTS_FILE)
 	
 	if content.has("error"):
