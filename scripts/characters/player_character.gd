@@ -67,3 +67,6 @@ func get_stats() -> Dictionary:
 
 func get_actions() -> Array[Action]:
 	return job.actions
+
+func get_sprite_frames() -> SpriteFrames:
+	return job.animations
