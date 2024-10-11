@@ -1,4 +1,4 @@
-class_name Action2 extends Node
+class_name Action extends Node
 
 enum ACTION_TYPE {
 	LAUNCH_ABILITY,
