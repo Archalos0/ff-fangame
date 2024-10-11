@@ -26,8 +26,13 @@ func load_battler(p_character_data: Game.CharacterData, p_is_player: bool):
 	name = _character_data.character_name
 	is_player = p_is_player
 
+func load_monster(monster_data: Monster):
+	_character_data = monster_data
+	name = _character_data.character_name
+	is_player = false
+
 func _ready() -> void:	
-	animated_sprite_2d.sprite_frames = _character_data.job.animations
+	animated_sprite_2d.sprite_frames = _character_data.get_sprite_frames()
 	
 	_place_health_bar()
 	_place_selection_arrow()
@@ -35,9 +40,9 @@ func _ready() -> void:
 	if is_player:
 		flip_character()
 	
-	health_bar.max_value = _character_data.stats.max_health_points
+	health_bar.max_value = _character_data.get_stats()["max_health_points"]
 	health_bar.min_value = 0
-	health_bar.value = _character_data.stats.current_health_points
+	health_bar.value = _character_data.get_stats()["current_health_points"]
 	
 	is_selectable.set_is_selectable(false)
 
