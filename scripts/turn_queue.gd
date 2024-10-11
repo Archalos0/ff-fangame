@@ -66,11 +66,11 @@ func play_turn():
 				#_:
 					#targets = potential_target
 		
-		#print_debug_message(action, targets)
-		#var targets_data: Array[Battler] = []
-		#for battler: Battler in targets:
-			#targets_data.append(battler)
-		#active_character.act(ability, targets_data)
+		print_debug_message(ability, targets)
+		var targets_data: Array[Battler] = []
+		for battler: Battler in targets:
+			targets_data.append(battler)
+		active_character.act(ability, targets_data)
 	
 	end_turn()
 
@@ -108,8 +108,8 @@ func end_turn():
 	set_next_character()
 	play_turn()
 
-func print_debug_message(action: Action, targets: Array[Battler]):
-	var debug_message = active_character.to_string() + " is using " + action.to_string()
+func print_debug_message(ability: Ability, targets: Array[Battler]):
+	var debug_message = active_character.to_string() + " is using " + ability.to_string()
 	if targets != []:
 		debug_message += " on "
 		for character: Battler in targets:

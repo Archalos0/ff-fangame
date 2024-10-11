@@ -13,10 +13,10 @@ func load_from_character_resource(p_resource: CharacterResource):
 	push_error("The method from_character_resource() has not been implementing in the derived class")
 
 func get_health_points() -> int:
-	return stats.health_points
+	return stats.current_health_points
 
 func set_health_points(hp: int):
-	stats.health_points = hp
+	stats.current_health_points = hp
 
 func get_animation():
 	push_error("The method get_animation() has not been implementing in the derived class")

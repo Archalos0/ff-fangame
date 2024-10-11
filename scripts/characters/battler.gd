@@ -70,7 +70,7 @@ func initialize_turn():
 func end_turn():
 	arrow_character_playing.visible = false
 
-func act(action: Action, targets: Array[Battler]):
+func act(ability: Ability, targets: Array[Battler]):
 	#var power = action.calcul_power(_character_data)
 	#
 	#match action.damage_type:
@@ -83,8 +83,9 @@ func act(action: Action, targets: Array[Battler]):
 		#Action.DAMAGE_TYPE.HEALING:
 			#for target: Battler in targets:
 				#target.get_heal(power)
-	pass
-
+	for target: Battler in targets:
+		target.get_hit(50)
+	
 func get_character_name() -> String:
 	return _character_data.character_name
 
@@ -108,11 +109,11 @@ func get_actions() -> Array[Action]:
 
 func get_hit(damage: int):
 	_character_data.set_health_points(_character_data.get_health_points() - damage)
-	health_bar.value = _character_data.stats.health_points
+	health_bar.value = _character_data.stats.current_health_points
 
 func get_heal(hp: int):
 	_character_data.set_health_points(_character_data.get_health_points() + hp)
-	health_bar.value = _character_data.stats.health_points
+	health_bar.value = _character_data.stats.current_health_points
 
 func get_focus():
 	if is_selectable.get_is_selectable():
