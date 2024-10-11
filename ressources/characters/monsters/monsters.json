@@ -10,7 +10,8 @@
     "def": 6,
     "weakness": "None",
     "steal": "Potion",
-    "location": "Altar Cave"
+    "location": "Altar Cave",
+    "sprite_frames": "res://assets/sprites/monsters/goblin.tres"
   },
   "carbuncle": {
     "name": "Carbuncle",
@@ -23,7 +24,8 @@
     "def": 6,
     "weakness": "None",
     "steal": "Potion",
-    "location": "Altar Cave"
+    "location": "Altar Cave",
+    "sprite_frames": "res://assets/sprites/monsters/carbuncle.tres"
   },
   "eye_fang": {
     "name": "Eye Fang",
@@ -36,7 +38,8 @@
     "def": 6,
     "weakness": "None",
     "steal": "Hi-Potion",
-    "location": "Altar Cave"
+    "location": "Altar Cave",
+    "sprite_frames": "res://assets/sprites/monsters/eye_fang.tres"
   },
   "blue_wisp": {
     "name": "Blue Wisp",
@@ -49,7 +52,8 @@
     "def": 6,
     "weakness": "None",
     "steal": "Potion",
-    "location": "Altar Cave"
+    "location": "Altar Cave",
+    "sprite_frames": "res://assets/sprites/monsters/blue_wisp.tres"
   },
   "killer_bee": {
     "name": "Killer Bee",
@@ -62,6 +66,7 @@
     "def": 6,
     "weakness": "Wind",
     "steal": ["Eye Drops", "Antidote"],
-    "location": "World Map (Near Kazus)"
+    "location": "World Map (Near Kazus)",
+    "sprite_frames": "res://assets/sprites/monsters/killer_bee.tres"
   }
 }
