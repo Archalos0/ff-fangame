@@ -13,7 +13,6 @@ bg_color = Color(1, 0.12549, 0.227451, 1)
 script = ExtResource("2_fyw8l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-animation = &""
 
 [node name="arrow_character_playing" type="Sprite2D" parent="."]
 visible = false
