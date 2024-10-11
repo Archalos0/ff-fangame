@@ -24,3 +24,7 @@ func get_animation():
 func get_stats() -> Dictionary:
 	push_error("The method get_stats() has not been implementing in the derived class")
 	return {}
+	
+func get_actions() -> Array[Action]:
+	push_error("The method get_actions() has not been implementing in the derived class")
+	return []
