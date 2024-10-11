@@ -32,7 +32,6 @@ func _send_action() -> void:
 		open_menu.emit(buttons_selected[0].action.menu_id)
 	else:
 		action_selected.emit(buttons_selected[0].action)
-	
 
 func load_actions(p_actions: Array[Action]) -> void:
 	for action: Action in p_actions:
