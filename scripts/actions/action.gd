@@ -5,7 +5,7 @@ enum ACTION_TYPE {
 	OPEN_MENU
 }
 
-class OpenMenuAction extends Action2:
+class OpenMenuAction extends Action:
 	var menu_id: String
 	
 	func _init(action_id: String, p_menu_id: String):
@@ -20,7 +20,7 @@ class OpenMenuAction extends Action2:
 	func _to_string() -> String:
 		return "Open menu action action : \r\n\taction_name : " + action_name + "\r\n\tmenu : " + menu_id
 
-class LaunchAbilityAction extends Action2:
+class LaunchAbilityAction extends Action:
 	var ability_id: String
 	
 	func _init(action_id: String, p_ability_id: String):
@@ -46,7 +46,7 @@ var description: String = "Description"
 var effect: ActionEffect
 
 
-static func load(action_id: String) -> Action2:
+static func load(action_id: String) -> Action:
 	var content = FileHandler.get_json_content(ACTIONS_FILE)
 
 	# Handle error
@@ -55,7 +55,7 @@ static func load(action_id: String) -> Action2:
 		push_error("action : " + action_id + " not found.")
 		return
 	
-	var action: Action2
+	var action: Action
 	
 	match content["actions"][action_id]["effect"]["type"]:
 		"LAUNCH_ABILITY": action = LaunchAbilityAction.new(action_id, content["actions"][action_id]["effect"]["id"])
