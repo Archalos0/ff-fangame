@@ -1,33 +1,39 @@
 {
   "actions": {
     "attack": {
-      "effects": {
+      "effect": {
         "type": "LAUNCH_ABILITY",
-        "attack_id": "basic_attack"
+        "id": "basic_attack"
       }
     },
     "defend": {
-      "effects": {
+      "effect": {
         "type": "LAUNCH_ABILITY",
-        "buff_id": "basic_defense"
+        "id": "basic_defense"
+      }
+    },
+    "advance": {
+      "effect": {
+        "type": "LAUNCH_ABILITY",
+        "id": "advance"
       }
     },
     "run_away": {
-      "effects": {
+      "effect": {
         "type": "LAUNCH_ABILITY",
-        "escape_id": "run_away"
+        "id": "run_away"
       }
     },
     "magic": {
-      "effects": {
+      "effect": {
         "type": "OPEN_MENU",
-        "menu_id": "MAGIC_SPELLS"
+        "id": "MAGIC_SPELLS"
       }
     },
-    "items": {
-      "effects": {
+    "item": {
+      "effect": {
         "type": "OPEN_MENU",
-        "menu_id": "ITEMS"
+        "id": "ITEMS"
       }
     }
   }

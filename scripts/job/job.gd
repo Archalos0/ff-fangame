@@ -5,7 +5,7 @@ const JOBS_FILE: String = "res://ressources/jobs/jobs.json"
 var job_name: String = ""
 var level: int = 1
 
-var actions: Array[Action] = []
+var actions: Array[Action2] = []
 
 var animations: SpriteFrames
 
@@ -26,10 +26,7 @@ func load_actions():
 	
 	var job_actions: Array = content[job_name]["actions"]
 	
-	print("-----------" + job_name + "-----------")
-	print("--------------------------------------")
 	for action_id in job_actions:
-		actions.append(Action.new())
-		actions[actions.size() - 1].load(action_id)	
+		actions.append(Action2.new())
+		actions[actions.size() - 1] = Action2.load(action_id)
 	
-	pass
