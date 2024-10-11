@@ -12,12 +12,6 @@
         "id": "basic_defense"
       }
     },
-    "advance": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "advance"
-      }
-    },
     "run_away": {
       "effect": {
         "type": "LAUNCH_ABILITY",
@@ -34,6 +28,18 @@
       "effect": {
         "type": "OPEN_MENU",
         "id": "ITEMS"
+      }
+    },
+    "advance": {
+      "effect": {
+        "type": "LAUNCH_ABILITY",
+        "id": "advance"
+      }
+    },
+    "retaliate": {
+      "effect": {
+        "type": "LAUNCH_ABILITY",
+        "id": "retaliate"
       }
     }
   }

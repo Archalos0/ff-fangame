@@ -6,6 +6,13 @@
     "target": "E",
     "type": "PHYSICAL"
   },
+  "retaliate": {
+    "name": "Retaliate",
+    "element": "NONE",
+    "hit_percentage": 100,
+    "target": "E",
+    "type": "PHYSICAL"
+  },
   "fire": {
     "name": "Fire",
     "element": "FIRE",
