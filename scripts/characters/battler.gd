@@ -86,7 +86,7 @@ func act(action: Action, targets: Array[Battler]):
 	pass
 
 func get_character_name() -> String:
-	return "" #_character_data.character_name
+	return _character_data.character_name
 
 func get_current_health_points() -> int:
 	return _character_data.get_stats()["current_health_points"]
