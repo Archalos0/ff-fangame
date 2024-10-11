@@ -1,6 +1,6 @@
 class_name ActionMenu extends MenuHandler
 
-signal action_selected(action: Action)
+signal ability_selected(ability: Ability)
 signal open_menu(menu_id: String)
 
 const ACTION_BUTTON = preload("res://scenes/UI/action_button.tscn")
@@ -31,7 +31,7 @@ func _send_action() -> void:
 	if buttons_selected[0].action is Action.OpenMenuAction:
 		open_menu.emit(buttons_selected[0].action.menu_id)
 	else:
-		action_selected.emit(buttons_selected[0].action)
+		ability_selected.emit(buttons_selected[0].action.ability)
 
 func load_actions(p_actions: Array[Action]) -> void:
 	for action: Action in p_actions:

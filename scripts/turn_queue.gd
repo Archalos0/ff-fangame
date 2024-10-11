@@ -1,6 +1,6 @@
 class_name TurnQueue extends Node2D
 
-signal action_selected(action: Action)
+signal ability_selected(ability: Ability)
 signal target_selected(targets: Array[Battler])
 
 @onready var message_box: MessageBox = %MessageBox
@@ -36,7 +36,7 @@ func play_turn():
 	if active_character.get_current_health_points() > 0:
 		active_character.initialize_turn()
 		
-		var action: Action
+		var ability: Ability
 		var targets: Array[Battler] = []
 		
 		if active_character.is_player == true:
@@ -46,38 +46,43 @@ func play_turn():
 			var has_select_actions_and_target: bool = false
 			while not has_select_actions_and_target:
 				
-				action = await _select_actions()
+				ability = await _select_actions()
 				#if action.target_type == Action.TARGET_TYPE.SELF:
 					#targets = [active_character]
-				#elif action.target_type != Action.TARGET_TYPE.NONE:
-					#targets = await get_target(action)
+				targets = await get_target(ability)
 				
-				has_select_actions_and_target = is_action_and_target_valid(action, targets)
+				has_select_actions_and_target = is_action_and_target_valid(ability, targets)
 			
 		else:
 			await get_tree().create_timer(1.5).timeout
-			action = active_character.get_actions()[randi() % active_character.get_actions().size()]
+			#ability = active_character.get_actions()[randi() % active_character.get_actions().size()]
 			
-			var potential_target: Array[Battler] = _get_targets_list(action)
-			match action.target_type:
+			#var potential_target: Array[Battler] = _get_targets_list(ability)
+			#match action.target_type:
 				#Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.SINGLE_ENEMY:
 					#targets.append(potential_target[randi() % potential_target.size()])
 				#Action.TARGET_TYPE.ALL_ALLIES, Action.TARGET_TYPE.ALL_ENEMIES:
 					#targets = potential_target
-				_:
-					targets = potential_target
+				#_:
+					#targets = potential_target
 		
-		print_debug_message(action, targets)
-		var targets_data: Array[Battler] = []
-		for battler: Battler in targets:
-			targets_data.append(battler)
-		active_character.act(action, targets_data)
+		#print_debug_message(action, targets)
+		#var targets_data: Array[Battler] = []
+		#for battler: Battler in targets:
+			#targets_data.append(battler)
+		#active_character.act(ability, targets_data)
 	
 	end_turn()
 
-func _get_targets_list(action: Action) -> Array[Battler]:
+func _get_targets_list(ability: Ability) -> Array[Battler]:
 	
 	var potential_targets: Array[Battler] = [] 
+	
+	match ability.target:
+		Enums.TARGET.SE, Enums.TARGET.AE:
+			potential_targets = get_enemies()
+		Enums.TARGET.SA, Enums.TARGET.AA:
+			potential_targets = get_allies()
 	
 	#match action.target_type:
 		#Action.TARGET_TYPE.NONE:
@@ -92,7 +97,7 @@ func _get_targets_list(action: Action) -> Array[Battler]:
 	return potential_targets
 
 
-func is_action_and_target_valid(action: Action, targets: Array[Battler]):
+func is_action_and_target_valid(ability: Ability, targets: Array[Battler]):
 	#return action != null and ( (targets == [] and action.target_type == Action.TARGET_TYPE.NONE) \
 		#or (targets != [] and action.target_type != Action.TARGET_TYPE.NONE))
 	return true
@@ -112,17 +117,17 @@ func print_debug_message(action: Action, targets: Array[Battler]):
 	
 	print(debug_message)
 
-func _select_actions() -> Action:
+func _select_actions() -> Ability:
 	battle_menu.set_focus_on_action_selection()
 	
 	message_box.set_message("Wait for action....")
-	var action: Action = await action_selected
-	message_box.set_message("action selected : " + action.to_string())
-	return action
+	var ability: Ability = await ability_selected
+	message_box.set_message("action selected : " + ability.to_string())
+	return ability
 
-func get_target(action: Action):
+func get_target(ability: Ability):
 
-	var potential_targets: Array[Battler] = _get_targets_list(action)
+	var potential_targets: Array[Battler] = _get_targets_list(ability)
 	
 	_set_targets_selectable(potential_targets, true)
 	

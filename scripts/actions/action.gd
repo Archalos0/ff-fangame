@@ -1,10 +1,16 @@
 class_name Action extends Node
 
+
+#region Constants
+const ACTIONS_FILE : String = "res://ressources/actions/actions.json"
+#endregion
+
 enum ACTION_TYPE {
 	LAUNCH_ABILITY,
 	OPEN_MENU
 }
 
+#region Derived class
 class OpenMenuAction extends Action:
 	var menu_id: String
 	
@@ -21,25 +27,28 @@ class OpenMenuAction extends Action:
 		return "Open menu action action : \r\n\taction_name : " + action_name + "\r\n\tmenu : " + menu_id
 
 class LaunchAbilityAction extends Action:
-	var ability_id: String
+	#var ability_id: String
+	var ability: Ability
 	
 	func _init(action_id: String, p_ability_id: String):
 		action_name = action_id
 		description = "descr"
-	
-		ability_id = p_ability_id
+		
+		ability = Ability.new()
+		ability.load(p_ability_id)
+		#ability_id = p_ability_id
 	
 	func use_action():
-		print("launch ability : " + ability_id)
+		print("launch ability : " + ability.ability_name)
 	
 	func _to_string() -> String:
-		return "Ability action : \r\n\taction_name : " + action_name + "\r\n\tability_id : " + ability_id
+		return "Ability action : \r\n\tability_name : " + ability.ability_name
+#endregion
 
 class ActionEffect:
 	var type: ACTION_TYPE 
 	var target_id: String
 
-const ACTIONS_FILE : String = "res://ressources/actions/actions.json"
 
 var action_name: String = ""
 var description: String = "Description"

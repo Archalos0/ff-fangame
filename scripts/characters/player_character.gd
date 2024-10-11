@@ -23,6 +23,7 @@ func load(character_data: Game.CharacterData):
 func load_actions():
 	#actions = job.actions
 	pass
+
 func load_stats():
 	var content = FileHandler.get_json_content("res://ressources/jobs/jobs.json")
 	
