@@ -1,6 +1,5 @@
 class_name ActionButton extends CommandButton
 
-@export var action_resource: ActionResource
 var action: Action
 
 func _ready() -> void:
