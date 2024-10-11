@@ -202,3 +202,11 @@ func _get_properties_dict():
 	}
 	
 	return properties
+
+func get_player_characters() -> Array[CharacterData]:
+	return [
+		_player.characters.character_1,
+		_player.characters.character_2,
+		_player.characters.character_3,
+		_player.characters.character_4
+	]
