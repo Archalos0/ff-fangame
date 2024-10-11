@@ -79,9 +79,9 @@ func _get_targets_list(ability: Ability) -> Array[Battler]:
 	var potential_targets: Array[Battler] = [] 
 	
 	match ability.target:
-		Enums.TARGET.SE, Enums.TARGET.AE:
+		Enums.TARGET.SE, Enums.TARGET.AE, Enums.TARGET.E:
 			potential_targets = get_enemies()
-		Enums.TARGET.SA, Enums.TARGET.AA:
+		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
 			potential_targets = get_allies()
 	
 	#match action.target_type:
@@ -126,16 +126,15 @@ func _select_actions() -> Ability:
 	return ability
 
 func get_target(ability: Ability):
-
 	var potential_targets: Array[Battler] = _get_targets_list(ability)
 	
 	_set_targets_selectable(potential_targets, true)
 	
-	#match action.target_type:
-		#Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.ALL_ALLIES:
-			#battle_menu.set_focus_on_player_character((action.target_type == Action.TARGET_TYPE.ALL_ALLIES))
-		#Action.TARGET_TYPE.SINGLE_ENEMY, Action.TARGET_TYPE.ALL_ENEMIES:
-			#battle_menu.set_focus_on_target_selection((action.target_type == Action.TARGET_TYPE.ALL_ENEMIES))
+	match ability.target:
+		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
+			battle_menu.set_focus_on_player_character((ability.target == Enums.TARGET.AA))
+		Enums.TARGET.SE, Enums.TARGET.AE, Enums.TARGET.E:
+			battle_menu.set_focus_on_target_selection((ability.target == Enums.TARGET.AE))
 	#
 	var targets_selected: Array[Battler] = await _select_targets(potential_targets)
 	
