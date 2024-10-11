@@ -13,21 +13,30 @@ script/source = "extends Node2D
 const BATTLER_OBJECT = preload(\"res://scenes/character.tscn\")
 
 func _ready() -> void:
+	Game.load_save(\"res://scripts/save/save.json\")
+	
 	battle_menu.characters_selected.connect(Callable(self, \"_on_characters_selected\"))
 	battle_menu.action_selected.connect(Callable(self, \"_on_action_selected\"))
 	
-	var battler: Battler = BATTLER_OBJECT.instantiate()
-	battler.load_battler(Game.get_player_characters()[0], true)
-	#_buttons.add_child(action_button)
-	battler.position.x = 500.0
-	battler.position.y = 100.0
-	turn_queue.add_child(battler)
-	#for player_character: Game.CharacterData in Game.get_player_characters():
-		#var battler: Battler = BATTLER_OBJECT.instantiate()
-		#battler.load_battler(player_character)
-		##_buttons.add_child(action_button)
-		#battler.name = player_character.name
-		#turn_queue.add_child(battler)
+	#var battler: Battler = BATTLER_OBJECT.instantiate()
+	#battler.load_battler(Game.get_player_characters()[0], true)
+	##_buttons.add_child(action_button)
+	#battler.position.x = 500.0
+	#battler.position.y = 100.0
+	#turn_queue.add_child(battler)
+	
+	var cpt := 0
+	for player_character: Game.CharacterData in Game.get_player_characters():
+		var battler: Battler = BATTLER_OBJECT.instantiate()
+		battler.load_battler(player_character, true)
+
+		battler.position.x = 200.0
+		battler.position.y = 80.0 + cpt*100
+		
+		turn_queue.add_child(battler)
+		cpt += 1
+	
+	print(\"coucou\")
 	
 	turn_queue.ready()
 
