@@ -9,7 +9,7 @@ enum ELEMENT {
 	HOLY
 }
 
-func element_from_string(element_string: String) -> ELEMENT:
+static func element_from_string(element_string: String) -> ELEMENT:
 	match element_string:
 		"NONE": 	return ELEMENT.NONE
 		"FIRE": 	return ELEMENT.FIRE
@@ -28,7 +28,7 @@ enum TARGET {
 	AA,  #Automatically targets all Allies
 }
 
-func target_from_string(target_string: String) -> TARGET:
+static func target_from_string(target_string: String) -> TARGET:
 	match target_string:
 		"E": 	return TARGET.E
 		"A": 	return TARGET.A
@@ -44,7 +44,7 @@ enum ABILITY_TYPE {
 	MAGICAL,
 }
 
-func ability_type_from_string(ability_type_string: String) -> ABILITY_TYPE:
+static func ability_type_from_string(ability_type_string: String) -> ABILITY_TYPE:
 	match ability_type_string:
 		"NONE": 	return ABILITY_TYPE.NONE
 		"PHYSICAL": return ABILITY_TYPE.PHYSICAL
