@@ -85,14 +85,14 @@ func get_character_name() -> String:
 	return "" #_character_data.character_name
 
 func get_current_health_points() -> int:
-	return 0 #_character_data.stats.health_points
+	return _character_data.stats.current_health_points
 
 #TODO: Add max_health_points in stats
 func get_max_health_points() -> int:
-	return 0 #_character_data.stats.max_health_points
+	return _character_data.stats.max_health_points
 
 func get_actions() -> Array[Action]:
-	return [] #_character_data.actions
+	return _character_data.get_actions()
 
 #TODO: Implement the other effect of the spell
 #TODO: Do I have to keep this function ?
