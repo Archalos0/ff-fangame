@@ -12,6 +12,8 @@ script/source = "extends Node2D
 
 const BATTLER_OBJECT = preload(\"res://scenes/character.tscn\")
 
+const monsters: Array[String] = [\"goblin\", \"goblin\", \"carbuncle\"]
+
 func _ready() -> void:
 	Game.load_save(\"res://scripts/save/save.json\")
 	
@@ -31,6 +33,20 @@ func _ready() -> void:
 		battler.load_battler(player_character, true)
 
 		battler.position.x = 200.0
+		battler.position.y = 80.0 + cpt*100
+		
+		turn_queue.add_child(battler)
+		cpt += 1
+	
+	cpt = 0
+	for monster: String in monsters:
+		var monster_data: Monster = Monster.new()
+		monster_data.load(monster)
+		
+		var battler: Battler = BATTLER_OBJECT.instantiate()
+		battler.load_monster(monster_data)
+
+		battler.position.x = 900.0
 		battler.position.y = 80.0 + cpt*100
 		
 		turn_queue.add_child(battler)
