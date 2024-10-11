@@ -1,0 +1,67 @@
+{
+  "goblin": {
+    "name": "Goblin",
+    "level": 1,
+    "hp": 7,
+    "exp": 1,
+    "gil": 10,
+    "drops": ["Potion", "Hi-Potion", "Phoenix Down"],
+    "atk": 6,
+    "def": 6,
+    "weakness": "None",
+    "steal": "Potion",
+    "location": "Altar Cave"
+  },
+  "carbuncle": {
+    "name": "Carbuncle",
+    "level": 1,
+    "hp": 10,
+    "exp": 2,
+    "gil": 5,
+    "drops": ["Potion", "Hi-Potion", "Phoenix Down"],
+    "atk": 6,
+    "def": 6,
+    "weakness": "None",
+    "steal": "Potion",
+    "location": "Altar Cave"
+  },
+  "eye_fang": {
+    "name": "Eye Fang",
+    "level": 1,
+    "hp": 11,
+    "exp": 3,
+    "gil": 7,
+    "drops": ["Potion", "Hi-Potion", "Phoenix Down"],
+    "atk": 7,
+    "def": 6,
+    "weakness": "None",
+    "steal": "Hi-Potion",
+    "location": "Altar Cave"
+  },
+  "blue_wisp": {
+    "name": "Blue Wisp",
+    "level": 1,
+    "hp": 14,
+    "exp": 4,
+    "gil": 10,
+    "drops": ["Potion", "Hi-Potion", "Phoenix Down"],
+    "atk": 7,
+    "def": 6,
+    "weakness": "None",
+    "steal": "Potion",
+    "location": "Altar Cave"
+  },
+  "killer_bee": {
+    "name": "Killer Bee",
+    "level": 2,
+    "hp": 18,
+    "exp": 12,
+    "gil": 12,
+    "drops": ["Eye Drops", "Antidote"],
+    "atk": 8,
+    "def": 6,
+    "weakness": "Wind",
+    "steal": ["Eye Drops", "Antidote"],
+    "location": "World Map (Near Kazus)"
+  }
+}
