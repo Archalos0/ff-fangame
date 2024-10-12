@@ -4,7 +4,6 @@ const MONSTERS_FILE := "res://ressources/characters/monsters/monsters.json"
 
 var gils: int
 var experience: int
-var sprite_frames: SpriteFrames
 
 var attack: int
 var defense: int
@@ -35,8 +34,8 @@ func load(monster_id: String):
 	experience = monster_data["exp"]
 	gils = monster_data["gil"]
 	
-	sprite_frames = SpriteFrames.new()
-	sprite_frames = load(monster_data["sprite_frames"]) as SpriteFrames
+	_sprite_frames = SpriteFrames.new()
+	_sprite_frames = load(monster_data["sprite_frames"]) as SpriteFrames
 	
 	stats = Stats.new()
 	stats.current_health_points = monster_data["hp"]
@@ -76,4 +75,4 @@ func get_stats() -> Dictionary:
 	return full_stats
 
 func get_sprite_frames() -> SpriteFrames:
-	return sprite_frames
+	return _sprite_frames

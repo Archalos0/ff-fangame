@@ -1,11 +1,12 @@
 class_name Character
 
 var character_name: String
-#var texture: Texture2D
 var level: int
 
 var stats: Stats
 var actions: Array[Action]
+
+var _sprite_frames: SpriteFrames
 
 var character_resource: CharacterResource
 

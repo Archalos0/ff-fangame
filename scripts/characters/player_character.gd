@@ -12,6 +12,10 @@ func load(character_data: Game.CharacterData):
 	job = Job.new()
 	job.load(character_data.job, character_data.jobs_level[character_data.job])
 	
+
+	_sprite_frames = SpriteFrames.new()
+	_sprite_frames = load(job.sprite_frames_path) as SpriteFrames
+	
 	#Load equipments
 	equipments = Equipments.new()
 	equipments.load(character_data.equipments)
@@ -73,4 +77,4 @@ func get_actions() -> Array[Action]:
 	return job.actions
 
 func get_sprite_frames() -> SpriteFrames:
-	return job.animations
+	return _sprite_frames
