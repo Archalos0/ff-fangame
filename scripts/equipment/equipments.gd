@@ -1,10 +1,10 @@
 class_name Equipments
 
-var left_hand: Equipment = Equipment.new()
-var right_hand: Equipment = Equipment.new()
-var head_armor: Armor = Armor.new()
-var body_armor: Armor = Armor.new()
-var arm_armor: Armor = Armor.new()
+var left_hand: EquipableItem = EquipableItem.new()
+var right_hand: EquipableItem = EquipableItem.new()
+var head_armor: EquipableItem = EquipableItem.new()
+var body_armor: EquipableItem = EquipableItem.new()
+var arm_armor: EquipableItem = EquipableItem.new()
 
 func load(equipments_data: Game.EquipmentsData):
 	left_hand.load(equipments_data.left_hand)

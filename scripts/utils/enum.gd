@@ -50,3 +50,10 @@ static func ability_type_from_string(ability_type_string: String) -> ABILITY_TYP
 		"PHYSICAL": return ABILITY_TYPE.PHYSICAL
 		"MAGICAL": 	return ABILITY_TYPE.MAGICAL
 		_: 			return ABILITY_TYPE.NONE
+
+enum STATUS {
+	POISON,
+	KO,
+	SILENCE,
+	SLEEP,
+}

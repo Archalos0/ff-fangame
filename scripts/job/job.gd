@@ -2,8 +2,10 @@ class_name Job
 
 const JOBS_FILE: String = "res://ressources/jobs/jobs.json"
 
+var job_id: String
 var job_name: String = ""
-var level: int = 1
+
+var skill: int
 
 var actions: Array[Action] = []
 

@@ -9,20 +9,6 @@ var vitality: int = 0
 var intellect: int = 0
 var mind: int = 0
 
-var attack: int
-var defense: int
-var magic_defense: int
-var evade: int
-
-var number_of_hits: int
-var crit_chance: float
-var physical_damage: int
-var black_magic_damage: int
-var white_magic_recovery: int
-var summon_damage: int
-var monk_attack_power: int
-var job_mastery_item: bool
-
 func load_character_stats(data: Dictionary):
 	if data.has("all_stats"):
 		strength 	= data["all_stats"]
