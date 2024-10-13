@@ -12,7 +12,6 @@ func load(character_data: Game.CharacterData):
 	job = Job.new()
 	job.load(character_data.job, character_data.jobs_level[character_data.job])
 	
-
 	_sprite_frames = SpriteFrames.new()
 	_sprite_frames = load(job.sprite_frames_path) as SpriteFrames
 	

@@ -8,22 +8,6 @@ var experience: int
 var attack: int
 var defense: int
 
-#func load_from_character_resource(p_resource: CharacterResource):
-	#if p_resource is not EnemyResource:
-		#push_error("The resource type is not valid")
-		#pass
-	#
-	#var resource: EnemyResource = p_resource
-	#
-	#character_name	= resource.character_name
-	#level			= resource.level
-	##texture			= resource.texture
-	#gils			= resource.gils
-	#experience		= resource.experience
-	#
-	#load_stats(resource.stats)
-	#load_actions(resource.actions_resources)
-
 func load(monster_id: String):
 	var content = FileHandler.get_json_content(MONSTERS_FILE)
 	
@@ -43,11 +27,6 @@ func load(monster_id: String):
 	attack = monster_data["atk"]
 	defense = monster_data["def"]
 
-#func load_actions(p_actions_resource: Array[ActionResource]):
-	##for action_resource: ActionResource in p_actions_resource:
-		##actions.append(Action.from_action_resource(action_resource))
-	#pass
-	
 func load_stats(p_stats: Dictionary):
 	#stats = Stats.from_dictionary(p_stats)
 	pass
