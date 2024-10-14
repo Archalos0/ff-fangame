@@ -3,16 +3,19 @@ extends Node
 #----INNER CLASS----#
 class PlayerData:
 	var characters: CharactersData = CharactersData.new()
-
+	var capacity_points: int = 0
+	
 	func load_player(dict: Dictionary):
 		for key in dict.keys():
 			match key:
-				"characters": characters.load_characters(dict["characters"]) 
+				"characters": characters.load_characters(dict["characters"])
+				"capacity_points": capacity_points =  dict["capacity_points"]
 				
 		
 	func get_properties_dict():
 		var properties = {
-			"characters": characters.get_properties_dict()
+			"characters": characters.get_properties_dict(),
+			"capacity_points": capacity_points,
 		}
 		
 		return properties
@@ -25,10 +28,10 @@ class CharactersData:
 	
 	#Set up the default name of the characters
 	func _init() -> void:
-		character_1.name = "Luneth" 
-		character_2.name = "Arc" 
-		character_3.name = "Refia" 
-		character_4.name = "Ingus" 
+		character_1.character_name = "Luneth" 
+		character_2.character_name = "Arc" 
+		character_3.character_name = "Refia" 
+		character_4.character_name = "Ingus" 
 	
 	func load_characters(characters: Array):
 		characters.resize(4)
@@ -52,13 +55,16 @@ class CharactersData:
 		return properties
 
 class CharacterData: 
-	var name: String = ""
-	var job: String = "warrior"
+	var character_name: String = ""
+	var job_id: String = "warrior"
 	var equipments: EquipmentsData = EquipmentsData.new()
 	var level: int = 1
 	var max_health_points: int = 100
 	var current_health_points: int = 100
-	var jobs_level: Dictionary = {
+	
+	var magics: MagicsData = MagicsData.new()
+	
+	var jobs_skill: Dictionary = {
 		"onion_knight": 1,
 		"warrior": 1,
 		"monk": 1,
@@ -84,22 +90,25 @@ class CharacterData:
 	}
 	
 	func load_character(dict: Dictionary):
-		name = dict["name"]
-		job = dict["job"]
+		character_name = dict["name"]
+		job_id = dict["job_id"]
 		level = dict["level"]
 
 		max_health_points = dict["max_health_points"]
 		current_health_points = dict["current_health_points"]
 
-		jobs_level = dict["jobs_level"]
+		jobs_skill = dict["jobs_skill"]
 
 		if dict.has("equipments"):
 			equipments.load_equipments(dict["equipments"])
+			
+		if dict.has("magics"):
+			magics.load_magics(dict["magics"])
 	
 	func get_properties_dict():
 		var properties = {
-			"name": name,
-			"job": job,
+			"name": character_name,
+			"job_id": job_id,
 			"level": level,
 			"max_health_points": max_health_points,
 			"current_health_points": current_health_points,
@@ -110,17 +119,17 @@ class CharacterData:
 				"body_armor": equipments.body_armor,
 				"arm_armor": equipments.arm_armor,
 			},
-			"jobs_level": jobs_level
+			"jobs_skill": jobs_skill
 		}
 		
 		return properties
 
 class EquipmentsData:
-	var left_hand:  String = ""
-	var right_hand: String = ""
-	var head_armor: String = ""
-	var body_armor: String = ""
-	var arm_armor:  String = ""
+	var left_hand_id	: String = ""
+	var right_hand_id	: String = ""
+	var head_armor_id	: String = ""
+	var body_armor_id	: String = ""
+	var arm_armor_id	: String = ""
 	
 	func load_equipments(dict: Dictionary):
 		for key in dict:
@@ -128,11 +137,11 @@ class EquipmentsData:
 				continue
 			
 			match key:
-				"left_hand": left_hand = dict["left_hand"]
-				"right_hand": right_hand = dict["right_hand"]
-				"head_armor": head_armor = dict["head_armor"]
-				"body_armor": body_armor = dict["body_armor"]
-				"arm_armor": arm_armor = dict["arm_armor"]
+				"left_hand": left_hand_id = dict["left_hand"]
+				"right_hand": right_hand_id = dict["right_hand"]
+				"head_armor": head_armor_id = dict["head_armor"]
+				"body_armor": body_armor_id = dict["body_armor"]
+				"arm_armor": arm_armor_id = dict["arm_armor"]
 
 
 #class EquipmentData:
@@ -168,6 +177,38 @@ class EquipmentsData:
 		#
 		#sprite_path = equipment_data["sprite_path"]
 		#stats_upgraded = equipment_data.get("stats_upgraded", null)
+
+class MagicsData:
+	var level_1: SpellsData = SpellsData.new()
+	var level_2: SpellsData = SpellsData.new()
+	var level_3: SpellsData = SpellsData.new()
+	var level_4: SpellsData = SpellsData.new()
+	var level_5: SpellsData = SpellsData.new()
+	var level_6: SpellsData = SpellsData.new()
+	var level_7: SpellsData = SpellsData.new()
+	var level_8: SpellsData = SpellsData.new()
+	
+	func load_magics(dict: Dictionary):
+		level_1.load_spells(dict["1"])
+		level_2.load_spells(dict["2"])
+		level_3.load_spells(dict["3"])
+		level_4.load_spells(dict["4"])
+		level_5.load_spells(dict["5"])
+		level_6.load_spells(dict["6"])
+		level_7.load_spells(dict["7"])
+		level_8.load_spells(dict["8"])
+		
+
+class SpellsData:
+	var first_slot_spell_id	: String = ""
+	var second_slot_spell_id: String = ""
+	var third_slot_spell_id	: String = ""
+	
+	func load_spells(dict: Dictionary):
+		first_slot_spell_id = dict["first_slot"]
+		second_slot_spell_id = dict["second_slot"]
+		third_slot_spell_id = dict["third_slot"]
+		
 #-------------------#
 
 var _save_file_path: String = ""

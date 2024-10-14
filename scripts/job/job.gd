@@ -19,7 +19,7 @@ var sprite_frames_path = _sprite_frames_path :
 
 func load(job_id: String, job_level: int):
 	job_name = job_id
-	level = job_level
+	#level = job_level
 	
 	_load_data()
 

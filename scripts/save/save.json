@@ -3,7 +3,7 @@
 		"characters": [
 			{
 				"name": "Luneth",
-				"job": "warrior",
+				"job_id": "warrior",
 				"level": 10,
 				"max_health_points": 150,
 				"current_health_points": 134,
@@ -24,7 +24,7 @@
 					"body_armor": "body_armor_001",
 					"arm_armor": "arms_013"
 				},
-				"jobs_level": {
+				"jobs_skill": {
 					"onion_knight": 1,
 					"warrior": 2,
 					"monk": 1,
@@ -51,13 +51,13 @@
 			},
 			{
 				"name": "Arc",
-				"job": "black_mage",
+				"job_id": "black_mage",
 				"level": 2,
 				"max_health_points": 123,
 				"current_health_points": 123,
 				"magics": {
-					"1": { "first_slot": "", "second_slot": "", "third_slot": ""},
-					"2": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"1": { "first_slot": "fire", "second_slot": "sleep", "third_slot": ""},
+					"2": { "first_slot": "poison", "second_slot": "", "third_slot": ""},
 					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
 					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},
 					"5": { "first_slot": "", "second_slot": "", "third_slot": ""},
@@ -72,7 +72,7 @@
 					"body_armor": "",
 					"arm_armor": ""
 				},
-				"jobs_level": {
+				"jobs_skill": {
 					"onion_knight": 1,
 					"warrior": 1,
 					"monk": 1,
@@ -99,15 +99,15 @@
 			},
 			{
 				"name": "Refia",
-				"job": "white_mage",
+				"job_id": "white_mage",
 				"level": 1,
 				"max_health_points": 100,
 				"current_health_points": 100,
 				"magics": {
-					"1": { "first_slot": "", "second_slot": "", "third_slot": ""},
-					"2": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"1": { "first_slot": "cure", "second_slot": "poisona", "third_slot": "sight"},
+					"2": { "first_slot": "mini", "second_slot": "", "third_slot": ""},
 					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
-					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"4": { "first_slot": "", "second_slot": "confuse", "third_slot": ""},
 					"5": { "first_slot": "", "second_slot": "", "third_slot": ""},
 					"6": { "first_slot": "", "second_slot": "", "third_slot": ""},
 					"7": { "first_slot": "", "second_slot": "", "third_slot": ""},
@@ -120,7 +120,7 @@
 					"body_armor": "",
 					"arm_armor": ""
 				},
-				"jobs_level": {
+				"jobs_skill": {
 					"onion_knight": 1,
 					"warrior": 1,
 					"monk": 1,
@@ -147,7 +147,7 @@
 			},
 			{
 				"name": "Ingus",
-				"job": "monk",
+				"job_id": "monk",
 				"level": 1,
 				"max_health_points": 100,
 				"current_health_points": 100,
@@ -168,7 +168,7 @@
 					"body_armor": "",
 					"arm_armor": ""
 				},
-				"jobs_level": {
+				"jobs_skill": {
 					"onion_knight": 1,
 					"warrior": 1,
 					"monk": 1,
