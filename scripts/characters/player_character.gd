@@ -5,14 +5,14 @@ var equipments: Equipments
 var stats: Stats
 var magics: Magics
 
-func load(character_data: Game.CharacterData):
-	character_name = character_data.name
+func load(character_data: CharacterData):
+	character_name = character_data.character_name
 
 	level = character_data.level
 
 	#Load job
 	job = Job.new()
-	job.load(character_data.job, character_data.jobs_level[character_data.job])
+	job.load(character_data.job_id, character_data.jobs_skill[character_data.job_id])
 	
 	_sprite_frames = SpriteFrames.new()
 	_sprite_frames = load(job.sprite_frames_path) as SpriteFrames

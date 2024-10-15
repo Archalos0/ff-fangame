@@ -6,12 +6,12 @@ var head_armor: EquipableItem = EquipableItem.new()
 var body_armor: EquipableItem = EquipableItem.new()
 var arm_armor: EquipableItem = EquipableItem.new()
 
-func load(equipments_data: Game.EquipmentsData):
-	left_hand.load(equipments_data.left_hand)
-	right_hand.load(equipments_data.right_hand)
-	head_armor.load(equipments_data.head_armor)
-	body_armor.load(equipments_data.body_armor)
-	arm_armor.load(equipments_data.arm_armor)
+func load(equipments_data: EquipmentsData):
+	left_hand.load(equipments_data.left_hand_id)
+	right_hand.load(equipments_data.right_hand_id)
+	head_armor.load(equipments_data.head_armor_id)
+	body_armor.load(equipments_data.body_armor_id)
+	arm_armor.load(equipments_data.arm_armor_id)
 
 func get_stats() -> Dictionary:
 	var stats: Dictionary = {

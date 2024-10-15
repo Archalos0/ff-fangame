@@ -57,3 +57,55 @@ enum STATUS {
 	SILENCE,
 	SLEEP,
 }
+
+enum EQUIPMENT_TYPE{
+	FISTS_AND_CLAWS,
+	NUNCHUKS,
+	RODS,
+	STAVES,
+	AXES_AND_HAMMERS,
+	SPEARS,
+	KNIVES,
+	SWORDS,
+	KATANAS,
+	BOOKS,
+	THROWING_WEAPONS,
+	BELLS,
+	HARPS,
+	BOWS,
+	ARROWS,
+	SHIELDS,
+	HEADGEAR,
+	BODY_ARMOUR,
+	ROBES,
+	GLOVES,
+	RINGS
+}
+
+static func equipment_type_from_string(element_string: String) -> EQUIPMENT_TYPE:
+	
+	var equipment_type: EQUIPMENT_TYPE
+	match element_string:
+		"FISTS_AND_CLAWS": equipment_type = EQUIPMENT_TYPE.FISTS_AND_CLAWS
+		"NUNCHUKS": equipment_type = EQUIPMENT_TYPE.NUNCHUKS
+		"RODS": equipment_type = EQUIPMENT_TYPE.RODS
+		"STAVES": equipment_type = EQUIPMENT_TYPE.STAVES
+		"AXES_AND_HAMMERS": equipment_type = EQUIPMENT_TYPE.AXES_AND_HAMMERS
+		"SPEARS": equipment_type = EQUIPMENT_TYPE.SPEARS
+		"KNIVES": equipment_type = EQUIPMENT_TYPE.KNIVES
+		"SWORDS": equipment_type = EQUIPMENT_TYPE.SWORDS
+		"KATANAS": equipment_type = EQUIPMENT_TYPE.KATANAS
+		"BOOKS": equipment_type = EQUIPMENT_TYPE.BOOKS
+		"THROWING_WEAPONS": equipment_type = EQUIPMENT_TYPE.THROWING_WEAPONS
+		"BELLS": equipment_type = EQUIPMENT_TYPE.BELLS
+		"HARPS": equipment_type = EQUIPMENT_TYPE.HARPS
+		"BOWS": equipment_type = EQUIPMENT_TYPE.BOWS
+		"ARROWS": equipment_type = EQUIPMENT_TYPE.ARROWS
+		"SHIELDS": equipment_type = EQUIPMENT_TYPE.SHIELDS
+		"HEADGEAR": equipment_type = EQUIPMENT_TYPE.HEADGEAR
+		"BODY_ARMOUR": equipment_type = EQUIPMENT_TYPE.BODY_ARMOUR
+		"ROBES": equipment_type = EQUIPMENT_TYPE.ROBES
+		"GLOVES": equipment_type = EQUIPMENT_TYPE.GLOVES
+		"RINGS": equipment_type = EQUIPMENT_TYPE.RINGS
+
+	return equipment_type
