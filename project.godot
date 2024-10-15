@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Game="*res://scripts/save/game.gd"
-Files="*res://scripts/utils/files.gd"
 
 [editor]
 
