@@ -19,6 +19,13 @@ static func element_from_string(element_string: String) -> ELEMENT:
 		"HOLY": 	return ELEMENT.HOLY
 		_: 			return ELEMENT.NONE
 
+static func elements_from_string(elements_string: Array) -> Array[ELEMENT]:
+	var elements: Array[ELEMENT] = []
+	for element_string in elements_string:
+		elements.append(element_from_string(element_string))
+		
+	return elements
+
 enum TARGET {
 	E,   #Single or Multiple targeting, default Enemy
 	A,   #Single or Multiple targeting, default Ally
@@ -52,11 +59,20 @@ static func ability_type_from_string(ability_type_string: String) -> ABILITY_TYP
 		_: 			return ABILITY_TYPE.NONE
 
 enum STATUS {
+	NONE,
 	POISON,
 	KO,
 	SILENCE,
 	SLEEP,
 }
+
+static func status_from_string(status_string: String) -> STATUS:
+	match status_string:
+		"POISON": 	return STATUS.POISON
+		"KO": 		return STATUS.KO
+		"SILENCE": 	return STATUS.SILENCE
+		"SLEEP": 	return STATUS.SLEEP
+		_: return STATUS.NONE
 
 enum EQUIPMENT_TYPE{
 	FISTS_AND_CLAWS,
