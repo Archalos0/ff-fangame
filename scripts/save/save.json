@@ -18,11 +18,11 @@
 					"8": { "first_slot": "", "second_slot": "", "third_slot": ""}
 				},
 				"equipments": {
-					"left_hand": "longsword",
-					"right_hand": "leather_shield",
-					"head_armor": "mythril_helm",
+					"left_hand": "golem_staff",
+					"right_hand": "diamond_shield",
+					"head_armor": "ice_helm",
 					"body_armor": "mythril_armor",
-					"arm_armor": "mythril_gloves"
+					"arm_armor": "onion_gauntlets"
 				},
 				"jobs_skill": {
 					"onion_knight": 1,
