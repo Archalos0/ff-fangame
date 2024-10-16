@@ -2,22 +2,26 @@ class_name Enums
 
 enum ELEMENT {
 	NONE,
-	FIRE,
-	ICE,
+	RECOVERY,
+	DARK,
 	LIGHTNING,
+	ICE,
+	FIRE,
 	EARTH,
-	HOLY
+	HOLY,
 }
 
 static func element_from_string(element_string: String) -> ELEMENT:
 	match element_string:
-		"NONE": 	return ELEMENT.NONE
-		"FIRE": 	return ELEMENT.FIRE
-		"ICE": 		return ELEMENT.ICE
-		"LIGHTNING": 	return ELEMENT.LIGHTNING
-		"EARTH": 	return ELEMENT.EARTH
-		"HOLY": 	return ELEMENT.HOLY
-		_: 			return ELEMENT.NONE
+		"NONE": return ELEMENT.NONE
+		"RECOVERY": return ELEMENT.RECOVERY
+		"DARK": return ELEMENT.DARK
+		"LIGHTNING": return ELEMENT.LIGHTNING
+		"ICE": return ELEMENT.ICE
+		"FIRE": return ELEMENT.FIRE
+		"EARTH": return ELEMENT.EARTH
+		"HOLY": return ELEMENT.HOLY
+		_: return ELEMENT.NONE
 
 static func elements_from_string(elements_string: Array) -> Array[ELEMENT]:
 	var elements: Array[ELEMENT] = []
