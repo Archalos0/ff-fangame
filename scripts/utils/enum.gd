@@ -4,7 +4,7 @@ enum ELEMENT {
 	NONE,
 	FIRE,
 	ICE,
-	THUNDER,
+	LIGHTNING,
 	EARTH,
 	HOLY
 }
@@ -14,7 +14,7 @@ static func element_from_string(element_string: String) -> ELEMENT:
 		"NONE": 	return ELEMENT.NONE
 		"FIRE": 	return ELEMENT.FIRE
 		"ICE": 		return ELEMENT.ICE
-		"THUNDER": 	return ELEMENT.THUNDER
+		"LIGHTNING": 	return ELEMENT.LIGHTNING
 		"EARTH": 	return ELEMENT.EARTH
 		"HOLY": 	return ELEMENT.HOLY
 		_: 			return ELEMENT.NONE
@@ -61,18 +61,45 @@ static func ability_type_from_string(ability_type_string: String) -> ABILITY_TYP
 enum STATUS {
 	NONE,
 	POISON,
-	KO,
+	BLIND,
+	MINI,
 	SILENCE,
+	TOAD,
+	PETRIFY,
+	KO,
+	CONFUSION,
 	SLEEP,
+	PARALYSIS,
+	PARTIAL_PETRIFICATION_1_2,
+	PARTIAL_PETRIFICATION_1_3,
+	PARTIAL_PETRIFICATION_2_3,
 }
 
 static func status_from_string(status_string: String) -> STATUS:
 	match status_string:
-		"POISON": 	return STATUS.POISON
-		"KO": 		return STATUS.KO
-		"SILENCE": 	return STATUS.SILENCE
-		"SLEEP": 	return STATUS.SLEEP
+		"NONE": return STATUS.NONE
+		"POISON": return STATUS.POISON
+		"BLIND": return STATUS.BLIND
+		"MINI": return STATUS.MINI
+		"SILENCE": return STATUS.SILENCE
+		"TOAD": return STATUS.TOAD
+		"PETRIFY": return STATUS.PETRIFY
+		"KO": return STATUS.KO
+		"CONFUSION": return STATUS.CONFUSION
+		"SLEEP": return STATUS.SLEEP
+		"PARALYSIS": return STATUS.PARALYSIS
+		"PARTIAL_PETRIFICATION_1_2": return STATUS.PARTIAL_PETRIFICATION_1_2
+		"PARTIAL_PETRIFICATION_1_3": return STATUS.PARTIAL_PETRIFICATION_1_3
+		"PARTIAL_PETRIFICATION_2_3": return STATUS.PARTIAL_PETRIFICATION_2_3
 		_: return STATUS.NONE
+
+static func statuses_from_string(statuses_string: Array) -> Array[STATUS]:
+	var statuses: Array[STATUS] = []
+	for status_string in statuses_string:
+		statuses.append(status_from_string(status_string))
+		
+	return statuses
+
 
 enum EQUIPMENT_TYPE{
 	FISTS_AND_CLAWS,
