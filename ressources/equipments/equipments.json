@@ -1115,8 +1115,8 @@
 	"price": 40,
 	"value": 20,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
   },
   "onion_shield": {
@@ -1129,8 +1129,8 @@
 	"price": null,
 	"value": 32750,
 	"status_immunity": ["ALL STATUS AILMENTS"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["OK"]
   },
   "mythril_shield": {
@@ -1143,8 +1143,8 @@
 	"price": 180,
 	"value": 90,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
   },
   "ice_shield": {
@@ -1157,8 +1157,8 @@
 	"price": 1800,
 	"value": 900,
 	"status_immunity": [],
-	"resistances": ["FIRE"],
-	"weakness": ["ICE"],
+	"elemental_resistances": ["FIRE"],
+	"elemental_weakness": "ICE",
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
   },
   "heroic_shield": {
@@ -1171,8 +1171,8 @@
 	"price": 3500,
 	"value": 1750,
 	"status_immunity": ["PETRIFY", "SLEEP"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "demon_shield": {
@@ -1185,8 +1185,8 @@
 	"price": 12500,
 	"value": 6250,
 	"status_immunity": ["CONFUSION", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["MK", "Ni"]
   },
   "diamond_shield": {
@@ -1199,8 +1199,8 @@
 	"price": 18000,
 	"value": 9000,
 	"status_immunity": ["CONFUSION", "TOAD"],
-	"resistances": ["LIGHTNING"],
-	"weakness": null,
+	"elemental_resistances": ["LIGHTNING"],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "aegis_shield": {
@@ -1215,8 +1215,8 @@
 	"price": null,
 	"value": 14000,
 	"status_immunity": ["CONFUSION", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "genji_shield": {
@@ -1232,8 +1232,8 @@
 	"price": null,
 	"value": 19000,
 	"status_immunity": ["CONFUSION", "POISON", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["MK", "Ni"]
   },
   "crystal_shield": {
@@ -1250,8 +1250,8 @@
 	"price": 50000,
 	"value": 25000,
 	"status_immunity": ["CONFUSION", "MINI", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "MK", "Ni", "OK", "RM", "Vi", "Wa"]
   },
 
@@ -1265,8 +1265,8 @@
 	"price": 15,
 	"value": 7,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["ALL JOBS EXCEPT MYSTIC KNIGHT"]
   },
   "onion_helm": {
@@ -1279,8 +1279,8 @@
 	"price": null,
 	"value": 32750,
 	"status_immunity": ["ALL STATUS AILMENTS"],
-	"resistances": ["AIR", "EARTH", "FIRE", "ICE", "RECOVERY"],
-	"weakness": null,
+	"elemental_resistances": ["AIR", "EARTH", "FIRE", "ICE", "RECOVERY"],
+	"elemental_weakness": "",
 	"equipped_by": ["OK"]
   },
   "mythril_helm": {
@@ -1293,8 +1293,8 @@
 	"price": 130,
 	"value": 65,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
   },
   "shell_helm": {
@@ -1307,8 +1307,8 @@
 	"price": null,
 	"value": 225,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "OK", "Vi", "Wa"]
   },
   "ice_helm": {
@@ -1321,8 +1321,8 @@
 	"price": 1200,
 	"value": 600,
 	"status_immunity": [],
-	"resistances": ["FIRE"],
-	"weakness": ["ICE"],
+	"elemental_resistances": ["FIRE"],
+	"elemental_weakness": "ICE",
 	"equipped_by": ["Dr", "Kn", "Ra", "RM", "Th", "Vi", "Wa"]
   },
   "headband": {
@@ -1335,8 +1335,8 @@
 	"price": 1200,
 	"value": 600,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BB", "Mo", "Ni"]
   },
   "scholar_hat": {
@@ -1349,8 +1349,8 @@
 	"price": 7500,
 	"value": 3750,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "De", "Ma", "Ni", "Sa", "Sc", "WM"]
   },
   "black_cowl": {
@@ -1365,8 +1365,8 @@
 	"price": 2000,
 	"value": 1000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ni", "Th"]
   },
   "chakra_band": {
@@ -1382,8 +1382,8 @@
 	"price": 2000,
 	"value": 1000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BB", "Mo", "Ni"]
   },
   "viking_helm": {
@@ -1396,8 +1396,8 @@
 	"price": 3000,
 	"value": 1500,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ni", "Vi"]
   },
   "dragon_helm": {
@@ -1410,8 +1410,8 @@
 	"price": null,
 	"value": 4000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Ni"]
   },
   "feathered_hat": {
@@ -1426,8 +1426,8 @@
 	"price": 8000,
 	"value": 4000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ba", "De", "Ev", "Ge", "Ma", "Ni", "Ra", "Sa", "Sc", "Su"]
   },
   "diamond_helm": {
@@ -1440,8 +1440,8 @@
 	"price": 20000,
 	"value": 10000,
 	"status_immunity": ["CONFUSION", "TOAD"],
-	"resistances": ["LIGHTNING"],
-	"weakness": null,
+	"elemental_resistances": ["LIGHTNING"],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "genji_helm": {
@@ -1454,8 +1454,8 @@
 	"price": null,
 	"value": 16000,
 	"status_immunity": ["CONFUSION", "POISON", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["MK", "Ni"]
   },
   "crystal_helm": {
@@ -1468,8 +1468,8 @@
 	"price": 50000,
 	"value": 25000,
 	"status_immunity": ["CONFUSION", "MINI", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "MK", "Ni", "OK", "RM", "Vi", "Wa"]
   },
   "ribbon": {
@@ -1482,8 +1482,8 @@
 	"price": null,
 	"value": 5,
 	"status_immunity": ["ALL STATUS AILMENTS"],
-	"resistances": ["AIR", "EARTH", "FIRE", "ICE", "RECOVERY"],
-	"weakness": null,
+	"elemental_resistances": ["AIR", "EARTH", "FIRE", "ICE", "RECOVERY"],
+	"elemental_weakness": "",
 	"equipped_by": ["ALL JOBS"]
   },
 
@@ -1497,8 +1497,8 @@
 	"price": 50,
 	"value": 25,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["ALL JOBS EXCEPT MYSTIC KNIGHT"]
   },
   "leather_armor": {
@@ -1511,8 +1511,8 @@
 	"price": 95,
 	"value": 47,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["ALL JOBS EXCEPT MYSTIC KNIGHT"]
   },
   "onion_armor": {
@@ -1525,8 +1525,8 @@
 	"price": null,
 	"value": 32750,
 	"status_immunity": ["ALL STATUS AILMENTS"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["OK"]
   },
   "mythril_armor": {
@@ -1539,8 +1539,8 @@
 	"price": 350,
 	"value": 175,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "Ra", "RM", "Vi", "Wa"]
   },
   "shell_armor": {
@@ -1553,8 +1553,8 @@
 	"price": 1250,
 	"value": 625,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Ra", "Vi", "Wa"]
   },
   "ice_armor": {
@@ -1567,8 +1567,8 @@
 	"price": 2400,
 	"value": 1200,
 	"status_immunity": [],
-	"resistances": ["FIRE"],
-	"weakness": ["ICE"],
+	"elemental_resistances": ["FIRE"],
+	"elemental_weakness": "ICE",
 	"equipped_by": ["Dr", "Kn", "Ni", "Ra", "Vi", "Wa"]
   },
   "flame_mail": {
@@ -1581,8 +1581,8 @@
 	"price": 2400,
 	"value": 1200,
 	"status_immunity": [],
-	"resistances": ["ICE"],
-	"weakness": ["FIRE"],
+	"elemental_resistances": ["ICE"],
+	"elemental_weakness": "FIRE",
 	"equipped_by": ["Dr", "Kn", "Ni", "Ra", "Vi", "Wa"]
   },
   "kenpo_gi": {
@@ -1595,8 +1595,8 @@
 	"price": 2000,
 	"value": 1000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BB", "Mo", "Ni"]
   },
   "black_garb": {
@@ -1611,8 +1611,8 @@
 	"price": 3800,
 	"value": 1900,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ni", "Th"]
   },
   "mage_robe": {
@@ -1625,8 +1625,8 @@
 	"price": 2000,
 	"value": 1000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "De", "Ev", "Ma", "Ni", "RM", "Sa", "Su", "WM"]
   },
   "viking_mail": {
@@ -1639,8 +1639,8 @@
 	"price": 4000,
 	"value": 2000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ni", "Vi"]
   },
   "black_belt_gi": {
@@ -1655,8 +1655,8 @@
 	"price": 3800,
 	"value": 1900,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BB", "Mo", "Ni"]
   },
   "knight_armor": {
@@ -1669,8 +1669,8 @@
 	"price": null,
 	"value": 3750,
 	"status_immunity": ["PETRIFY", "SLEEP"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Kn", "Ni"]
   },
   "dragon_mail": {
@@ -1683,8 +1683,8 @@
 	"price": null,
 	"value": 4000,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Ni"]
   },
   "bard_vest": {
@@ -1697,8 +1697,8 @@
 	"price": 5500,
 	"value": 2750,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ba", "Ni"]
   },
   "scholar_robe": {
@@ -1711,8 +1711,8 @@
 	"price": 5500,
 	"value": 2750,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "De", "Ma", "Ni", "Sa", "Sc", "WM"]
   },
   "gaia_vest": {
@@ -1725,8 +1725,8 @@
 	"price": 4200,
 	"value": 2100,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ge", "Ni"]
   },
   "demon_mail": {
@@ -1739,8 +1739,8 @@
 	"price": 25000,
 	"value": 12500,
 	"status_immunity": ["CONFUSION", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["MK", "Ni"]
   },
   "diamond_mail": {
@@ -1753,8 +1753,8 @@
 	"price": 33000,
 	"value": 16500,
 	"status_immunity": ["CONFUSION", "TOAD"],
-	"resistances": ["LIGHTNING"],
-	"weakness": null,
+	"elemental_resistances": ["LIGHTNING"],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "reflect_mail": {
@@ -1767,8 +1767,8 @@
 	"price": null,
 	"value": 17500,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "white_robe": {
@@ -1783,8 +1783,8 @@
 	"price": 7000,
 	"value": 3500,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["De", "Ev", "Ni", "RM", "Sa", "Su", "WM"]
   },
   "black_robe": {
@@ -1799,8 +1799,8 @@
 	"price": 7000,
 	"value": 3500,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "Ev", "Ma", "Ni", "RM", "Sa", "Su"]
   },
   "genji_armor": {
@@ -1813,8 +1813,8 @@
 	"price": null,
 	"value": 20000,
 	"status_immunity": ["CONFUSION", "POISON", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["MK", "Ni"]
   },
   "crystal_mail": {
@@ -1827,8 +1827,8 @@
 	"price": 65000,
 	"value": 32500,
 	"status_immunity": ["CONFUSION", "MINI", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "MK", "Ni", "OK", "RM", "Vi", "Wa"]
   },
   "rusty_mail": {
@@ -1841,8 +1841,8 @@
 	"price": null,
 	"value": 50,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": []
   },
 
@@ -1856,8 +1856,8 @@
 	"price": 80,
 	"value": 40,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "De", "Ev", "Ge", "Ma", "Ni", "RM", "Sa", "Sc", "Su", "WM"]
   },
   "onion_gauntlets": {
@@ -1874,8 +1874,8 @@
 	"price": null,
 	"value": 32750,
 	"status_immunity": ["ALL STATUS AILMENTS"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["OK"]
   },
   "mythril_gloves": {
@@ -1888,8 +1888,8 @@
 	"price": 120,
 	"value": 60,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Vi", "Wa"]
   },
   "mythril_bracers": {
@@ -1902,8 +1902,8 @@
 	"price": 120,
 	"value": 60,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "De", "Ev", "Ge", "Ma", "Ni", "RM", "Sa", "Sc", "Su", "WM"]
   },
   "thief_gloves": {
@@ -1918,8 +1918,8 @@
 	"price": 2500,
 	"value": 1250,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ni", "Th"]
   },
   "gauntlets": {
@@ -1932,8 +1932,8 @@
 	"price": 1250,
 	"value": null,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "power_bracers": {
@@ -1948,8 +1948,8 @@
 	"price": 1250,
 	"value": null,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Ba", "BB", "Dr", "Ge", "Kn", "Mo", "Ni", "Ra", "RM", "Sc", "Th", "Vi", "Wa"]
   },
   "rune_bracers": {
@@ -1962,8 +1962,8 @@
 	"price": 5000,
 	"value": 2500,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "De", "Ev", "Ge", "Ma", "Ni", "RM", "Sa", "Sc", "Su", "WM"]
   },
   "diamond_bracers": {
@@ -1976,8 +1976,8 @@
 	"price": 10000,
 	"value": 5000,
 	"status_immunity": ["CONFUSION", "TOAD"],
-	"resistances": ["LIGHTNING"],
-	"weakness": null,
+	"elemental_resistances": ["LIGHTNING"],
+	"elemental_weakness": "",
 	"equipped_by": ["BM", "De", "Ev", "Ge", "Ma", "Ni", "RM", "Sa", "Sc", "Su", "WM"]
   },
   "diamond_gloves": {
@@ -1990,8 +1990,8 @@
 	"price": 15000,
 	"value": 7500,
 	"status_immunity": ["CONFUSION", "TOAD"],
-	"resistances": ["LIGHTNING"],
-	"weakness": null,
+	"elemental_resistances": ["LIGHTNING"],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
   },
   "protect_ring": {
@@ -2006,8 +2006,8 @@
 	"price": 15000,
 	"value": null,
 	"status_immunity": [],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["All jobs except Mystic Knight"]
   },
   "genji_gloves": {
@@ -2020,8 +2020,8 @@
 	"price": 15000,
 	"value": null,
 	"status_immunity": ["CONFUSION", "POISON", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["MK", "Ni"]
   },
   "crystal_gloves": {
@@ -2034,8 +2034,8 @@
 	"price": 50000,
 	"value": 25000,
 	"status_immunity": ["CONFUSION", "MINI", "PETRIFY", "SLEEP", "TOAD"],
-	"resistances": [],
-	"weakness": null,
+	"elemental_resistances": [],
+	"elemental_weakness": "",
 	"equipped_by": ["Dr", "Kn", "MK", "Ni", "OK", "RM", "Vi", "Wa"]
   }
 }
