@@ -165,7 +165,7 @@
 		"price": null,
 		"value": 15000,
 		"spell": "",
-		"status_inflicted": "Partial Petrification (2/3)",
+		"status_inflicted": "PARTIAL_PETRIFICATION_2_3",
 		"elements_inflicted": ["AIR", "EARTH", "FIRE", "HOLY", "ICE", "LIGHTNING"],
 		"equipped_by": ["Ma", "Ni", "Sa", "Su"]
 	},
@@ -230,8 +230,8 @@
 		"price": 13500,
 		"value": 6750,
 		"spell": "break",
-		"status_inflicted": "Partial Petrification (1/3)",
-		"elements_inflicted": ["Earth"],
+		"status_inflicted": "PARTIAL_PETRIFICATION_1_3",
+		"elements_inflicted": ["EARTH"],
 		"equipped_by": ["De", "Ni", "RM", "Sa", "WM"]
 	},
 	"rune_staff": {
@@ -637,7 +637,7 @@
 		"price": null,
 		"value": 15000,
 		"spell": null,
-		"status_inflicted": "partial_petrification_1_2",
+		"status_inflicted": "PARTIAL_PETRIFICATION_1_2",
 		"elements_inflicted": ["EARTH"],
 		"equipped_by": ["Kn", "Ni"]
 	},
@@ -1085,7 +1085,7 @@
 		"price": null,
 		"value": 50,
 		"spell": null,
-		"status_inflicted": "Petrification",
+		"status_inflicted": "PETRIFY",
 		"elements_inflicted": ["EARTH"],
 		"equipped_by": ["Ni", "Ra"]
 	},
@@ -1114,7 +1114,7 @@
 	"bonuses": null,
 	"price": 40,
 	"value": 20,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
@@ -1142,7 +1142,7 @@
 	"bonuses": null,
 	"price": 180,
 	"value": 90,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
@@ -1156,7 +1156,7 @@
 	"bonuses": null,
 	"price": 1800,
 	"value": 900,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": ["FIRE"],
 	"weakness": ["ICE"],
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
@@ -1264,7 +1264,7 @@
 	"bonuses": null,
 	"price": 15,
 	"value": 7,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["ALL JOBS EXCEPT MYSTIC KNIGHT"]
@@ -1292,7 +1292,7 @@
 	"bonuses": null,
 	"price": 130,
 	"value": 65,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Th", "Vi", "Wa"]
@@ -1306,7 +1306,7 @@
 	"bonuses": null,
 	"price": null,
 	"value": 225,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "OK", "Vi", "Wa"]
@@ -1320,7 +1320,7 @@
 	"bonuses": null,
 	"price": 1200,
 	"value": 600,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": ["FIRE"],
 	"weakness": ["ICE"],
 	"equipped_by": ["Dr", "Kn", "Ra", "RM", "Th", "Vi", "Wa"]
@@ -1334,7 +1334,7 @@
 	"bonuses": null,
 	"price": 1200,
 	"value": 600,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BB", "Mo", "Ni"]
@@ -1348,7 +1348,7 @@
 	"bonuses": null,
 	"price": 7500,
 	"value": 3750,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BM", "De", "Ma", "Ni", "Sa", "Sc", "WM"]
@@ -1364,7 +1364,7 @@
 	},
 	"price": 2000,
 	"value": 1000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ni", "Th"]
@@ -1381,7 +1381,7 @@
 	},
 	"price": 2000,
 	"value": 1000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BB", "Mo", "Ni"]
@@ -1395,7 +1395,7 @@
 	"bonuses": null,
 	"price": 3000,
 	"value": 1500,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ni", "Vi"]
@@ -1409,7 +1409,7 @@
 	"bonuses": null,
 	"price": null,
 	"value": 4000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Ni"]
@@ -1425,7 +1425,7 @@
 	},
 	"price": 8000,
 	"value": 4000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ba", "De", "Ev", "Ge", "Ma", "Ni", "Ra", "Sa", "Sc", "Su"]
@@ -1496,7 +1496,7 @@
 	"bonuses": null,
 	"price": 50,
 	"value": 25,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["ALL JOBS EXCEPT MYSTIC KNIGHT"]
@@ -1510,7 +1510,7 @@
 	"bonuses": null,
 	"price": 95,
 	"value": 47,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["ALL JOBS EXCEPT MYSTIC KNIGHT"]
@@ -1538,7 +1538,7 @@
 	"bonuses": null,
 	"price": 350,
 	"value": 175,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "Ra", "RM", "Vi", "Wa"]
@@ -1552,7 +1552,7 @@
 	"bonuses": null,
 	"price": 1250,
 	"value": 625,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "Ra", "Vi", "Wa"]
@@ -1566,7 +1566,7 @@
 	"bonuses": null,
 	"price": 2400,
 	"value": 1200,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": ["FIRE"],
 	"weakness": ["ICE"],
 	"equipped_by": ["Dr", "Kn", "Ni", "Ra", "Vi", "Wa"]
@@ -1580,7 +1580,7 @@
 	"bonuses": null,
 	"price": 2400,
 	"value": 1200,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": ["ICE"],
 	"weakness": ["FIRE"],
 	"equipped_by": ["Dr", "Kn", "Ni", "Ra", "Vi", "Wa"]
@@ -1594,7 +1594,7 @@
 	"bonuses": null,
 	"price": 2000,
 	"value": 1000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BB", "Mo", "Ni"]
@@ -1610,7 +1610,7 @@
 	},
 	"price": 3800,
 	"value": 1900,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ni", "Th"]
@@ -1624,7 +1624,7 @@
 	"bonuses": null,
 	"price": 2000,
 	"value": 1000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BM", "De", "Ev", "Ma", "Ni", "RM", "Sa", "Su", "WM"]
@@ -1638,7 +1638,7 @@
 	"bonuses": null,
 	"price": 4000,
 	"value": 2000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ni", "Vi"]
@@ -1654,7 +1654,7 @@
 	},
 	"price": 3800,
 	"value": 1900,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BB", "Mo", "Ni"]
@@ -1682,7 +1682,7 @@
 	"bonuses": null,
 	"price": null,
 	"value": 4000,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Ni"]
@@ -1696,7 +1696,7 @@
 	"bonuses": null,
 	"price": 5500,
 	"value": 2750,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ba", "Ni"]
@@ -1710,7 +1710,7 @@
 	"bonuses": null,
 	"price": 5500,
 	"value": 2750,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BM", "De", "Ma", "Ni", "Sa", "Sc", "WM"]
@@ -1724,7 +1724,7 @@
 	"bonuses": null,
 	"price": 4200,
 	"value": 2100,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ge", "Ni"]
@@ -1766,7 +1766,7 @@
 	"bonuses": null,
 	"price": null,
 	"value": 17500,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
@@ -1782,7 +1782,7 @@
 	},
 	"price": 7000,
 	"value": 3500,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["De", "Ev", "Ni", "RM", "Sa", "Su", "WM"]
@@ -1798,7 +1798,7 @@
 	},
 	"price": 7000,
 	"value": 3500,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BM", "Ev", "Ma", "Ni", "RM", "Sa", "Su"]
@@ -1840,7 +1840,7 @@
 	"bonuses": null,
 	"price": null,
 	"value": 50,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": []
@@ -1855,7 +1855,7 @@
 	"bonuses": null,
 	"price": 80,
 	"value": 40,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BM", "De", "Ev", "Ge", "Ma", "Ni", "RM", "Sa", "Sc", "Su", "WM"]
@@ -1887,7 +1887,7 @@
 	"bonuses": null,
 	"price": 120,
 	"value": 60,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "OK", "RM", "Vi", "Wa"]
@@ -1901,7 +1901,7 @@
 	"bonuses": null,
 	"price": 120,
 	"value": 60,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BM", "De", "Ev", "Ge", "Ma", "Ni", "RM", "Sa", "Sc", "Su", "WM"]
@@ -1917,7 +1917,7 @@
 	},
 	"price": 2500,
 	"value": 1250,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ni", "Th"]
@@ -1931,7 +1931,7 @@
 	"bonuses": null,
 	"price": 1250,
 	"value": null,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Dr", "Kn", "Ni", "Vi"]
@@ -1947,7 +1947,7 @@
 	},
 	"price": 1250,
 	"value": null,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["Ba", "BB", "Dr", "Ge", "Kn", "Mo", "Ni", "Ra", "RM", "Sc", "Th", "Vi", "Wa"]
@@ -1961,7 +1961,7 @@
 	"bonuses": null,
 	"price": 5000,
 	"value": 2500,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["BM", "De", "Ev", "Ge", "Ma", "Ni", "RM", "Sa", "Sc", "Su", "WM"]
@@ -2005,7 +2005,7 @@
 	},
 	"price": 15000,
 	"value": null,
-	"status_immunity": null,
+	"status_immunity": [],
 	"resistances": [],
 	"weakness": null,
 	"equipped_by": ["All jobs except Mystic Knight"]
