@@ -16,18 +16,27 @@ var defense: int
 var evade_percentage: int
 var magic_defense: int
 var status_immunity: Array[Enums.STATUS]
-var elemantal_resistances: Array[Enums.ELEMENT]
+var elemental_resistances: Array[Enums.ELEMENT]
 var elemental_weakness: Enums.ELEMENT
 
 func load(equipment_id: String):
 	
 	if equipment_id == "": 
+		item_id = ""
 		item_name = ""
 		bonuses = Stats.new()
+		
 		attack_power = 0
+		hit_percentage = 0
+		status_inflicted = Enums.STATUS.NONE
+		elements_inflicted = []
+		
 		defense = 0
 		magic_defense = 0
 		evade_percentage = 0
+		status_immunity = []
+		elemental_resistances = []
+		elemental_weakness = Enums.ELEMENT.NONE
 		
 		return
 	
@@ -56,6 +65,6 @@ func load(equipment_id: String):
 	defense 				= equipment_data.get("defense", 0)
 	magic_defense 			= equipment_data.get("magic_defense", 0)
 	evade_percentage 		= equipment_data.get("evade_percentage", 0)
-	#status_immunity			= equipment_data.get("status_immunity", [])
-	#elemantal_resistances	= equipment_data.get("elemantal_resistances", [])
-	#elemental_weakness		= equipment_data.get("elemental_weakness", null)
+	status_immunity			= Enums.statuses_from_string(equipment_data.get("status_immunity", []))
+	elemental_resistances	= Enums.elements_from_string(equipment_data.get("elemental_resistances", []))
+	elemental_weakness		= Enums.element_from_string(equipment_data.get("elemental_weakness", ""))
