@@ -98,7 +98,26 @@ static func status_from_string(status_string: String) -> STATUS:
 		_: return STATUS.NONE
 
 static func statuses_from_string(statuses_string: Array) -> Array[STATUS]:
+	
+	if "ALL STATUS AILMENTS" in statuses_string:
+		return [
+			STATUS.POISON,
+			STATUS.BLIND,
+			STATUS.MINI,
+			STATUS.SILENCE,
+			STATUS.TOAD,
+			STATUS.PETRIFY,
+			STATUS.KO,
+			STATUS.CONFUSION,
+			STATUS.SLEEP,
+			STATUS.PARALYSIS,
+			STATUS.PARTIAL_PETRIFICATION_1_2,
+			STATUS.PARTIAL_PETRIFICATION_1_3,
+			STATUS.PARTIAL_PETRIFICATION_2_3
+		]
+	
 	var statuses: Array[STATUS] = []
+	
 	for status_string in statuses_string:
 		statuses.append(status_from_string(status_string))
 		
