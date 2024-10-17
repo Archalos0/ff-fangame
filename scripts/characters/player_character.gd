@@ -3,7 +3,7 @@ class_name PlayerCharacter extends Character
 var job: Job
 var equipments: Equipments
 var stats: Stats
-var magics: Magics
+var magics: Magics = Magics.new()
 
 func load(character_data: CharacterData):
 	character_name = character_data.character_name
@@ -24,6 +24,8 @@ func load(character_data: CharacterData):
 	load_stats()
 	stats.current_health_points = character_data.current_health_points
 	stats.max_health_points = character_data.max_health_points
+	
+	magics.load(character_data.magics)
 
 func load_actions():
 	#actions = job.actions

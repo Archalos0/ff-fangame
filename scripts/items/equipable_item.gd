@@ -22,10 +22,6 @@ var elemental_weakness: Enums.ELEMENT
 
 func load(equipment_id: String):
 	
-	#var buy_value	: int
-	#var sell_value	: int
-	#var ability		: Ability
-	
 	if equipment_id == "": 
 		item_id = ""
 		item_name = ""
@@ -50,8 +46,7 @@ func load(equipment_id: String):
 	
 	var content: Dictionary = FileHandler.get_json_content(Files.EQUIPMENTS_FILE)
 	
-	if content.has("error"):
-		return
+	if content.has("error"): return
 		
 	var equipment_data = content[equipment_id]
 	
@@ -71,7 +66,10 @@ func load(equipment_id: String):
 	hit_percentage		= equipment_data.get("hit_percentage", 0)
 	status_inflicted	= Enums.status_from_string(equipment_data.get("status_inflicted", ""))
 	elements_inflicted	= Enums.elements_from_string(equipment_data.get("elements_inflicted", []))
-	spell_on_use 		= Spell.new(equipment_data.get("spell_on_use", null))
+	
+	if equipment_data.has("spell_on_use") and equipment_data["spell_on_use"] != "":
+		spell_on_use 		= Spell.new()
+		spell_on_use.load(equipment_data.get("spell_on_use", ""))
 	
 	# Armor stats
 	defense 				= equipment_data.get("defense", 0)
