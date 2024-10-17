@@ -38,7 +38,6 @@ func load(p_spell_id: String):
 	
 	cast_by = spell_data["cast_by"]
 
-
 static func from_id(p_spell_id: String) -> Spell:
 	
 	if p_spell_id == "":
@@ -73,3 +72,6 @@ static func from_id(p_spell_id: String) -> Spell:
 	spell.cast_by = spell_data.get("cast_by", [])
 	
 	return spell
+
+func exec(caster: Battler, targets: Array[Battler]):
+	push_error("The method exec() has not been implementing in the derived class")

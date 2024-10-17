@@ -66,6 +66,7 @@ func play_turn():
 				#_:
 					#targets = potential_target
 		
+		active_character.act()
 		active_character.print_debug_message()
 		#print_debug_message(spell, targets)
 		#var targets_data: Array[Battler] = []

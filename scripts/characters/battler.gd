@@ -72,7 +72,8 @@ func initialize_turn():
 func end_turn():
 	arrow_character_playing.visible = false
 
-func act(spell: Spell, targets: Array[Battler]):
+func act():#spell: Spell, targets: Array[Battler]):
+	spell_cast.cast(self)
 	#var power = action.calcul_power(_character_data)
 	#
 	#match action.damage_type:
@@ -85,8 +86,8 @@ func act(spell: Spell, targets: Array[Battler]):
 		#Action.DAMAGE_TYPE.HEALING:
 			#for target: Battler in targets:
 				#target.get_heal(power)
-	for target: Battler in targets:
-		target.get_hit(3)
+	#for target: Battler in targets:
+		#target.get_hit(3)
 	
 func get_character_name() -> String:
 	return _character_data.character_name

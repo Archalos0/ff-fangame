@@ -19,8 +19,9 @@
   },
   "magic": {
     "effect": {
-      "type": "OPEN_MENU",
-      "id": "MAGIC_SPELLS"
+      "type": "LAUNCH_SPELL",
+      "id": "fire"
+      
     }
   },
   "item": {
