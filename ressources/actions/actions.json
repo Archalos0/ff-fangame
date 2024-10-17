@@ -1,6 +1,6 @@
 {
   "actions": {
-    "attack": {
+    "fight": {
       "effect": {
         "type": "LAUNCH_ABILITY",
         "id": "basic_attack"
@@ -12,7 +12,7 @@
         "id": "basic_defense"
       }
     },
-    "run_away": {
+    "run": {
       "effect": {
         "type": "LAUNCH_ABILITY",
         "id": "run_away"
@@ -30,16 +30,46 @@
         "id": "ITEMS"
       }
     },
-    "advance": {
+    "steal": {
       "effect": {
         "type": "LAUNCH_ABILITY",
-        "id": "advance"
+        "id": "steal"
       }
     },
-    "retaliate": {
+    "flee": {
       "effect": {
         "type": "LAUNCH_ABILITY",
-        "id": "retaliate"
+        "id": "flee"
+      }
+    },
+    "terrain": {
+      "effect": {
+        "type": "OPEN_MENU",
+        "id": "TERRAIN"
+      }
+    },
+    "jump": {
+      "effect": {
+        "type": "LAUNCH_ABILITY",
+        "id": "jump"
+      }
+    },
+    "boost": {
+      "effect": {
+        "type": "LAUNCH_ABILITY",
+        "id": "boost"
+      }
+    },
+    "scare": {
+      "effect": {
+        "type": "LAUNCH_ABILITY",
+        "id": "scare"
+      }
+    },
+    "cheer": {
+      "effect": {
+        "type": "LAUNCH_ABILITY",
+        "id": "cheer"
       }
     }
   }
