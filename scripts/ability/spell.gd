@@ -2,17 +2,21 @@ class_name Spell
 
 var spell_id: String = ""
 var spell_name: String = ""
-var level: int = 1
+var level: int = 0
 var power: int = 0
-var hit_percentage: int = 100
-var target: Array[String]
+var hit_percentage: int = 0
+var target: Array#[String]
 var statuses: Array[Enums.STATUS] = []
 var elements: Array[Enums.ELEMENT] = []
 
-var cast_by: Array[String] = []
+var cast_by: Array#[String] = []
 
-func _init(p_spell_id: String):
-	if p_spell_id == null:
+func _init():
+	pass
+	#load(p_spell_id)
+
+func load(p_spell_id: String):
+	if p_spell_id == "":
 		return
 	
 	var content = FileHandler.get_json_content(Files.SPELLS_FILE)
@@ -33,3 +37,4 @@ func _init(p_spell_id: String):
 	elements = Enums.elements_from_string(spell_data.get("elements", []))
 	
 	cast_by = spell_data["cast_by"]
+	
