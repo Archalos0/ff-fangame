@@ -12,7 +12,7 @@ func load(character_data: CharacterData):
 
 	#Load job
 	job = Job.new()
-	job.load(character_data.job_id, character_data.jobs_skill[character_data.job_id])
+	job.load(character_data.job_id, character_data.jobs_skill)
 	
 	_sprite_frames = SpriteFrames.new()
 	_sprite_frames = load(job.sprite_frames_path) as SpriteFrames
@@ -36,7 +36,7 @@ func load_stats():
 		return
 	
 	stats = Stats.new()
-	stats.load_character_stats(content[job.job_name]["stats"][str(level)])
+	stats.load_character_stats(content[job.job_id]["stats"][str(level)])
 
 func get_animation() -> SpriteFrames:
 	return job.animations
