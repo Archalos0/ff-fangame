@@ -4,12 +4,12 @@
 			{
 				"name": "Luneth",
 				"job_id": "warrior",
-				"level": 10,
+				"level": 14,
 				"max_health_points": 150,
 				"current_health_points": 134,
 				"magics": {
-					"1": { "first_slot": "", "second_slot": "", "third_slot": ""},
-					"2": { "first_slot": "", "second_slot": "", "third_slot": ""},
+					"1": { "first_slot": "fire", "second_slot": "sleep", "third_slot": ""},
+					"2": { "first_slot": "poison", "second_slot": "", "third_slot": ""},
 					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
 					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},
 					"5": { "first_slot": "", "second_slot": "", "third_slot": ""},
