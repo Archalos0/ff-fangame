@@ -37,6 +37,7 @@ enum TARGET {
 	SA,  #Single only, default Ally
 	AE,  #Automatically targets all Enemies
 	AA,  #Automatically targets all Allies
+	SELF, #Only on the launcher (defend, run)
 }
 
 static func target_from_string(target_string: String) -> TARGET:
@@ -47,6 +48,7 @@ static func target_from_string(target_string: String) -> TARGET:
 		"SA": 	return TARGET.SA
 		"AE": 	return TARGET.AE
 		"AA": 	return TARGET.AA
+		"SELF":	return TARGET.SELF
 		_: 		return TARGET.E
 
 enum ABILITY_TYPE { 

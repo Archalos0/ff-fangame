@@ -3,7 +3,7 @@ class_name Battler extends Node2D
 var _character_data: Character
 # Character stats
 
-var spell_cast: SpellCast
+var spell_cast: SpellCast = SpellCast.new()
 
 @export var actions: Array[Action] = []
 
@@ -129,3 +129,12 @@ func character_selected():
 	if is_selectable.get_is_selectable():
 		turn_queue.target_selected.emit([self])
 		arrow_character_selection.visible = false
+
+func print_debug_message():
+	var debug_message = _character_data.character_name + " is using " + spell_cast.spell.to_string()
+	if spell_cast.targets != []:
+		debug_message += " on "
+		for character: Battler in spell_cast.targets:
+			debug_message += character.to_string() + " "
+	
+	print(debug_message)

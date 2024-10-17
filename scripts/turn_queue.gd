@@ -36,7 +36,6 @@ func play_turn():
 	if active_character.get_current_health_points() > 0:
 		active_character.initialize_turn()
 		
-		var spell: Spell
 		var targets: Array[Battler] = []
 		
 		if active_character.is_player == true:
@@ -46,12 +45,13 @@ func play_turn():
 			var has_select_actions_and_target: bool = false
 			while not has_select_actions_and_target:
 				
-				spell = await _select_actions()
-				#if action.target_type == Action.TARGET_TYPE.SELF:
-					#targets = [active_character]
-				targets = await get_target(spell)
+				active_character.spell_cast.spell = await _select_actions()
+				if active_character.spell_cast.spell.target == Enums.TARGET.SELF:
+					active_character.spell_cast.targets = [active_character]
+				else:
+					active_character.spell_cast.targets = await get_target(active_character.spell_cast.spell)
 				
-				has_select_actions_and_target = is_action_and_target_valid(spell, targets)
+				has_select_actions_and_target = true #is_action_and_target_valid(spell, targets)
 			
 		else:
 			await get_tree().create_timer(1.5).timeout
@@ -66,11 +66,12 @@ func play_turn():
 				#_:
 					#targets = potential_target
 		
-		print_debug_message(spell, targets)
-		var targets_data: Array[Battler] = []
-		for battler: Battler in targets:
-			targets_data.append(battler)
-		active_character.act(spell, targets_data)
+		active_character.print_debug_message()
+		#print_debug_message(spell, targets)
+		#var targets_data: Array[Battler] = []
+		#for battler: Battler in targets:
+			#targets_data.append(battler)
+		#active_character.act(spell, targets_data)
 	
 	end_turn()
 
@@ -83,16 +84,6 @@ func _get_targets_list(spell: Spell) -> Array[Battler]:
 			potential_targets = get_enemies()
 		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
 			potential_targets = get_allies()
-	
-	#match action.target_type:
-		#Action.TARGET_TYPE.NONE:
-			#pass
-		#Action.TARGET_TYPE.SELF:
-			#potential_targets.append(active_character)
-		#Action.TARGET_TYPE.SINGLE_ENEMY, Action.TARGET_TYPE.ALL_ENEMIES:
-			#potential_targets = get_enemies()
-		#Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.ALL_ALLIES:
-			#potential_targets = get_allies()
 	
 	return potential_targets
 
@@ -132,10 +123,10 @@ func get_target(spell: Spell):
 	
 	match spell.target:
 		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
-			battle_menu.set_focus_on_player_character(spell.target.size() > 1)#(spell.target == Enums.TARGET.AA))
+			battle_menu.set_focus_on_player_character((spell.target == Enums.TARGET.AA))
 		Enums.TARGET.SE, Enums.TARGET.AE, Enums.TARGET.E:
-			battle_menu.set_focus_on_target_selection(spell.target.size() > 1)#(spell.target == Enums.TARGET.AE))
-	#
+			battle_menu.set_focus_on_target_selection((spell.target == Enums.TARGET.AE))
+		
 	var targets_selected: Array[Battler] = await _select_targets(potential_targets)
 	
 	return targets_selected

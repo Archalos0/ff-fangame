@@ -5,7 +5,7 @@ var spell_name: String = ""
 var level: int = 0
 var power: int = 0
 var hit_percentage: int = 0
-var target: Array#[String]
+var target: Enums.TARGET
 var statuses: Array[Enums.STATUS] = []
 var elements: Array[Enums.ELEMENT] = []
 
@@ -32,7 +32,7 @@ func load(p_spell_id: String):
 	level = spell_data["level"]
 	power = spell_data["power"]
 	hit_percentage = spell_data["hit_percentage"]
-	target = spell_data["target"]
+	target = Enums.target_from_string(spell_data["target"])
 	statuses = Enums.statuses_from_string(spell_data.get("statuses", []))
 	elements = Enums.elements_from_string(spell_data.get("elements", []))
 	
@@ -66,7 +66,7 @@ static func from_id(p_spell_id: String) -> Spell:
 	spell.level = spell_data.get("level", 0)
 	spell.power = spell_data.get("power", 0)
 	spell.hit_percentage = spell_data.get("hit_percentage", 0)
-	spell.target = spell_data["target"]
+	spell.target = Enums.target_from_string(spell_data["target"])
 	spell.statuses = Enums.statuses_from_string(spell_data.get("statuses", []))
 	spell.elements = Enums.elements_from_string(spell_data.get("elements", []))
 	

@@ -2,17 +2,17 @@
   "basic_attack": {
     "spell_name": "Attack",
     "type": "PHYSICAL",
-    "target": ["One Enemy"]
+    "target": "SE"
   },
   "basic_defense": {
     "spell_name": "Defense",
     "type": "WHITE",
-    "target": ["SELF"]
+    "target": "SELF"
   },
   "run": {
     "spell_name": "Run",
     "type": "WHITE",
-    "target": ["SELF"]
+    "target": "SELF"
   },
   "flare": {
     "spell_name": "Flare",
@@ -20,7 +20,7 @@
     "type": "BLACK",
     "power": 200,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": [],
     "cast_by": ["Ma", "Sa"]
@@ -31,7 +31,7 @@
     "type": "BLACK",
     "power": 0,
     "hit_percentage": 35,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": ["KO"],
     "elements": [],
     "cast_by": ["Ma", "Sa"]
@@ -42,7 +42,7 @@
     "type": "BLACK",
     "power": 180,
     "hit_percentage": 100,
-    "target": ["All Enemies"],
+    "target": "AE",
     "statuses": [],
     "elements": [],
     "cast_by": ["Ma", "Sa"]
@@ -53,7 +53,7 @@
     "type": "BLACK",
     "power": 133,
     "hit_percentage": 100,
-    "target": ["All Enemies"],
+    "target": "AE",
     "statuses": [],
     "elements": ["EARTH"],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -64,7 +64,7 @@
     "type": "BLACK",
     "power": 0,
     "hit_percentage": 40,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": ["PETRIFY"],
     "elements": ["EARTH"],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -75,7 +75,7 @@
     "type": "BLACK",
     "power": 160,
     "hit_percentage": 100,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": [],
     "elements": ["RECOVERY"],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -86,7 +86,7 @@
     "type": "BLACK",
     "power": 150,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["FIRE"],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -97,7 +97,7 @@
     "type": "BLACK",
     "power": 130,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": [],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -108,7 +108,7 @@
     "type": "BLACK",
     "power": 0,
     "hit_percentage": 0,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": ["KO"],
     "elements": [],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -119,7 +119,7 @@
     "type": "BLACK",
     "power": 110,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["LIGHTNING"],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -130,7 +130,7 @@
     "type": "BLACK",
     "power": 100,
     "hit_percentage": 100,
-    "target": ["All Enemies"],
+    "target": "AE",
     "statuses": ["KO"],
     "elements": [],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -141,7 +141,7 @@
     "type": "BLACK",
     "power": 0,
     "hit_percentage": 60,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": [],
     "cast_by": ["BM", "Ma", "Sa"]
@@ -152,7 +152,7 @@
     "type": "BLACK",
     "power": 0,
     "hit_percentage": 50,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": ["PARTIAL_PETRIFICATION_1_2"],
     "elements": ["EARTH"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -163,7 +163,7 @@
     "type": "BLACK",
     "power": 85,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["ICE"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -174,7 +174,7 @@
     "type": "BLACK",
     "power": 0,
     "hit_percentage": 80,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": ["PARALYSIS"],
     "elements": [],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -185,7 +185,7 @@
     "type": "BLACK",
     "power": 55,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["FIRE"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -196,7 +196,7 @@
     "type": "BLACK",
     "power": 55,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["ICE"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -207,7 +207,7 @@
     "type": "BLACK",
     "power": 55,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["LIGHTNING"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -218,7 +218,7 @@
     "type": "BLACK",
     "power": 35,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["LIGHTNING"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -229,7 +229,7 @@
     "type": "BLACK",
     "power": 20,
     "hit_percentage": 60,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": ["POISON"],
     "elements": [],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -240,7 +240,7 @@
     "type": "BLACK",
     "power": 10,
     "hit_percentage": 60,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": ["BLIND"],
     "elements": [],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -251,7 +251,7 @@
     "type": "BLACK",
     "power": 25,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["FIRE"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -262,7 +262,7 @@
     "type": "BLACK",
     "power": 25,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["ICE"],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -273,7 +273,7 @@
     "type": "BLACK",
     "power": 0,
     "hit_percentage": 15,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": ["SLEEP"],
     "elements": [],
     "cast_by": ["BM", "Ma", "RM", "Sa"]
@@ -284,7 +284,7 @@
     "type": "WHITE",
     "power": 4,
     "hit_percentage": 40,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["AIR"],
     "cast_by": ["De", "Sa"]
@@ -295,7 +295,7 @@
     "type": "WHITE",
     "power": 255,
     "hit_percentage": 0,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": ["KO"],
     "elements": ["RECOVERY"],
     "cast_by": ["De", "Sa"]
@@ -306,7 +306,7 @@
     "type": "WHITE",
     "power": 160,
     "hit_percentage": 100,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": [],
     "elements": ["HOLY"],
     "cast_by": ["De", "Sa"]
@@ -317,7 +317,7 @@
     "type": "WHITE",
     "power": 220,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "A",
     "statuses": [],
     "elements": ["RECOVERY"],
     "cast_by": ["De", "Sa", "WM"]
@@ -328,7 +328,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 60,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": ["ALL_STATUS_AILMENTS_EXCEPT_KO"],
     "elements": [],
     "cast_by": ["De", "Sa", "WM"]
@@ -339,7 +339,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 75,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": [],
     "elements": [],
     "cast_by": ["De", "Sa", "WM"]
@@ -350,7 +350,7 @@
     "type": "WHITE",
     "power": 115,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["AIR", "ICE"],
     "cast_by": ["De", "Sa", "WM"]
@@ -361,7 +361,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 60,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": ["PARTIAL_PETRIFICATION", "PETRIFICATION"],
     "elements": [],
     "cast_by": ["De", "Sa", "WM"]
@@ -372,7 +372,7 @@
     "type": "WHITE",
     "power": 5,
     "hit_percentage": 16,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": [],
     "elements": [],
     "cast_by": ["De", "Sa", "WM"]
@@ -383,7 +383,7 @@
     "type": "WHITE",
     "power": 180,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "A",
     "statuses": [],
     "elements": ["RECOVERY"],
     "cast_by": ["De", "Sa", "WM"]
@@ -394,7 +394,7 @@
     "type": "WHITE",
     "power": 1,
     "hit_percentage": 15,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": ["KO"],
     "elements": ["RECOVERY"],
     "cast_by": ["De", "Sa", "WM"]
@@ -405,7 +405,7 @@
     "type": "WHITE",
     "power": 5,
     "hit_percentage": 75,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": [],
     "elements": [],
     "cast_by": ["De", "Sa", "WM"]
@@ -416,7 +416,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 100,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": [],
     "elements": [],
     "cast_by": ["De", "RM", "Sa", "WM"]
@@ -427,7 +427,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 25,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": ["CONFUSION"],
     "elements": [],
     "cast_by": ["De", "RM", "Sa", "WM"]
@@ -438,7 +438,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 60,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": ["SILENCE"],
     "elements": [],
     "cast_by": ["De", "RM", "Sa", "WM"]
@@ -449,7 +449,7 @@
     "type": "WHITE",
     "power": 125,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "A",
     "statuses": [],
     "elements": ["RECOVERY"],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -460,7 +460,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 0,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": ["KO"],
     "elements": [],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -471,7 +471,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 75,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": ["BLIND"],
     "elements": [],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -482,7 +482,7 @@
     "type": "WHITE",
     "power": 45,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "E",
     "statuses": [],
     "elements": ["AIR", "ICE"],
     "cast_by": ["De", "RM", "Sa", "WM"]
@@ -493,7 +493,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 0,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": ["TOAD"],
     "elements": [],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -504,7 +504,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 0,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": ["MINI"],
     "elements": [],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -515,7 +515,7 @@
     "type": "WHITE",
     "power": 42,
     "hit_percentage": 100,
-    "target": ["One", "All Enemies"],
+    "target": "A",
     "statuses": [],
     "elements": ["RECOVERY"],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -526,7 +526,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 50,
-    "target": ["One Enemy"],
+    "target": "SA",
     "statuses": ["POISON"],
     "elements": [],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -537,7 +537,7 @@
     "type": "WHITE",
     "power": 0,
     "hit_percentage": 100,
-    "target": ["One Enemy"],
+    "target": "SE",
     "statuses": [],
     "elements": [],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
@@ -993,7 +993,7 @@
     "elements": ["LIGHTNING"],
     "cast_by": []
   },
-  "earthquake": {
+  "earthquake_monster": {
     "item_name": "Earthquake",
     "level": 7,
     "type": "ABILITY",
