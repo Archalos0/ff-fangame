@@ -7,7 +7,7 @@ signal characters_selected(charcters: Array[Battler])
 @onready var target_menu: TargetSelectionMenu = $TargetSelection
 @onready var player_character_menu: PlayerSelectionMenu = $PlayerCharacterInformations
 
-@onready var magic_spells_menu: Panel = $MagicSpellsMenu
+@onready var magic_spells_menu: MagicSpellsMenu = $MagicSpellsMenu
 @onready var items_menu: Panel = $ItemsMenu
 
 # Called when the node enters the scene tree for the first time.
@@ -42,6 +42,9 @@ func _on_characters_selected(characters: Array[Battler]):
 
 func update_actions_buttons(actions):
 	action_menu.load_actions(actions)
+
+func update_spells_menu(magics: Magics):
+	magic_spells_menu.load_spells(magics)
 
 func delete_previous_action():
 	action_menu.delete_actions()

@@ -23,3 +23,7 @@ func get_sprite_frames() -> SpriteFrames:
 func get_actions() -> Array[Action]:
 	push_error("The method get_actions() has not been implementing in the derived class")
 	return []
+
+func get_spells() -> Magics:
+	push_error("The method get_spells() has not been implementing in the derived class")
+	return null

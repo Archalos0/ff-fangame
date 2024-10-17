@@ -110,6 +110,9 @@ func get_actions() -> Array[Action]:
 	#else:
 		#get_heal(spell.power)
 
+func get_spells() -> Magics:
+	return _character_data.get_spells()
+
 func get_hit(damage: int):
 	_character_data.get_stats().current_health_points = _character_data.get_stats().current_health_points - damage
 	health_bar.value = _character_data.stats.current_health_points
