@@ -3,6 +3,8 @@ class_name Battler extends Node2D
 var _character_data: Character
 # Character stats
 
+var spell_cast: SpellCast
+
 @export var actions: Array[Action] = []
 
 # Character controls
@@ -84,7 +86,7 @@ func act(spell: Spell, targets: Array[Battler]):
 			#for target: Battler in targets:
 				#target.get_heal(power)
 	for target: Battler in targets:
-		target.get_hit(50)
+		target.get_hit(3)
 	
 func get_character_name() -> String:
 	return _character_data.character_name
@@ -108,7 +110,7 @@ func get_actions() -> Array[Action]:
 		#get_heal(spell.power)
 
 func get_hit(damage: int):
-	_character_data.set_health_points(_character_data.get_health_points() - damage)
+	_character_data.get_stats().current_health_points = _character_data.get_stats().current_health_points - damage
 	health_bar.value = _character_data.stats.current_health_points
 
 func get_heal(hp: int):
