@@ -19,7 +19,7 @@ var is_selectable: ISelectable = ISelectable.new()
 # Reference to the battle manager
 @onready var turn_queue: TurnQueue = $"/root/BattleScene/TurnQueue"
 
-func load_battler(p_character_data: Game.CharacterData, p_is_player: bool):
+func load_battler(p_character_data: CharacterData, p_is_player: bool):
 	_character_data = PlayerCharacter.new()
 	_character_data.load(p_character_data)
 	

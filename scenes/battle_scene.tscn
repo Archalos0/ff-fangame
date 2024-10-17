@@ -21,7 +21,7 @@ func _ready() -> void:
 	battle_menu.ability_selected.connect(Callable(self, \"_on_ability_selected\"))
 	
 	var cpt := 0
-	for player_character: Game.CharacterData in Game.get_player_characters():
+	for player_character: CharacterData in Game.get_player_characters():
 		var battler: Battler = BATTLER_OBJECT.instantiate()
 		battler.load_battler(player_character, true)
 
