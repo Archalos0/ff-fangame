@@ -1,5 +1,5 @@
 {
- "flare": {
+  "flare": {
     "spell_name": "Flare",
     "level": 8,
     "type": "BLACK",
@@ -505,7 +505,7 @@
     "elements": ["RECOVERY"],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]
   },
-  "poisonna": {
+  "poisona": {
     "spell_name": "Poisona",
     "level": 1,
     "type": "WHITE",
