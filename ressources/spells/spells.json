@@ -1,4 +1,19 @@
 {
+  "basic_attack": {
+    "spell_name": "Attack",
+    "type": "PHYSICAL",
+    "target": ["One Enemy"]
+  },
+  "basic_defense": {
+    "spell_name": "Defense",
+    "type": "WHITE",
+    "target": ["SELF"]
+  },
+  "run": {
+    "spell_name": "Run",
+    "type": "WHITE",
+    "target": ["SELF"]
+  },
   "flare": {
     "spell_name": "Flare",
     "level": 8,

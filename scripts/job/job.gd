@@ -37,7 +37,7 @@ func _load_data():
 	
 	_sprite_frames_path = job_data["sprite_frames"]
 	
-	#_load_actions(job_data["actions"])
+	_load_actions(job_data["actions"])
 	
 func _load_actions(job_actions: Array):
 	

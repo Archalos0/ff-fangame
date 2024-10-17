@@ -28,21 +28,19 @@ class OpenMenuAction extends Action:
 
 class LaunchAbilityAction extends Action:
 	#var ability_id: String
-	var ability: Ability
+	var spell: Spell
 	
-	func _init(action_id: String, p_ability_id: String):
+	func _init(action_id: String, p_spell_id: String):
 		action_name = action_id
 		description = "descr"
 		
-		ability = Ability.new()
-		ability.load(p_ability_id)
-		#ability_id = p_ability_id
+		spell = Spell.from_id(p_spell_id)
 	
 	func use_action():
-		print("launch ability : " + ability.ability_name)
+		print("launch ability : " + spell.spell_name)
 	
 	func _to_string() -> String:
-		return "Ability action : \r\n\tability_name : " + ability.ability_name
+		return "Ability action : \r\n\tability_name : " + spell.spell_name
 #endregion
 
 class ActionEffect:
@@ -60,15 +58,19 @@ static func load(action_id: String) -> Action:
 
 	# Handle error
 
-	if not content["actions"].has(action_id):
+	if not content.has(action_id):
 		push_error("action : " + action_id + " not found.")
 		return
 	
+	var action_data = content[action_id]
+	
 	var action: Action
 	
-	match content["actions"][action_id]["effect"]["type"]:
-		"LAUNCH_ABILITY": action = LaunchAbilityAction.new(action_id, content["actions"][action_id]["effect"]["id"])
-		"OPEN_MENU": action = OpenMenuAction.new(action_id, content["actions"][action_id]["effect"]["id"])
+	match action_data["effect"]["type"]:
+		"LAUNCH_SPELL", "LAUNCH_PHYSICAL_ATTACK": 
+			action = LaunchAbilityAction.new(action_id, action_data["effect"]["id"])
+		"OPEN_MENU": 
+			action = OpenMenuAction.new(action_id, action_data["effect"]["id"])
 	
 	return action
 

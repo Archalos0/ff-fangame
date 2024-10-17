@@ -54,6 +54,7 @@ static func from_id(p_spell_id: String) -> Spell:
 	var spell: Spell
 	
 	match content[p_spell_id]["type"]:
+		"PHYSICAL": spell = PhysicalSpell.new()
 		"BLACK", "TERRAIN": spell = BlackSpell.new()
 		"WHITE": spell = WhiteSpell.new()
 		"SUMMON": spell = CallSpell.new()
@@ -62,13 +63,13 @@ static func from_id(p_spell_id: String) -> Spell:
 	spell.spell_id = p_spell_id
 	
 	spell.spell_name = spell_data["spell_name"]
-	spell.level = spell_data["level"]
-	spell.power = spell_data["power"]
-	spell.hit_percentage = spell_data["hit_percentage"]
+	spell.level = spell_data.get("level", 0)
+	spell.power = spell_data.get("power", 0)
+	spell.hit_percentage = spell_data.get("hit_percentage", 0)
 	spell.target = spell_data["target"]
 	spell.statuses = Enums.statuses_from_string(spell_data.get("statuses", []))
 	spell.elements = Enums.elements_from_string(spell_data.get("elements", []))
 	
-	spell.cast_by = spell_data["cast_by"]
+	spell.cast_by = spell_data.get("cast_by", [])
 	
 	return spell

@@ -47,8 +47,8 @@ func _ready() -> void:
 	
 	turn_queue.initialize()
 
-func _on_ability_selected(ability: Ability):
-	turn_queue.ability_selected.emit(ability)
+func _on_ability_selected(spell: Spell):
+	turn_queue.ability_selected.emit(spell)
 
 func _on_characters_selected(characters: Array[Battler]):
 	turn_queue.target_selected.emit(characters)

@@ -1,76 +1,79 @@
 {
-  "actions": {
-    "fight": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "basic_attack"
-      }
-    },
-    "defend": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "basic_defense"
-      }
-    },
-    "run": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "run_away"
-      }
-    },
-    "magic": {
-      "effect": {
-        "type": "OPEN_MENU",
-        "id": "MAGIC_SPELLS"
-      }
-    },
-    "item": {
-      "effect": {
-        "type": "OPEN_MENU",
-        "id": "ITEMS"
-      }
-    },
-    "steal": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "steal"
-      }
-    },
-    "flee": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "flee"
-      }
-    },
-    "terrain": {
-      "effect": {
-        "type": "OPEN_MENU",
-        "id": "TERRAIN"
-      }
-    },
-    "jump": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "jump"
-      }
-    },
-    "boost": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "boost"
-      }
-    },
-    "scare": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "scare"
-      }
-    },
-    "cheer": {
-      "effect": {
-        "type": "LAUNCH_ABILITY",
-        "id": "cheer"
-      }
+  "fight": {
+    "effect": {
+      "type": "LAUNCH_PHYSICAL_ATTACK",
+      "id": "basic_attack"
+    }
+  },
+  "defend": {
+    "effect": {
+      "type": "LAUNCH_SPELL",
+      "id": "basic_defense"
+    }
+  },
+  "run": {
+    "effect": {
+      "type": "LAUNCH_SPELL",
+      "id": "run"
+    }
+  },
+  "magic": {
+    "effect": {
+      "type": "OPEN_MENU",
+      "id": "MAGIC_SPELLS"
+    }
+  },
+  "item": {
+    "effect": {
+      "type": "OPEN_MENU",
+      "id": "ITEMS"
+    }
+  },
+  "steal": {
+    "effect": {
+      "type": "LAUNCH_SPELL",
+      "id": "steal"
+    }
+  },
+  "flee": {
+    "effect": {
+      "type": "LAUNCH_SPELL",
+      "id": "flee"
+    }
+  },
+  "terrain": {
+    "effect": {
+      "type": "OPEN_MENU",
+      "id": "TERRAIN"
+    }
+  },
+  "jump": {
+    "effect": {
+      "type": "LAUNCH_PHYSICAL_ATTACK",
+      "id": "jump"
+    }
+  },
+  "boost": {
+    "effect": {
+      "type": "LAUNCH_SPELL",
+      "id": "boost"
+    }
+  },
+  "scare": {
+    "effect": {
+      "type": "LAUNCH_SPELL",
+      "id": "scare"
+    }
+  },
+  "cheer": {
+    "effect": {
+      "type": "LAUNCH_SPELL",
+      "id": "cheer"
+    }
+  },
+  "sing": {
+    "effect": {
+      "type": "LAUNCH_PHYSICAL_ATTACK"
     }
   }
 }

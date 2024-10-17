@@ -8,7 +8,7 @@
 				"max_health_points": 150,
 				"current_health_points": 134,
 				"magics": {
-					"1": { "first_slot": "fire", "second_slot": "sleep", "third_slot": ""},
+					"1": { "first_slot": "fire", "second_slot": "haste", "third_slot": "bahamut_mega_flare"},
 					"2": { "first_slot": "poison", "second_slot": "", "third_slot": ""},
 					"3": { "first_slot": "", "second_slot": "", "third_slot": ""},
 					"4": { "first_slot": "", "second_slot": "", "third_slot": ""},

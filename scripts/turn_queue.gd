@@ -1,6 +1,6 @@
 class_name TurnQueue extends Node2D
 
-signal ability_selected(ability: Ability)
+signal ability_selected(spell: Spell)
 signal target_selected(targets: Array[Battler])
 
 @onready var message_box: MessageBox = %MessageBox
@@ -36,7 +36,7 @@ func play_turn():
 	if active_character.get_current_health_points() > 0:
 		active_character.initialize_turn()
 		
-		var ability: Ability
+		var spell: Spell
 		var targets: Array[Battler] = []
 		
 		if active_character.is_player == true:
@@ -46,12 +46,12 @@ func play_turn():
 			var has_select_actions_and_target: bool = false
 			while not has_select_actions_and_target:
 				
-				ability = await _select_actions()
+				spell = await _select_actions()
 				#if action.target_type == Action.TARGET_TYPE.SELF:
 					#targets = [active_character]
-				targets = await get_target(ability)
+				targets = await get_target(spell)
 				
-				has_select_actions_and_target = is_action_and_target_valid(ability, targets)
+				has_select_actions_and_target = is_action_and_target_valid(spell, targets)
 			
 		else:
 			await get_tree().create_timer(1.5).timeout
@@ -66,19 +66,19 @@ func play_turn():
 				#_:
 					#targets = potential_target
 		
-		print_debug_message(ability, targets)
+		print_debug_message(spell, targets)
 		var targets_data: Array[Battler] = []
 		for battler: Battler in targets:
 			targets_data.append(battler)
-		active_character.act(ability, targets_data)
+		active_character.act(spell, targets_data)
 	
 	end_turn()
 
-func _get_targets_list(ability: Ability) -> Array[Battler]:
+func _get_targets_list(spell: Spell) -> Array[Battler]:
 	
 	var potential_targets: Array[Battler] = [] 
 	
-	match ability.target:
+	match spell.target:
 		Enums.TARGET.SE, Enums.TARGET.AE, Enums.TARGET.E:
 			potential_targets = get_enemies()
 		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
@@ -97,7 +97,7 @@ func _get_targets_list(ability: Ability) -> Array[Battler]:
 	return potential_targets
 
 
-func is_action_and_target_valid(ability: Ability, targets: Array[Battler]):
+func is_action_and_target_valid(spell: Spell, targets: Array[Battler]):
 	#return action != null and ( (targets == [] and action.target_type == Action.TARGET_TYPE.NONE) \
 		#or (targets != [] and action.target_type != Action.TARGET_TYPE.NONE))
 	return true
@@ -108,8 +108,8 @@ func end_turn():
 	set_next_character()
 	play_turn()
 
-func print_debug_message(ability: Ability, targets: Array[Battler]):
-	var debug_message = active_character.to_string() + " is using " + ability.to_string()
+func print_debug_message(spell: Spell, targets: Array[Battler]):
+	var debug_message = active_character.to_string() + " is using " + spell.to_string()
 	if targets != []:
 		debug_message += " on "
 		for character: Battler in targets:
@@ -117,24 +117,24 @@ func print_debug_message(ability: Ability, targets: Array[Battler]):
 	
 	print(debug_message)
 
-func _select_actions() -> Ability:
+func _select_actions() -> Spell:
 	battle_menu.set_focus_on_action_selection()
 	
 	message_box.set_message("Wait for action....")
-	var ability: Ability = await ability_selected
-	message_box.set_message("action selected : " + ability.to_string())
-	return ability
+	var spell: Spell = await ability_selected
+	message_box.set_message("action selected : " + spell.to_string())
+	return spell
 
-func get_target(ability: Ability):
-	var potential_targets: Array[Battler] = _get_targets_list(ability)
+func get_target(spell: Spell):
+	var potential_targets: Array[Battler] = _get_targets_list(spell)
 	
 	_set_targets_selectable(potential_targets, true)
 	
-	match ability.target:
+	match spell.target:
 		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
-			battle_menu.set_focus_on_player_character((ability.target == Enums.TARGET.AA))
+			battle_menu.set_focus_on_player_character(spell.target.size() > 1)#(spell.target == Enums.TARGET.AA))
 		Enums.TARGET.SE, Enums.TARGET.AE, Enums.TARGET.E:
-			battle_menu.set_focus_on_target_selection((ability.target == Enums.TARGET.AE))
+			battle_menu.set_focus_on_target_selection(spell.target.size() > 1)#(spell.target == Enums.TARGET.AE))
 	#
 	var targets_selected: Array[Battler] = await _select_targets(potential_targets)
 	

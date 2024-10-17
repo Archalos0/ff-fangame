@@ -70,7 +70,7 @@ func initialize_turn():
 func end_turn():
 	arrow_character_playing.visible = false
 
-func act(ability: Ability, targets: Array[Battler]):
+func act(spell: Spell, targets: Array[Battler]):
 	#var power = action.calcul_power(_character_data)
 	#
 	#match action.damage_type:

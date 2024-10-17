@@ -27,10 +27,6 @@ func load(character_data: CharacterData):
 	
 	magics.load(character_data.magics)
 
-func load_actions():
-	#actions = job.actions
-	pass
-
 func load_stats():
 	var content = FileHandler.get_json_content("res://ressources/jobs/jobs.json")
 	

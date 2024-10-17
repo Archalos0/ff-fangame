@@ -1,6 +1,6 @@
 class_name BattleMenu extends Control
 
-signal ability_selected(ability: Ability)
+signal ability_selected(spell: Spell)
 signal characters_selected(charcters: Array[Battler])
 
 @onready var action_menu: ActionMenu = $ActionSelection
@@ -24,8 +24,8 @@ func _ready() -> void:
 	
 	player_character_menu.characters_selected.connect(Callable(self, "_on_characters_selected"))
 	
-func _on_ability_selected(ability: Ability):
-	ability_selected.emit(ability)
+func _on_ability_selected(spell: Spell):
+	ability_selected.emit(spell)
 
 func _on_open_menu(menu_id: String):
 	match menu_id:
