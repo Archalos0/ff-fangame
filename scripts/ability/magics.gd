@@ -18,4 +18,3 @@ func load(magics_data: MagicsData):
 	level_6.load(magics_data.level_6)
 	level_7.load(magics_data.level_7)
 	level_7.load(magics_data.level_8)
-	
