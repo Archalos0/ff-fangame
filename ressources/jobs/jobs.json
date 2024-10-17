@@ -3,9 +3,9 @@
 		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/warrior/warrior_animation.tres",
 		"job_name": "Warrior",
 		"actions": [
-			"attack",
-			"advance",
+			"fight",
 			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -680,9 +680,9 @@
 		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/monk/monk_animation.tres",
 		"job_name": "Monk",
 		"actions": [
-			"attack",
-			"retaliate",
+			"fight",
 			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -1357,9 +1357,9 @@
 		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/white_mage/white_mage_animation.tres",
 		"job_name": "White mage",
 		"actions": [
-			"attack",
+			"fight",
 			"magic",
-			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -2034,9 +2034,9 @@
 		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/black_mage/black_mage_animation.tres",
 		"job_name": "Black mage",
 		"actions": [
-			"attack",
+			"fight",
 			"magic",
-			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -2711,9 +2711,9 @@
 		"sprite_frames": "res://assets/sprites/jobs/wind_crystal/red_mage/red_mage_animation.tres",
 		"job_name": "Red mage",
 		"actions": [
-			"attack",
+			"fight",
 			"magic",
-			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -3387,7 +3387,7 @@
 	"thief": {
 		"job_name": "Thief",
 		"actions": [
-			"attack",
+			"fight",
 			"steal",
 			"flee",
 			"item"
@@ -4063,9 +4063,9 @@
 	"ranger": {
 		"job_name": "Ranger",
 		"actions": [
-			"attack",
-			"barrage",
+			"fight",
 			"defend",
+			"magic",
 			"item"
 		],
 		"stats": {
@@ -4739,9 +4739,9 @@
 	"knight": {
 		"job_name": "Knight",
 		"actions": [
-			"attack",
-			"magic",
+			"fight",
 			"defend",
+			"run",
 			"item"
 		],
 		"passive": "cover",
@@ -5416,8 +5416,8 @@
 	"scholar": {
 		"job_name": "Scholar",
 		"actions": [
-			"attack",
-			"magic",
+			"fight",
+			"peep",
 			"study",
 			"item"
 		],
@@ -6093,7 +6093,7 @@
 	"geomancer": {
 		"job_name": "Geomancer",
 		"actions": [
-			"attack",
+			"fight",
 			"terrain",
 			"defend",
 			"item"
@@ -6769,7 +6769,7 @@
 	"dragoon": {
 		"job_name": "Dragoon",
 		"actions": [
-			"attack",
+			"fight",
 			"jump",
 			"defend",
 			"item"
@@ -7445,9 +7445,9 @@
 	"viking": {
 		"job_name": "Viking",
 		"actions": [
-			"attack",
-			"provoke",
+			"fight",
 			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -8121,9 +8121,9 @@
 	"mystic_knigth": {
 		"job_name": "Mystic knight",
 		"actions": [
-			"attack",
-			"souleater",
+			"fight",
 			"defend",
+			"magic",
 			"item"
 		],
 		"stats": {
@@ -8797,9 +8797,9 @@
 	"evoker": {
 		"job_name": "Evoker",
 		"actions": [
-			"attack",
-			"summon",
-			"defend",
+			"fight",
+			"magic",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -9473,9 +9473,9 @@
 	"bard": {
 		"job_name": "Bard",
 		"actions": [
-			"attack",
 			"sing",
-			"defend",
+			"scare",
+			"cheer",
 			"item"
 		],
 		"stats": {
@@ -10149,7 +10149,7 @@
 	"black_belt": {
 		"job_name": "Black belt",
 		"actions": [
-			"attack",
+			"fight",
 			"boost",
 			"defend",
 			"item"
@@ -10825,9 +10825,9 @@
 	"devout": {
 		"job_name": "Devout",
 		"actions": [
-			"attack",
+			"fight",
 			"magic",
-			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -11501,9 +11501,9 @@
 	"magus": {
 		"job_name": "Magus",
 		"actions": [
-			"attack",
+			"fight",
 			"magic",
-			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -12177,9 +12177,9 @@
 	"summoner": {
 		"job_name": "Summoner",
 		"actions": [
-			"attack",
-			"summon",
-			"defend",
+			"fight",
+			"magic",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -12853,9 +12853,9 @@
 	"sage": {
 		"job_name": "Sage",
 		"actions": [
-			"attack",
+			"fight",
 			"magic",
-			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
@@ -13529,9 +13529,9 @@
 	"ninja": {
 		"job_name": "Ninja",
 		"actions": [
-			"attack",
-			"throw",
+			"fight",
 			"defend",
+			"run",
 			"item"
 		],
 		"stats": {
