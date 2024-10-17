@@ -10,6 +10,7 @@ var attack_power: int
 var hit_percentage: int
 var status_inflicted: Enums.STATUS
 var elements_inflicted: Array[Enums.ELEMENT]
+var spell_on_use: Spell = null
 
 # Armor Data
 var defense: int
@@ -21,15 +22,22 @@ var elemental_weakness: Enums.ELEMENT
 
 func load(equipment_id: String):
 	
+	#var buy_value	: int
+	#var sell_value	: int
+	#var ability		: Ability
+	
 	if equipment_id == "": 
 		item_id = ""
 		item_name = ""
+		buy_value = 0
+		
 		bonuses = Stats.new()
 		
 		attack_power = 0
 		hit_percentage = 0
 		status_inflicted = Enums.STATUS.NONE
 		elements_inflicted = []
+		spell_on_use = null
 		
 		defense = 0
 		magic_defense = 0
@@ -49,17 +57,21 @@ func load(equipment_id: String):
 	
 	item_id = equipment_id
 	item_name = equipment_data["item_name"]
+	buy_value = equipment_data["price"]
+	sell_value = equipment_data["value"]
 	
 	if equipment_data["bonuses"] == null:
 		bonuses = Stats.new()
 	else:
 		bonuses.load_character_stats(equipment_data["bonuses"])
 		
+	
 	# Weapon stats
 	attack_power 		= equipment_data.get("attack_power", 0)
 	hit_percentage		= equipment_data.get("hit_percentage", 0)
 	status_inflicted	= Enums.status_from_string(equipment_data.get("status_inflicted", ""))
 	elements_inflicted	= Enums.elements_from_string(equipment_data.get("elements_inflicted", []))
+	spell_on_use 		= Spell.new(equipment_data.get("spell_on_use", null))
 	
 	# Armor stats
 	defense 				= equipment_data.get("defense", 0)
