@@ -9,6 +9,7 @@ var skill: int
 
 var actions: Array[Action] = []
 
+
 var _sprite_frames_path: String = ""
 var sprite_frames_path = _sprite_frames_path :
 	get(): return _sprite_frames_path
@@ -17,9 +18,10 @@ var sprite_frames_path = _sprite_frames_path :
 # Equippable weapons
 # var equippable_weapons = Array[WEAPON_TYPE]
 
-func load(job_id: String, job_level: int):
-	job_name = job_id
-	#level = job_level
+func load(p_job_id: String, jobs_skill: Dictionary):
+	job_id = p_job_id
+	
+	skill = jobs_skill[job_id]
 	
 	_load_data()
 
@@ -29,7 +31,9 @@ func _load_data():
 	if content.has("error"):
 		return
 	
-	var job_data = content[job_name]
+	var job_data = content[job_id]
+	
+	job_name = job_data["job_name"]
 	
 	_sprite_frames_path = job_data["sprite_frames"]
 	
