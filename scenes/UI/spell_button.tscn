@@ -22,7 +22,6 @@ offset_bottom = -623.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_w8wuk")
-text = "Some Action"
 alignment = 0
 script = ExtResource("1_a3rxq")
 

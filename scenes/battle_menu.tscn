@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://scripts/UI/Menu/target_selection_menu.gd" id="4_eyooa"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/magic_spells_menu.gd" id="5_b21hc"]
 [ext_resource type="Script" path="res://scripts/UI/Menu/player_selection_menu.gd" id="5_jdmb0"]
-[ext_resource type="Script" path="res://scripts/UI/Buttons/spell_button.gd" id="6_tpnly"]
+[ext_resource type="PackedScene" uid="uid://bytgvx3utwakv" path="res://scenes/UI/spell_button.tscn" id="6_rk74q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3q5r"]
 bg_color = Color(0.141176, 0.301961, 1, 1)
@@ -137,20 +137,182 @@ text = "XX / XX"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="SpellButton" type="Button" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level1/HBoxContainer"]
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level1/HBoxContainer" instance=ExtResource("6_rk74q")]
 layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("6_tpnly")
 
-[node name="SpellButton2" type="Button" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level1/HBoxContainer"]
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level1/HBoxContainer" instance=ExtResource("6_rk74q")]
 layout_mode = 2
-size_flags_horizontal = 3
-script = ExtResource("6_tpnly")
 
-[node name="SpellButton3" type="Button" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level1/HBoxContainer"]
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level1/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="Level2" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level2"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level2"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level2"]
 layout_mode = 2
 size_flags_horizontal = 3
-script = ExtResource("6_tpnly")
+
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level2/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level2/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level2/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="Level3" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level3"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level3"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level3/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level3/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level3/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="Level4" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level4"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level4"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level4/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level4/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level4/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="Level5" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level5"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level5"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level5/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level5/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level5/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="Level6" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level6"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level6"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level6/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level6/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level6/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="Level7" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level7"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level7"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level7"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level7/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level7/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level7/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="Level8" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level8"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level8"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level8"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpellButton" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level8/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level8/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
+
+[node name="SpellButton3" parent="MagicSpellsMenu/ScrollContainer/Buttons/Level8/HBoxContainer" instance=ExtResource("6_rk74q")]
+layout_mode = 2
 
 [node name="ItemsMenu" type="Panel" parent="."]
 visible = false
