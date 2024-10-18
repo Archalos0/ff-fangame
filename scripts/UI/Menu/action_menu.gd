@@ -7,7 +7,7 @@ const ACTION_BUTTON = preload("res://scenes/UI/action_button.tscn")
 
 func _ready() -> void:
 	var container = get_node("Buttons")
-	_containers_list.append(container)
+	_buttons_list._containers.append(container)
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventKey: 
@@ -56,4 +56,4 @@ func delete_actions() -> void:
 
 func _load_ui():
 	for _button: CommandButton in _buttons_list._buttons:
-		_containers_list[0].add_child(_button)
+		_buttons_list._containers[0].add_child(_button)

@@ -6,7 +6,6 @@ enum MODE_SELECTION {
 }
 
 var _buttons_list: ButtonsListHandler = ButtonsListHandler.new()
-var _containers_list: Array[BoxContainer] = []
 
 @onready var _buttons: ButtonsHandler = $Buttons
 

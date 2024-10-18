@@ -17,4 +17,4 @@ func load_characters(p_enemies: Array[Battler]) -> void:
 
 func _load_ui():
 	for _button: CommandButton in _buttons_list._buttons:
-		_containers_list[0].add_child(_button)
+		_buttons_list._containers[0].add_child(_button)

@@ -14,14 +14,14 @@ const SPELL_BUTTON = preload("res://scenes/UI/spell_button.tscn")
 @onready var level_8: HBoxContainer = $ScrollContainer/Buttons/Level8
 
 func _ready() -> void:
-	_containers_list.append(level_1.get_node("HBoxContainer"))
-	_containers_list.append(level_2.get_node("HBoxContainer"))
-	_containers_list.append(level_3.get_node("HBoxContainer"))
-	_containers_list.append(level_4.get_node("HBoxContainer"))
-	_containers_list.append(level_5.get_node("HBoxContainer"))
-	_containers_list.append(level_6.get_node("HBoxContainer"))
-	_containers_list.append(level_7.get_node("HBoxContainer"))
-	_containers_list.append(level_8.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_1.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_2.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_3.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_4.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_5.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_6.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_7.get_node("HBoxContainer"))
+	_buttons_list._containers.append(level_8.get_node("HBoxContainer"))
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventKey: 
@@ -30,12 +30,16 @@ func _gui_input(event: InputEvent) -> void:
 			_reset_ui()
 			return
 		if event.is_action_pressed("Next"):
+			_buttons_list.select_bottom_button()
 			return
 		if event.is_action_pressed("Previous"):
+			_buttons_list.select_top_button()
 			return
 		if event.is_action_pressed("HNext"):
+			_buttons_list.select_next_button()
 			return
 		if event.is_action_pressed("HPrevious"):
+			_buttons_list.select_next_button()
 			return
 
 func _send_spell() -> void:
@@ -70,7 +74,7 @@ func _load_ui():
 	var spell_cpt: int = 0
 	
 	for spell_button: CommandButton in _buttons_list._buttons:
-		_containers_list[spell_cpt/3].add_child(spell_button)
+		_buttons_list._containers[spell_cpt/3].add_child(spell_button)
 		spell_cpt += 1
 
 func delete_spells():
@@ -85,6 +89,6 @@ func set_focus_state(p_focus_state: bool, p_authorize_multiple_selection: bool =
 	
 	_authorize_multiple_selection = p_authorize_multiple_selection
 	_current_mode_selection = MODE_SELECTION.SINGLE
-	focus_mode = Control.FOCUS_ALL
+	#focus_mode = Control.FOCUS_ALL
 	grab_focus()
 	_buttons_list.select_first()

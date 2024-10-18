@@ -1,6 +1,7 @@
 class_name ButtonsListHandler
 
 var _buttons: Array[CommandButton] = []
+var _containers: Array[BoxContainer] = []
 
 var _index_button_selected: int = 0
 
@@ -14,10 +15,26 @@ func select_next_button() -> void:
 		_index_button_selected += 1
 		_buttons[_index_button_selected].set_is_selected(true)
 
+func select_bottom_button() -> void:
+	
+	if _index_button_selected < (_buttons.size() - 1):
+		var button_per_container: int = _buttons.size() / _containers.size()
+		_buttons[_index_button_selected].set_is_selected(false)
+		_index_button_selected += button_per_container
+		_buttons[_index_button_selected].set_is_selected(true)
+
 func select_previous_button() -> void:
 	if _index_button_selected > 0:
 		_buttons[_index_button_selected].set_is_selected(false)
 		_index_button_selected -= 1
+		_buttons[_index_button_selected].set_is_selected(true)
+
+func select_top_button() -> void:
+	
+	if _index_button_selected < (_buttons.size() - 1):
+		var button_per_container: int = _buttons.size() / _containers.size()
+		_buttons[_index_button_selected].set_is_selected(false)
+		_index_button_selected -= button_per_container
 		_buttons[_index_button_selected].set_is_selected(true)
 
 func select_all() -> void:

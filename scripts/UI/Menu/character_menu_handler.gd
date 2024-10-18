@@ -6,7 +6,7 @@ var _characters: Array[Battler] = []
 
 func _ready() -> void:
 	var container = get_node("Buttons")
-	_containers_list.append(container)
+	_buttons_list._containers.append(container)
 
 func load_characters(p_characters: Array[Battler]) -> void:
 	_characters = p_characters
