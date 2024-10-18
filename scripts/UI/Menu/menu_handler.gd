@@ -5,6 +5,9 @@ enum MODE_SELECTION {
 	MULTIPLE,
 }
 
+var _buttons_list: ButtonsListHandler = ButtonsListHandler.new()
+var _containers_list: Array[BoxContainer] = []
+
 @onready var _buttons: ButtonsHandler = $Buttons
 
 var _has_focus: bool = false
@@ -13,7 +16,7 @@ var _current_mode_selection: MODE_SELECTION = MODE_SELECTION.SINGLE
 
 func _ready() -> void:
 	focus_mode = Panel.FOCUS_NONE
-	_buttons.initialize()
+	if _buttons != null : _buttons.initialize()
 
 #func select_all():
 	#if _has_focus: 
@@ -58,4 +61,8 @@ func set_focus_state(p_focus_state: bool, p_authorize_multiple_selection: bool =
 	_current_mode_selection = MODE_SELECTION.SINGLE
 	focus_mode = Control.FOCUS_ALL
 	grab_focus()
-	_buttons.select_first()
+	_buttons_list.select_first()
+
+func _load_ui():
+	push_error("The method _load_ui() has not been implementing in the derived class")
+	
