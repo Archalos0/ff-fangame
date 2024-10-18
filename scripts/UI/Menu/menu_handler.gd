@@ -30,7 +30,7 @@ func _ready() -> void:
 		#push_error("Le menu " + name + " n'a pas le focus")
 
 func _reset_ui() -> void:
-	#_buttons.unselect_all()
+	_buttons_list.unselect_all()
 	focus_mode = Control.FOCUS_NONE
 	#_buttons.focus_mode = Control.FOCUS_NONE
 	_authorize_multiple_selection = false
