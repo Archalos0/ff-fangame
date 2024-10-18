@@ -29,7 +29,9 @@ func _on_ability_selected(spell: Spell):
 
 func _on_open_menu(menu_id: String):
 	match menu_id:
-		"MAGIC_SPELLS": magic_spells_menu.visible = true
+		"MAGIC_SPELLS": 
+			magic_spells_menu.visible = true
+			set_focus_on_magic_spells_menu()
 		"ITEMS": items_menu.visible = true
 
 func _on_close_menu(menu_id: String):
@@ -49,16 +51,29 @@ func update_spells_menu(magics: Magics):
 func delete_previous_action():
 	action_menu.delete_actions()
 
+func delete_previous_spells():
+	magic_spells_menu.delete_spells()
+
 func set_focus_on_action_selection():
 	action_menu.set_focus_state(true)
 	player_character_menu.set_focus_state(false)
 	target_menu.set_focus_state(false)
+	magic_spells_menu.set_focus_state(false)
 
 func set_focus_on_target_selection(p_authorize_multiple_selection: bool = false):
 	target_menu.set_focus_state(true, p_authorize_multiple_selection)
 	action_menu.set_focus_state(false)
+	magic_spells_menu.set_focus_state(false)
+	player_character_menu.set_focus_state(false)
 
 func set_focus_on_player_character(p_authorize_multiple_selection: bool = false):
 	player_character_menu.set_focus_state(true, p_authorize_multiple_selection)
 	target_menu.set_focus_state(false)
 	action_menu.set_focus_state(false)
+	magic_spells_menu.set_focus_state(false)
+
+func set_focus_on_magic_spells_menu():
+	magic_spells_menu.set_focus_state(true)
+	action_menu.set_focus_state(false)
+	player_character_menu.set_focus_state(false)
+	target_menu.set_focus_state(false)

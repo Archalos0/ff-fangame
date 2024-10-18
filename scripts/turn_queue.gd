@@ -99,6 +99,7 @@ func is_action_and_target_valid(spell: Spell, targets: Array[Battler]):
 func end_turn():
 	active_character.end_turn()
 	battle_menu.delete_previous_action()
+	battle_menu.delete_previous_spells()
 	set_next_character()
 	play_turn()
 

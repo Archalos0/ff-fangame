@@ -18,3 +18,31 @@ func load(magics_data: MagicsData):
 	level_6.load(magics_data.level_6)
 	level_7.load(magics_data.level_7)
 	level_7.load(magics_data.level_8)
+
+func get_all_spells() -> Array[Spell]:
+	return [
+		level_1.slot_1,
+		level_1.slot_2,
+		level_1.slot_3,
+		level_2.slot_1,
+		level_2.slot_2,
+		level_2.slot_3,
+		level_3.slot_1,
+		level_3.slot_2,
+		level_3.slot_3,
+		level_4.slot_1,
+		level_4.slot_2,
+		level_4.slot_3,
+		level_5.slot_1,
+		level_5.slot_2,
+		level_5.slot_3,
+		level_6.slot_1,
+		level_6.slot_2,
+		level_6.slot_3,
+		level_7.slot_1,
+		level_7.slot_2,
+		level_7.slot_3,
+		level_8.slot_1,
+		level_8.slot_2,
+		level_8.slot_3
+	]
