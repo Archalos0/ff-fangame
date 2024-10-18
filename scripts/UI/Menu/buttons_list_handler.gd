@@ -41,6 +41,7 @@ func get_buttons_selected() -> Array[CommandButton]:
 
 func remove_all_buttons() -> void:
 	for button: CommandButton in _buttons:
-		#remove_child(button)
+		var parent_node = button.get_parent()
+		parent_node.remove_child(button)
 		button.queue_free()
 	_buttons.clear()

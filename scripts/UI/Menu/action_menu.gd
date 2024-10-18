@@ -52,7 +52,7 @@ func load_actions(p_actions: Array[Action]) -> void:
 	#_buttons.initialize()
 
 func delete_actions() -> void:
-	_buttons.remove_all_buttons()
+	_buttons_list.remove_all_buttons()
 
 func _load_ui():
 	for _button: CommandButton in _buttons_list._buttons:
