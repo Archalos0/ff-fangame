@@ -42,7 +42,6 @@ func _on_close_menu(menu_id: String):
 		"ITEMS": items_menu.visible = false
 
 func _on_characters_selected(characters: Array[Battler]):
-	print("coucou")
 	characters_selected.emit(characters)
 
 func update_actions_buttons(actions):
