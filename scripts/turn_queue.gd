@@ -16,7 +16,7 @@ func initialize():
 	for node_character in get_children():
 		characters.append(node_character)
 		
-	battle_menu.target_menu.load_characters(characters.filter(func(character): return not character.is_player))
+	battle_menu.targets_menu.load_characters(characters.filter(func(character): return not character.is_player))
 	battle_menu.player_character_menu.load_characters(characters.filter(func(character): return character.is_player))
 	
 	

@@ -120,3 +120,5 @@ offset_top = 10.0
 offset_right = 569.0
 offset_bottom = 156.0
 script = ExtResource("3_s47vh")
+
+[connection signal="targets_selected" from="TargetsMenu" to="." method="_on_characters_selected"]

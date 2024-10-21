@@ -36,8 +36,8 @@ func _send_characters() -> void:
 	if self is PlayerSelectionMenu:
 		for character_button: PlayerCharacterButton in _buttons_list.get_buttons_selected():
 			_characters_selected.append(character_button.character)
-	elif self is TargetSelectionMenu:
-		for character_button: TargetButton in _buttons_list.get_buttons_selected():
-			_characters_selected.append(character_button.character)
+	#elif self is TargetSelectionMenu:
+		#for character_button: TargetButton in _buttons_list.get_buttons_selected():
+			#_characters_selected.append(character_button.character)
 	
 	self.characters_selected.emit(_characters_selected)

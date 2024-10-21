@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4tpjnj433uhm"]
+[gd_scene load_steps=3 format=3 uid="uid://c4tpjnj433uhm"]
 
 [ext_resource type="Script" path="res://scripts/UI/Menu/target_selection_menu.gd" id="1_b24r4"]
-[ext_resource type="Script" path="res://scripts/UI/Menu/buttons_handler.gd" id="2_i6ng8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3q5r"]
 bg_color = Color(0.141176, 0.301961, 1, 1)
@@ -18,9 +17,10 @@ corner_radius_bottom_left = 5
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -648.0
-offset_right = 296.0
-offset_bottom = -482.0
+offset_left = 161.0
+offset_top = -602.0
+offset_right = 457.0
+offset_bottom = -436.0
 grow_vertical = 0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_p3q5r")
@@ -32,4 +32,3 @@ offset_left = 11.0
 offset_top = 9.0
 offset_right = 289.0
 offset_bottom = 159.0
-script = ExtResource("2_i6ng8")
