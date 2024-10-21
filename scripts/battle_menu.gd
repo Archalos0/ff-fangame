@@ -36,11 +36,15 @@ func open_menu(menu_id: String):
 			set_focus_on_magic_spells_menu()
 		"ITEMS": items_menu.visible = true
 
-func _on_close_menu(menu_id: String):
+func close_menu(menu_id: String):
 	match menu_id:
-		"MAGIC_SPELLS": magic_spells_menu.visible = false
-		"ITEMS": items_menu.visible = false
-
+		"MAGIC_SPELLS": 
+			magic_spells_menu.visible = false
+			set_focus_on_action_selection()
+		"ITEMS": 
+			items_menu.visible = false
+			set_focus_on_action_selection()
+			
 func _on_characters_selected(characters: Array[Battler]):
 	characters_selected.emit(characters)
 
@@ -81,9 +85,11 @@ func set_focus_on_magic_spells_menu():
 	player_character_menu.set_focus_state(false)
 	targets_menu.set_focus_state(false)
 
-
 func _on_spell_seleted(spell: Spell) -> void:
 	spell_selected.emit(spell)
 	if magic_spells_menu.visible == true:
 		magic_spells_menu.set_focus_state(false)
 		magic_spells_menu.visible = false
+
+func _on_magic_spells_menu_cancel_action() -> void:
+	close_menu("MAGIC_SPELLS")

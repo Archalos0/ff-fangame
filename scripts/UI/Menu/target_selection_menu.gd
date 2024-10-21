@@ -42,6 +42,7 @@ func load_characters(p_enemies: Array[Battler]) -> void:
 		buttons.add_child(target_button)
 		target_button.target_button_selected.connect(Callable(self, "_on_target_selected"))
 		target_button.change_mode_selection.connect(Callable(self, "_switch_selection_mode"))
+		target_button.cancel_action.connect(Callable(self, "_on_cancel_action"))
 		
 func _on_target_selected(target: Battler) -> void:
 	var arr: Array[Battler] = []
@@ -78,3 +79,6 @@ func _on_gui_input(event: InputEvent) -> void:
 			targets_selected.emit(arr)
 		if event.is_action_pressed("Change_Mode_Selection"):
 			_switch_selection_mode()
+
+func _on_cancel_action():
+	print("cancel action")

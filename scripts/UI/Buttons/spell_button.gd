@@ -1,6 +1,7 @@
 class_name SpellButton extends CommandButton
 
 signal spell_selected(spell: Spell)
+signal cancel_action()
 
 var spell: Spell
 
@@ -26,3 +27,8 @@ func _on_resized() -> void:
 
 func _on_button_up() -> void:
 	spell_selected.emit(spell)
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.is_action_pressed("Cancel"):
+			cancel_action.emit()

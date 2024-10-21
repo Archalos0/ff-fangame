@@ -111,4 +111,5 @@ offset_bottom = 635.0
 grow_vertical = 1
 
 [connection signal="targets_selected" from="TargetsMenu" to="." method="_on_characters_selected"]
+[connection signal="cancel_action" from="MagicSpellsMenu" to="." method="_on_magic_spells_menu_cancel_action"]
 [connection signal="spell_selected" from="MagicSpellsMenu" to="." method="_on_spell_seleted"]
