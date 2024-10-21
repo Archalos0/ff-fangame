@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://dss2ya53djm1h"]
+
+[ext_resource type="Script" path="res://scripts/UI/Menu/buttons_handler.gd" id="1_ni4p6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3q5r"]
+bg_color = Color(0.141176, 0.301961, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="ItemsBattleMenu" type="Panel"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -648.0
+offset_right = 296.0
+offset_bottom = -482.0
+grow_vertical = 0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3q5r")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -11.5
+offset_right = 81.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "ITEMS MENU"
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 289.0
+offset_bottom = 159.0
+script = ExtResource("1_ni4p6")
