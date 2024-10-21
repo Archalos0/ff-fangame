@@ -16,9 +16,9 @@ func select_next_button() -> void:
 		_buttons[_index_button_selected].set_is_selected(true)
 
 func select_bottom_button() -> void:
+	var button_per_container: int = _buttons.size() / _containers.size()
 	
-	if _index_button_selected < (_buttons.size() - 1):
-		var button_per_container: int = _buttons.size() / _containers.size()
+	if _index_button_selected + button_per_container < (_buttons.size() - 1):
 		_buttons[_index_button_selected].set_is_selected(false)
 		_index_button_selected += button_per_container
 		_buttons[_index_button_selected].set_is_selected(true)
@@ -30,9 +30,9 @@ func select_previous_button() -> void:
 		_buttons[_index_button_selected].set_is_selected(true)
 
 func select_top_button() -> void:
+	var button_per_container: int = _buttons.size() / _containers.size()
 	
-	if _index_button_selected < (_buttons.size() - 1):
-		var button_per_container: int = _buttons.size() / _containers.size()
+	if _index_button_selected - button_per_container > 0:
 		_buttons[_index_button_selected].set_is_selected(false)
 		_index_button_selected -= button_per_container
 		_buttons[_index_button_selected].set_is_selected(true)
@@ -45,6 +45,7 @@ func select_first() -> void:
 	if _buttons.size() > 0:
 		_index_button_selected = 0
 		_buttons[0].set_is_selected(true)
+		_buttons[0].grab_focus()
 
 func unselect_all() -> void:
 	for button: CommandButton in _buttons:

@@ -36,13 +36,13 @@ func get_all_spells() -> Array[Spell]:
 		level_5.slot_1,
 		level_5.slot_2,
 		level_5.slot_3,
-		level_6.slot_1,
-		level_6.slot_2,
-		level_6.slot_3,
-		level_7.slot_1,
-		level_7.slot_2,
-		level_7.slot_3,
-		level_8.slot_1,
-		level_8.slot_2,
-		level_8.slot_3
+		#level_6.slot_1,
+		#level_6.slot_2,
+		#level_6.slot_3,
+		#level_7.slot_1,
+		#level_7.slot_2,
+		#level_7.slot_3,
+		#level_8.slot_1,
+		#level_8.slot_2,
+		#level_8.slot_3
 	]

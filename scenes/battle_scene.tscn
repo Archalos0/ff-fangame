@@ -69,5 +69,4 @@ metadata/_edit_use_anchors_ = true
 [node name="MessageBox" parent="CanvasLayer" instance=ExtResource("5_boqcs")]
 unique_name_in_owner = true
 
-[editable path="CanvasLayer/BattleMenu"]
 [editable path="CanvasLayer/MessageBox"]

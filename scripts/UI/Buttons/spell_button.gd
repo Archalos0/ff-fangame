@@ -18,3 +18,6 @@ func _on_focus_entered() -> void:
 
 func _on_focus_exited() -> void:
 	on_focus_exited()
+
+func _on_resized() -> void:
+	on_resized()

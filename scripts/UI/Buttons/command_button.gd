@@ -31,3 +31,7 @@ func on_focus_entered():
 
 func on_focus_exited():
 	hand_selection.visible = false
+
+func on_resized():
+	if hand_selection != null:
+		hand_selection.position.y = size.y / 2

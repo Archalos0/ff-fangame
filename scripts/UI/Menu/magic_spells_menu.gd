@@ -13,6 +13,8 @@ const SPELL_BUTTON = preload("res://scenes/UI/spell_button.tscn")
 @onready var level_7: HBoxContainer = $ScrollContainer/Buttons/Level7
 @onready var level_8: HBoxContainer = $ScrollContainer/Buttons/Level8
 
+@onready var scroll_container: ScrollContainer = $ScrollContainer
+
 func _ready() -> void:
 	_buttons_list._containers.append(level_1.get_node("HBoxContainer"))
 	_buttons_list._containers.append(level_2.get_node("HBoxContainer"))
@@ -22,7 +24,43 @@ func _ready() -> void:
 	_buttons_list._containers.append(level_6.get_node("HBoxContainer"))
 	_buttons_list._containers.append(level_7.get_node("HBoxContainer"))
 	_buttons_list._containers.append(level_8.get_node("HBoxContainer"))
-
+	
+	_buttons_list._buttons.append(_buttons_list._containers[0].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[0].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[0].get_child(2))
+	
+	_buttons_list._buttons.append(_buttons_list._containers[1].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[1].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[1].get_child(2))
+	
+	_buttons_list._buttons.append(_buttons_list._containers[2].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[2].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[2].get_child(2))
+	
+	_buttons_list._buttons.append(_buttons_list._containers[3].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[3].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[3].get_child(2))
+	
+	_buttons_list._buttons.append(_buttons_list._containers[4].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[4].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[4].get_child(2))
+	
+	_buttons_list._buttons.append(_buttons_list._containers[5].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[5].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[5].get_child(2))
+	
+	_buttons_list._buttons.append(_buttons_list._containers[6].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[6].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[6].get_child(2))
+	
+	_buttons_list._buttons.append(_buttons_list._containers[7].get_child(0))
+	_buttons_list._buttons.append(_buttons_list._containers[7].get_child(1))
+	_buttons_list._buttons.append(_buttons_list._containers[7].get_child(2))
+	
+	scroll_container.focus_mode = Control.FOCUS_NONE
+	
+	set_focus_state(true)
+	
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventKey: 
 		if event.is_action_pressed("Validate"):
@@ -39,7 +77,7 @@ func _gui_input(event: InputEvent) -> void:
 			_buttons_list.select_next_button()
 			return
 		if event.is_action_pressed("HPrevious"):
-			_buttons_list.select_next_button()
+			_buttons_list.select_previous_button()
 			return
 
 func _send_spell() -> void:
@@ -57,11 +95,13 @@ func _send_spell() -> void:
 	
 func load_spells(magics: Magics) -> void:
 	
+	var cpt := 0
 	for spell: Spell in magics.get_all_spells():
-		var spell_button: SpellButton = SPELL_BUTTON.instantiate()
-		spell_button.set_spell(spell)
-		_buttons_list._buttons.append(spell_button)	
-	_load_ui()
+		#var spell_button: SpellButton = SPELL_BUTTON.instantiate()
+		#spell_button.set_spell(spell)
+		_buttons_list._buttons[cpt].set_spell(spell)	
+		cpt += 1
+	#_load_ui()
 	#for spells: Spells in :
 		#var action_button: ActionButton = ACTION_BUTTON.instantiate()
 		#action_button.set_action(action)
@@ -70,12 +110,12 @@ func load_spells(magics: Magics) -> void:
 
 #func delete_actions() -> void:
 
-func _load_ui():
-	var spell_cpt: int = 0
-	
-	for spell_button: CommandButton in _buttons_list._buttons:
-		_buttons_list._containers[spell_cpt/3].add_child(spell_button)
-		spell_cpt += 1
+#func _load_ui():
+	#var spell_cpt: int = 0
+	#
+	#for spell_button: CommandButton in _buttons_list._buttons:
+		#_buttons_list._containers[spell_cpt/3].add_child(spell_button)
+		#spell_cpt += 1
 
 func delete_spells():
 	_buttons_list.remove_all_buttons()
@@ -89,6 +129,18 @@ func set_focus_state(p_focus_state: bool, p_authorize_multiple_selection: bool =
 	
 	_authorize_multiple_selection = p_authorize_multiple_selection
 	_current_mode_selection = MODE_SELECTION.SINGLE
-	#focus_mode = Control.FOCUS_ALL
+	focus_mode = Control.FOCUS_ALL
 	grab_focus()
 	_buttons_list.select_first()
+
+
+func _on_mouse_entered() -> void:
+	print(get_viewport().gui_get_focus_owner())
+
+
+func _on_scroll_container_scroll_started() -> void:
+	print("scroll started")
+
+
+func _on_scroll_container_scroll_ended() -> void:
+	print("scroll ended")

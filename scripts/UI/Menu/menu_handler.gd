@@ -58,8 +58,8 @@ func set_focus_state(p_focus_state: bool, p_authorize_multiple_selection: bool =
 	
 	_authorize_multiple_selection = p_authorize_multiple_selection
 	_current_mode_selection = MODE_SELECTION.SINGLE
-	focus_mode = Control.FOCUS_ALL
-	grab_focus()
+	focus_mode = Control.FOCUS_NONE
+	_buttons.focus_mode = Control.FOCUS_NONE
 	_buttons_list.select_first()
 
 func _load_ui():
