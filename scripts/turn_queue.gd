@@ -70,11 +70,6 @@ func play_turn():
 		
 		active_character.act()
 		active_character.print_debug_message()
-		#print_debug_message(spell, targets)
-		#var targets_data: Array[Battler] = []
-		#for battler: Battler in targets:
-			#targets_data.append(battler)
-		#active_character.act(spell, targets_data)
 	
 	end_turn()
 
