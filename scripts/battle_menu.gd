@@ -8,7 +8,7 @@ signal characters_selected(charcters: Array[Battler])
 @onready var player_character_menu: PlayerSelectionMenu = $PlayerCharacterInformations
 
 @onready var magic_spells_menu: MagicSpellsMenu = $MagicSpellsMenu
-@onready var items_menu: Panel = $ItemsMenu
+@onready var items_battle_menu: ItemsBattleMenu = $ItemsBattleMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,15 +34,17 @@ func open_menu(menu_id: String):
 		"MAGIC_SPELLS": 
 			magic_spells_menu.visible = true
 			set_focus_on_magic_spells_menu()
-		"ITEMS": items_menu.visible = true
-
+		"ITEMS": 
+			items_battle_menu.visible = true
+			set_focus_on_items_menu()
+			
 func close_menu(menu_id: String):
 	match menu_id:
 		"MAGIC_SPELLS": 
 			magic_spells_menu.visible = false
 			set_focus_on_action_selection()
 		"ITEMS": 
-			items_menu.visible = false
+			items_battle_menu.visible = false
 			set_focus_on_action_selection()
 			
 func _on_characters_selected(characters: Array[Battler]):
@@ -53,6 +55,9 @@ func update_actions_buttons(actions):
 
 func update_spells_menu(magics: Magics):
 	magic_spells_menu.load_spells(magics)
+
+func update_items_menu(items: Array[Item]):
+	items_battle_menu.load_items(items)
 
 func delete_previous_action():
 	actions_menu.reset_actions()
@@ -66,21 +71,32 @@ func set_focus_on_action_selection():
 	player_character_menu.set_focus_state(false)
 	targets_menu.set_focus_state(false)
 	magic_spells_menu.set_focus_state(false)
+	items_battle_menu.set_focus_state(false)
 
 func set_focus_on_target_selection(p_authorize_multiple_selection: bool = false):
 	targets_menu.set_focus_state(true, p_authorize_multiple_selection)
 	actions_menu.set_focus_state(false)
 	magic_spells_menu.set_focus_state(false)
 	player_character_menu.set_focus_state(false)
+	items_battle_menu.set_focus_state(false)
 
 func set_focus_on_player_character(p_authorize_multiple_selection: bool = false):
 	player_character_menu.set_focus_state(true, p_authorize_multiple_selection)
 	targets_menu.set_focus_state(false)
 	actions_menu.set_focus_state(false)
 	magic_spells_menu.set_focus_state(false)
+	items_battle_menu.set_focus_state(false)
 
 func set_focus_on_magic_spells_menu():
 	magic_spells_menu.set_focus_state(true)
+	actions_menu.set_focus_state(false)
+	player_character_menu.set_focus_state(false)
+	targets_menu.set_focus_state(false)
+	items_battle_menu.set_focus_state(false)
+
+func set_focus_on_items_menu():
+	items_battle_menu.set_focus_state(true)
+	magic_spells_menu.set_focus_state(false)
 	actions_menu.set_focus_state(false)
 	player_character_menu.set_focus_state(false)
 	targets_menu.set_focus_state(false)
@@ -93,3 +109,6 @@ func _on_spell_seleted(spell: Spell) -> void:
 
 func _on_magic_spells_menu_cancel_action() -> void:
 	close_menu("MAGIC_SPELLS")
+
+func _on_items_battle_menu_cancel_item_selection() -> void:
+	close_menu("ITEMS")
