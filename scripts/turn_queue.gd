@@ -1,6 +1,6 @@
 class_name TurnQueue extends Node2D
 
-signal ability_selected(spell: Spell)
+signal spell_selected(spell: Spell)
 signal target_selected(targets: Array[Battler])
 
 @onready var message_box: MessageBox = %MessageBox
@@ -116,7 +116,7 @@ func _select_actions() -> Spell:
 	battle_menu.set_focus_on_action_selection()
 	
 	message_box.set_message("Wait for action....")
-	var spell: Spell = await ability_selected
+	var spell: Spell = await spell_selected
 	message_box.set_message("action selected : " + spell.to_string())
 	return spell
 

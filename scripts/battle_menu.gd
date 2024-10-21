@@ -1,6 +1,6 @@
 class_name BattleMenu extends Control
 
-signal ability_selected(spell: Spell)
+signal spell_selected(spell: Spell)
 signal characters_selected(charcters: Array[Battler])
 
 @onready var actions_menu: ActionMenu = $ActionsMenu
@@ -27,7 +27,7 @@ func _on_action_selected(action: Action):
 	if action is Action.OpenMenuAction:
 		open_menu(action.menu_id)
 	else:
-		ability_selected.emit(action.spell)
+		spell_selected.emit(action.spell)
 
 func open_menu(menu_id: String):
 	match menu_id:
@@ -80,3 +80,10 @@ func set_focus_on_magic_spells_menu():
 	actions_menu.set_focus_state(false)
 	player_character_menu.set_focus_state(false)
 	targets_menu.set_focus_state(false)
+
+
+func _on_spell_seleted(spell: Spell) -> void:
+	spell_selected.emit(spell)
+	if magic_spells_menu.visible == true:
+		magic_spells_menu.set_focus_state(false)
+		magic_spells_menu.visible = false

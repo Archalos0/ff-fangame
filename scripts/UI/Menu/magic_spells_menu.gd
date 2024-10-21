@@ -114,13 +114,8 @@ func set_focus_state(p_focus_state: bool) -> void:
 	level_1.get_node("Buttons").get_child(0).grab_focus()
 
 
-func _on_mouse_entered() -> void:
-	print(get_viewport().gui_get_focus_owner())
 
-
-func _on_scroll_container_scroll_started() -> void:
-	print("scroll started")
-
-
-func _on_scroll_container_scroll_ended() -> void:
-	print("scroll ended")
+func _on_spell_button_up(spell: Spell) -> void:
+	if spell == null: return
+	
+	spell_selected.emit(spell)

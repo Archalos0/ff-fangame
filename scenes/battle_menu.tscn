@@ -122,3 +122,4 @@ offset_bottom = 156.0
 script = ExtResource("3_s47vh")
 
 [connection signal="targets_selected" from="TargetsMenu" to="." method="_on_characters_selected"]
+[connection signal="spell_selected" from="MagicSpellsMenu" to="." method="_on_spell_seleted"]
