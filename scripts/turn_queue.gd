@@ -1,6 +1,6 @@
 class_name TurnQueue extends Node2D
 
-signal ability_selected(spell: Spell)
+signal spell_selected(spell: Spell)
 signal target_selected(targets: Array[Battler])
 
 @onready var message_box: MessageBox = %MessageBox
@@ -16,7 +16,7 @@ func initialize():
 	for node_character in get_children():
 		characters.append(node_character)
 		
-	battle_menu.target_menu.load_characters(characters.filter(func(character): return not character.is_player))
+	battle_menu.targets_menu.load_characters(characters.filter(func(character): return not character.is_player))
 	battle_menu.player_character_menu.load_characters(characters.filter(func(character): return character.is_player))
 	
 	
@@ -70,11 +70,6 @@ func play_turn():
 		
 		active_character.act()
 		active_character.print_debug_message()
-		#print_debug_message(spell, targets)
-		#var targets_data: Array[Battler] = []
-		#for battler: Battler in targets:
-			#targets_data.append(battler)
-		#active_character.act(spell, targets_data)
 	
 	end_turn()
 
@@ -99,6 +94,7 @@ func is_action_and_target_valid(spell: Spell, targets: Array[Battler]):
 func end_turn():
 	active_character.end_turn()
 	battle_menu.delete_previous_action()
+	battle_menu.delete_previous_spells()
 	set_next_character()
 	play_turn()
 
@@ -115,7 +111,7 @@ func _select_actions() -> Spell:
 	battle_menu.set_focus_on_action_selection()
 	
 	message_box.set_message("Wait for action....")
-	var spell: Spell = await ability_selected
+	var spell: Spell = await spell_selected
 	message_box.set_message("action selected : " + spell.to_string())
 	return spell
 

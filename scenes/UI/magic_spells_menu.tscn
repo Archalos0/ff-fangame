@@ -1,0 +1,399 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv7n831kifbr4"]
+
+[ext_resource type="Script" path="res://scripts/UI/Menu/magic_spells_menu.gd" id="1_1p7u6"]
+[ext_resource type="PackedScene" uid="uid://bytgvx3utwakv" path="res://scenes/UI/spell_button.tscn" id="3_jc8og"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3q5r"]
+bg_color = Color(0.141176, 0.301961, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="MagicSpellsMenu" type="Panel"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 131.0
+offset_top = -606.0
+offset_right = 427.0
+offset_bottom = -440.0
+grow_vertical = 0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3q5r")
+script = ExtResource("1_1p7u6")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -10.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+scroll_horizontal_custom_step = 20.0
+scroll_vertical_custom_step = 20.0
+vertical_scroll_mode = 3
+
+[node name="List" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Level1" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level1"]
+layout_mode = 2
+text = "Lvl. 1"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level1"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level1/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level2/Buttons/FirstSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level1/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level2/Buttons/SecondSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level1/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level2/Buttons/ThirdSlot")
+focus_mode = 0
+
+[node name="Level2" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level2"]
+layout_mode = 2
+text = "Lvl. 2"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level2"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level2/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../../Level1/Buttons/FirstSlot")
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level3/Buttons/FirstSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level2/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_top = NodePath("../../../Level1/Buttons/SecondSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level3/Buttons/SecondSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level2/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_top = NodePath("../../../Level1/Buttons/ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level3/Buttons/ThirdSlot")
+focus_mode = 0
+
+[node name="Level3" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level3"]
+layout_mode = 2
+text = "Lvl. 3"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level3"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level3/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../../Level2/Buttons/FirstSlot")
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level4/Buttons/FirstSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level3/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_top = NodePath("../../../Level2/Buttons/SecondSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level4/Buttons/SecondSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level3/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_top = NodePath("../../../Level2/Buttons/ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level4/Buttons/ThirdSlot")
+focus_mode = 0
+
+[node name="Level4" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level4"]
+layout_mode = 2
+text = "Lvl. 4"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level4"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level4/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../../Level3/Buttons/FirstSlot")
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level5/Buttons/FirstSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level4/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_top = NodePath("../../../Level3/Buttons/SecondSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level5/Buttons/SecondSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level4/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_top = NodePath("../../../Level3/Buttons/ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level5/Buttons/ThirdSlot")
+focus_mode = 0
+
+[node name="Level5" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level5"]
+layout_mode = 2
+text = "Lvl. 5"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level5"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level5/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../../Level4/Buttons/FirstSlot")
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level6/Buttons/FirstSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level5/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_top = NodePath("../../../Level4/Buttons/SecondSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level6/Buttons/SecondSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level5/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_top = NodePath("../../../Level4/Buttons/ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level6/Buttons/ThirdSlot")
+focus_mode = 0
+
+[node name="Level6" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level6"]
+layout_mode = 2
+text = "Lvl. 6"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level6"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level6/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../../Level5/Buttons/FirstSlot")
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level7/Buttons/FirstSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level6/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_top = NodePath("../../../Level5/Buttons/SecondSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level7/Buttons/SecondSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level6/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_top = NodePath("../../../Level5/Buttons/ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level7/Buttons/ThirdSlot")
+focus_mode = 0
+
+[node name="Level7" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level7"]
+layout_mode = 2
+text = "Lvl. 7"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level7"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level7"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level7/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../../Level6/Buttons/FirstSlot")
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_neighbor_bottom = NodePath("../../../Level8/Buttons/FirstSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level7/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_top = NodePath("../../../Level6/Buttons/SecondSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level8/Buttons/SecondSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level7/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_top = NodePath("../../../Level6/Buttons/ThirdSlot")
+focus_neighbor_bottom = NodePath("../../../Level8/Buttons/ThirdSlot")
+focus_mode = 0
+
+[node name="Level8" type="HBoxContainer" parent="ScrollContainer/List"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="ScrollContainer/List/Level8"]
+layout_mode = 2
+text = "Lvl. 8"
+
+[node name="mp" type="Label" parent="ScrollContainer/List/Level8"]
+layout_mode = 2
+text = "XX / XX"
+
+[node name="Buttons" type="HBoxContainer" parent="ScrollContainer/List/Level8"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FirstSlot" parent="ScrollContainer/List/Level8/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_top = NodePath("../../../Level7/Buttons/FirstSlot")
+focus_neighbor_right = NodePath("../SecondSlot")
+focus_mode = 0
+
+[node name="SecondSlot" parent="ScrollContainer/List/Level8/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../FirstSlot")
+focus_neighbor_top = NodePath("../../../Level7/Buttons/SecondSlot")
+focus_neighbor_right = NodePath("../ThirdSlot")
+focus_mode = 0
+
+[node name="ThirdSlot" parent="ScrollContainer/List/Level8/Buttons" instance=ExtResource("3_jc8og")]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../SecondSlot")
+focus_neighbor_top = NodePath("../../../Level7/Buttons/ThirdSlot")
+focus_mode = 0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="scroll_ended" from="ScrollContainer" to="." method="_on_scroll_container_scroll_ended"]
+[connection signal="scroll_started" from="ScrollContainer" to="." method="_on_scroll_container_scroll_started"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level1/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level1/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level1/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level2/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level2/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level2/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level3/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level3/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level3/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level4/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level4/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level4/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level5/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level5/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level5/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level6/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level6/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level6/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level7/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level7/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level7/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level8/Buttons/FirstSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level8/Buttons/SecondSlot" to="." method="_on_spell_button_up"]
+[connection signal="spell_selected" from="ScrollContainer/List/Level8/Buttons/ThirdSlot" to="." method="_on_spell_button_up"]
+
+[editable path="ScrollContainer/List/Level1/Buttons/FirstSlot"]
+[editable path="ScrollContainer/List/Level2/Buttons/FirstSlot"]
+[editable path="ScrollContainer/List/Level3/Buttons/FirstSlot"]
+[editable path="ScrollContainer/List/Level4/Buttons/FirstSlot"]
+[editable path="ScrollContainer/List/Level5/Buttons/FirstSlot"]
+[editable path="ScrollContainer/List/Level6/Buttons/FirstSlot"]
+[editable path="ScrollContainer/List/Level7/Buttons/FirstSlot"]
+[editable path="ScrollContainer/List/Level8/Buttons/FirstSlot"]

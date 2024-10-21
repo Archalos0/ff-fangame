@@ -5,6 +5,8 @@ enum MODE_SELECTION {
 	MULTIPLE,
 }
 
+var _buttons_list: ButtonsListHandler = ButtonsListHandler.new()
+
 @onready var _buttons: ButtonsHandler = $Buttons
 
 var _has_focus: bool = false
@@ -13,7 +15,7 @@ var _current_mode_selection: MODE_SELECTION = MODE_SELECTION.SINGLE
 
 func _ready() -> void:
 	focus_mode = Panel.FOCUS_NONE
-	_buttons.initialize()
+	if _buttons != null : _buttons.initialize()
 
 #func select_all():
 	#if _has_focus: 
@@ -27,9 +29,9 @@ func _ready() -> void:
 		#push_error("Le menu " + name + " n'a pas le focus")
 
 func _reset_ui() -> void:
-	_buttons.unselect_all()
+	_buttons_list.unselect_all()
 	focus_mode = Control.FOCUS_NONE
-	_buttons.focus_mode = Control.FOCUS_NONE
+	#_buttons.focus_mode = Control.FOCUS_NONE
 	_authorize_multiple_selection = false
 	_current_mode_selection = MODE_SELECTION.SINGLE
 
@@ -56,6 +58,10 @@ func set_focus_state(p_focus_state: bool, p_authorize_multiple_selection: bool =
 	
 	_authorize_multiple_selection = p_authorize_multiple_selection
 	_current_mode_selection = MODE_SELECTION.SINGLE
-	focus_mode = Control.FOCUS_ALL
-	grab_focus()
-	_buttons.select_first()
+	focus_mode = Control.FOCUS_NONE
+	_buttons.focus_mode = Control.FOCUS_NONE
+	_buttons_list.select_first()
+
+func _load_ui():
+	push_error("The method _load_ui() has not been implementing in the derived class")
+	

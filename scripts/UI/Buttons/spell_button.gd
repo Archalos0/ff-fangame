@@ -1,5 +1,7 @@
 class_name SpellButton extends CommandButton
 
+signal spell_selected(spell: Spell)
+
 var spell: Spell
 
 func _ready() -> void:
@@ -18,3 +20,9 @@ func _on_focus_entered() -> void:
 
 func _on_focus_exited() -> void:
 	on_focus_exited()
+
+func _on_resized() -> void:
+	on_resized()
+
+func _on_button_up() -> void:
+	spell_selected.emit(spell)

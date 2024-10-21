@@ -1,44 +1,56 @@
-class_name ActionMenu extends MenuHandler
+class_name ActionMenu extends Panel
 
-signal ability_selected(spell: Spell)
-signal open_menu(menu_id: String)
+signal action_button_selected(action: Action)
 
-const ACTION_BUTTON = preload("res://scenes/UI/action_button.tscn")
+var _has_focus: bool = false
 
-func _gui_input(event: InputEvent) -> void:
-	if event is InputEventKey: 
-		if event.is_action_pressed("Validate"):
-			_send_action()
-			_reset_ui()
-			return
-		if event.is_action_pressed("Next"):
-			_buttons.select_next_button()
-			return
-		if event.is_action_pressed("Previous"):
-			_buttons.select_previous_button()
-			return
+@onready var buttons: VBoxContainer = $Buttons
 
-func _send_action() -> void:
-	var buttons_selected: Array[CommandButton] = _buttons.get_buttons_selected()
-	if buttons_selected.size() == 0:
-		push_error("Pas d'action sélectionnée")
-		return
+@onready var action_1: ActionButton = $Buttons/Action1
+@onready var action_2: ActionButton = $Buttons/Action2
+@onready var action_3: ActionButton = $Buttons/Action3
+@onready var action_4: ActionButton = $Buttons/Action4
+
+func _ready() -> void:
 	
-	if buttons_selected.size() > 1:
-		push_error("Plus d'une action sélectionnée")
-		return
-	
-	if buttons_selected[0].action is Action.OpenMenuAction:
-		open_menu.emit(buttons_selected[0].action.menu_id)
-	else:
-		ability_selected.emit(buttons_selected[0].action.spell)
+	action_1.action_button_selected.connect(Callable(self, "_on_action_selected"))
+	action_2.action_button_selected.connect(Callable(self, "_on_action_selected"))
+	action_3.action_button_selected.connect(Callable(self, "_on_action_selected"))
+	action_4.action_button_selected.connect(Callable(self, "_on_action_selected"))
+
 
 func load_actions(p_actions: Array[Action]) -> void:
-	for action: Action in p_actions:
-		var action_button: ActionButton = ACTION_BUTTON.instantiate()
-		action_button.set_action(action)
-		_buttons.add_child(action_button)
-	_buttons.initialize()
+	action_1.set_action(p_actions[0])
+	action_2.set_action(p_actions[1])
+	action_3.set_action(p_actions[2])
+	action_4.set_action(p_actions[3])
 
-func delete_actions() -> void:
-	_buttons.remove_all_buttons()
+func reset_actions() -> void:
+	action_1.set_action(null)
+	action_2.set_action(null)
+	action_3.set_action(null)
+	action_4.set_action(null)
+
+func set_focus_state(p_focus_state: bool):
+	_has_focus = p_focus_state
+	
+	if not _has_focus:
+		focus_mode = Control.FOCUS_NONE
+		buttons.focus_mode = Control.FOCUS_NONE
+		action_1.focus_mode = Control.FOCUS_NONE
+		action_2.focus_mode = Control.FOCUS_NONE
+		action_3.focus_mode = Control.FOCUS_NONE
+		action_4.focus_mode = Control.FOCUS_NONE
+		return
+	
+	focus_mode = Control.FOCUS_NONE
+	buttons.focus_mode = Control.FOCUS_NONE
+	action_1.focus_mode = Control.FOCUS_ALL
+	action_2.focus_mode = Control.FOCUS_ALL
+	action_3.focus_mode = Control.FOCUS_ALL
+	action_4.focus_mode = Control.FOCUS_ALL
+	
+	action_1.grab_focus()
+		
+func _on_action_selected(action_selected: Action) -> void:
+	action_button_selected.emit(action_selected)

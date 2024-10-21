@@ -135,10 +135,10 @@ func character_selected():
 		arrow_character_selection.visible = false
 
 func print_debug_message():
-	var debug_message = _character_data.character_name + " is using " + spell_cast.spell.to_string()
+	var debug_message = _character_data.character_name + " is using " + spell_cast.spell.spell_name
 	if spell_cast.targets != []:
 		debug_message += " on "
 		for character: Battler in spell_cast.targets:
-			debug_message += character.to_string() + " "
+			debug_message += character.get_character_name() + " "
 	
 	print(debug_message)
