@@ -1,84 +1,20 @@
-class_name MagicSpellsMenu extends MenuHandler
+class_name MagicSpellsMenu extends Panel
 
 signal spell_selected(spell: Spell)
 
-const SPELL_BUTTON = preload("res://scenes/UI/spell_button.tscn")
-
-@onready var level_1: HBoxContainer = $ScrollContainer/Buttons/Level1
-@onready var level_2: HBoxContainer = $ScrollContainer/Buttons/Level2
-@onready var level_3: HBoxContainer = $ScrollContainer/Buttons/Level3
-@onready var level_4: HBoxContainer = $ScrollContainer/Buttons/Level4
-@onready var level_5: HBoxContainer = $ScrollContainer/Buttons/Level5
-@onready var level_6: HBoxContainer = $ScrollContainer/Buttons/Level6
-@onready var level_7: HBoxContainer = $ScrollContainer/Buttons/Level7
-@onready var level_8: HBoxContainer = $ScrollContainer/Buttons/Level8
+@onready var level_1: HBoxContainer = $ScrollContainer/List/Level1
+@onready var level_2: HBoxContainer = $ScrollContainer/List/Level2
+@onready var level_3: HBoxContainer = $ScrollContainer/List/Level3
+@onready var level_4: HBoxContainer = $ScrollContainer/List/Level4
+@onready var level_5: HBoxContainer = $ScrollContainer/List/Level5
+@onready var level_6: HBoxContainer = $ScrollContainer/List/Level6
+@onready var level_7: HBoxContainer = $ScrollContainer/List/Level7
+@onready var level_8: HBoxContainer = $ScrollContainer/List/Level8
 
 @onready var scroll_container: ScrollContainer = $ScrollContainer
+@onready var list: VBoxContainer = $ScrollContainer/List
 
-func _ready() -> void:
-	_buttons_list._containers.append(level_1.get_node("HBoxContainer"))
-	_buttons_list._containers.append(level_2.get_node("HBoxContainer"))
-	_buttons_list._containers.append(level_3.get_node("HBoxContainer"))
-	_buttons_list._containers.append(level_4.get_node("HBoxContainer"))
-	_buttons_list._containers.append(level_5.get_node("HBoxContainer"))
-	_buttons_list._containers.append(level_6.get_node("HBoxContainer"))
-	_buttons_list._containers.append(level_7.get_node("HBoxContainer"))
-	_buttons_list._containers.append(level_8.get_node("HBoxContainer"))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[0].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[0].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[0].get_child(2))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[1].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[1].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[1].get_child(2))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[2].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[2].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[2].get_child(2))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[3].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[3].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[3].get_child(2))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[4].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[4].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[4].get_child(2))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[5].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[5].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[5].get_child(2))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[6].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[6].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[6].get_child(2))
-	
-	_buttons_list._buttons.append(_buttons_list._containers[7].get_child(0))
-	_buttons_list._buttons.append(_buttons_list._containers[7].get_child(1))
-	_buttons_list._buttons.append(_buttons_list._containers[7].get_child(2))
-	
-	scroll_container.focus_mode = Control.FOCUS_NONE
-	
-	set_focus_state(true)
-	
-func _gui_input(event: InputEvent) -> void:
-	if event is InputEventKey: 
-		if event.is_action_pressed("Validate"):
-			_send_spell()
-			_reset_ui()
-			return
-		if event.is_action_pressed("Next"):
-			_buttons_list.select_bottom_button()
-			return
-		if event.is_action_pressed("Previous"):
-			_buttons_list.select_top_button()
-			return
-		if event.is_action_pressed("HNext"):
-			_buttons_list.select_next_button()
-			return
-		if event.is_action_pressed("HPrevious"):
-			_buttons_list.select_previous_button()
-			return
+var _has_focus: bool = false
 
 func _send_spell() -> void:
 	#var buttons_selected: Array[CommandButton] = _buttons.get_buttons_selected()
@@ -95,43 +31,87 @@ func _send_spell() -> void:
 	
 func load_spells(magics: Magics) -> void:
 	
-	var cpt := 0
-	for spell: Spell in magics.get_all_spells():
-		#var spell_button: SpellButton = SPELL_BUTTON.instantiate()
-		#spell_button.set_spell(spell)
-		_buttons_list._buttons[cpt].set_spell(spell)	
-		cpt += 1
-	#_load_ui()
-	#for spells: Spells in :
-		#var action_button: ActionButton = ACTION_BUTTON.instantiate()
-		#action_button.set_action(action)
-		#_buttons.add_child(action_button)
-	#_buttons.initialize()
+	level_1.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_1.slot_1)
+	level_1.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_1.slot_2)
+	level_1.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_1.slot_3)
+	
+	level_2.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_2.slot_1)
+	level_2.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_2.slot_2)
+	level_2.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_2.slot_3)
+	
+	level_3.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_3.slot_1)
+	level_3.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_3.slot_2)
+	level_3.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_3.slot_3)
+	
+	level_4.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_4.slot_1)
+	level_4.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_4.slot_2)
+	level_4.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_4.slot_3)
+	
+	level_5.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_5.slot_1)
+	level_5.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_5.slot_2)
+	level_5.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_5.slot_3)
+	
+	level_6.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_6.slot_1)
+	level_6.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_6.slot_2)
+	level_6.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_6.slot_3)
+	
+	level_7.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_7.slot_1)
+	level_7.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_7.slot_2)
+	level_7.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_7.slot_3)
+	
+	level_8.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_8.slot_1)
+	level_8.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_8.slot_2)
+	level_8.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_8.slot_3)
+	
 
-#func delete_actions() -> void:
-
-#func _load_ui():
-	#var spell_cpt: int = 0
-	#
-	#for spell_button: CommandButton in _buttons_list._buttons:
-		#_buttons_list._containers[spell_cpt/3].add_child(spell_button)
-		#spell_cpt += 1
-
-func delete_spells():
-	_buttons_list.remove_all_buttons()
-
-func set_focus_state(p_focus_state: bool, p_authorize_multiple_selection: bool = false) -> void:
+func reset_spells():
+	level_1.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_1.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_1.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+	level_2.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_2.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_2.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+	level_3.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_3.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_3.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+	level_4.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_4.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_4.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+	level_5.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_5.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_5.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+	level_6.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_6.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_6.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+	level_7.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_7.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_7.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+	level_8.get_node("Buttons").get_node("FirstSlot").set_spell(null)
+	level_8.get_node("Buttons").get_node("SecondSlot").set_spell(null)
+	level_8.get_node("Buttons").get_node("ThirdSlot").set_spell(null)
+	
+func set_focus_state(p_focus_state: bool) -> void:
 	_has_focus = p_focus_state
 	
 	if not _has_focus:
-		_reset_ui()
+		for level in list.get_children():
+			for spell_button: SpellButton in level.get_node("Buttons").get_children():
+				spell_button.focus_mode = Control.FOCUS_NONE
+			
 		return
 	
-	_authorize_multiple_selection = p_authorize_multiple_selection
-	_current_mode_selection = MODE_SELECTION.SINGLE
-	focus_mode = Control.FOCUS_ALL
-	grab_focus()
-	_buttons_list.select_first()
+	for level in list.get_children():
+		for spell_button: SpellButton in level.get_node("Buttons").get_children():
+				spell_button.focus_mode = Control.FOCUS_ALL
+	
+	level_1.get_node("Buttons").get_child(0).grab_focus()
 
 
 func _on_mouse_entered() -> void:
