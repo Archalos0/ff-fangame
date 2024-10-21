@@ -66,7 +66,6 @@ text = "Action 4"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="button_up" from="Buttons/Action1" to="Buttons/Action1" method="_on_button_up"]
 [connection signal="button_up" from="Buttons/Action2" to="." method="_on_button_up"]
 [connection signal="button_up" from="Buttons/Action3" to="." method="_on_button_up"]
 [connection signal="button_up" from="Buttons/Action4" to="." method="_on_button_up"]

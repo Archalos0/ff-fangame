@@ -1,22 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwxim7a03270n"]
+[gd_scene load_steps=7 format=3 uid="uid://bwxim7a03270n"]
 
 [ext_resource type="Script" path="res://scripts/battle_menu.gd" id="1_quhk2"]
 [ext_resource type="PackedScene" uid="uid://djwiw62a5ltqt" path="res://scenes/UI/actions_menu.tscn" id="2_2qldp"]
 [ext_resource type="PackedScene" uid="uid://c4tpjnj433uhm" path="res://scenes/UI/targets_menu.tscn" id="3_nkyla"]
-[ext_resource type="Script" path="res://scripts/UI/Menu/buttons_handler.gd" id="3_s47vh"]
+[ext_resource type="PackedScene" uid="uid://dss2ya53djm1h" path="res://scenes/UI/items_battle_menu.tscn" id="5_8bhlv"]
 [ext_resource type="PackedScene" uid="uid://dv7n831kifbr4" path="res://scenes/UI/magic_spells_menu.tscn" id="5_w5h22"]
 [ext_resource type="PackedScene" uid="uid://bw77d3egff4jo" path="res://scenes/UI/player_character_informations.tscn" id="6_bdbux"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3q5r"]
-bg_color = Color(0.141176, 0.301961, 1, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [node name="BattleMenu" type="Control"]
 layout_mode = 3
@@ -62,42 +51,17 @@ offset_right = 531.0
 offset_bottom = 635.0
 grow_vertical = 1
 
-[node name="ItemsMenu" type="Panel" parent="."]
+[node name="ItemsBattleMenu" parent="." instance=ExtResource("5_8bhlv")]
 visible = false
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 235.0
-offset_top = -179.0
-offset_right = 531.0
-offset_bottom = -13.0
-grow_vertical = 0
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_p3q5r")
-
-[node name="Label" type="Label" parent="ItemsMenu"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.5
-offset_top = -11.5
-offset_right = 81.5
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "ITEMS MENU"
-
-[node name="Buttons" type="VBoxContainer" parent="ItemsMenu"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 9.0
-offset_right = 289.0
-offset_bottom = 159.0
-script = ExtResource("3_s47vh")
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 235.0
+offset_top = 469.0
+offset_right = 531.0
+offset_bottom = 635.0
+grow_vertical = 1
 
 [node name="PlayerCharacterInformations" parent="." instance=ExtResource("6_bdbux")]
 layout_mode = 0
@@ -111,4 +75,6 @@ offset_bottom = 635.0
 grow_vertical = 1
 
 [connection signal="targets_selected" from="TargetsMenu" to="." method="_on_characters_selected"]
+[connection signal="cancel_action" from="MagicSpellsMenu" to="." method="_on_magic_spells_menu_cancel_action"]
 [connection signal="spell_selected" from="MagicSpellsMenu" to="." method="_on_spell_seleted"]
+[connection signal="cancel_item_selection" from="ItemsBattleMenu" to="." method="_on_items_battle_menu_cancel_item_selection"]

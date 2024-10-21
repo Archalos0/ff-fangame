@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bytgvx3utwakv"]
+[gd_scene load_steps=7 format=3 uid="uid://blnhc3xig5ipf"]
 
-[ext_resource type="Script" path="res://scripts/UI/Buttons/spell_button.gd" id="1_a3rxq"]
-[ext_resource type="Texture2D" uid="uid://ig2gs72xw203" path="res://assets/Hand3.png" id="2_kdpad"]
+[ext_resource type="Texture2D" uid="uid://diluopplb0q31" path="res://assets/sprites/menu_elements/armor.png" id="1_gxw8g"]
+[ext_resource type="Texture2D" uid="uid://ig2gs72xw203" path="res://assets/Hand3.png" id="2_gfipa"]
+[ext_resource type="Script" path="res://scripts/UI/Buttons/item_button.gd" id="2_slfiy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fxjg"]
 
@@ -12,24 +13,22 @@ Button/colors/font_focus_color = Color(1, 0.941176, 0.133333, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_0fxjg")
 Button/styles/normal = SubResource("StyleBoxEmpty_4e6uj")
 
-[node name="SpellButton" type="Button"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -25.0
-offset_right = -837.0
-offset_bottom = -623.0
+[node name="ItemButton" type="Button"]
+offset_right = 91.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_w8wuk")
+text = "Potion : 8"
+icon = ExtResource("1_gxw8g")
 alignment = 0
-script = ExtResource("1_a3rxq")
+script = ExtResource("2_slfiy")
 
 [node name="HandSelection" type="Sprite2D" parent="."]
 position = Vector2(-32, 25)
 rotation = 0.698132
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_kdpad")
+texture = ExtResource("2_gfipa")
 flip_h = true
 
 [connection signal="button_up" from="." to="." method="_on_button_up"]

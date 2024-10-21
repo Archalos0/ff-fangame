@@ -1,6 +1,7 @@
 class_name MagicSpellsMenu extends Panel
 
 signal spell_selected(spell: Spell)
+signal cancel_action()
 
 @onready var level_1: HBoxContainer = $ScrollContainer/List/Level1
 @onready var level_2: HBoxContainer = $ScrollContainer/List/Level2
@@ -113,9 +114,11 @@ func set_focus_state(p_focus_state: bool) -> void:
 	
 	level_1.get_node("Buttons").get_child(0).grab_focus()
 
-
-
 func _on_spell_button_up(spell: Spell) -> void:
 	if spell == null: return
 	
 	spell_selected.emit(spell)
+
+
+func _on_cancel_action() -> void:
+	cancel_action.emit()
