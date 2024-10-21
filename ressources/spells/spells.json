@@ -515,7 +515,7 @@
     "type": "WHITE",
     "power": 42,
     "hit_percentage": 100,
-    "target": "A",
+    "target": "AA",
     "statuses": [],
     "elements": ["RECOVERY"],
     "cast_by": ["De", "MK", "Ra", "RM", "Sa", "WM"]

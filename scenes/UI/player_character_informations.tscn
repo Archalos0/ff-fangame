@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw77d3egff4jo"]
+
+[ext_resource type="Script" path="res://scripts/UI/Menu/player_selection_menu.gd" id="1_d5pop"]
+[ext_resource type="PackedScene" uid="uid://cvrnv0dr30iee" path="res://scenes/UI/character_informations.tscn" id="2_r4ck6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3q5r"]
+bg_color = Color(0.141176, 0.301961, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="PlayerCharacterMenu" type="Panel"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -648.0
+offset_right = 579.0
+offset_bottom = -482.0
+grow_vertical = 0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3q5r")
+script = ExtResource("1_d5pop")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 569.0
+offset_bottom = 156.0
+
+[node name="Character1" parent="Buttons" instance=ExtResource("2_r4ck6")]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+
+[node name="Character2" parent="Buttons" instance=ExtResource("2_r4ck6")]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+
+[node name="Character3" parent="Buttons" instance=ExtResource("2_r4ck6")]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+
+[node name="Character4" parent="Buttons" instance=ExtResource("2_r4ck6")]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="change_mode_selection" from="Buttons/Character1" to="." method="_switch_selection_mode"]
+[connection signal="character_selected" from="Buttons/Character1" to="." method="_on_character_selected"]
+[connection signal="change_mode_selection" from="Buttons/Character2" to="." method="_switch_selection_mode"]
+[connection signal="character_selected" from="Buttons/Character2" to="." method="_on_character_selected"]
+[connection signal="change_mode_selection" from="Buttons/Character3" to="." method="_switch_selection_mode"]
+[connection signal="character_selected" from="Buttons/Character3" to="." method="_on_character_selected"]
+[connection signal="change_mode_selection" from="Buttons/Character4" to="." method="_switch_selection_mode"]
+[connection signal="character_selected" from="Buttons/Character4" to="." method="_on_character_selected"]
