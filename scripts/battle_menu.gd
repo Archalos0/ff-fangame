@@ -63,7 +63,7 @@ func update_active_character_ui(battler: Battler):
 func update_actions_buttons(actions):
 	actions_menu.load_actions(actions)
 
-func update_spells_menu(magics: Magics):
+func update_spells_menu(magics: Array[Spell]):
 	magic_spells_menu.load_spells(magics)
 
 func update_items_menu(items: Array[Item]):

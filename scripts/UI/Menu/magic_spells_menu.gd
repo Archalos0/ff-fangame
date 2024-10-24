@@ -30,39 +30,39 @@ func _send_spell() -> void:
 	#spell_selected.emit(buttons_selected[0].spell)
 	pass
 	
-func load_spells(magics: Magics) -> void:
+func load_spells(spells: Array[Spell]) -> void:
 	
-	level_1.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_1.slot_1)
-	level_1.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_1.slot_2)
-	level_1.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_1.slot_3)
+	level_1.get_node("Buttons").get_node("FirstSlot").set_spell(spells[0])
+	level_1.get_node("Buttons").get_node("SecondSlot").set_spell(spells[1])
+	level_1.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[2])
 	
-	level_2.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_2.slot_1)
-	level_2.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_2.slot_2)
-	level_2.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_2.slot_3)
+	level_2.get_node("Buttons").get_node("FirstSlot").set_spell(spells[3])
+	level_2.get_node("Buttons").get_node("SecondSlot").set_spell(spells[4])
+	level_2.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[5])
 	
-	level_3.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_3.slot_1)
-	level_3.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_3.slot_2)
-	level_3.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_3.slot_3)
+	level_3.get_node("Buttons").get_node("FirstSlot").set_spell(spells[6])
+	level_3.get_node("Buttons").get_node("SecondSlot").set_spell(spells[7])
+	level_3.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[8])
 	
-	level_4.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_4.slot_1)
-	level_4.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_4.slot_2)
-	level_4.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_4.slot_3)
+	level_4.get_node("Buttons").get_node("FirstSlot").set_spell(spells[9])
+	level_4.get_node("Buttons").get_node("SecondSlot").set_spell(spells[10])
+	level_4.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[11])
 	
-	level_5.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_5.slot_1)
-	level_5.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_5.slot_2)
-	level_5.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_5.slot_3)
+	level_5.get_node("Buttons").get_node("FirstSlot").set_spell(spells[12])
+	level_5.get_node("Buttons").get_node("SecondSlot").set_spell(spells[13])
+	level_5.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[14])
 	
-	level_6.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_6.slot_1)
-	level_6.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_6.slot_2)
-	level_6.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_6.slot_3)
+	level_6.get_node("Buttons").get_node("FirstSlot").set_spell(spells[15])
+	level_6.get_node("Buttons").get_node("SecondSlot").set_spell(spells[16])
+	level_6.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[17])
 	
-	level_7.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_7.slot_1)
-	level_7.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_7.slot_2)
-	level_7.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_7.slot_3)
+	level_7.get_node("Buttons").get_node("FirstSlot").set_spell(spells[18])
+	level_7.get_node("Buttons").get_node("SecondSlot").set_spell(spells[19])
+	level_7.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[20])
 	
-	level_8.get_node("Buttons").get_node("FirstSlot").set_spell(magics.level_8.slot_1)
-	level_8.get_node("Buttons").get_node("SecondSlot").set_spell(magics.level_8.slot_2)
-	level_8.get_node("Buttons").get_node("ThirdSlot").set_spell(magics.level_8.slot_3)
+	level_8.get_node("Buttons").get_node("FirstSlot").set_spell(spells[21])
+	level_8.get_node("Buttons").get_node("SecondSlot").set_spell(spells[22])
+	level_8.get_node("Buttons").get_node("ThirdSlot").set_spell(spells[23])
 	
 
 func reset_spells():

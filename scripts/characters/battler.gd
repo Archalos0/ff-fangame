@@ -134,7 +134,7 @@ func get_actions() -> Array[Action]:
 	#else:
 		#get_heal(spell.power)
 
-func get_spells() -> Magics:
+func get_spells() -> Array[Spell]:
 	return _character_data.get_spells()
 
 func get_hit(damage: int):

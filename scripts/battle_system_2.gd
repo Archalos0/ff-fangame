@@ -21,7 +21,7 @@ enum BATTLE_STATE {
 }
 
 const BATTLER_OBJECT = preload("res://scenes/character.tscn")
-const monsters_id: Array[String] = ["goblin", "goblin", "carbuncle"]
+const monsters_id: Array[String] = ["goblin", "killer_bee", "carbuncle"]
 
 var battle_state: BATTLE_STATE
 
@@ -137,7 +137,7 @@ func select_next_character():
 func monsters_turn():
 	for monster in monsters:
 		monster.spell_cast.spell = monster.get_spells().pick_random()
-		monster.spell_cast.targets = player_characters.pick_random()
+		monster.spell_cast.targets = [player_characters.pick_random()]
 		
 	next_battle_state()
 
