@@ -143,8 +143,9 @@ func monsters_turn():
 
 func play_turn():
 	
-	var all_battlers: Array[Battler] = player_characters
-	all_battlers.append_array(monsters)
+	var all_battlers: Array[Battler] = []
+	all_battlers.append_array(player_characters.duplicate())
+	all_battlers.append_array(monsters.duplicate())
 	
 	all_battlers.shuffle()
 	
