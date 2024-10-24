@@ -1,195 +1,135 @@
-class_name TurnQueue extends Node2D
+class_name BattleSystem extends Node2D
+
+signal changing_active_character()
+signal loading_complete()
+
+signal wait_for_spell()
+signal wait_for_targets()
 
 signal spell_selected(spell: Spell)
-signal target_selected(targets: Array[Battler])
+signal targets_selected(targets: Array[Battler])
 
-@onready var message_box: MessageBox = %MessageBox
-@onready var battle_menu: BattleMenu = %BattleMenu
-
-var characters: Array[Battler] = []
-var active_character: Battler = null
-
-enum BattleState {
+enum BATTLE_STATE {
 	# Prepare battle
 	LOAD_BATTLE_DATA,
 	
 	# During battle
-	LOAD_ACTIVE_CHARACTER_DATA,
-	SELECT_ACTION,
-	SELECT_TARGETS,
+	WAIT_FOR_SPELL,
+	WAIT_FOR_TARGETS,
+	NEXT_CHARACTER,
+	
+	# Executing all actions
 	PLAY_TURN,
 	
 	# End battle 
 	WIN,
-	LOST
+	LOST 
 }
 
-func initialize():
-	
-	active_character = get_child(0)
-	for node_character in get_children():
-		characters.append(node_character)
+const BATTLER_OBJECT = preload("res://scenes/character.tscn")
+
+const monsters_id: Array[String] = ["goblin", "goblin", "carbuncle"]
+
+var battle_state: BATTLE_STATE
+
+var characters: Array[Battler] = []
+var active_character: Battler = null
+
+#func _ready() -> void:
+	#Game.load_save("res://scripts/save/save.json")
+	#
+	#var monsters_data: Array[Monster] = []
+	#for monster_id: String in monsters_id:
+		#var monster_data: Monster = Monster.new()
+		#monster_data.load(monster_id)
+		#monsters_data.append(monster_data)
+	#
+	#load_battle_data(Game.get_player_characters(), monsters_data)
+
+func set_battle_state(new_battle_state: BATTLE_STATE) -> void:
+	battle_state = new_battle_state
+	match battle_state:
+		BATTLE_STATE.LOAD_BATTLE_DATA: pass
 		
-	battle_menu.targets_menu.load_characters(characters.filter(func(character): return not character.is_player))
-	battle_menu.player_character_menu.load_characters(characters.filter(func(character): return character.is_player))
+		BATTLE_STATE.WAIT_FOR_SPELL: _update_to_spell_selection()
+		BATTLE_STATE.WAIT_FOR_TARGETS: _update_to_targets_selection()
+		BATTLE_STATE.NEXT_CHARACTER: _select_next_character()
+		
+		BATTLE_STATE.PLAY_TURN: pass
+		
+		BATTLE_STATE.WIN: pass
+		BATTLE_STATE.LOST: pass
+
+func _next_battle_state() -> void:
+	match battle_state:
+		BATTLE_STATE.LOAD_BATTLE_DATA: set_battle_state(BATTLE_STATE.WAIT_FOR_SPELL)
+		
+		BATTLE_STATE.WAIT_FOR_SPELL: set_battle_state(BATTLE_STATE.WAIT_FOR_TARGETS)
+		BATTLE_STATE.WAIT_FOR_TARGETS: 
+			if characters.find(active_character) == characters.size() - 1:
+				set_battle_state(BATTLE_STATE.PLAY_TURN)
+			else:
+				set_battle_state(BATTLE_STATE.NEXT_CHARACTER)
+				
+		BATTLE_STATE.NEXT_CHARACTER: set_battle_state(BATTLE_STATE.WAIT_FOR_SPELL)
+		
+		BATTLE_STATE.PLAY_TURN: 
+			active_character = characters[0]
+			set_battle_state(BATTLE_STATE.WAIT_FOR_SPELL)
+		
+		BATTLE_STATE.WIN: pass
+		BATTLE_STATE.LOST: pass
+
+func load_battle_data(player_characters: Array[CharacterData], monsters: Array[Monster]) -> void:
+	set_battle_state(BATTLE_STATE.LOAD_BATTLE_DATA)
 	
+	characters.append_array(player_characters.map(
+		func(character): 
+			var battler: Battler = BATTLER_OBJECT.instantiate()
+			battler.load_battler(character, true)
+			return battler
+			)
+		)
 	
-	play_turn()
+	characters.append_array(monsters.map(
+		func(monster): 
+			var battler: Battler = BATTLER_OBJECT.instantiate()
+			battler.load_monster(monster)
+			return battler
+			)
+		)
+		
+	loading_complete.emit()
 	
-func play_turn():
+	active_character = characters[0]
+	changing_active_character.emit()
 	
-	if is_battle_end():
-		if active_character.is_player:
-			print("YOU WIN")
-			message_box.set_message("YOU WIN")
-		else:
-			print("YOU LOST")
-			message_box.set_message("YOU LOST")
+	set_battle_state(BATTLE_STATE.WAIT_FOR_SPELL)
+
+func _update_to_spell_selection():
+	wait_for_spell.emit()
+
+func _on_spell_selected(spell_selected: Spell) -> void:
+	if battle_state != BATTLE_STATE.WAIT_FOR_SPELL:
+		push_error("The battle system does not wait for spell")
 		return
-	
-	if active_character.get_current_health_points() > 0:
-		active_character.initialize_turn()
 		
-		var targets: Array[Battler] = []
+	active_character.spell_cast.spell = spell_selected
+	set_battle_state(BATTLE_STATE.WAIT_FOR_TARGETS)
+
+func _update_to_targets_selection():
+	wait_for_targets.emit()
+
+func _on_targets_selected(targets_selected: Array[Battler]) -> void:
+	if battle_state != BATTLE_STATE.WAIT_FOR_TARGETS:
+		push_error("The battle system does not wait for targets")
+		return
 		
-		if active_character.is_player == true:
-			
-			battle_menu.update_actions_buttons(active_character.get_actions())
-			battle_menu.update_spells_menu(active_character.get_spells())
-			await get_tree().create_timer(1.5).timeout
-		
-			var has_select_actions_and_target: bool = false
-			while not has_select_actions_and_target:
-				
-				active_character.spell_cast.spell = await _select_actions()
-				if active_character.spell_cast.spell.target == Enums.TARGET.SELF:
-					active_character.spell_cast.targets = [active_character]
-				else:
-					active_character.spell_cast.targets = await get_target(active_character.spell_cast.spell)
-				
-				has_select_actions_and_target = true #is_action_and_target_valid(spell, targets)
-			
-		else:
-			await get_tree().create_timer(1.5).timeout
-			#ability = active_character.get_actions()[randi() % active_character.get_actions().size()]
-			
-			#var potential_target: Array[Battler] = _get_targets_list(ability)
-			#match action.target_type:
-				#Action.TARGET_TYPE.SINGLE_ALLY, Action.TARGET_TYPE.SINGLE_ENEMY:
-					#targets.append(potential_target[randi() % potential_target.size()])
-				#Action.TARGET_TYPE.ALL_ALLIES, Action.TARGET_TYPE.ALL_ENEMIES:
-					#targets = potential_target
-				#_:
-					#targets = potential_target
-		
-		active_character.act()
-		active_character.print_debug_message()
-	
-	end_turn()
+	active_character.spell_cast.targets = targets_selected
+	set_battle_state(BATTLE_STATE.NEXT_CHARACTER)
 
-func _get_targets_list(spell: Spell) -> Array[Battler]:
-	
-	var potential_targets: Array[Battler] = [] 
-	
-	match spell.target:
-		Enums.TARGET.SE, Enums.TARGET.AE, Enums.TARGET.E:
-			potential_targets = get_enemies()
-		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
-			potential_targets = get_allies()
-	
-	return potential_targets
-
-
-func is_action_and_target_valid(spell: Spell, targets: Array[Battler]):
-	#return action != null and ( (targets == [] and action.target_type == Action.TARGET_TYPE.NONE) \
-		#or (targets != [] and action.target_type != Action.TARGET_TYPE.NONE))
-	return true
-
-func end_turn():
-	active_character.end_turn()
-	battle_menu.delete_previous_action()
-	battle_menu.delete_previous_spells()
-	set_next_character()
-	play_turn()
-
-func print_debug_message(spell: Spell, targets: Array[Battler]):
-	var debug_message = active_character.to_string() + " is using " + spell.to_string()
-	if targets != []:
-		debug_message += " on "
-		for character: Battler in targets:
-			debug_message += character.to_string() + " "
-	
-	print(debug_message)
-
-func _select_actions() -> Spell:
-	battle_menu.set_focus_on_action_selection()
-	
-	message_box.set_message("Wait for action....")
-	var spell: Spell = await spell_selected
-	message_box.set_message("action selected : " + spell.to_string())
-	return spell
-
-func get_target(spell: Spell):
-	var potential_targets: Array[Battler] = _get_targets_list(spell)
-	
-	_set_targets_selectable(potential_targets, true)
-	
-	match spell.target:
-		Enums.TARGET.SA, Enums.TARGET.AA, Enums.TARGET.A:
-			battle_menu.set_focus_on_player_character((spell.target == Enums.TARGET.AA))
-		Enums.TARGET.SE, Enums.TARGET.AE, Enums.TARGET.E:
-			battle_menu.set_focus_on_target_selection((spell.target == Enums.TARGET.AE))
-		
-	var targets_selected: Array[Battler] = await _select_targets(potential_targets)
-	
-	return targets_selected
-
-func _select_targets(targets: Array[Battler]) -> Array[Battler]:
-
-	message_box.set_message("Wait for target...")
-	var targets_selected: Array[Battler] = []
-	targets_selected.append_array(await target_selected)
-	
-	var message: String = "Targets selected : "
-	for character: Battler in targets_selected:
-		message += character.get_character_name() + ", "
-	message_box.set_message(message)
-	
-	
-	_set_targets_selectable(targets, false)
-	
-	return targets_selected
-
-func _set_targets_selectable(targets: Array[Battler], is_selectable: bool):
-	for character: Battler in targets:
-		character.is_selectable.set_is_selectable(is_selectable)
-
-func get_enemies():
-	if active_character.is_player == true:
-		return characters.filter(func(character): return not character.is_player)
-	else:
-		return characters.filter(func(character): return character.is_player)
-
-func get_allies():
-	if active_character.is_player == true:
-		return characters.filter(func(character): return character.is_player)
-	else:
-		return characters.filter(func(character): return not character.is_player)
-
-func set_next_character(): 
-	var new_index : int = (active_character.get_index() + 1) % get_child_count()
-	if(get_child(new_index).name == "Timer"):
-		new_index = (new_index + 1) % get_child_count()
-	active_character = get_child(new_index)
-
-func is_battle_end() -> bool:	
-	var all_opponents_dead: bool = true
-	for opponent: Battler in characters:
-		if active_character.is_player and not opponent.is_player and opponent.get_current_health_points() > 0:
-			all_opponents_dead = false
-			break
-		elif not active_character.is_player and opponent.is_player and opponent.get_current_health_points() > 0:
-			all_opponents_dead = false
-			break
-			
-	return all_opponents_dead
+func _select_next_character():
+	active_character = characters[characters.find(active_character) + 1]
+	if active_character.is_player:
+		changing_active_character.emit()
+		wait_for_spell.emit()

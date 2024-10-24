@@ -22,6 +22,8 @@ func set_character(new_character: Battler):
 	character_name.text = character.get_character_name()
 	hp.text = str(character.get_current_health_points()) + " / " + str(character.get_max_health_points())
 	action_selected.text = ""
+	
+	character.spell_is_cast.connect(Callable(self, "_on_spell_is_cast"))
 
 func set_is_selected(p_is_selected: bool):
 	super(p_is_selected)
@@ -45,3 +47,6 @@ func _on_button_up() -> void:
 	var arr: Array[Battler] = []
 	arr.append(character)
 	character_selected.emit(arr)
+
+func _on_spell_is_cast():
+	action_selected.text = character.spell_cast.spell.spell_name
