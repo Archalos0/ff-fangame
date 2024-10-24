@@ -168,3 +168,6 @@ func print_debug_message():
 	print("---------------------")
 	print(debug_message)
 	print("---------------------")
+
+func get_attack() -> int:
+	return _character_data.get_attack()

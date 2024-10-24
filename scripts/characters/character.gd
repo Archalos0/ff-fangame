@@ -27,3 +27,7 @@ func get_actions() -> Array[Action]:
 func get_spells() -> Array[Spell]:
 	push_error("The method get_spells() has not been implementing in the derived class")
 	return []
+
+func get_attack() -> int:
+	push_error("The method get_attack() has not been implementing in the derived class")
+	return 0

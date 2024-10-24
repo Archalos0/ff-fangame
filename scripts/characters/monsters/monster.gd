@@ -51,3 +51,6 @@ func get_sprite_frames() -> SpriteFrames:
 
 func get_spells() -> Array[Spell]:
 	return spells
+
+func get_attack() -> int:
+	return combat_stats.attack

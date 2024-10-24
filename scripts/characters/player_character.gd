@@ -68,3 +68,6 @@ func get_combat_stats() -> CombatStats:
 	
 func get_sprite_frames() -> SpriteFrames:
 	return _sprite_frames
+
+func get_attack() -> int:
+	return equipments.get_weapon_attack() + (stats.strength / 4) + (job.skill / 4) 

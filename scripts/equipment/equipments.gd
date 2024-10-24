@@ -38,3 +38,6 @@ func get_stats() -> Dictionary:
 	stats["evade"] += left_hand.evade_modifier + right_hand.evade_modifier + head_armor.evade_modifier + body_armor.evade_modifier + arm_armor.evade_modifier
 	
 	return stats
+
+func get_weapon_attack() -> int:
+	return left_hand.attack_power + right_hand.attack_power
