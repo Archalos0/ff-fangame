@@ -23,6 +23,10 @@ func _ready() -> void:
 	
 	player_character_menu.characters_selected.connect(Callable(self, "_on_characters_selected"))
 	
+func load_ui(player_characters: Array[Battler], monsters: Array[Battler]):
+	player_character_menu.load_characters(player_characters)
+	targets_menu.load_characters(monsters)
+
 func _on_action_selected(action: Action):
 	if action is Action.OpenMenuAction:
 		open_menu(action.menu_id)
@@ -50,10 +54,16 @@ func close_menu(menu_id: String):
 func _on_characters_selected(characters: Array[Battler]):
 	characters_selected.emit(characters)
 
+func update_active_character_ui(battler: Battler):
+	actions_menu.reset_actions()
+	actions_menu.load_actions(battler.get_actions())
+	
+	magic_spells_menu.load_spells(battler.get_spells())
+	
 func update_actions_buttons(actions):
 	actions_menu.load_actions(actions)
 
-func update_spells_menu(magics: Magics):
+func update_spells_menu(magics: Array[Spell]):
 	magic_spells_menu.load_spells(magics)
 
 func update_items_menu(items: Array[Item]):

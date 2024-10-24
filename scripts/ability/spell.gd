@@ -75,3 +75,9 @@ static func from_id(p_spell_id: String) -> Spell:
 
 func exec(caster: Battler, targets: Array[Battler]):
 	push_error("The method exec() has not been implementing in the derived class")
+
+func is_selecting_allies() -> bool:
+	return target == Enums.TARGET.A or target == Enums.TARGET.SA or target == Enums.TARGET.AA
+
+func can_be_used_on_multiple_targets() -> bool:
+	return target == Enums.TARGET.E or target == Enums.TARGET.A or target == Enums.TARGET.AE or target == Enums.TARGET.AA

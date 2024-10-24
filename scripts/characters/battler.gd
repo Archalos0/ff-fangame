@@ -1,5 +1,7 @@
 class_name Battler extends Node2D
 
+signal spell_is_cast()
+
 var _character_data: Character
 # Character stats
 
@@ -27,12 +29,34 @@ func load_battler(p_character_data: CharacterData, p_is_player: bool):
 	
 	name = _character_data.character_name
 	is_player = p_is_player
+	
+static func from_character_data(character_data: CharacterData) -> Battler:
+	var new_battler: Battler = Battler.new()
+	new_battler.load_battler(character_data, true)
+	return new_battler
+
+func load_monster_by_id(monster_id: String):
+	var monster_data: Monster = Monster.new()
+	monster_data.load(monster_id)
+	
+	load_monster(monster_data)
+	
 
 func load_monster(monster_data: Monster):
 	_character_data = monster_data
 	name = _character_data.character_name
 	is_player = false
 
+static func from_monster_id(monster_id: String) -> Battler:
+	var new_battler: Battler = Battler.new()
+	
+	var monster_data: Monster = Monster.new()
+	monster_data.load(monster_id)
+	
+	new_battler.load_monster(monster_data)
+
+	return new_battler
+	
 func _ready() -> void:	
 	animated_sprite_2d.sprite_frames = _character_data.get_sprite_frames()
 	
@@ -110,7 +134,7 @@ func get_actions() -> Array[Action]:
 	#else:
 		#get_heal(spell.power)
 
-func get_spells() -> Magics:
+func get_spells() -> Array[Spell]:
 	return _character_data.get_spells()
 
 func get_hit(damage: int):
@@ -141,4 +165,6 @@ func print_debug_message():
 		for character: Battler in spell_cast.targets:
 			debug_message += character.get_character_name() + " "
 	
+	print("---------------------")
 	print(debug_message)
+	print("---------------------")

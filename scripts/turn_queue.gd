@@ -9,6 +9,20 @@ signal target_selected(targets: Array[Battler])
 var characters: Array[Battler] = []
 var active_character: Battler = null
 
+enum BattleState {
+	# Prepare battle
+	LOAD_BATTLE_DATA,
+	
+	# During battle
+	LOAD_ACTIVE_CHARACTER_DATA,
+	SELECT_ACTION,
+	SELECT_TARGETS,
+	PLAY_TURN,
+	
+	# End battle 
+	WIN,
+	LOST
+}
 
 func initialize():
 	

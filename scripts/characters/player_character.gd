@@ -45,8 +45,8 @@ func get_stats() -> Stats:
 func get_actions() -> Array[Action]:
 	return job.actions
 
-func get_spells() -> Magics:
-	return magics
+func get_spells() -> Array[Spell]:
+	return magics.get_all_spells()
 
 func get_combat_stats() -> CombatStats:
 	var combat_stats := CombatStats.new()
